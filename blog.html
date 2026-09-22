@@ -76,14 +76,13 @@
         </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container py-lg-2">
-                <a class="navbar-brand fs-4 fw-semibold me-0" href="index.html">
-                    <span class="text-primary">FAR</span>EXEL
-                    <p class="text-sm opacity-75 fw-light mb-0">Detailing Studio</p>
+                <a class="navbar-brand me-0 p-0" href="index.html">
+                    <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo">
                 </a>
                 <div class="d-none d-lg-block">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link rounded-1 active" aria-current="page" href="index.html"><ion-icon
+                            <a class="nav-link rounded-1" aria-current="page" href="index.html"><ion-icon
                                     name="home"></ion-icon>Home</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -124,7 +123,8 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
+                            <a class="nav-link rounded-1 active" href="blog.html"><ion-icon
+                                    name="reader"></ion-icon>Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link rounded-1" href="career.html"><ion-icon
@@ -148,15 +148,10 @@
                             </a>
                             <ul class="dropdown-menu px-2">
                                 <li><a class="dropdown-item" href="about.html">About</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="our-team.html">Our Team</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="faqs.html">FAQs</a>
-                                </li>
+                                <li><a class="dropdown-item" href="certificates.html">Certificates</a></li>
+                                <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
+                                <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
+                                <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -209,10 +204,8 @@
 
     <main class="main" id="main">
         <!-- Subpage Banner -->
-        <section class="section subpage-banner" id="subpage-banner">
+        <section class="section subpage-banner" id="subpage-banner" aria-label="Blog Banner">
             <div class="container position-relative py-4 py-lg-5">
-                <img src="public/images/subpage-banner.png" alt="Subpage Banner Image"
-                    class="subpage-banner-img img-fluid w-100">
                 <h1>Blog</h1>
                 <p>Explore practical car care advice, detailing insights, and the latest from FAREXEL.</p>
                 <div class="breadcrumb">
@@ -232,31 +225,37 @@
             </div>
         </section>
 
-        <section class="section blogs" id="blogs">
+        <section class="section blogs" id="blogs" aria-label="Articles and Insights">
             <div class="container py-4 py-lg-5">
                 <div class="row filters gy-3 gy-lg-0 mb-4">
-                    <div class="position-relative col-sm-12 col-md-6 col-lg-3">
-                        <input type="text" name="search" id="blog-search" placeholder="Search Blog..."
-                            class="form-control pe-4">
-                        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="position-relative">
+                            <input type="text" name="search" id="blog-search" placeholder="Search Blog..."
+                                class="form-control pe-4">
+                            <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                        </div>
                     </div>
-                    <div class="position-relative col-sm-12 col-md-6 col-lg-3">
-                        <select name="category" id="blog-category" class="form-control pe-4">
-                            <option value="default">All Categories</option>
-                            <option value="exterior">Exterior Care</option>
-                            <option value="protection">Paint Protection</option>
-                            <option value="interior">Interior Care</option>
-                            <option value="maintenance">Maintenance</option>
-                        </select>
-                        <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="position-relative">
+                            <select name="category" id="blog-category" class="form-control pe-4">
+                                <option value="default">All Categories</option>
+                                <option value="exterior">Exterior Care</option>
+                                <option value="protection">Paint Protection</option>
+                                <option value="interior">Interior Care</option>
+                                <option value="maintenance">Maintenance</option>
+                            </select>
+                            <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
+                        </div>
                     </div>
-                    <div class="position-relative col-sm-12 col-md-6 col-lg-3">
-                        <select name="sort" id="blog-sort" class="form-control pe-4">
-                            <option value="default">Default</option>
-                            <option value="newest">Newest</option>
-                            <option value="oldest">Oldest</option>
-                        </select>
-                        <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
+                    <div class="col-sm-12 col-md-6 col-lg-3">
+                        <div class="position-relative">
+                            <select name="sort" id="blog-sort" class="form-control pe-4">
+                                <option value="default">Default</option>
+                                <option value="newest">Newest</option>
+                                <option value="oldest">Oldest</option>
+                            </select>
+                            <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
+                        </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3">
                         <div class="d-flex align-items-center gap-3 h-100">
@@ -271,7 +270,7 @@
                 </div>
                 <div class="row gy-4">
                     <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
+                        <article class="card blog">
                             <div class="row align-items-center">
                                 <div class="col-4">
                                     <div class="thumbnail">
@@ -306,7 +305,7 @@
                         </article>
                     </div>
                     <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
+                        <article class="card blog">
                             <div class="row align-items-center">
                                 <div class="col-4">
                                     <div class="thumbnail">
@@ -341,7 +340,7 @@
                         </article>
                     </div>
                     <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
+                        <article class="card blog">
                             <div class="row align-items-center">
                                 <div class="col-4">
                                     <div class="thumbnail">
@@ -376,7 +375,7 @@
                         </article>
                     </div>
                     <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
+                        <article class="card blog">
                             <div class="row align-items-center">
                                 <div class="col-4">
                                     <div class="thumbnail">
@@ -410,7 +409,7 @@
                         </article>
                     </div>
                     <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
+                        <article class="card blog">
                             <div class="row align-items-center">
                                 <div class="col-4">
                                     <div class="thumbnail">
@@ -444,7 +443,7 @@
                         </article>
                     </div>
                     <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
+                        <article class="card blog">
                             <div class="row align-items-center">
                                 <div class="col-4">
                                     <div class="thumbnail">
@@ -478,7 +477,7 @@
                         </article>
                     </div>
                     <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
+                        <article class="card blog">
                             <div class="row align-items-center">
                                 <div class="col-4">
                                     <div class="thumbnail">
@@ -512,7 +511,7 @@
                         </article>
                     </div>
                     <div class="col-sm-12 col-lg-6">
-                        <article class="card blog position-relative h-100">
+                        <article class="card blog">
                             <div class="row align-items-center">
                                 <div class="col-4">
                                     <div class="thumbnail">
@@ -562,12 +561,12 @@
         </section>
 
         <!-- Fullwidth CTA -->
-        <section class="section fullwidth-cta" id="fullwidth-cta">
+        <section class="section fullwidth-cta" id="fullwidth-cta" aria-label="Call To Action">
             <div class="container py-4 py-lg-0">
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
                         <div class="wrapper">
-                            <h2 class="cta-title">Give Your Car the Finish It Deserves.</h2>
+                            <h2 class="cta-title">Reserve Your Detailing Experience.</h2>
                             <p class="cta-description">
                                 From deep interior cleaning to a flawless exterior finish, we
                                 bring your vehicle back to its best. Book your detailing
@@ -614,8 +613,8 @@
                 </div>
             </div>
             <div class="whatsapp-chat-message-box">
-                <p class="mb-0">Click below to chat on WhatsApp or send us an email to <a
-                        href="mailto:hello@farexel.com" class="text-decoration-none text-primary">hello@farexel.com</a>
+                <p class="mb-0">Click below to chat on WhatsApp or send us an email to <a href="mailto:info@farexel.com"
+                        class="text-decoration-none text-primary">hello@farexel.com</a>
                 </p>
             </div>
             <div class="whatsapp-chat-option">
@@ -651,9 +650,8 @@
         <div class="container">
             <div class="footer-inner row gy-4">
                 <div class="col-lg-3">
-                    <a class="footer-brand fs-4 fw-semibold d-inline-block text-decoration-none mb-3" href="index.html">
-                        <span class="text-primary">FAR</span>EXEL
-                        <p class="text-sm opacity-75 fw-light mb-0">Detailing Studio</p>
+                    <a class="footer-brand d-inline-block text-decoration-none mb-3" href="index.html">
+                        <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo">
                     </a>
                     <p class="text-sm">
                         Premium car care for Dubai drivers who expect a clean finish,
@@ -671,6 +669,12 @@
                         </a>
                         <a href="#" title="Facebook" data-size="fit" class="handle facebook btn btn-secondary">
                             <span><ion-icon name="logo-facebook"></ion-icon></span>
+                        </a>
+                    </div>
+                    <div class="contact-us-spinner mt-4">
+                        <a href="contact.html">
+                            <img src="public/images/contact-spinner.png" height="160" width="160"
+                                alt="Contact Us Spinner Image">
                         </a>
                     </div>
                 </div>
@@ -756,7 +760,7 @@
                                 <p class="text-xs text-uppercase tracking-wider mb-0">
                                     Email Us
                                 </p>
-                                <a href="mailto:hello@farexel.com"
+                                <a href="mailto:info@farexel.com"
                                     class="text-decoration-none text-sm">hello@farexel.com</a>
                             </div>
                         </li>
@@ -784,6 +788,14 @@
                             </div>
                         </li>
                     </ul>
+                    <h6 class="text-uppercase tracking-wider mt-4">Subscribe</h6>
+                    <p class="text-12">Subscribe to our newsletter and stay updated with our offer.</p>
+                    <form action="" method="" class="d-flex align-items-center gap-2">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email...">
+                        <button type="submit" class="btn btn-primary">
+                            <span>Subscribe</span>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="row align-items-center copyright-bar">
@@ -806,6 +818,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Ionicons JS -->
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>

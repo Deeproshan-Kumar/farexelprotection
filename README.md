@@ -1,64 +1,55 @@
-# FAREXEL
+# FAREXEL Protection — Premium Automotive Detailing Studio
 
-FAREXEL is a responsive automotive detailing studio website for presenting premium vehicle care services, limited-time offers, customer experiences, and booking information.
+FAREXEL Protection is a responsive automotive detailing studio website for presenting premium vehicle care services, paint protection film (PPF), ceramic coating, ISO certifications, customer experiences, and interactive booking estimation.
 
-The project is built as a lightweight static website with semantic HTML, custom CSS, ES modules, and browser-delivered third-party libraries. It does not require a bundler, framework, package manager, or build step.
+The project is built as a lightweight static website with semantic HTML5, custom CSS, ES modules, and browser-delivered third-party libraries. It does not require a bundler, framework, package manager, or build step.
 
 ## Features
 
-- Responsive automotive detailing website for desktop, tablet, and mobile.
-- Multi-page navigation for the studio's main content areas.
-- Dark and light theme toggle with local storage persistence.
-- Lenis smooth scrolling integrated with GSAP ScrollTrigger.
-- GSAP page-intro, hero, text, card, and section reveal animations.
-- Reduced-motion support through `prefers-reduced-motion`.
-- Responsive mobile navigation menu.
-- Swiper carousels for offers and customer testimonials.
-- Scroll-to-top control that follows the responsive header height.
-- Hover interactions for service cards, navigation items, and animated text.
-- Video tour with play and pause controls.
-- Copy-to-clipboard controls for contact information.
-- Ionicons for navigation, actions, services, and interface feedback.
-- Reusable service, offer, portfolio, FAQ, blog, and contact layouts.
+- **Responsive Architecture**: Pixel-perfect design tailored for mobile, tablet, desktop, and ultra-wide displays.
+- **Interactive Service Calculator (`services.html`)**: Select service cards to dynamically aggregate total price (AED), estimated turnaround time (Business Hours), vehicle category, and selected package badges with smooth scroll to booking form.
+- **Industry Certificates (`certificates.html`)**: Showcase studio credentials including ISO 9001:2015, Master Detailer certifications, IDA memberships, Ceramic Coating & PPF Installer standards, and Nanotech surface protection.
+- **GSAP ScrollTrigger Reveal Animations**: Scroll-based reveal animations across homepage counters, Client Experiences image & content blocks, home ratings, video galleries, photo grids, customer stories, team profiles, and service summaries.
+- **Lenis Smooth Scroll**: Buttery smooth scrolling integrated with GSAP ScrollTrigger timeline management.
+- **Theme Toggle**: Dark and light theme toggle with `localStorage` state persistence.
+- **Full Section Accessibility (`aria-label`)**: 100% section-level ARIA accessibility pass across all 15 HTML pages.
+- **Swiper Carousels**: Interactive carousels for promotional offers and client testimonials.
+- **Responsive Navigation**: Mobile slide-out menu, interactive header top bar, and pillar transition overlay.
+- **Ionicons Integration**: Vector iconography for actions, features, ratings, and vehicle categories.
 
 ## Pages
 
-| Page                | File                       | Purpose                                        |
-| ------------------- | -------------------------- | ---------------------------------------------- |
-| Home                | `index.html`               | Main landing page and complete studio overview |
-| About               | `about.html`               | Studio story and company information           |
-| Services            | `services.html`            | Services page entry point                      |
-| Customer Experience | `customer-experience.html` | Customer-focused experience content            |
-| Portfolio           | `portfolio.html`           | Completed detailing and restoration work       |
-| Blog                | `blog.html`                | Detailing and vehicle-care articles            |
-| Career              | `career.html`              | Career and team opportunities                  |
-| Contact             | `contact.html`             | Contact and booking information                |
-| Our Team            | `our-team.html`            | Team profiles                                  |
-| Testimonials        | `testimonials.html`        | Customer feedback                              |
-| FAQs                | `faqs.html`                | Frequently asked questions                     |
+| Page | File | Purpose |
+| --- | --- | --- |
+| Home | `index.html` | Studio homepage, signature services, before/after, and client reviews |
+| About | `about.html` | Studio story, craftsmanship process, and company details |
+| Services | `services.html` | Interactive service catalog, duration calculator & booking form |
+| Certificates | `certificates.html` | Verified studio credentials, certifications, and quality standards |
+| Customer Experience | `customer-experience.html` | Client journey, detailed case studies, and before/after comparisons |
+| Blog | `blog.html` | Detailing guides, paint maintenance articles, and news |
+| Blog Detail | `blog-detail.html` | Full article view with reader recommendations |
+| Career | `career.html` | Team career opportunities, benefits, and application submission |
+| Job Detail | `job-detail.html` | Individual job role requirements and application form |
+| Contact | `contact.html` | Location details, workshop map, direct inquiry, and working hours |
+| Our Team | `our-team.html` | Detailer profiles, master technician credentials, and selection process |
+| Testimonials | `testimonials.html` | Detailed client reviews and video testimonials |
+| FAQs | `faqs.html` | Comprehensive answers regarding booking, PPF, and ceramic coating |
+| Photos | `photos.html` | Filterable high-res gallery of completed detailing projects |
+| Videos | `videos.html` | Video showcase of vehicle transformations and application processes |
 
-## Technology
+## Technology Stack
 
-### Local source
+### Core Frontend
+- **HTML5**: Semantic markup with complete ARIA support (`aria-label`, `aria-hidden`, `role`).
+- **CSS3**: Modern CSS custom properties, flexbox, grid, glassmorphism, and responsive breakpoints.
+- **JavaScript (ES Modules)**: Native browser modules (`import`/`export`) without compilation overhead.
 
-- HTML5
-- CSS3
-- Modern JavaScript ES modules
-- Bootstrap overrides and responsive styles
-- Local images and video assets in `public/`
-
-### CDN dependencies
-
-The pages load these libraries from public CDNs:
-
+### Third-Party Libraries (via CDN)
 - [Bootstrap 5.3.8](https://getbootstrap.com/)
 - [Ionicons 8.0.13](https://ionic.io/ionicons)
-- [Lenis 1.3.26](https://lenis.darkroom.engineering/)
-- [GSAP 3.15.0](https://gsap.com/)
-- [GSAP ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/)
+- [Lenis 1.3.26](https://lenis.darkroom.engineering/) (Smooth Scroll)
+- [GSAP 3.15.0](https://gsap.com/) & ScrollTrigger
 - [Swiper 11](https://swiperjs.com/)
-
-An internet connection is required when running the site with the current CDN-based setup.
 
 ## Project Structure
 
@@ -67,16 +58,22 @@ An internet connection is required when running the site with the current CDN-ba
 ├── index.html
 ├── about.html
 ├── blog.html
+├── blog-detail.html
 ├── career.html
+├── certificates.html
 ├── contact.html
 ├── customer-experience.html
 ├── faqs.html
+├── job-detail.html
 ├── our-team.html
-├── portfolio.html
+├── photos.html
 ├── services.html
 ├── testimonials.html
+├── videos.html
+├── README.md
 ├── public/
 │   ├── images/
+│   │   └── certificates/
 │   └── videos/
 └── src/
     ├── css/
@@ -89,141 +86,37 @@ An internet connection is required when running the site with the current CDN-ba
         ├── main.js
         ├── pageTransition.js
         ├── scrollAnimations.js
+        ├── servicesSummary.js
         └── toggleTheme.js
 ```
 
 ## Getting Started
 
-### Prerequisites
+### Quick Start (Local Server)
 
-Use one of the following:
+Since the project uses ES modules (`import`/`export`), it must be served via a local web server:
 
-- Python 3
-- Node.js with any static file server
-- VS Code Live Server or another static server
-
-Opening the HTML file directly may work for basic markup, but a local server is recommended because the site uses ES modules and external assets.
-
-### Run with Python
-
-From the project root:
-
+#### Option 1: Python 3
 ```bash
 python -m http.server 4173
 ```
+Open [http://localhost:4173](http://localhost:4173) in your browser.
 
-Open:
-
-```text
-http://localhost:4173/
-```
-
-Stop the server with `Ctrl+C`.
-
-### Run with Node.js
-
-If a static server is already available in your environment, serve the project root and open the URL it provides. For example, with `serve`:
-
+#### Option 2: Node.js / npx
 ```bash
 npx serve .
 ```
 
-## Development Notes
+#### Option 3: VS Code Live Server
+Right-click `index.html` in VS Code and choose **Open with Live Server**.
 
-- Edit page content directly in the root HTML files.
-- Place shared styling in `src/css/main.css` and responsive overrides in `src/css/responsive.css`.
-- Keep Bootstrap-specific customizations in `src/css/bootstrap-override.css`.
-- Add shared JavaScript initialization in `src/js/init.js`.
-- Keep application startup and page-level wiring in `src/js/main.js`.
-- Add ScrollTrigger reveal behavior in `src/js/scrollAnimations.js`.
-- Add page-load animations in `src/js/heroIntro.js` or `src/js/pageTransition.js`.
-- Use existing Ionicon and Bootstrap utility conventions before introducing new patterns.
-- Preserve `prefers-reduced-motion` behavior when adding animations.
-- Use relative paths for local assets so the site can be deployed as static files.
+## Development Guidelines
 
-## Animation Guidelines
-
-The site uses a small set of reusable animation patterns:
-
-- `revealGroup()` for fade and slide reveals.
-- `waveReveal()` for staggered card grids and lists.
-- `waveTextReveal()` for letter-based text reveals.
-- Lenis for smooth scrolling.
-- GSAP ScrollTrigger for viewport-based animation timing.
-
-When adding a new animated section:
-
-1. Identify the section container and its repeated child elements.
-2. Reuse an existing reveal helper where possible.
-3. Add a narrow selector in `initScrollAnimations()`.
-4. Respect reduced-motion users.
-5. Test the section on both mobile and desktop widths.
-
-## Accessibility
-
-- Use meaningful `alt` text for images.
-- Keep buttons and links descriptive.
-- Preserve keyboard access when changing interactive controls.
-- Keep `aria-label` and `aria-hidden` values synchronized with dynamic controls.
-- Do not rely on color alone to communicate state.
-- Respect `prefers-reduced-motion` for animation-heavy interactions.
-
-## Validation
-
-There is currently no automated test suite or build pipeline. Before opening a pull request, perform these checks:
-
-```bash
-node --check src/js/main.js
-node --check src/js/init.js
-node --check src/js/scrollAnimations.js
-python -m http.server 4173
-```
-
-Then verify the main flows in a browser:
-
-- Desktop and mobile navigation.
-- Theme switching and persistence.
-- Smooth scrolling and scroll-to-top behavior.
-- Offers and testimonial Swipers.
-- Service-card and text hover states.
-- Video controls.
-- Copy buttons.
-- Keyboard focus and reduced-motion behavior.
+- **Services Summary Logic**: Located in `src/js/servicesSummary.js`. Listens to card selections across all vehicle tabs and updates summary elements (`#summary-total-time`, `#summary-total-price`, `#summary-selected-services`, `#summary-vehicle-type`).
+- **Animations**: GSAP ScrollTrigger reveals are managed in `src/js/scrollAnimations.js`.
+- **Theme Manager**: Dark/light theme handler is configured in `src/js/toggleTheme.js`.
+- **Accessibility**: Ensure any new `<section>` tag includes a descriptive `aria-label`.
 
 ## Deployment
 
-FAREXEL can be deployed to any static hosting provider, including:
-
-- GitHub Pages
-- Netlify
-- Vercel static hosting
-- Cloudflare Pages
-- Amazon S3 with static website hosting
-- Any web server that serves HTML, CSS, JavaScript, images, and video files
-
-Publish the repository root as the site root. No compilation or server-side runtime is required.
-
-## Content and Configuration
-
-The following contact details are currently represented in the site content:
-
-- Email: `contact@farexel.com`
-- Phone: `+971 50 555 0184`
-- Location: Dubai, United Arab Emirates
-
-Update these values in the relevant HTML files before production launch. Replace placeholder links such as `#` with real destinations, booking flows, social profiles, privacy policy pages, and terms pages.
-
-## Browser Support
-
-The site targets modern browsers with support for:
-
-- ES modules
-- CSS custom properties
-- `IntersectionObserver` and modern browser APIs used by the animation libraries
-- Responsive CSS media queries
-
-Always test the deployed site in current versions of Chrome, Edge, Firefox, and Safari before release.
-
-## License
-
-No license has been specified for this project. Add a license file before distributing the source publicly.
+FAREXEL Protection can be deployed directly to static hosting providers (GitHub Pages, Netlify, Vercel, Cloudflare Pages, AWS S3) by deploying the root folder. No build step or bundler is required.

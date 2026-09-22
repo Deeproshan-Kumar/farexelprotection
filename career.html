@@ -76,14 +76,13 @@
         </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container py-lg-2">
-                <a class="navbar-brand fs-4 fw-semibold me-0" href="index.html">
-                    <span class="text-primary">FAR</span>EXEL
-                    <p class="text-sm opacity-75 fw-light mb-0">Detailing Studio</p>
+                <a class="navbar-brand me-0 p-0" href="index.html">
+                    <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo">
                 </a>
                 <div class="d-none d-lg-block">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link rounded-1 active" aria-current="page" href="index.html"><ion-icon
+                            <a class="nav-link rounded-1" aria-current="page" href="index.html"><ion-icon
                                     name="home"></ion-icon>Home</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -127,7 +126,7 @@
                             <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link rounded-1" href="career.html"><ion-icon
+                            <a class="nav-link rounded-1 active" href="career.html"><ion-icon
                                     name="briefcase"></ion-icon>Career</a>
                         </li>
                         <li class="nav-item">
@@ -148,15 +147,10 @@
                             </a>
                             <ul class="dropdown-menu px-2">
                                 <li><a class="dropdown-item" href="about.html">About</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="our-team.html">Our Team</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="faqs.html">FAQs</a>
-                                </li>
+                                <li><a class="dropdown-item" href="certificates.html">Certificates</a></li>
+                                <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
+                                <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
+                                <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -209,10 +203,8 @@
 
     <main class="main" id="main">
         <!-- Subpage Banner -->
-        <section class="section subpage-banner" id="subpage-banner">
+        <section class="section subpage-banner" id="subpage-banner" aria-label="Careers Banner">
             <div class="container position-relative py-4 py-lg-5">
-                <img src="public/images/subpage-banner.png" alt="Subpage Banner Image"
-                    class="subpage-banner-img img-fluid w-100">
                 <h1>Career</h1>
                 <p>Build your future with a team that takes pride in craftsmanship and exceptional service.</p>
                 <div class="breadcrumb">
@@ -233,7 +225,7 @@
         </section>
 
         <!-- Open Positions -->
-        <section class="section careers" id="careers">
+        <section class="section careers" id="careers" aria-label="Open Positions">
             <div class="container py-4 py-lg-5">
                 <div class="section-header career-intro text-center mb-4 mb-lg-4">
                     <h2 class="d-inline-block position-relative pb-2">
@@ -247,24 +239,30 @@
                 </div>
                 <div class="career-header">
                     <div class="row">
-                        <div class="position-relative col-sm-12 col-lg-3">
-                            <input type="text" name="search-job" id="search-job"
-                                placeholder="Search By Title, Keywords..." class="form-control pe-4">
-                            <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                        <div class="col-sm-12 col-lg-3">
+                            <div class="position-relative">
+                                <input type="text" name="search-job" id="search-job"
+                                    placeholder="Search By Title, Keywords..." class="form-control pe-4">
+                                <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                            </div>
                         </div>
-                        <div class="position-relative col-sm-12 col-lg-3">
-                            <select name="country" id="country" class="form-control pe-4">
-                                <option value="default">All Countries</option>
-                                <option value="saudi-arabia">Saudi Arabia</option>
-                            </select>
-                            <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
+                        <div class="col-sm-12 col-lg-3">
+                            <div class="position-relative">
+                                <select name="country" id="country" class="form-control pe-4">
+                                    <option value="default">All Countries</option>
+                                    <option value="saudi-arabia">Saudi Arabia</option>
+                                </select>
+                                <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
+                            </div>
                         </div>
-                        <div class="position-relative col-sm-12 col-lg-3">
-                            <select name="job-type" id="job-type" class="form-control pe-4">
-                                <option value="default">All Work Arrangements</option>
-                                <option value="full-time">Full-time</option>
-                            </select>
-                            <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
+                        <div class="col-sm-12 col-lg-3">
+                            <div class="position-relative">
+                                <select name="job-type" id="job-type" class="form-control pe-4">
+                                    <option value="default">All Work Arrangements</option>
+                                    <option value="full-time">Full-time</option>
+                                </select>
+                                <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
+                            </div>
                         </div>
                         <div class="col-sm-12 col-lg-3">
                             <div class="d-flex align-items-center gap-3">
@@ -272,7 +270,7 @@
                                     <span>Apply Filter</span>
                                 </button>
                                 <button class="btn btn-primary" type="button" id="reset-job-filters">
-                                    <span>Reset</span>
+                                    <span>Reset Filter</span>
                                 </button>
                             </div>
                         </div>
@@ -303,13 +301,13 @@
                     </div>
                     <div class="col-9">
                         <div class="job-layout">
-                            <article class="card job position-relative h-100" data-role="detailing"
-                                data-experience="experienced" data-type="full-time" data-location="saudi-arabia">
+                            <article class="card job" data-role="detailing" data-experience="experienced"
+                                data-type="full-time" data-location="saudi-arabia">
                                 <div class="card-header bg-transparent border-0 py-3">
                                     <p class="mb-0">SAR 5,000 - 7,000 / month</p>
                                 </div>
                                 <div class="card-body">
-                                    <a href="mailto:careers@farexel.com?subject=Application%20-%20Senior%20Automotive%20Detailer"
+                                    <a href="job-detail.html"
                                         class="job-title text-decoration-none d-inline-block mb-2">
                                         <h4 class="mb-0">Senior Automotive Detailer</h4>
                                     </a>
@@ -326,27 +324,29 @@
                                             Arabia
                                         </li>
                                     </ul>
+                                    <p class="mb-0">
+                                        <small><ion-icon class="me-2" name="car-sport"></ion-icon>Senior Automotive
+                                            Detailer</small>
+                                    </p>
                                 </div>
                                 <div class="card-footer bg-surface-2 border-0 py-3">
                                     <div class="d-flex align-items-center justify-content-between gap-4">
-                                        <p class="mb-0">
-                                            <small><ion-icon class="me-2" name="car-sport"></ion-icon>Senior Automotive
-                                                Detailer</small>
-                                        </p>
-                                        <a href="mailto:careers@farexel.com?subject=Application%20-%20Senior%20Automotive%20Detailer"
-                                            class="btn btn-primary">
-                                            <span>Apply Now <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        <a href="job-detail.html" class="btn btn-primary">
+                                            <span>Quick Apply <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        </a>
+                                        <a href="mailto:info@farexel.com" class="btn btn-primary">
+                                            <span>Apply via Email <ion-icon class="ms-2" name="open"></ion-icon></span>
                                         </a>
                                     </div>
                                 </div>
                             </article>
-                            <article class="card job position-relative h-100" data-role="technical"
-                                data-experience="experienced" data-type="full-time" data-location="saudi-arabia">
+                            <article class="card job" data-role="technical" data-experience="experienced"
+                                data-type="full-time" data-location="saudi-arabia">
                                 <div class="card-header bg-transparent border-0 py-3">
                                     <p class="mb-0">SAR 6,000 - 8,000 / month</p>
                                 </div>
                                 <div class="card-body">
-                                    <a href="mailto:careers@farexel.com?subject=Application%20-%20Paint%20Correction%20Specialist"
+                                    <a href="job-detail.html"
                                         class="job-title text-decoration-none d-inline-block mb-2">
                                         <h4 class="mb-0">Paint Correction Specialist</h4>
                                     </a>
@@ -363,27 +363,29 @@
                                             Arabia
                                         </li>
                                     </ul>
+                                    <p class="mb-0">
+                                        <small><ion-icon class="me-2" name="color-wand"></ion-icon>Paint Correction
+                                            Specialist</small>
+                                    </p>
                                 </div>
                                 <div class="card-footer bg-surface-2 border-0 py-3">
                                     <div class="d-flex align-items-center justify-content-between gap-4">
-                                        <p class="mb-0">
-                                            <small><ion-icon class="me-2" name="color-wand"></ion-icon>Paint Correction
-                                                Specialist</small>
-                                        </p>
-                                        <a href="mailto:careers@farexel.com?subject=Application%20-%20Paint%20Correction%20Specialist"
-                                            class="btn btn-primary">
-                                            <span>Apply Now <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        <a href="job-detail.html" class="btn btn-primary">
+                                            <span>Quick Apply <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        </a>
+                                        <a href="mailto:info@farexel.com" class="btn btn-primary">
+                                            <span>Apply via Email <ion-icon class="ms-2" name="open"></ion-icon></span>
                                         </a>
                                     </div>
                                 </div>
                             </article>
-                            <article class="card job position-relative h-100" data-role="customer"
-                                data-experience="entry" data-type="full-time" data-location="saudi-arabia">
+                            <article class="card job" data-role="customer" data-experience="entry" data-type="full-time"
+                                data-location="saudi-arabia">
                                 <div class="card-header bg-transparent border-0 py-3">
                                     <p class="mb-0">SAR 4,000 - 5,500 / month</p>
                                 </div>
                                 <div class="card-body">
-                                    <a href="mailto:careers@farexel.com?subject=Application%20-%20Customer%20Experience%20Advisor"
+                                    <a href="job-detail.html"
                                         class="job-title text-decoration-none d-inline-block mb-2">
                                         <h4 class="mb-0">Customer Experience Advisor</h4>
                                     </a>
@@ -400,27 +402,29 @@
                                             Arabia
                                         </li>
                                     </ul>
+                                    <p class="mb-0">
+                                        <small><ion-icon class="me-2" name="people"></ion-icon>Customer Experience
+                                            Advisor</small>
+                                    </p>
                                 </div>
                                 <div class="card-footer bg-surface-2 border-0 py-3">
                                     <div class="d-flex align-items-center justify-content-between gap-4">
-                                        <p class="mb-0">
-                                            <small><ion-icon class="me-2" name="people"></ion-icon>Customer Experience
-                                                Advisor</small>
-                                        </p>
-                                        <a href="mailto:careers@farexel.com?subject=Application%20-%20Customer%20Experience%20Advisor"
-                                            class="btn btn-primary">
-                                            <span>Apply Now <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        <a href="job-detail.html" class="btn btn-primary">
+                                            <span>Quick Apply <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        </a>
+                                        <a href="mailto:info@farexel.com" class="btn btn-primary">
+                                            <span>Apply via Email <ion-icon class="ms-2" name="open"></ion-icon></span>
                                         </a>
                                     </div>
                                 </div>
                             </article>
-                            <article class="card job position-relative h-100" data-role="technical"
-                                data-experience="experienced" data-type="full-time" data-location="saudi-arabia">
+                            <article class="card job" data-role="technical" data-experience="experienced"
+                                data-type="full-time" data-location="saudi-arabia">
                                 <div class="card-header bg-transparent border-0 py-3">
                                     <p class="mb-0">SAR 5,500 - 7,500 / month</p>
                                 </div>
                                 <div class="card-body">
-                                    <a href="mailto:careers@farexel.com?subject=Application%20-%20Ceramic%20Coating%20Technician"
+                                    <a href="job-detail.html"
                                         class="job-title text-decoration-none d-inline-block mb-2">
                                         <h4 class="mb-0">Ceramic Coating Technician</h4>
                                     </a>
@@ -437,27 +441,29 @@
                                             Arabia
                                         </li>
                                     </ul>
+                                    <p class="mb-0">
+                                        <small><ion-icon class="me-2" name="shield-checkmark"></ion-icon>Ceramic
+                                            Coating Technician</small>
+                                    </p>
                                 </div>
                                 <div class="card-footer bg-surface-2 border-0 py-3">
                                     <div class="d-flex align-items-center justify-content-between gap-4">
-                                        <p class="mb-0">
-                                            <small><ion-icon class="me-2" name="shield-checkmark"></ion-icon>Ceramic
-                                                Coating Technician</small>
-                                        </p>
-                                        <a href="mailto:careers@farexel.com?subject=Application%20-%20Ceramic%20Coating%20Technician"
-                                            class="btn btn-primary">
-                                            <span>Apply Now <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        <a href="job-detail.html" class="btn btn-primary">
+                                            <span>Quick Apply <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        </a>
+                                        <a href="mailto:info@farexel.com" class="btn btn-primary">
+                                            <span>Apply via Email <ion-icon class="ms-2" name="open"></ion-icon></span>
                                         </a>
                                     </div>
                                 </div>
                             </article>
-                            <article class="card job position-relative h-100" data-role="detailing"
-                                data-experience="entry" data-type="full-time" data-location="saudi-arabia">
+                            <article class="card job" data-role="detailing" data-experience="entry"
+                                data-type="full-time" data-location="saudi-arabia">
                                 <div class="card-header bg-transparent border-0 py-3">
                                     <p class="mb-0">SAR 3,500 - 4,500 / month</p>
                                 </div>
                                 <div class="card-body">
-                                    <a href="mailto:careers@farexel.com?subject=Application%20-%20Vehicle%20Preparation%20Technician"
+                                    <a href="job-detail.html"
                                         class="job-title text-decoration-none d-inline-block mb-2">
                                         <h4 class="mb-0">Vehicle Preparation Technician</h4>
                                     </a>
@@ -474,27 +480,29 @@
                                             Arabia
                                         </li>
                                     </ul>
+                                    <p class="mb-0">
+                                        <small><ion-icon class="me-2" name="car-sport"></ion-icon>Vehicle
+                                            Preparation Technician</small>
+                                    </p>
                                 </div>
                                 <div class="card-footer bg-surface-2 border-0 py-3">
                                     <div class="d-flex align-items-center justify-content-between gap-4">
-                                        <p class="mb-0">
-                                            <small><ion-icon class="me-2" name="car-sport"></ion-icon>Vehicle
-                                                Preparation Technician</small>
-                                        </p>
-                                        <a href="mailto:careers@farexel.com?subject=Application%20-%20Vehicle%20Preparation%20Technician"
-                                            class="btn btn-primary">
-                                            <span>Apply Now <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        <a href="job-detail.html" class="btn btn-primary">
+                                            <span>Quick Apply <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        </a>
+                                        <a href="mailto:info@farexel.com" class="btn btn-primary">
+                                            <span>Apply <ion-icon class="ms-2" name="open"></ion-icon></span>
                                         </a>
                                     </div>
                                 </div>
                             </article>
-                            <article class="card job position-relative h-100" data-role="operations"
-                                data-experience="experienced" data-type="full-time" data-location="saudi-arabia">
+                            <article class="card job" data-role="operations" data-experience="experienced"
+                                data-type="full-time" data-location="saudi-arabia">
                                 <div class="card-header bg-transparent border-0 py-3">
                                     <p class="mb-0">SAR 4,500 - 6,000 / month</p>
                                 </div>
                                 <div class="card-body">
-                                    <a href="mailto:careers@farexel.com?subject=Application%20-%20Studio%20Operations%20Coordinator"
+                                    <a href="job-detail.html"
                                         class="job-title text-decoration-none d-inline-block mb-2">
                                         <h4 class="mb-0">Studio Operations Coordinator</h4>
                                     </a>
@@ -511,16 +519,18 @@
                                             Arabia
                                         </li>
                                     </ul>
+                                    <p class="mb-0">
+                                        <small><ion-icon class="me-2" name="clipboard"></ion-icon>Studio Operations
+                                            Coordinator</small>
+                                    </p>
                                 </div>
                                 <div class="card-footer bg-surface-2 border-0 py-3">
                                     <div class="d-flex align-items-center justify-content-between gap-4">
-                                        <p class="mb-0">
-                                            <small><ion-icon class="me-2" name="clipboard"></ion-icon>Studio Operations
-                                                Coordinator</small>
-                                        </p>
-                                        <a href="mailto:careers@farexel.com?subject=Application%20-%20Studio%20Operations%20Coordinator"
-                                            class="btn btn-primary">
-                                            <span>Apply Now <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        <a href="job-detail.html" class="btn btn-primary">
+                                            <span>Quick Apply <ion-icon class="ms-2" name="open"></ion-icon></span>
+                                        </a>
+                                        <a href="mailto:info@farexel.com" class="btn btn-primary">
+                                            <span>Apply via Email <ion-icon class="ms-2" name="open"></ion-icon></span>
                                         </a>
                                     </div>
                                 </div>
@@ -544,12 +554,12 @@
         </section>
 
         <!-- Fullwidth CTA -->
-        <section class="section fullwidth-cta" id="fullwidth-cta">
+        <section class="section fullwidth-cta" id="fullwidth-cta" aria-label="Call To Action">
             <div class="container py-4 py-lg-0">
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
                         <div class="wrapper">
-                            <h2 class="cta-title">Give Your Car the Finish It Deserves.</h2>
+                            <h2 class="cta-title">Reserve Your Detailing Experience.</h2>
                             <p class="cta-description">
                                 From deep interior cleaning to a flawless exterior finish, we
                                 bring your vehicle back to its best. Book your detailing
@@ -596,8 +606,8 @@
                 </div>
             </div>
             <div class="whatsapp-chat-message-box">
-                <p class="mb-0">Click below to chat on WhatsApp or send us an email to <a
-                        href="mailto:hello@farexel.com" class="text-decoration-none text-primary">hello@farexel.com</a>
+                <p class="mb-0">Click below to chat on WhatsApp or send us an email to <a href="mailto:info@farexel.com"
+                        class="text-decoration-none text-primary">hello@farexel.com</a>
                 </p>
             </div>
             <div class="whatsapp-chat-option">
@@ -633,9 +643,8 @@
         <div class="container">
             <div class="footer-inner row gy-4">
                 <div class="col-lg-3">
-                    <a class="footer-brand fs-4 fw-semibold d-inline-block text-decoration-none mb-3" href="index.html">
-                        <span class="text-primary">FAR</span>EXEL
-                        <p class="text-sm opacity-75 fw-light mb-0">Detailing Studio</p>
+                    <a class="footer-brand d-inline-block text-decoration-none mb-3" href="index.html">
+                        <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo">
                     </a>
                     <p class="text-sm">
                         Premium car care for Dubai drivers who expect a clean finish,
@@ -653,6 +662,12 @@
                         </a>
                         <a href="#" title="Facebook" data-size="fit" class="handle facebook btn btn-secondary">
                             <span><ion-icon name="logo-facebook"></ion-icon></span>
+                        </a>
+                    </div>
+                    <div class="contact-us-spinner mt-4">
+                        <a href="contact.html">
+                            <img src="public/images/contact-spinner.png" height="160" width="160"
+                                alt="Contact Us Spinner Image">
                         </a>
                     </div>
                 </div>
@@ -738,7 +753,7 @@
                                 <p class="text-xs text-uppercase tracking-wider mb-0">
                                     Email Us
                                 </p>
-                                <a href="mailto:hello@farexel.com"
+                                <a href="mailto:info@farexel.com"
                                     class="text-decoration-none text-sm">hello@farexel.com</a>
                             </div>
                         </li>
@@ -766,6 +781,14 @@
                             </div>
                         </li>
                     </ul>
+                    <h6 class="text-uppercase tracking-wider mt-4">Subscribe</h6>
+                    <p class="text-12">Subscribe to our newsletter and stay updated with our offer.</p>
+                    <form action="" method="" class="d-flex align-items-center gap-2">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email...">
+                        <button type="submit" class="btn btn-primary">
+                            <span>Subscribe</span>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="row align-items-center copyright-bar">
@@ -788,6 +811,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Ionicons JS -->
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>

@@ -10,9 +10,6 @@ import {
   initTourVideoPlayer,
   initTestimonialSwiper,
   initOffersSwiper,
-  initPopularServicesSwiper,
-  initServiceStatisticsSwiper,
-  initCopyButtons,
   initScrollToTop,
   initTextHoverAnimation,
   initTeamCardTilt,
@@ -20,6 +17,7 @@ import {
   initJobFilters,
   initBlogFilters,
   initWhatsappWidget,
+  initFileUpload,
 } from "./init.js";
 import { toggleTheme } from "./toggleTheme.js";
 import { initPageTransition } from "./pageTransition.js";
@@ -29,6 +27,7 @@ import {
   initBeforeAfterSliders,
   initCategoryFilters,
 } from "./beforeAfterSlider.js";
+import { initServicesSummary } from "./servicesSummary.js";
 
 // Mobile Menu
 function handleMobileMenu(navbarToggler, target) {
@@ -96,7 +95,6 @@ window.addEventListener("DOMContentLoaded", () => {
   const navbarToggler = document.querySelector("#navbar-toggler");
   const mobileMenu = document.querySelector(".mobile-menu");
   handleMobileMenu(navbarToggler, mobileMenu);
-  initCopyButtons();
 
   // Init lenis (smooth scroll)
   const lenis = initLenis();
@@ -135,9 +133,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // Stats counters
   initStatsCounters();
 
-  // Copy to clipboard
-  initCopyButtons();
-
   // Tour video player
   let tourVideo = document.querySelector("#tour-video"),
     videoCtrlBtn = document.querySelector("#video-control-btn"),
@@ -150,11 +145,8 @@ window.addEventListener("DOMContentLoaded", () => {
   // Offers swiper
   initOffersSwiper();
 
-  // Popular services swiper
-  initPopularServicesSwiper();
-
-  // Service statistics swiper
-  initServiceStatisticsSwiper();
+  // File upload
+  initFileUpload();
 
   // Scroll to top
   let scrollToTopBtn = document.querySelector("#scroll-to-top-btn");
@@ -175,4 +167,7 @@ window.addEventListener("DOMContentLoaded", () => {
   // Before and after image slider & category filters
   initBeforeAfterSliders();
   initCategoryFilters();
+
+  // Services page interactive summary & card selection
+  initServicesSummary();
 });

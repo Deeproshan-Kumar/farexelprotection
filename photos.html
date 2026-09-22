@@ -78,9 +78,8 @@
         </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container py-lg-2">
-                <a class="navbar-brand fs-4 fw-semibold me-0" href="index.html">
-                    <span class="text-primary">FAR</span>EXEL
-                    <p class="text-sm opacity-75 fw-light mb-0">Detailing Studio</p>
+                <a class="navbar-brand me-0 p-0" href="index.html">
+                    <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo">
                 </a>
                 <div class="d-none d-lg-block">
                     <ul class="navbar-nav">
@@ -94,18 +93,11 @@
                                 <ion-icon name="information-circle"></ion-icon>About
                             </a>
                             <ul class="dropdown-menu px-2">
-                                <li>
-                                    <a class="rounded-1 dropdown-item" href="about.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a class="rounded-1 dropdown-item" href="our-team.html">Our Team</a>
-                                </li>
-                                <li>
-                                    <a class="rounded-1 dropdown-item" href="testimonials.html">Testimonials</a>
-                                </li>
-                                <li>
-                                    <a class="rounded-1 dropdown-item" href="faqs.html">FAQs</a>
-                                </li>
+                                <li><a class="dropdown-item" href="about.html">About</a></li>
+                                <li><a class="dropdown-item" href="certificates.html">Certificates</a></li>
+                                <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
+                                <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
+                                <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -211,10 +203,8 @@
 
     <main class="main" id="main">
         <!-- Subpage Banner -->
-        <section class="section subpage-banner" id="subpage-banner">
+        <section class="section subpage-banner" id="subpage-banner" aria-label="Photo Gallery Hero Banner">
             <div class="container position-relative py-4 py-lg-5">
-                <img src="public/images/subpage-banner.png" alt="Subpage Banner Image"
-                    class="subpage-banner-img img-fluid w-100">
                 <h1>Photos</h1>
                 <p>Showcasing Precision in Every Detail.</p>
                 <div class="breadcrumb">
@@ -240,7 +230,7 @@
         </section>
 
         <!-- Photos -->
-        <section class="section photos" id="photos">
+        <section class="section photos" id="photos" aria-label="Detailing Gallery Photos">
             <div class="container py-4 py-lg-5">
                 <div class="row filters gy-3 gy-lg-0 mb-4">
                     <div class="col-sm-12 col-lg-6">
@@ -418,12 +408,12 @@
         </section>
 
         <!-- Fullwidth CTA -->
-        <section class="section fullwidth-cta" id="fullwidth-cta">
+        <section class="section fullwidth-cta" id="fullwidth-cta" aria-label="Book Detailing Appointment CTA">
             <div class="container py-4 py-lg-0">
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
                         <div class="wrapper">
-                            <h2 class="cta-title">Give Your Car the Finish It Deserves.</h2>
+                            <h2 class="cta-title">Reserve Your Detailing Experience.</h2>
                             <p class="cta-description">
                                 From deep interior cleaning to a flawless exterior finish, we
                                 bring your vehicle back to its best. Book your detailing
@@ -471,7 +461,7 @@
             </div>
             <div class="whatsapp-chat-message-box">
                 <p class="mb-0">Click below to chat on WhatsApp or send us an email to <a
-                        href="mailto:hello@farexel.com" class="text-decoration-none text-primary">hello@farexel.com</a>
+                        href="mailto:info@farexel.com" class="text-decoration-none text-primary">hello@farexel.com</a>
                 </p>
             </div>
             <div class="whatsapp-chat-option">
@@ -507,9 +497,8 @@
         <div class="container">
             <div class="footer-inner row gy-4">
                 <div class="col-lg-3">
-                    <a class="footer-brand fs-4 fw-semibold d-inline-block text-decoration-none mb-3" href="index.html">
-                        <span class="text-primary">FAR</span>EXEL
-                        <p class="text-sm opacity-75 fw-light mb-0">Detailing Studio</p>
+                    <a class="footer-brand d-inline-block text-decoration-none mb-3" href="index.html">
+                        <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo">
                     </a>
                     <p class="text-sm">
                         Premium car care for Dubai drivers who expect a clean finish,
@@ -527,6 +516,12 @@
                         </a>
                         <a href="#" title="Facebook" data-size="fit" class="handle facebook btn btn-secondary">
                             <span><ion-icon name="logo-facebook"></ion-icon></span>
+                        </a>
+                    </div>
+                    <div class="contact-us-spinner mt-4">
+                        <a href="contact.html">
+                            <img src="public/images/contact-spinner.png" height="160" width="160"
+                                alt="Contact Us Spinner Image">
                         </a>
                     </div>
                 </div>
@@ -612,7 +607,7 @@
                                 <p class="text-xs text-uppercase tracking-wider mb-0">
                                     Email Us
                                 </p>
-                                <a href="mailto:hello@farexel.com"
+                                <a href="mailto:info@farexel.com"
                                     class="text-decoration-none text-sm">hello@farexel.com</a>
                             </div>
                         </li>
@@ -640,6 +635,14 @@
                             </div>
                         </li>
                     </ul>
+                    <h6 class="text-uppercase tracking-wider mt-4">Subscribe</h6>
+                    <p class="text-12">Subscribe to our newsletter and stay updated with our offer.</p>
+                    <form action="" method="" class="d-flex align-items-center gap-2">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email...">
+                        <button type="submit" class="btn btn-primary">
+                            <span>Subscribe</span>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="row align-items-center copyright-bar">
@@ -662,6 +665,7 @@
             </div>
         </div>
     </footer>
+
     <!-- Ionicons JS -->
     <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>

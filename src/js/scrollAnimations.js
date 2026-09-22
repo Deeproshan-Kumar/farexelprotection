@@ -41,7 +41,12 @@ function revealGroup(selector, vars = {}) {
 
 // Vertical "wave" reveal for card grids/rows.
 // playOnce: set to true for Swiper wrappers (avoid re-animating cloned slides)
-function waveReveal(containerSelector, itemSelector, vars = {}, playOnce = false) {
+function waveReveal(
+  containerSelector,
+  itemSelector,
+  vars = {},
+  playOnce = false,
+) {
   const containers = gsap.utils.toArray(containerSelector);
 
   containers.forEach((container) => {
@@ -160,29 +165,36 @@ export function initScrollAnimations() {
   revealGroup(".subpage-banner > .container > p", { y: 24, duration: 0.7 });
   revealGroup(".subpage-banner .breadcrumb", { y: 20, duration: 0.6 });
 
-  // ---- Homepage: popular services ----
-  revealGroup(".popular-services .popular-car-item", { y: 32, duration: 0.8 });
+  // ---- Homepage: farexel services ----
+  revealGroup(".farexel-services .service-item", { y: 32, duration: 0.8 });
+  revealGroup(".gsap-booking-form-col", { y: 32, duration: 0.8 });
   revealGroup(".service-marquee", { y: 20, duration: 0.7 });
-  revealGroup(".trusted-partners .trusted-partners__viewport", {
+  revealGroup(".achievements", {
     y: 20,
     duration: 0.7,
   });
-  revealGroup(".service-statistics .col-lg-4", { y: 24, duration: 0.7 });
 
   // ---- About section (homepage) ----
   // Target the about section image and text blocks by their specific class handles
   revealGroup(".gsap-about-img", { scale: 0.94, y: 16 });
   revealGroup(".gsap-about-text", { y: 24, duration: 0.7 });
-  revealGroup(".gsap-about-contact-handles .contact-handle", {
+  revealGroup(".gsap-icon-boxes .icon-box", {
     y: 24,
     duration: 0.6,
     delay: 0.12,
+  });
+  waveReveal(".counters", ":scope > .counter", {
+    y: 36,
+    skewY: 0,
   });
 
   // ---- About page sections ----
   revealGroup(".gsap-about-intro-img", { scale: 0.93, y: 16 });
   revealGroup(".gsap-about-intro-content", { y: 32, duration: 0.85 });
-  waveReveal(".gsap-about-values-grid", ".gsap-value-card", { y: 40, skewY: 0 });
+  waveReveal(".gsap-about-values-grid", ".gsap-value-card", {
+    y: 40,
+    skewY: 0,
+  });
   revealGroup(".gsap-about-stats-item", { y: 24, duration: 0.7 });
 
   // ---- Our Journey — timeline entries reveal one by one as you scroll ----
@@ -211,8 +223,18 @@ export function initScrollAnimations() {
   waveReveal(".our-latest-works .cards.row", ":scope > div");
 
   // Swiper wrappers: play once so GSAP never fights Swiper's cloned slides
-  waveReveal(".offers-swiper .swiper-wrapper", ":scope > .swiper-slide", {}, true);
-  waveReveal(".testimonial-swiper .swiper-wrapper", ":scope > .swiper-slide", {}, true);
+  waveReveal(
+    ".offers-swiper .swiper-wrapper",
+    ":scope > .swiper-slide",
+    {},
+    true,
+  );
+  waveReveal(
+    ".testimonial-swiper .swiper-wrapper",
+    ":scope > .swiper-slide",
+    {},
+    true,
+  );
 
   waveReveal(".our-amenities .amenities", ":scope > div");
 
@@ -221,11 +243,61 @@ export function initScrollAnimations() {
     y: 32,
     skewY: 0,
   });
-  // Customer experiences rating platform cards
+  // Customer experiences rating platform cards & Homepage Ratings
   waveReveal(".gsap-cx-platform-cards", ".gsap-platform-card", {
     y: 40,
     skewY: 0,
   });
+  waveReveal(".rating-platforms .row", ":scope > div", {
+    y: 40,
+    skewY: 0,
+  });
+  waveReveal(".ratings .row", ":scope > div", {
+    y: 40,
+    skewY: 0,
+  });
+
+  // Client Experiences section (Homepage & Testimonials page)
+  revealGroup(".customer-experiences .row > .col-lg-6:first-child", {
+    x: -36,
+    y: 0,
+    scale: 0.96,
+    duration: 0.85,
+  });
+  revealGroup(".customer-experiences .row > .col-lg-6:last-child > h4", {
+    y: 28,
+    duration: 0.7,
+  });
+  revealGroup(".customer-experiences .row > .col-lg-6:last-child > p", {
+    y: 28,
+    duration: 0.7,
+  });
+  waveReveal(".customer-experiences .row > .col-lg-6:last-child .row", ":scope > div", {
+    y: 36,
+    skewY: 0,
+  });
+
+  // Certificates grid wave reveal
+  waveReveal(".certificates .row.gy-4", ":scope > div", {
+    y: 48,
+    skewY: 0,
+  });
+
+  // Videos gallery wave reveal
+  waveReveal(".videos .row.gy-4", ":scope > div", {
+    y: 48,
+    skewY: 0,
+  });
+
+  // Testimonials section grid wave reveal
+  waveReveal(".testimonials .row.gy-4", ":scope > div", {
+    y: 48,
+    skewY: 0,
+  });
+
+  // Selected Services Summary section reveal
+  revealGroup(".selected-services-summary .summary-card", { y: 32, duration: 0.8 });
+
   // Customer experiences stats band
   revealGroup(".gsap-cx-stat-item", { y: 24, duration: 0.7 });
 
@@ -271,7 +343,9 @@ export function initScrollAnimations() {
   // 2. The Difference Is in the Details (#before-after)
   const beforeAfterSection = document.querySelector("#before-after");
   if (beforeAfterSection) {
-    const baFilterBtns = beforeAfterSection.querySelectorAll(".ba-filter-group .ba-filter-btn");
+    const baFilterBtns = beforeAfterSection.querySelectorAll(
+      ".ba-filter-group .ba-filter-btn",
+    );
 
     if (baFilterBtns.length) {
       gsap.from(baFilterBtns, {
@@ -353,10 +427,14 @@ export function initScrollAnimations() {
 
   // ---- Contact page ----
   revealGroup(".gsap-contact-form-cols", { y: 32, duration: 0.8 });
-  waveReveal(".contact-form .d-flex.flex-column.gap-4", ":scope > .consulation", {
-    y: 40,
-    skewY: 0,
-  });
+  waveReveal(
+    ".contact-form .d-flex.flex-column.gap-4",
+    ":scope > .consulation",
+    {
+      y: 40,
+      skewY: 0,
+    },
+  );
   revealGroup(".studio-location .map-container", { scale: 0.96, y: 0 });
   waveReveal(".studio-location .our-locations", ":scope > div", {
     y: 48,
@@ -388,4 +466,15 @@ export function initScrollAnimations() {
   // Re-measure trigger positions once everything (images, fonts) has
   // finished loading, since layout height can shift after first paint.
   window.addEventListener("load", () => ScrollTrigger.refresh());
+
+  // Re-measure trigger positions on Bootstrap tab switch or accordion collapse/expand
+  // so layout height changes don't cause lower sections to disappear or misalign.
+  const handleLayoutChange = () => {
+    ScrollTrigger.refresh();
+    setTimeout(() => ScrollTrigger.refresh(), 150);
+  };
+
+  document.addEventListener("shown.bs.tab", handleLayoutChange);
+  document.addEventListener("shown.bs.collapse", handleLayoutChange);
+  document.addEventListener("hidden.bs.collapse", handleLayoutChange);
 }
