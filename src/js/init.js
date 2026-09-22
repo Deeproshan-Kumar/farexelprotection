@@ -233,109 +233,22 @@ export function initOffersSwiper() {
   });
 }
 
-// Init popular services swiper
-export function initPopularServicesSwiper() {
-  const popularServicesSwiper = document.querySelector(
-    ".popular-services-swiper",
-  );
-  if (!popularServicesSwiper) return;
+// Init file upload
+export function initFileUpload() {
+  const file = document.querySelector("#file");
+  const fileName = document.querySelector("#file-name");
 
-  const paginationButtons = [
-    ...popularServicesSwiper.querySelectorAll(
-      ".popular-service-pagination [data-slide-index]",
-    ),
-  ];
+  if (!file || !fileName) return;
 
-  const swiper = new Swiper(popularServicesSwiper, {
-    slidesPerView: 1,
-    loop: true,
-    speed: 800,
-  });
-
-  const updatePagination = (activeIndex) => {
-    paginationButtons.forEach((button, index) => {
-      const isActive = index === activeIndex;
-      button.classList.toggle("swiper-pagination-bullet-active", isActive);
-      button.setAttribute("aria-selected", String(isActive));
-    });
-  };
-
-  paginationButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      swiper.slideToLoop(Number(button.dataset.slideIndex));
-    });
-  });
-
-  swiper.on("slideChange", () => updatePagination(swiper.realIndex));
-  updatePagination(swiper.realIndex);
-}
-
-// Init service statitics swiper
-export function initServiceStatisticsSwiper() {
-  const serviceStatisticsSwiper = document.querySelector(
-    ".service-statistics-swiper",
-  );
-  if (!serviceStatisticsSwiper) return;
-
-  new Swiper(serviceStatisticsSwiper, {
-    direction: "vertical",
-    loop: true,
-    speed: 800,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-      pauseOnMouseEnter: true,
-    },
-  });
-}
-
-// Init copy to clipboard
-export function initCopyButtons() {
-  const copyButtons = document.querySelectorAll("[data-copy-target]");
-
-  copyButtons.forEach((button) => {
-    button.addEventListener("click", async () => {
-      const target = document.querySelector(button.dataset.copyTarget);
-      if (!target) return;
-
-      const value = target.textContent.trim();
-      let copied = false;
-
-      try {
-        if (navigator.clipboard?.writeText) {
-          await navigator.clipboard.writeText(value);
-          copied = true;
-        } else {
-          const input = document.createElement("textarea");
-          input.value = value;
-          input.setAttribute("readonly", "");
-          input.style.position = "fixed";
-          input.style.opacity = "0";
-          document.body.appendChild(input);
-          input.select();
-          copied = document.execCommand("copy");
-          input.remove();
-        }
-      } catch {
-        copied = false;
-      }
-
-      if (!copied) return;
-
-      const icon = button.querySelector("ion-icon");
-      const originalLabel = button.getAttribute("aria-label");
-      const originalTitle = button.getAttribute("title");
-
-      icon?.setAttribute("name", "checkmark");
-      button.setAttribute("aria-label", "Copied");
-      button.setAttribute("title", "Copied");
-
-      window.setTimeout(() => {
-        icon?.setAttribute("name", "copy");
-        if (originalLabel) button.setAttribute("aria-label", originalLabel);
-        if (originalTitle) button.setAttribute("title", originalTitle);
-      }, 1600);
-    });
+  file.addEventListener("change", function (e) {
+    if (this.files.length > 0) {
+      fileName.innerHTML = `
+                <i class="bi bi-file-earmark-text me-1"></i>
+                ${this.files[0].name}
+            `;
+    } else {
+      fileName.innerHTML = "";
+    }
   });
 }
 
@@ -410,11 +323,20 @@ export function initJobFilters() {
   const cards = [...careerSection.querySelectorAll(".card.job")];
   const sidebar = careerSection.querySelector(".job-filters");
 
-  if (!searchInput || !countrySelect || !typeSelect || !applyButton || !resetButton || !cards.length) return;
+  if (
+    !searchInput ||
+    !countrySelect ||
+    !typeSelect ||
+    !applyButton ||
+    !resetButton ||
+    !cards.length
+  )
+    return;
 
   const emptyState = document.createElement("p");
   emptyState.className = "job-filter-empty text-center py-4 mb-0";
-  emptyState.textContent = "No roles match these filters yet. Try a broader search.";
+  emptyState.textContent =
+    "No roles match these filters yet. Try a broader search.";
   emptyState.hidden = true;
   careerSection.querySelector(".job-layout")?.append(emptyState);
 
@@ -433,19 +355,32 @@ export function initJobFilters() {
     let visibleCards = 0;
 
     cards.forEach((card) => {
-      const matchesSearch = !query || card.textContent.toLowerCase().includes(query);
-      const matchesCountry = country === "default" || card.dataset.location === country;
+      const matchesSearch =
+        !query || card.textContent.toLowerCase().includes(query);
+      const matchesCountry =
+        country === "default" || card.dataset.location === country;
       const matchesType = type === "default" || card.dataset.type === type;
       const matchesRole = !roles.length || roles.includes(card.dataset.role);
-      const matchesExperience = !experiences.length || experiences.includes(card.dataset.experience);
-      const matchesLocation = !locations.length || locations.includes(card.dataset.location);
-      const isVisible = matchesSearch && matchesCountry && matchesType && matchesRole && matchesExperience && matchesLocation;
+      const matchesExperience =
+        !experiences.length || experiences.includes(card.dataset.experience);
+      const matchesLocation =
+        !locations.length || locations.includes(card.dataset.location);
+      const isVisible =
+        matchesSearch &&
+        matchesCountry &&
+        matchesType &&
+        matchesRole &&
+        matchesExperience &&
+        matchesLocation;
 
       card.hidden = !isVisible;
       if (isVisible) visibleCards += 1;
     });
 
     emptyState.hidden = visibleCards > 0;
+    if (typeof ScrollTrigger !== "undefined") {
+      setTimeout(() => ScrollTrigger.refresh(), 100);
+    }
   }
 
   function resetFilters() {
@@ -481,24 +416,45 @@ export function initBlogFilters() {
   const resetButton = blogSection.querySelector("#reset-blog-filters");
   const grid = blogSection.querySelector(".row.gy-4");
   const cards = [...(grid?.querySelectorAll(":scope > div") || [])];
-  if (!searchInput || !categorySelect || !sortSelect || !applyButton || !resetButton || !grid || !cards.length) return;
+  if (
+    !searchInput ||
+    !categorySelect ||
+    !sortSelect ||
+    !applyButton ||
+    !resetButton ||
+    !grid ||
+    !cards.length
+  )
+    return;
 
   const emptyState = document.createElement("p");
   emptyState.className = "blog-filter-empty text-center py-4 mb-0";
-  emptyState.textContent = "No articles match these filters yet. Try a broader search.";
+  emptyState.textContent =
+    "No articles match these filters yet. Try a broader search.";
   emptyState.hidden = true;
   grid.after(emptyState);
 
   const getCategory = (card) => {
     const text = card.textContent.toLowerCase();
-    if (text.includes("ppf") || text.includes("ceramic") || text.includes("paint")) return "protection";
+    if (
+      text.includes("ppf") ||
+      text.includes("ceramic") ||
+      text.includes("paint")
+    )
+      return "protection";
     if (text.includes("interior")) return "interior";
-    if (text.includes("rainy") || text.includes("regular") || text.includes("full detail")) return "maintenance";
+    if (
+      text.includes("rainy") ||
+      text.includes("regular") ||
+      text.includes("full detail")
+    )
+      return "maintenance";
     return "exterior";
   };
 
   const getDate = (card) => {
-    const dateText = card.querySelector(".meta-info li")?.textContent.trim() || "";
+    const dateText =
+      card.querySelector(".meta-info li")?.textContent.trim() || "";
     return Date.parse(dateText.replace(/^[^A-Za-z]*/, "")) || 0;
   };
 
@@ -507,8 +463,10 @@ export function initBlogFilters() {
     const category = categorySelect.value;
     const sort = sortSelect.value;
     const matchingCards = cards.filter((card) => {
-      const matchesSearch = !query || card.textContent.toLowerCase().includes(query);
-      const matchesCategory = category === "default" || getCategory(card) === category;
+      const matchesSearch =
+        !query || card.textContent.toLowerCase().includes(query);
+      const matchesCategory =
+        category === "default" || getCategory(card) === category;
       return matchesSearch && matchesCategory;
     });
 
@@ -523,6 +481,9 @@ export function initBlogFilters() {
     });
     matchingCards.forEach((card) => grid.append(card));
     emptyState.hidden = matchingCards.length > 0;
+    if (typeof ScrollTrigger !== "undefined") {
+      setTimeout(() => ScrollTrigger.refresh(), 100);
+    }
   }
 
   function resetFilters() {

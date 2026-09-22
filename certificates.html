@@ -4,16 +4,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About Us | FAREXEL — Premium Car Detailing Studio</title>
-    <meta name="description"
-        content="Discover the passion, precision, and people behind FAREXEL's premium car care. Learn our story, values, and why Dubai's drivers trust us." />
+    <title>Certificates | FAREXEL</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <!-- Lenis CSS -->
+    <!-- Lennis CSS -->
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css" />
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/css/glightbox.min.css" />
     <!-- App CSS -->
     <link rel="stylesheet" href="src/css/bootstrap-override.css" />
     <link rel="stylesheet" href="src/css/main.css" />
@@ -84,16 +84,17 @@
                 <div class="d-none d-lg-block">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link rounded-1" href="index.html"><ion-icon name="home"></ion-icon>Home</a>
+                            <a class="nav-link rounded-1" aria-current="page" href="index.html"><ion-icon
+                                    name="home"></ion-icon>Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link rounded-1 active dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <ion-icon name="information-circle"></ion-icon>About
                             </a>
                             <ul class="dropdown-menu px-2">
                                 <li><a class="dropdown-item" href="about.html">About</a></li>
-                                <li><a class="dropdown-item" href="certificates.html">Certificates</a></li>
+                                <li><a class="dropdown-item active" href="certificates.html">Certificates</a></li>
                                 <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
                                 <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
                                 <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
@@ -113,7 +114,7 @@
                                     name="people"></ion-icon>Portfolio</a>
                             <ul class="dropdown-menu px-2">
                                 <li><a class="rounded-1 dropdown-item" href="photos.html">Photos</a></li>
-                                <li><a class="rounded-1 dropdown-item" href="videos.html">Videos</a></li>
+                                <li><a class="rounded-1 dropdown-item active" href="videos.html">Videos</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -132,16 +133,24 @@
                 <div class="mobile-menu">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">About</a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                About
+                            </a>
                             <ul class="dropdown-menu px-2">
                                 <li><a class="dropdown-item" href="about.html">About</a></li>
-                                <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
-                                <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
-                                <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="our-team.html">Our Team</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="faqs.html">FAQs</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -165,7 +174,7 @@
                             <a class="nav-link" href="career.html">Career</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="career.html">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -194,10 +203,10 @@
 
     <main class="main" id="main">
         <!-- Subpage Banner -->
-        <section class="section subpage-banner" id="subpage-banner" aria-label="About Us Banner">
+        <section class="section subpage-banner" id="subpage-banner" aria-label="Certificates Banner">
             <div class="container position-relative py-4 py-lg-5">
-                <h1>About Us</h1>
-                <p>Discover the passion, standards, and people behind FAREXEL's premium car care.</p>
+                <h1>Certificates</h1>
+                <p>Verified Excellence, Industry Certification &amp; Uncompromising Standards.</p>
                 <div class="breadcrumb">
                     <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
                         <li>
@@ -207,394 +216,162 @@
                             </a>
                         </li>
                         <ion-icon name="chevron-forward"></ion-icon>
-                        <li>About</li>
+                        <li>
+                            <a href="about.html" class="text-decoration-none d-flex align-items-center gap-2">About</a>
+                        </li>
+                        <ion-icon name="chevron-forward"></ion-icon>
+                        <li>
+                            Certificates
+                        </li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Hero Section -->
-        <section class="section about-hero" id="about-hero" aria-label="Who We Are">
+        <!-- Certificates Listing -->
+        <section class="section certificates" id="certificates" aria-label="Accreditations and Certificates">
             <div class="container py-4 py-lg-5">
-                <div class="row gy-4 gy-lg-0">
-                    <div class="col-sm-12 col-lg-6">
-                        <img src="public/images/service-placeholder.jpg"
-                            class="img-fluid about-hero-img rounded-1 w-100" alt="About Hero Image">
-                    </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <span class="text-primary text-uppercase fw-semibold small mb-2">
-                            Who We Are
-                        </span>
-
-                        <h2 class="mb-3">
-                            Built on Trust. Driven by Excellence.
-                        </h2>
-
-                        <p class="lead text-muted mb-3">
-                            We are dedicated to providing dependable, innovative, and
-                            customer-focused solutions that help individuals and businesses
-                            move forward with confidence.
-                        </p>
-
-                        <p class="text-muted mb-3">
-                            Our journey is built on a simple belief: great service begins with
-                            understanding people and their needs. We take the time to listen,
-                            understand your goals, and develop solutions that deliver real,
-                            measurable value.
-                        </p>
-
-                        <p class="text-muted mb-4">
-                            From the first interaction to the completion of every project,
-                            we maintain a strong focus on quality, transparency, and
-                            professionalism. Our experienced team combines knowledge,
-                            creativity, and attention to detail to ensure every customer
-                            receives an experience they can rely on.
-                        </p>
-
-                        <div class="d-flex align-items-center gap-3">
-                            <a href="#contact" class="btn btn-primary">
-                                <span>Contact Us</span>
-                            </a>
-                            <a href="#services" class="btn btn-secondary">
-                                <span>Our Services</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section obsession" id="obsession" aria-label="Obsessed With Quality">
-            <div class="container text-center py-4 py-lg-5">
-                <div class="section-header text-center mb-4 mb-lg-4">
-                    <h2 class="d-inline-block position-relative pb-2">
-                        Obsessed With Quality
-                    </h2>
-                </div>
-                <p class="mb-0"> We believe quality is more than just a standard—it’s a commitment. From the smallest
-                    detail to the final result, we take the time to do things the right way. We carefully select the
-                    best materials, follow thoughtful processes, and continuously improve our work to deliver an
-                    experience you can trust. Our passion for quality drives everything we do, ensuring that every
-                    product and service meets the highest expectations and leaves a lasting impression. </p>
-            </div>
-        </section>
-
-        <!-- Achievements -->
-        <section class="section achievements" id="achievements" aria-label="Achievements">
-            <div class="container py-0 py-lg-4">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <div
-                            class="counter d-flex justify-content-md-center align-items-center gap-3 px-4 px-lg-3 py-3">
-                            <div class="icon-box rounded-1">
-                                <ion-icon class="icon" name="settings"></ion-icon>
+                <div class="row gy-4">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/certificates/cert-iso-9001.jpg" height="280" width="500"
+                                    alt="ISO 9001:2015 Certification" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/certificates/cert-iso-9001.jpg"
+                                    data-gallery="FAREXEL-certificates" aria-label="Open ISO 9001:2015 Certification">
+                                    <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+                                </a>
                             </div>
-                            <div>
-                                <h4 class="display-3 mb-0">
-                                    <span class="counter" data-count="600">0</span>+
-                                </h4>
-                                <p class="text-sm mb-0">WHEEL REPLACEMENT</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <div
-                            class="counter d-flex justify-content-md-center align-items-center gap-3 px-4 px-lg-3 py-3">
-                            <div class="icon-box rounded-1">
-                                <ion-icon class="icon" name="construct"></ion-icon>
-                            </div>
-                            <div>
-                                <h4 class="display-3 mb-0">
-                                    <span class="counter" data-count="250">0</span>+
-                                </h4>
-                                <p class="text-sm mb-0">INTERIOR REMODELING</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <div
-                            class="counter d-flex justify-content-md-center align-items-center gap-3 px-4 px-lg-3 py-3">
-                            <div class="icon-box rounded-1">
-                                <ion-icon class="icon" name="car-sport-outline"></ion-icon>
-                            </div>
-                            <div>
-                                <h4 class="display-3 mb-0">
-                                    <span class="counter" data-count="456">0</span>+
-                                </h4>
-                                <p class="text-sm mb-0">EXTERIOR REMODELING</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <div
-                            class="counter d-flex justify-content-md-center align-items-center gap-3 px-4 px-lg-3 py-3">
-                            <div class="icon-box rounded-1">
-                                <ion-icon class="icon" name="color-wand"></ion-icon>
-                            </div>
-                            <div>
-                                <h4 class="display-3 mb-0">
-                                    <span class="counter" data-count="700">0</span>+
-                                </h4>
-                                <p class="text-sm mb-0">COLOR CORRECTION</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us -->
-        <section class="section why-choose-us" id="why-choosse-us" aria-label="The FAREXEL Difference">
-            <div class="container py-4 py-lg-5">
-                <div class="section-header text-center mb-4 mb-lg-4">
-                    <h2 class="d-inline-block position-relative pb-2">
-                        The FAREXEL Difference
-                    </h2>
-                    <p class="mb-0">
-                        From automotive passion to a customer-first experience
-                    </p>
-                </div>
-                <div class="row align-items-center gy-4 gy-lg-0">
-                    <div class="col-sm-12 col-lg-4 panel left">
-                        <div class="d-flex flex-column gap-4">
-                            <article class="icon-box rounded-1">
-                                <div class="wrapper">
-                                    <div class="icon mb-3">
-                                        <ion-icon name="pulse"></ion-icon>
-                                    </div>
-                                    <div class="box">
-                                        <h5>Fitness Checking Facility</h5>
-                                        <p class="mb-0">
-                                            We inspect every vehicle carefully to identify its needs
-                                            before recommending the right detailing or maintenance
-                                            service.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="icon-box rounded-1">
-                                <div class="wrapper">
-                                    <div class="icon mb-3">
-                                        <ion-icon name="construct"></ion-icon>
-                                    </div>
-                                    <div class="box">
-                                        <h5>Expert Engine & Balancing</h5>
-                                        <p class="mb-0">
-                                            Our experienced technicians help keep your engine smooth,
-                                            balanced, and ready for reliable performance on every
-                                            journey.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="icon-box rounded-1">
-                                <div class="wrapper">
-                                    <div class="icon mb-3">
-                                        <ion-icon name="car-sport"></ion-icon>
-                                    </div>
-                                    <div class="box">
-                                        <h5>Car Wash Facility</h5>
-                                        <p class="mb-0">
-                                            From a thorough wash to the finishing touches, we remove
-                                            everyday dirt while protecting your vehicle's finish and
-                                            bringing back its shine.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-4 panel middle">
-                        <img src="public/images/car-lg.png" class="d-block img-fluid mx-auto" alt="Car Large" />
-                    </div>
-                    <div class="col-sm-12 col-lg-4 panel right">
-                        <div class="d-flex flex-column gap-4">
-                            <article class="icon-box rounded-1">
-                                <div class="wrapper">
-                                    <div class="icon mb-3">
-                                        <ion-icon name="hammer"></ion-icon>
-                                    </div>
-                                    <div class="box">
-                                        <h5>Car Denting Repair</h5>
-                                        <p class="mb-0">
-                                            We restore dents and surface damage with careful
-                                            workmanship, helping your car look its best without
-                                            compromising its original character.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="icon-box rounded-1">
-                                <div class="wrapper">
-                                    <div class="icon mb-3">
-                                        <ion-icon name="bonfire"></ion-icon>
-                                    </div>
-                                    <div class="box">
-                                        <h5>Modern Technology</h5>
-                                        <p class="mb-0">
-                                            Professional tools, quality products, and proven
-                                            techniques give every vehicle a precise, consistent, and
-                                            long-lasting finish.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="icon-box rounded-1">
-                                <div class="wrapper">
-                                    <div class="icon mb-3">
-                                        <ion-icon name="hammer"></ion-icon>
-                                    </div>
-                                    <div class="box">
-                                        <h5>Mechanical Engineering</h5>
-                                        <p class="mb-0">
-                                            Our technical knowledge supports dependable care for the
-                                            details beneath the surface, so your vehicle stays ready
-                                            for the road.
-                                        </p>
-                                    </div>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Amenities -->
-        <section class="section our-amenities" id="our-amenities" aria-label="Our Amenities">
-            <div class="container py-4 py-lg-5">
-                <div class="section-header text-center mb-4 mb-lg-4">
-                    <h2 class="d-inline-block position-relative pb-2">Amenities</h2>
-                    <p class="mb-0">
-                        A comfortable, family-friendly space while your vehicle is being
-                        cared for.
-                    </p>
-                </div>
-                <div class="amenities row gy-4">
-                    <!-- Cafeteria -->
-                    <div class="cols-sm-12 col-md-6 col-lg-4">
-                        <article class="card amenity">
-                            <div class="card-body">
-                                <div class="icon d-flex align-items-center justify-content-center rounded-1 mb-3 p-2">
-                                    <ion-icon name="cafe"></ion-icon>
-                                </div>
-                                <h6 class="mb-2">Cafeteria</h6>
-                                <p class="text-sm mb-0">
-                                    Relax with a refreshing drink or snack while our detailing
-                                    experts take care of your vehicle.
-                                </p>
-                            </div>
-                            <div class="card-footer border-0">
-                                <p class="text-sm mb-0">
-                                    <ion-icon name="checkmark-circle"></ion-icon> Available
-                                    On-Site
-                                </p>
+                            <div class="card-body text-center py-3">
+                                <h4>ISO 9001:2015 Certification</h4>
                             </div>
                         </article>
                     </div>
-
-                    <!-- Games -->
-                    <div class="cols-sm-12 col-md-6 col-lg-4">
-                        <article class="card amenity">
-                            <div class="card-body">
-                                <div class="icon d-flex align-items-center justify-content-center rounded-1 mb-3 p-2">
-                                    <ion-icon name="game-controller"></ion-icon>
-                                </div>
-                                <h6 class="mb-2">Games & Entertainment</h6>
-                                <p class="text-sm mb-0">
-                                    Keep yourself entertained with our selection of games while
-                                    you wait for your car to be ready.
-                                </p>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/certificates/cert-ceramic-coating.jpg" height="280" width="500"
+                                    alt="Master Ceramic Coating Specialist" class="img-fluid w-100">
+                                <a class="magnifier glightbox"
+                                    href="public/images/certificates/cert-ceramic-coating.jpg"
+                                    data-gallery="FAREXEL-certificates"
+                                    aria-label="Open Master Ceramic Coating Specialist">
+                                    <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+                                </a>
                             </div>
-                            <div class="card-footer border-0">
-                                <p class="text-sm mb-0">
-                                    <ion-icon name="happy"></ion-icon> Fun While You Wait
-                                </p>
+                            <div class="card-body text-center py-3">
+                                <h4>Master Ceramic Specialist</h4>
                             </div>
                         </article>
                     </div>
-
-                    <!-- Baby Care -->
-                    <div class="cols-sm-12 col-md-6 col-lg-4">
-                        <article class="card amenity">
-                            <div class="card-body">
-                                <div class="icon d-flex align-items-center justify-content-center rounded-1 mb-3 p-2">
-                                    <ion-icon name="happy"></ion-icon>
-                                </div>
-                                <h6 class="mb-2">Baby Care</h6>
-                                <p class="text-sm mb-0">
-                                    Family-friendly facilities make it easier and more
-                                    comfortable to visit with your little ones.
-                                </p>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/certificates/cert-ppf-installer.jpg" height="280" width="500"
+                                    alt="PPF Master Installer Accreditation" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/certificates/cert-ppf-installer.jpg"
+                                    data-gallery="FAREXEL-certificates"
+                                    aria-label="Open PPF Master Installer Accreditation">
+                                    <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+                                </a>
                             </div>
-                            <div class="card-footer border-0">
-                                <p class="text-sm mb-0">
-                                    <ion-icon name="heart"></ion-icon> Family Friendly
-                                </p>
+                            <div class="card-body text-center py-3">
+                                <h4>PPF Master Installer</h4>
                             </div>
                         </article>
                     </div>
-
-                    <!-- Restaurant -->
-                    <div class="cols-sm-12 col-md-6 col-lg-4">
-                        <article class="card amenity">
-                            <div class="card-body">
-                                <div class="icon d-flex align-items-center justify-content-center rounded-1 mb-3 p-2">
-                                    <ion-icon name="restaurant"></ion-icon>
-                                </div>
-                                <h6 class="mb-2">Restaurant</h6>
-                                <p class="text-sm mb-0">
-                                    Enjoy a delicious meal in our comfortable dining area while
-                                    your vehicle receives its professional treatment.
-                                </p>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/certificates/cert-paint-correction.jpg" height="280" width="500"
+                                    alt="Paint Correction &amp; Refinement" class="img-fluid w-100">
+                                <a class="magnifier glightbox"
+                                    href="public/images/certificates/cert-paint-correction.jpg"
+                                    data-gallery="FAREXEL-certificates"
+                                    aria-label="Open Paint Correction and Refinement">
+                                    <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+                                </a>
                             </div>
-                            <div class="card-footer border-0">
-                                <p class="text-sm mb-0">
-                                    <ion-icon name="restaurant"></ion-icon> Dine While You Wait
-                                </p>
+                            <div class="card-body text-center py-3">
+                                <h4>Paint Correction &amp; Refinement</h4>
                             </div>
                         </article>
                     </div>
-
-                    <!-- Restroom -->
-                    <div class="cols-sm-12 col-md-6 col-lg-4">
-                        <article class="card amenity">
-                            <div class="card-body">
-                                <div class="icon d-flex align-items-center justify-content-center rounded-1 mb-3 p-2">
-                                    <ion-icon name="water"></ion-icon>
-                                </div>
-                                <h6 class="mb-2">Clean Restrooms</h6>
-                                <p class="text-sm mb-0">
-                                    Convenient, clean, and well-maintained restroom facilities
-                                    are available for all our customers.
-                                </p>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/certificates/cert-ida-member.jpg" height="280" width="500"
+                                    alt="IDA Certified Detailer" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/certificates/cert-ida-member.jpg"
+                                    data-gallery="FAREXEL-certificates" aria-label="Open IDA Certified Detailer">
+                                    <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+                                </a>
                             </div>
-                            <div class="card-footer border-0">
-                                <p class="text-sm mb-0">
-                                    <ion-icon name="checkmark-circle"></ion-icon> Customer
-                                    Facility
-                                </p>
+                            <div class="card-body text-center py-3">
+                                <h4>IDA Certified Detailer</h4>
                             </div>
                         </article>
                     </div>
-
-                    <!-- Kids Area -->
-                    <div class="cols-sm-12 col-md-6 col-lg-4">
-                        <article class="card amenity">
-                            <div class="card-body">
-                                <div class="icon d-flex align-items-center justify-content-center rounded-1 mb-3 p-2">
-                                    <ion-icon name="balloon"></ion-icon>
-                                </div>
-                                <h6 class="mb-2">Kids Area</h6>
-                                <p class="text-sm mb-0">
-                                    A dedicated kids' area gives little ones a fun and
-                                    comfortable space to enjoy while you wait.
-                                </p>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/certificates/cert-environmental.jpg" height="280" width="500"
+                                    alt="ISO 14001 Environmental Standard" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/certificates/cert-environmental.jpg"
+                                    data-gallery="FAREXEL-certificates"
+                                    aria-label="Open ISO 14001 Environmental Standard">
+                                    <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+                                </a>
                             </div>
-                            <div class="card-footer border-0">
-                                <p class="text-sm mb-0">
-                                    <ion-icon cl name="balloon"></ion-icon> Fun for Little Ones
-                                </p>
+                            <div class="card-body text-center py-3">
+                                <h4>ISO 14001 Compliance</h4>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/certificates/cert-nanotech.jpg" height="280" width="500"
+                                    alt="Nano-Technology Protection" class="img-fluid w-100">
+                                <a class="magnifier glightbox" href="public/images/certificates/cert-nanotech.jpg"
+                                    data-gallery="FAREXEL-certificates" aria-label="Open Nano-Technology Protection">
+                                    <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center py-3">
+                                <h4>Nano-Technology Protection</h4>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/certificates/cert-quality-assurance.jpg" height="280"
+                                    width="500" alt="Automotive Service Excellence" class="img-fluid w-100">
+                                <a class="magnifier glightbox"
+                                    href="public/images/certificates/cert-quality-assurance.jpg"
+                                    data-gallery="FAREXEL-certificates" aria-label="Open Automotive Service Excellence">
+                                    <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center py-3">
+                                <h4>Automotive Service Excellence</h4>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <article class="card photo border-0">
+                            <div class="card-header p-0 border-0">
+                                <img src="public/images/certificates/cert-master-detailer.jpg" height="280" width="500"
+                                    alt="Master Detailing Craftsman" class="img-fluid w-100">
+                                <a class="magnifier glightbox"
+                                    href="public/images/certificates/cert-master-detailer.jpg"
+                                    data-gallery="FAREXEL-certificates" aria-label="Open Master Detailing Craftsman">
+                                    <ion-icon name="search-outline" role="img" class="md hydrated"></ion-icon>
+                                </a>
+                            </div>
+                            <div class="card-body text-center py-3">
+                                <h4>Master Detailing Craftsman</h4>
                             </div>
                         </article>
                     </div>
@@ -608,12 +385,11 @@
                 <div class="row align-items-center">
                     <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
                         <div class="wrapper">
-                            <h2 class="cta-title">Reserve Your Detailing Experience.</h2>
+                            <h2 class="cta-title">Certified Protection You Can Count On.</h2>
                             <p class="cta-description">
-                                From deep interior cleaning to a flawless exterior finish, we
-                                bring your vehicle back to its best. Book your detailing
-                                service today and drive away feeling like you just bought it
-                                again.
+                                Experience factory-grade precision, paint protection, and detailing backed by
+                                international accreditation and certified automotive specialists. Book your consultation
+                                today.
                             </p>
                             <a href="tel:+971505550184" class="cta-btn">
                                 <div class="d-flex align-items-center gap-2">
@@ -622,7 +398,7 @@
                                     </div>
                                     <div>
                                         <p class="text-sm mb-1">We are available 24x7</p>
-                                        <h4 class="text-primary mb-0">+1 123456789</h4>
+                                        <h4 class="text-primary mb-0">+971 50 555 0184</h4>
                                     </div>
                                 </div>
                             </a>
@@ -868,7 +644,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <!-- Lenis -->
+    <!-- Lennis -->
     <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
     <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
@@ -878,6 +654,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- CountUp JS -->
     <script src="https://cdn.jsdelivr.net/npm/countup.js@2.9.0/dist/countUp.umd.js"></script>
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
     <!-- Main JS -->
     <script type="module" src="src/js/main.js"></script>
 </body>

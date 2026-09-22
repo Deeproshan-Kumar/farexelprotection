@@ -27,6 +27,12 @@
     height: 4rem;
     width: 0.25rem;
     background: linear-gradient(var(--clr-primary), transparent);
+    transition: all 300ms ease-in-out;
+  }
+
+  .card.process:hover::after {
+    top: -3.5rem;
+    height: 3.5rem;
   }
 }
 
@@ -101,6 +107,15 @@
     padding-left: 3rem;
   }
 
+  .farexel-services .nav-tabs.parent {
+    gap: 0.625rem;
+  }
+
+  .farexel-services .nav-tabs.parent .nav-link {
+    font-size: 0.875rem;
+    padding: 0.5rem;
+  }
+
   .subpage-banner-img {
     display: none;
   }
@@ -167,36 +182,22 @@
     width: 100%;
   }
 
-  .video-control-btn.btn[data-size="fit"] {
+  .video-control-btn.btn[data-size="fit"] span {
     height: 2.5rem;
     width: 2.5rem;
   }
 
-  .popular-car-item h3 {
+  .service-item h3 {
     margin-bottom: -1rem;
   }
 
-  .popular-car-item__image {
+  .service-item__image {
     min-height: 12rem;
   }
 
-  .popular-car-item__amount {
+  .service-item__amount {
     right: 0;
     bottom: 0.25rem;
-  }
-
-  .trusted-partners__track {
-    animation-duration: 18s;
-  }
-
-  .trusted-partners__group {
-    min-height: 5rem;
-    gap: 1.5rem;
-  }
-
-  .service-statistics {
-    margin-right: auto;
-    max-height: 8rem;
   }
 
   .career-header .row>div,
@@ -278,13 +279,5 @@
   .navbar,
   .footer {
     padding-inline: 3rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .service-marquee__track,
-  .trusted-partners__track {
-    animation-play-state: paused;
   }
 }
