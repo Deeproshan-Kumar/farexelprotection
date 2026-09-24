@@ -169,14 +169,14 @@
     font-size: 0.875rem;
   }
 
-  .site-header .announcement-bar {
-    max-height: var(--announcement-height, 3.3125rem);
-  }
-
   .site-header .announcement-bar li,
   .site-header .announcement-bar li a {
     display: flex;
     font-size: 0.75rem;
+  }
+
+  .hero-image-container {
+    padding-top: 2rem;
   }
 
   .service-strip .service-marquee__group {
@@ -191,6 +191,10 @@
 
   .about .contact-handle {
     width: 100%;
+  }
+
+  .countdown-timer .screen {
+    padding: 0.25rem;
   }
 
   .showcase-of-excellence .wrapper .work p {
@@ -246,6 +250,12 @@
     justify-content: flex-start;
   }
 
+  .achievements .icon-box .icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 1rem;
+  }
+
   .video-control-btn.btn[data-size="fit"] span {
     height: 2.5rem;
     width: 2.5rem;
@@ -264,25 +274,29 @@
     bottom: 0.25rem;
   }
 
-  .career-header .row > div,
-  .career-header .row > div:last-child .d-flex {
+  .blogs .blog .blog-title h5 {
+    font-size: 1rem;
+  }
+
+  .career-header .row>div,
+  .career-header .row>div:last-child .d-flex {
     width: 100%;
   }
 
-  .career-header .row > div:last-child .d-flex {
+  .career-header .row>div:last-child .d-flex {
     justify-content: stretch;
   }
 
-  .career-header .row > div:last-child button {
+  .career-header .row>div:last-child button {
     flex: 1;
   }
 
-  .careers > .container > .row {
+  .careers>.container>.row {
     display: block;
   }
 
-  .careers > .container > .row > .col-3,
-  .careers > .container > .row > .col-9 {
+  .careers>.container>.row>.col-3,
+  .careers>.container>.row>.col-9 {
     width: 100%;
   }
 
@@ -312,6 +326,12 @@
   }
 }
 
+@media only screen and (max-width: 510px) {
+  .customer-experiences .image-col {
+    padding-left: 5.25rem;
+  }
+}
+
 .section,
 .site-header .announcement-bar,
 .navbar,
@@ -320,6 +340,7 @@
 }
 
 @media (min-width: 48rem) {
+
   .section,
   .site-header .announcement-bar,
   .navbar,
@@ -329,6 +350,7 @@
 }
 
 @media (min-width: 64rem) {
+
   .section,
   .site-header .announcement-bar,
   .navbar,
@@ -338,6 +360,7 @@
 }
 
 @media (min-width: 80rem) {
+
   .section,
   .site-header .announcement-bar,
   .navbar,
@@ -347,6 +370,7 @@
 }
 
 @media (min-width: 96rem) {
+
   .section,
   .site-header .announcement-bar,
   .navbar,

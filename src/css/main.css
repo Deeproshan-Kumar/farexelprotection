@@ -252,7 +252,6 @@ input[type="radio"] {
 }
 
 .site-header .announcement-bar {
-  max-height: var(--announcement-height, 3.3125rem);
   overflow: hidden;
   opacity: 1;
   visibility: visible;
@@ -1396,6 +1395,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 .customer-experiences .image-col {
   position: relative;
   padding: 2rem 4rem;
+  padding-right: 1rem;
 }
 
 .customer-experiences .image-col img {
