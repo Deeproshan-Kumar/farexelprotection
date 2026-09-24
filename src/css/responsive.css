@@ -330,6 +330,16 @@
   .customer-experiences .image-col {
     padding-left: 5.25rem;
   }
+
+  .whatsapp-chat-popup {
+    right: 1rem;
+    max-width: 18rem;
+  }
+
+  .site-header .navbar-nav .dropdown-menu {
+    min-width: 18rem;
+    margin-left: 0;
+  }
 }
 
 .section,
