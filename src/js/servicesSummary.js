@@ -23,7 +23,7 @@ export function initServicesSummary() {
     const activeVehicle = getActiveVehicleName();
 
     if (summaryVehicleTypeEl) {
-      summaryVehicleTypeEl.innerHTML = `<ion-icon name="car-sport" class="me-1"></ion-icon>${activeVehicle}`;
+      summaryVehicleTypeEl.innerHTML = `${activeVehicle}`;
     }
 
     // Sync vehicle type in form dropdown if option exists
@@ -80,7 +80,7 @@ export function initServicesSummary() {
     }
 
     if (summaryTotalTimeEl) {
-      summaryTotalTimeEl.innerHTML = `<ion-icon name="time-outline" class="me-1"></ion-icon>${totalHours} Business Hours`;
+      summaryTotalTimeEl.innerHTML = `${totalHours} Business Hours`;
     }
 
     if (summaryTotalPriceEl) {

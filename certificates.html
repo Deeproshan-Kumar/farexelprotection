@@ -58,7 +58,7 @@
     </div>
 
     <!-- Site Header -->
-    <header class="site-header" id="site-header">
+    <header class="site-header" id="site-header" aria-label="Header">
       <div class="announcement-bar bg-primary">
         <div class="container py-1 py-lg-2">
           <div class="row align-items-center">
@@ -116,7 +116,7 @@
       </div>
       <nav class="navbar navbar-expand-lg">
         <div class="container py-lg-2">
-          <a class="navbar-brand me-0 p-0" href="index.html">
+          <a class="navbar-brand me-0" href="index.html">
             <img
               src="public/images/logo.png"
               alt="Logo"
@@ -137,7 +137,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link rounded-1 active dropdown-toggle"
+                  class="nav-link rounded-1 dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -146,21 +146,72 @@
                   <ion-icon name="information-circle"></ion-icon>About
                 </a>
                 <ul class="dropdown-menu px-2">
-                  <li><a class="dropdown-item" href="about.html">About</a></li>
                   <li>
-                    <a class="dropdown-item active" href="certificates.html"
-                      >Certificates</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="about.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                      </span>
+                      About Us
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="our-team.html">Our Team</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="testimonials.html"
-                      >Testimonials</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2 active"
+                      href="certificates.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="document-outline"></ion-icon>
+                      </span>
+                      Certificates
+                    </a>
                   </li>
-                  <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="our-team.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                      </span>
+                      Our Team
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="leadership-insights.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="pencil-outline"></ion-icon>
+                      </span>
+                      Leadership Insights
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="testimonials.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="happy-outline"></ion-icon>
+                      </span>
+                      Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="faqs.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                      </span>
+                      FAQs
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -184,14 +235,26 @@
                 >
                 <ul class="dropdown-menu px-2">
                   <li>
-                    <a class="rounded-1 dropdown-item" href="photos.html"
-                      >Photos</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="photos.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="image-outline"></ion-icon>
+                      </span>
+                      Photos
+                    </a>
                   </li>
                   <li>
-                    <a class="rounded-1 dropdown-item active" href="videos.html"
-                      >Videos</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="videos.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                      </span>
+                      Videos
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -215,7 +278,7 @@
           <div class="mobile-menu">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html"
+                <a class="nav-link" aria-current="page" href="index.html"
                   >Home</a
                 >
               </li>
@@ -230,17 +293,71 @@
                   About
                 </a>
                 <ul class="dropdown-menu px-2">
-                  <li><a class="dropdown-item" href="about.html">About</a></li>
                   <li>
-                    <a class="dropdown-item" href="our-team.html">Our Team</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="testimonials.html"
-                      >Testimonials</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="about.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                      </span>
+                      About Us
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="faqs.html">FAQs</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2 active"
+                      href="certificates.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="document-outline"></ion-icon>
+                      </span>
+                      Certificates
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="our-team.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                      </span>
+                      Our Team
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="leadership-insights.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="pencil-outline"></ion-icon>
+                      </span>
+                      Leadership Insights
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="testimonials.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="happy-outline"></ion-icon>
+                      </span>
+                      Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="faqs.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                      </span>
+                      FAQs
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -263,15 +380,33 @@
                 >
                 <ul class="dropdown-menu px-2">
                   <li>
-                    <a class="dropdown-item" href="photos.html">Photos</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="photos.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="image-outline"></ion-icon>
+                      </span>
+                      Photos
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="videos.html">Videos</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="videos.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                      </span>
+                      Videos
+                    </a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
+                <a class="nav-link rounded-1" href="blog.html"
+                  ><ion-icon name="reader"></ion-icon>Blog</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="career.html">Career</a>
@@ -321,37 +456,46 @@
     <main class="main" id="main">
       <!-- Subpage Banner -->
       <section
-        class="section subpage-banner"
+        class="subpage-banner"
         id="subpage-banner"
         aria-label="Certificates Banner"
       >
-        <div class="container position-relative py-4 py-lg-5">
-          <h1>Certificates</h1>
-          <p>
-            Verified Excellence, Industry Certification &amp; Uncompromising
-            Standards.
-          </p>
-          <div class="breadcrumb">
-            <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
-              <li>
-                <a
-                  href="index.html"
-                  class="text-decoration-none text-primary d-flex align-items-center gap-2"
-                >
-                  <ion-icon name="home" class="icon"></ion-icon>Home
-                </a>
-              </li>
-              <ion-icon name="chevron-forward"></ion-icon>
-              <li>
-                <a
-                  href="about.html"
-                  class="text-decoration-none d-flex align-items-center gap-2"
-                  >About</a
-                >
-              </li>
-              <ion-icon name="chevron-forward"></ion-icon>
-              <li>Certificates</li>
-            </ul>
+        <img
+          src="public/images/banners/certificates-banner.jpg"
+          alt="Certificates Banner"
+          class="img-fluid w-100 h-100"
+        />
+        <div class="section">
+          <div class="container position-relative py-4 py-lg-5">
+            <h1>Certificates</h1>
+            <p>
+              Verified Excellence, Industry Certification &amp; Uncompromising
+              Standards.
+            </p>
+            <div class="breadcrumb">
+              <ul
+                class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0"
+              >
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-decoration-none text-primary d-flex align-items-center gap-2"
+                  >
+                    <ion-icon name="home" class="icon"></ion-icon>Home
+                  </a>
+                </li>
+                <ion-icon name="chevron-forward"></ion-icon>
+                <li>
+                  <a
+                    href="about.html"
+                    class="text-decoration-none d-flex align-items-center gap-2"
+                    >About</a
+                  >
+                </li>
+                <ion-icon name="chevron-forward"></ion-icon>
+                <li>Certificates</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -988,10 +1132,14 @@
               class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end gap-4 mb-0"
             >
               <li class="mb-0">
-                <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a>
+                <a href="privacy-policy.html" class="text-decoration-none"
+                  >Privacy Policy</a
+                >
               </li>
               <li class="mb-0">
-                <a href="terms-of-service.html" class="text-decoration-none">Terms of Service</a>
+                <a href="terms-of-service.html" class="text-decoration-none"
+                  >Terms of Service</a
+                >
               </li>
             </ul>
           </div>

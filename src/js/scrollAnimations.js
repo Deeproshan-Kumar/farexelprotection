@@ -252,7 +252,7 @@ export function initScrollAnimations() {
   revealGroup(".gsap-about-stats-item", { y: 24, duration: 0.7 });
 
   // ─── #our-mission-vision ────────────────────────────────────────────────────
-  waveReveal("#our-mission-vision", ".gsap-mission-vision-card", {
+  waveReveal("#our-mission-vision", ".gsap-mission-vision-card, .vm-card", {
     y: 36,
     skewY: 0,
   });
@@ -305,7 +305,7 @@ export function initScrollAnimations() {
   waveReveal(".gsap-cx-platform-cards", ".gsap-platform-card", { y: 48, skewY: 0 });
 
   // ─── Reviews grid (Customer Experience page) ─────────────────────────────────
-  waveReveal(".gsap-cx-reviews-row", ".gsap-testimonial-card", { y: 48, skewY: 0 });
+  waveReveal(".gsap-cx-reviews-row", { y: 48, skewY: 0 });
 
   // ─── Testimonials page grid ───────────────────────────────────────────────────
   waveReveal(".testimonial-grid, #customer-experiences", ".gsap-testimonial-card", {
@@ -491,6 +491,19 @@ export function initScrollAnimations() {
 
   // ─── Re-measure once everything (images, fonts) has loaded ───────────────────
   window.addEventListener("load", () => ScrollTrigger.refresh());
+
+  // ─── Re-measure when lazy-loaded images finish downloading ───────────────────
+  let imgRefreshTimer;
+  document.addEventListener(
+    "load",
+    (e) => {
+      if (e.target && e.target.tagName === "IMG") {
+        clearTimeout(imgRefreshTimer);
+        imgRefreshTimer = setTimeout(() => ScrollTrigger.refresh(), 150);
+      }
+    },
+    true,
+  );
 
   // ─── Re-measure on Bootstrap tab / accordion toggle ──────────────────────────
   const handleLayoutChange = () => {
