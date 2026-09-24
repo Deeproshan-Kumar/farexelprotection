@@ -57,13 +57,18 @@
   }
 }
 
-@media (max-width: 991px) {
-}
-
 /* Mobile */
 @media only screen and (max-width: 991px) {
+  .logo {
+    height: 2.5rem;
+  }
+
   .site-header .navbar-nav .nav-link {
     padding: 0.75rem;
+  }
+
+  .site-header .navbar-nav .dropdown-menu::before {
+    display: none;
   }
 
   .announcement-bar .action.login::before {
@@ -106,6 +111,16 @@
   .farexel-services .nav-tabs.parent .nav-link {
     font-size: 0.875rem;
     padding: 0.5rem;
+  }
+
+  .blogs .blog .profile-pic {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .career-form,
+  .service-req-form {
+    padding: 1rem;
   }
 
   .subpage-banner-img {
@@ -281,6 +296,19 @@
 
   .masonary-grid {
     column-count: 1;
+  }
+
+  .contact-us-spinner img {
+    height: 7rem;
+    width: 7rem;
+  }
+
+  .whatsapp-btn {
+    right: 1rem;
+  }
+
+  .scroll-to-top-btn {
+    right: 1.2rem;
   }
 }
 

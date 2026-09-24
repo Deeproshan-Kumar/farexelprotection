@@ -305,7 +305,7 @@ export function initScrollAnimations() {
   waveReveal(".gsap-cx-platform-cards", ".gsap-platform-card", { y: 48, skewY: 0 });
 
   // ─── Reviews grid (Customer Experience page) ─────────────────────────────────
-  waveReveal(".gsap-cx-reviews-row", ".gsap-testimonial-card", { y: 48, skewY: 0 });
+  waveReveal(".gsap-cx-reviews-row", { y: 48, skewY: 0 });
 
   // ─── Testimonials page grid ───────────────────────────────────────────────────
   waveReveal(".testimonial-grid, #customer-experiences", ".gsap-testimonial-card", {

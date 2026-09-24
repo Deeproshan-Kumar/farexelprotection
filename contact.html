@@ -53,39 +53,39 @@
     </div>
 
     <!-- Site Header -->
-    <header class="site-header" id="site-header">
+    <header class="site-header" id="site-header" aria-label="Header">
       <div class="announcement-bar bg-primary">
         <div class="container py-1 py-lg-2">
           <div class="row align-items-center">
             <div class="col-sm-12 col-lg-6">
               <ul
-                class="list-unstyled mb-0 d-flex justify-content-between justify-content-lg-start align-items-center gap-2 gap-xl-4 text-sm mb-0"
+                class="list-unstyled d-flex justify-content-between justify-content-lg-start align-items-center gap-2 gap-xl-4 text-sm mb-0"
               >
                 <li class="action mail">
                   <a href="#" class="text-decoration-none"
-                    ><ion-icon class="icon me-2" name="mail"></ion-icon
+                    ><ion-icon class="icon me-1" name="mail"></ion-icon
                     >contact@farexel.com</a
                   >
                 </li>
                 <li class="action readonly">
-                  <ion-icon class="icon me-2" name="time"></ion-icon>Mon - Fri :
+                  <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Fri :
                   09:00am - 08:00pm
                 </li>
               </ul>
             </div>
             <div class="col-sm-12 col-lg-6">
               <ul
-                class="list-unstyled mb-0 d-flex justify-content-between justify-content-lg-end align-items-center justify-content-end gap-2 gap-xl-4 text-sm mb-0"
+                class="list-unstyled d-flex justify-content-between justify-content-lg-end align-items-center justify-content-end gap-2 gap-xl-4 text-sm mb-0"
               >
                 <li class="action call">
                   <a href="#" class="text-decoration-none"
-                    ><ion-icon class="icon me-2" name="call"></ion-icon>+91
+                    ><ion-icon class="icon me-1" name="call"></ion-icon>+91
                     1234567890</a
                   >
                 </li>
                 <li class="action switch-lang">
                   <label for="lang"
-                    ><ion-icon class="icon me-2" name="language"></ion-icon
+                    ><ion-icon class="icon me-1" name="language"></ion-icon
                     >Lang:</label
                   >
                   <select name="lang" id="lang" class="lang">
@@ -94,13 +94,13 @@
                 </li>
                 <li class="action login">
                   <a href="#" class="text-decoration-none"
-                    ><ion-icon class="icon me-2" name="person"></ion-icon
+                    ><ion-icon class="icon me-1" name="person"></ion-icon
                     >Login</a
                   >
                 </li>
                 <li class="action register">
                   <a href="#" class="text-decoration-none"
-                    ><ion-icon class="icon me-2" name="person"></ion-icon
+                    ><ion-icon class="icon me-1" name="person"></ion-icon
                     >Register</a
                   >
                 </li>
@@ -111,7 +111,7 @@
       </div>
       <nav class="navbar navbar-expand-lg">
         <div class="container py-lg-2">
-          <a class="navbar-brand me-0 p-0" href="index.html">
+          <a class="navbar-brand me-0" href="index.html">
             <img
               src="public/images/logo.png"
               alt="Logo"
@@ -141,21 +141,72 @@
                   <ion-icon name="information-circle"></ion-icon>About
                 </a>
                 <ul class="dropdown-menu px-2">
-                  <li><a class="dropdown-item" href="about.html">About</a></li>
                   <li>
-                    <a class="dropdown-item" href="certificates.html"
-                      >Certificates</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="about.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                      </span>
+                      About Us
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="our-team.html">Our Team</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="testimonials.html"
-                      >Testimonials</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="certificates.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="document-outline"></ion-icon>
+                      </span>
+                      Certificates
+                    </a>
                   </li>
-                  <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="our-team.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                      </span>
+                      Our Team
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="leadership-insights.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="pencil-outline"></ion-icon>
+                      </span>
+                      Leadership Insights
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="testimonials.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="happy-outline"></ion-icon>
+                      </span>
+                      Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="faqs.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                      </span>
+                      FAQs
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -179,14 +230,26 @@
                 >
                 <ul class="dropdown-menu px-2">
                   <li>
-                    <a class="rounded-1 dropdown-item" href="photos.html"
-                      >Photos</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="photos.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="image-outline"></ion-icon>
+                      </span>
+                      Photos
+                    </a>
                   </li>
                   <li>
-                    <a class="rounded-1 dropdown-item" href="videos.html"
-                      >Videos</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="videos.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                      </span>
+                      Videos
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -225,17 +288,71 @@
                   About
                 </a>
                 <ul class="dropdown-menu px-2">
-                  <li><a class="dropdown-item" href="about.html">About</a></li>
                   <li>
-                    <a class="dropdown-item" href="our-team.html">Our Team</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="testimonials.html"
-                      >Testimonials</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="about.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                      </span>
+                      About Us
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="faqs.html">FAQs</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="certificates.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="document-outline"></ion-icon>
+                      </span>
+                      Certificates
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="our-team.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                      </span>
+                      Our Team
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="leadership-insights.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="pencil-outline"></ion-icon>
+                      </span>
+                      Leadership Insights
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="testimonials.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="happy-outline"></ion-icon>
+                      </span>
+                      Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="faqs.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                      </span>
+                      FAQs
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -258,15 +375,33 @@
                 >
                 <ul class="dropdown-menu px-2">
                   <li>
-                    <a class="dropdown-item" href="photos.html">Photos</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="photos.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="image-outline"></ion-icon>
+                      </span>
+                      Photos
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="videos.html">Videos</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="videos.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                      </span>
+                      Videos
+                    </a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
+                <a class="nav-link rounded-1" href="blog.html"
+                  ><ion-icon name="reader"></ion-icon>Blog</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="career.html">Career</a>
@@ -294,7 +429,7 @@
               class="btn btn-primary d-none d-lg-inline-block"
             >
               <span>
-                <ion-icon name="call" class="me-2"></ion-icon
+                <ion-icon name="call" class="me-1"></ion-icon
                 ><span class="d-none d-lg-inline-block">Book Now</span>
               </span>
             </a>
@@ -316,31 +451,38 @@
     <main class="main" id="main">
       <!-- Subpage Banner -->
       <section
-        class="section subpage-banner"
+        class="subpage-banner"
         id="subpage-banner"
         aria-label="Contact Us Banner"
       >
-        <div class="container position-relative py-4 py-lg-5">
-          <h1>Contact Us</h1>
-          <p>
-            Have questions or ready to book? Get in touch with the FAREXEL team
-            today.
-          </p>
-          <div class="breadcrumb">
-            <ul
-              class="list-unstyled mb-0 d-flex align-items-center gap-2 ps-0 mb-0"
-            >
-              <li>
-                <a
-                  href="index.html"
-                  class="text-decoration-none text-primary d-flex align-items-center gap-2"
-                >
-                  <ion-icon name="home" class="icon"></ion-icon>Home
-                </a>
-              </li>
-              <ion-icon name="chevron-forward"></ion-icon>
-              <li>Contact</li>
-            </ul>
+        <img
+          src="public/images/banners/contact-banner.jpg"
+          alt="Contact Banner"
+          class="img-fluid w-100 h-100"
+        />
+        <div class="section">
+          <div class="container position-relative py-4 py-lg-5">
+            <h1>Contact Us</h1>
+            <p>
+              Have questions or ready to book? Get in touch with the FAREXEL
+              team today.
+            </p>
+            <div class="breadcrumb">
+              <ul
+                class="list-unstyled mb-0 d-flex align-items-center gap-2 ps-0 mb-0"
+              >
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-decoration-none text-primary d-flex align-items-center gap-2"
+                  >
+                    <ion-icon name="home" class="icon"></ion-icon>Home
+                  </a>
+                </li>
+                <ion-icon name="chevron-forward"></ion-icon>
+                <li>Contact</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -976,10 +1118,14 @@
               class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end gap-4 mb-0"
             >
               <li class="mb-0">
-                <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a>
+                <a href="privacy-policy.html" class="text-decoration-none"
+                  >Privacy Policy</a
+                >
               </li>
               <li class="mb-0">
-                <a href="terms-of-service.html" class="text-decoration-none">Terms of Service</a>
+                <a href="terms-of-service.html" class="text-decoration-none"
+                  >Terms of Service</a
+                >
               </li>
             </ul>
           </div>

@@ -58,7 +58,7 @@
     </div>
 
     <!-- Site Header -->
-    <header class="site-header" id="site-header">
+    <header class="site-header" id="site-header" aria-label="Header">
       <div class="announcement-bar bg-primary">
         <div class="container py-1 py-lg-2">
           <div class="row align-items-center">
@@ -116,7 +116,7 @@
       </div>
       <nav class="navbar navbar-expand-lg">
         <div class="container py-lg-2">
-          <a class="navbar-brand me-0 p-0" href="index.html">
+          <a class="navbar-brand me-0" href="index.html">
             <img
               src="public/images/logo.png"
               alt="Logo"
@@ -146,21 +146,72 @@
                   <ion-icon name="information-circle"></ion-icon>About
                 </a>
                 <ul class="dropdown-menu px-2">
-                  <li><a class="dropdown-item" href="about.html">About</a></li>
                   <li>
-                    <a class="dropdown-item" href="certificates.html"
-                      >Certificates</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="about.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                      </span>
+                      About Us
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="our-team.html">Our Team</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="testimonials.html"
-                      >Testimonials</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="certificates.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="document-outline"></ion-icon>
+                      </span>
+                      Certificates
+                    </a>
                   </li>
-                  <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="our-team.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                      </span>
+                      Our Team
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="leadership-insights.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="pencil-outline"></ion-icon>
+                      </span>
+                      Leadership Insights
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="testimonials.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="happy-outline"></ion-icon>
+                      </span>
+                      Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="faqs.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                      </span>
+                      FAQs
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -175,7 +226,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link rounded-1 dropdown-toggle active"
+                  class="nav-link rounded-1 dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -184,14 +235,26 @@
                 >
                 <ul class="dropdown-menu px-2">
                   <li>
-                    <a class="rounded-1 dropdown-item active" href="photos.html"
-                      >Photos</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2 active"
+                      href="photos.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="image-outline"></ion-icon>
+                      </span>
+                      Photos
+                    </a>
                   </li>
                   <li>
-                    <a class="rounded-1 dropdown-item" href="videos.html"
-                      >Videos</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="videos.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                      </span>
+                      Videos
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -230,17 +293,71 @@
                   About
                 </a>
                 <ul class="dropdown-menu px-2">
-                  <li><a class="dropdown-item" href="about.html">About</a></li>
                   <li>
-                    <a class="dropdown-item" href="our-team.html">Our Team</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="testimonials.html"
-                      >Testimonials</a
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="about.html"
                     >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="information-circle-outline"></ion-icon>
+                      </span>
+                      About Us
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="faqs.html">FAQs</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="certificates.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="document-outline"></ion-icon>
+                      </span>
+                      Certificates
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="our-team.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="people-outline"></ion-icon>
+                      </span>
+                      Our Team
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="leadership-insights.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="pencil-outline"></ion-icon>
+                      </span>
+                      Leadership Insights
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="testimonials.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="happy-outline"></ion-icon>
+                      </span>
+                      Testimonials
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="faqs.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="help-circle-outline"></ion-icon>
+                      </span>
+                      FAQs
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -254,7 +371,7 @@
               </li>
               <li class="nav-item dropdown">
                 <a
-                  class="nav-link dropdown-toggle active"
+                  class="nav-link dropdown-toggle"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -263,15 +380,33 @@
                 >
                 <ul class="dropdown-menu px-2">
                   <li>
-                    <a class="dropdown-item active" href="photos.html">Photos</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2 active"
+                      href="photos.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="image-outline"></ion-icon>
+                      </span>
+                      Photos
+                    </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="videos.html">Videos</a>
+                    <a
+                      class="dropdown-item d-flex align-items-center gap-2"
+                      href="videos.html"
+                    >
+                      <span class="dropdown-item-icon">
+                        <ion-icon name="videocam-outline"></ion-icon>
+                      </span>
+                      Videos
+                    </a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
+                <a class="nav-link rounded-1" href="blog.html"
+                  ><ion-icon name="reader"></ion-icon>Blog</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="career.html">Career</a>
@@ -321,34 +456,43 @@
     <main class="main" id="main">
       <!-- Subpage Banner -->
       <section
-        class="section subpage-banner"
+        class="subpage-banner"
         id="subpage-banner"
         aria-label="Photo Gallery Hero Banner"
       >
-        <div class="container position-relative py-4 py-lg-5">
-          <h1>Photos</h1>
-          <p>Showcasing Precision in Every Detail.</p>
-          <div class="breadcrumb">
-            <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
-              <li>
-                <a
-                  href="index.html"
-                  class="text-decoration-none text-primary d-flex align-items-center gap-2"
-                >
-                  <ion-icon name="home" class="icon"></ion-icon>Home
-                </a>
-              </li>
-              <ion-icon name="chevron-forward"></ion-icon>
-              <li>
-                <a
-                  href="portfolio.html"
-                  class="text-decoration-none d-flex align-items-center gap-2"
-                  >Portfolio</a
-                >
-              </li>
-              <ion-icon name="chevron-forward"></ion-icon>
-              <li>Photos</li>
-            </ul>
+        <img
+          src="public/images/banners/portfolio-image-banner.jpg"
+          alt="Portfolio Photo Banner"
+          class="img-fluid w-100 h-100"
+        />
+        <div class="section">
+          <div class="container position-relative py-4 py-lg-5">
+            <h1>Photos</h1>
+            <p>Showcasing Precision in Every Detail.</p>
+            <div class="breadcrumb">
+              <ul
+                class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0"
+              >
+                <li>
+                  <a
+                    href="index.html"
+                    class="text-decoration-none text-primary d-flex align-items-center gap-2"
+                  >
+                    <ion-icon name="home" class="icon"></ion-icon>Home
+                  </a>
+                </li>
+                <ion-icon name="chevron-forward"></ion-icon>
+                <li>
+                  <a
+                    href="portfolio.html"
+                    class="text-decoration-none d-flex align-items-center gap-2"
+                    >Portfolio</a
+                  >
+                </li>
+                <ion-icon name="chevron-forward"></ion-icon>
+                <li>Photos</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -362,22 +506,24 @@
         <div class="container py-4 py-lg-5">
           <div class="row filters gy-3 gy-lg-0 mb-4">
             <div class="col-sm-12 col-lg-6">Showing 1–9 of 15 results</div>
-            <div class="position-relative col-sm-12 col-lg-6">
-              <select name="sort" id="sort" class="sorting form-control pe-4">
-                <option value="default">Default</option>
-                <option value="newest">Newest</option>
-                <option value="oldest">Oldest</option>
-              </select>
-              <ion-icon
-                name="chevron-down-outline"
-                class="select-icon"
-              ></ion-icon>
+            <div class="col-sm-12 col-lg-6">
+              <div class="position-relative">
+                <select name="sort" id="sort" class="sorting form-control pe-4">
+                  <option value="default">Default</option>
+                  <option value="newest">Newest</option>
+                  <option value="oldest">Oldest</option>
+                </select>
+                <ion-icon
+                  name="chevron-down-outline"
+                  class="select-icon"
+                ></ion-icon>
+              </div>
             </div>
           </div>
           <div class="row gy-4">
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="card photo border-0">
-                <div class="card-header p-0 border-0">
+                <div class="card-header p-0">
                   <img
                     src="public/images/surface-refinement.jpg"
                     height="280"
@@ -394,15 +540,15 @@
                     <ion-icon name="search-outline"></ion-icon>
                   </a>
                 </div>
-                <div class="card-body text-center">
-                  <h4>Precision Surface Refinement</h4>
+                <div class="card-body">
                   <p class="text-primary mb-0">Paint Correction</p>
+                  <h4 class="mb-0">Precision Surface Refinement</h4>
                 </div>
               </article>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="card photo border-0">
-                <div class="card-header p-0 border-0">
+                <div class="card-header p-0">
                   <img
                     src="public/images/interior-detailing.jpg"
                     height="280"
@@ -419,15 +565,15 @@
                     <ion-icon name="search-outline"></ion-icon>
                   </a>
                 </div>
-                <div class="card-body text-center">
-                  <h4>Interior Detailing Excellence</h4>
+                <div class="card-body">
                   <p class="text-primary mb-0">Interior Care</p>
+                  <h4 class="mb-0">Interior Detailing Excellence</h4>
                 </div>
               </article>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="card photo border-0">
-                <div class="card-header p-0 border-0">
+                <div class="card-header p-0">
                   <img
                     src="public/images/client-experience.jpg"
                     height="280"
@@ -444,15 +590,15 @@
                     <ion-icon name="search-outline"></ion-icon>
                   </a>
                 </div>
-                <div class="card-body text-center">
-                  <h4>Client Experience & Consultation</h4>
+                <div class="card-body">
                   <p class="text-primary mb-0">Consultation</p>
+                  <h4 class="mb-2">Client Experience & Consultation</h4>
                 </div>
               </article>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="card photo border-0">
-                <div class="card-header p-0 border-0">
+                <div class="card-header p-0">
                   <img
                     src="public/images/paint-enhancement.jpg"
                     height="280"
@@ -469,15 +615,15 @@
                     <ion-icon name="search-outline"></ion-icon>
                   </a>
                 </div>
-                <div class="card-body text-center">
-                  <h4>Advance Paint Enhancement</h4>
+                <div class="card-body">
                   <p class="text-primary mb-0">Surface Protection</p>
+                  <h4 class="mb-0">Advance Paint Enhancement</h4>
                 </div>
               </article>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="card photo border-0">
-                <div class="card-header p-0 border-0">
+                <div class="card-header p-0">
                   <img
                     src="public/images/premium-finish-protection.jpg"
                     height="280"
@@ -494,15 +640,15 @@
                     <ion-icon name="search-outline"></ion-icon>
                   </a>
                 </div>
-                <div class="card-body text-center">
-                  <h4>Premium Finish Protection</h4>
+                <div class="card-body">
                   <p class="text-primary mb-0">Ceramic Coating</p>
+                  <h4 class="mb-0">Premium Finish Protection</h4>
                 </div>
               </article>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="card photo border-0">
-                <div class="card-header p-0 border-0">
+                <div class="card-header p-0">
                   <img
                     src="public/images/premium-finish-detailing.jpg"
                     height="280"
@@ -519,15 +665,15 @@
                     <ion-icon name="search-outline"></ion-icon>
                   </a>
                 </div>
-                <div class="card-body text-center">
-                  <h4>Premium Finish Detailing</h4>
+                <div class="card-body">
                   <p class="text-primary mb-0">Ceramic Coating</p>
+                  <h4 class="mb-0">Premium Finish Detailing</h4>
                 </div>
               </article>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="card photo border-0">
-                <div class="card-header p-0 border-0">
+                <div class="card-header p-0">
                   <img
                     src="public/images/suspension-and-underbody.jpg"
                     height="280"
@@ -544,15 +690,15 @@
                     <ion-icon name="search-outline"></ion-icon>
                   </a>
                 </div>
-                <div class="card-body text-center">
-                  <h4>Suspension & Underbody Care</h4>
+                <div class="card-body">
                   <p class="text-primary mb-0">Underbody Care</p>
+                  <h4 class="mb-0">Suspension & Underbody Care</h4>
                 </div>
               </article>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="card photo border-0">
-                <div class="card-header p-0 border-0">
+                <div class="card-header p-0">
                   <img
                     src="public/images/client-experience.jpg"
                     height="280"
@@ -569,15 +715,15 @@
                     <ion-icon name="search-outline"></ion-icon>
                   </a>
                 </div>
-                <div class="card-body text-center">
-                  <h4>Red Vehicle Exterior Finish</h4>
+                <div class="card-body">
                   <p class="text-primary mb-0">Exterior Detailing</p>
+                  <h4 class="mb-2">Red Vehicle Exterior Finish</h4>
                 </div>
               </article>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-4">
               <article class="card photo border-0">
-                <div class="card-header p-0 border-0">
+                <div class="card-header p-0">
                   <img
                     src="public/images/surface-refinement.jpg"
                     height="280"
@@ -594,9 +740,9 @@
                     <ion-icon name="search-outline"></ion-icon>
                   </a>
                 </div>
-                <div class="card-body text-center">
-                  <h4>Executive Vehicle Care</h4>
+                <div class="card-body">
                   <p class="text-primary mb-0">Premium Finish</p>
+                  <h4 class="mb-0">Executive Vehicle Care</h4>
                 </div>
               </article>
             </div>
@@ -984,10 +1130,14 @@
               class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end gap-4 mb-0"
             >
               <li class="mb-0">
-                <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a>
+                <a href="privacy-policy.html" class="text-decoration-none"
+                  >Privacy Policy</a
+                >
               </li>
               <li class="mb-0">
-                <a href="terms-of-service.html" class="text-decoration-none">Terms of Service</a>
+                <a href="terms-of-service.html" class="text-decoration-none"
+                  >Terms of Service</a
+                >
               </li>
             </ul>
           </div>
