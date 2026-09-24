@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Career | FAREXEL</title>
+    <title>Terms of Service | FAREXEL</title>
     <link
       rel="icon"
       type="image/png"
@@ -34,6 +34,11 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- GLightbox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/css/glightbox.min.css"
     />
     <!-- App CSS -->
     <link rel="stylesheet" href="src/css/bootstrap-override.css" />
@@ -141,24 +146,21 @@
                   <ion-icon name="information-circle"></ion-icon>About
                 </a>
                 <ul class="dropdown-menu px-2">
+                  <li><a class="dropdown-item" href="about.html">About</a></li>
                   <li>
-                    <a class="rounded-1 dropdown-item" href="about.html"
-                      >About Us</a
+                    <a class="dropdown-item" href="certificates.html"
+                      >Certificates</a
                     >
                   </li>
                   <li>
-                    <a class="rounded-1 dropdown-item" href="our-team.html"
-                      >Our Team</a
-                    >
+                    <a class="dropdown-item" href="our-team.html">Our Team</a>
                   </li>
                   <li>
-                    <a class="rounded-1 dropdown-item" href="testimonials.html"
+                    <a class="dropdown-item" href="testimonials.html"
                       >Testimonials</a
                     >
                   </li>
-                  <li>
-                    <a class="rounded-1 dropdown-item" href="faqs.html">FAQs</a>
-                  </li>
+                  <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -199,7 +201,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link rounded-1 active" href="career.html"
+                <a class="nav-link rounded-1" href="career.html"
                   ><ion-icon name="briefcase"></ion-icon>Career</a
                 >
               </li>
@@ -230,11 +232,6 @@
                 <ul class="dropdown-menu px-2">
                   <li><a class="dropdown-item" href="about.html">About</a></li>
                   <li>
-                    <a class="dropdown-item" href="certificates.html"
-                      >Certificates</a
-                    >
-                  </li>
-                  <li>
                     <a class="dropdown-item" href="our-team.html">Our Team</a>
                   </li>
                   <li>
@@ -242,7 +239,9 @@
                       >Testimonials</a
                     >
                   </li>
-                  <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                  <li>
+                    <a class="dropdown-item" href="faqs.html">FAQs</a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -275,7 +274,7 @@
                 <a class="nav-link" href="blog.html">Blog</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="career.html">Career</a>
+                <a class="nav-link" href="career.html">Career</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
@@ -324,13 +323,13 @@
       <section
         class="section subpage-banner"
         id="subpage-banner"
-        aria-label="Careers Banner"
+        aria-label="Terms of Service Banner"
       >
         <div class="container position-relative py-4 py-lg-5">
-          <h1>Career</h1>
+          <h1>Terms of Service</h1>
           <p>
-            Build your future with a team that takes pride in craftsmanship and
-            exceptional service.
+            Please review the terms that govern your use of FAREXEL’s services
+            and website.
           </p>
           <div class="breadcrumb">
             <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
@@ -343,556 +342,498 @@
                 </a>
               </li>
               <ion-icon name="chevron-forward"></ion-icon>
-              <li>Career</li>
+              <li>Terms of Service</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <!-- Open Positions -->
-      <section class="section careers" id="careers" aria-label="Open Positions">
+      <!-- Terms of Service Content -->
+      <section class="section terms-section">
         <div class="container py-4 py-lg-5">
-          <div class="section-header career-intro text-center mb-4 mb-lg-4">
-            <h2 class="d-inline-block position-relative pb-2">Join Our Team</h2>
+          <div class="terms-intro mb-5">
+            <p class="text-sm text-uppercase tracking-wider text-primary mb-2">
+              FAREXEL — Premium Car Detailing
+            </p>
+
+            <h2 class="mb-3">Terms of Service</h2>
+
+            <p>
+              These Terms of Service govern your use of the FAREXEL website and
+              the services provided by FAREXEL. By accessing our website,
+              submitting an enquiry, requesting a quotation, booking a service,
+              or using our services, you agree to be bound by these Terms.
+            </p>
+
             <p class="mb-0">
-              Build a career around precision, craftsmanship and care. We are
-              looking for thoughtful people who take pride in leaving every
-              vehicle better than they found it.
+              If you do not agree with these Terms, please do not use our
+              website or services.
             </p>
           </div>
-          <div class="career-header">
-            <div class="row">
-              <div class="col-sm-12 col-lg-3">
-                <div class="position-relative">
-                  <input
-                    type="text"
-                    name="search-job"
-                    id="search-job"
-                    placeholder="Search By Title, Keywords..."
-                    class="form-control pe-4"
-                  />
-                  <ion-icon
-                    name="search-outline"
-                    class="search-icon"
-                  ></ion-icon>
-                </div>
-              </div>
-              <div class="col-sm-12 col-lg-3">
-                <div class="position-relative">
-                  <select name="country" id="country" class="form-control pe-4">
-                    <option value="default">All Countries</option>
-                    <option value="saudi-arabia">Saudi Arabia</option>
-                  </select>
-                  <ion-icon
-                    name="chevron-down-outline"
-                    class="select-icon"
-                  ></ion-icon>
-                </div>
-              </div>
-              <div class="col-sm-12 col-lg-3">
-                <div class="position-relative">
-                  <select
-                    name="job-type"
-                    id="job-type"
-                    class="form-control pe-4"
-                  >
-                    <option value="default">All Work Arrangements</option>
-                    <option value="full-time">Full-time</option>
-                  </select>
-                  <ion-icon
-                    name="chevron-down-outline"
-                    class="select-icon"
-                  ></ion-icon>
-                </div>
-              </div>
-              <div class="col-sm-12 col-lg-3">
-                <div class="d-flex align-items-center gap-3">
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                    id="apply-job-filters"
-                  >
-                    <span>Apply Filter</span>
-                  </button>
-                  <button
-                    class="btn btn-primary"
-                    type="button"
-                    id="reset-job-filters"
-                  >
-                    <span>Reset Filter</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3">
-              <aside class="sidebar job-filters" id="job-filters">
-                <div class="job-filter-group">
-                  <h4>Role</h4>
-                  <label
-                    ><input type="checkbox" name="role" value="detailing" />
-                    Detailing & finish</label
-                  >
-                  <label
-                    ><input type="checkbox" name="role" value="technical" />
-                    Technical specialists</label
-                  >
-                  <label
-                    ><input type="checkbox" name="role" value="customer" />
-                    Customer experience</label
-                  >
-                  <label
-                    ><input type="checkbox" name="role" value="operations" />
-                    Studio operations</label
-                  >
-                </div>
-                <div class="job-filter-group">
-                  <h4>Experience</h4>
-                  <label
-                    ><input type="checkbox" name="experience" value="entry" />
-                    1+ year</label
-                  >
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="experience"
-                      value="experienced"
-                    />
-                    2+ years</label
-                  >
-                </div>
-                <div class="job-filter-group">
-                  <h4>Location</h4>
-                  <label
-                    ><input
-                      type="checkbox"
-                      name="location"
-                      value="saudi-arabia"
-                    />
-                    Riyadh, Saudi Arabia</label
-                  >
-                </div>
-              </aside>
-            </div>
-            <div class="col-9">
-              <div class="job-layout">
-                <article
-                  class="card job"
-                  data-role="detailing"
-                  data-experience="experienced"
-                  data-type="full-time"
-                  data-location="saudi-arabia"
-                >
-                  <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                    <p class="mb-0">SAR 5,000 - 7,000 / month</p>
-                  </div>
-                  <div class="card-body">
-                    <a
-                      href="job-detail.html"
-                      class="job-title text-decoration-none d-inline-block mb-2"
-                    >
-                      <h4 class="mb-0">Senior Automotive Detailer</h4>
-                    </a>
-                    <ul
-                      class="list-unstyled d-flex flex-wrap gap-1 gap-lg-2 mb-0"
-                    >
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="briefcase"></ion-icon
-                        >2+ years experience
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="checkmark"></ion-icon
-                        >Full-time
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="location"></ion-icon
-                        >Riyadh, Saudi Arabia
-                      </li>
-                    </ul>
-                    <p class="mb-0">
-                      <small
-                        ><ion-icon class="me-2" name="car-sport"></ion-icon
-                        >Senior Automotive Detailer</small
-                      >
-                    </p>
-                  </div>
-                  <div class="card-footer bg-surface-2 border-0 py-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between gap-4"
-                    >
-                      <a href="job-detail.html" class="btn btn-primary">
-                        <span
-                          >Quick Apply
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                      <a href="mailto:info@farexel.com" class="btn btn-primary">
-                        <span
-                          >Apply via Email
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  class="card job"
-                  data-role="technical"
-                  data-experience="experienced"
-                  data-type="full-time"
-                  data-location="saudi-arabia"
-                >
-                  <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                    <p class="mb-0">SAR 6,000 - 8,000 / month</p>
-                  </div>
-                  <div class="card-body">
-                    <a
-                      href="job-detail.html"
-                      class="job-title text-decoration-none d-inline-block mb-2"
-                    >
-                      <h4 class="mb-0">Paint Correction Specialist</h4>
-                    </a>
-                    <ul
-                      class="list-unstyled d-flex flex-wrap gap-1 gap-lg-2 mb-0"
-                    >
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="briefcase"></ion-icon
-                        >2+ years experience
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="checkmark"></ion-icon
-                        >Full-time
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="location"></ion-icon
-                        >Riyadh, Saudi Arabia
-                      </li>
-                    </ul>
-                    <p class="mb-0">
-                      <small
-                        ><ion-icon class="me-2" name="color-wand"></ion-icon
-                        >Paint Correction Specialist</small
-                      >
-                    </p>
-                  </div>
-                  <div class="card-footer bg-surface-2 border-0 py-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between gap-4"
-                    >
-                      <a href="job-detail.html" class="btn btn-primary">
-                        <span
-                          >Quick Apply
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                      <a href="mailto:info@farexel.com" class="btn btn-primary">
-                        <span
-                          >Apply via Email
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  class="card job"
-                  data-role="customer"
-                  data-experience="entry"
-                  data-type="full-time"
-                  data-location="saudi-arabia"
-                >
-                  <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                    <p class="mb-0">SAR 4,000 - 5,500 / month</p>
-                  </div>
-                  <div class="card-body">
-                    <a
-                      href="job-detail.html"
-                      class="job-title text-decoration-none d-inline-block mb-2"
-                    >
-                      <h4 class="mb-0">Customer Experience Advisor</h4>
-                    </a>
-                    <ul
-                      class="list-unstyled d-flex flex-wrap gap-1 gap-lg-2 mb-0"
-                    >
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="briefcase"></ion-icon
-                        >1+ year experience
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="checkmark"></ion-icon
-                        >Full-time
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="location"></ion-icon
-                        >Riyadh, Saudi Arabia
-                      </li>
-                    </ul>
-                    <p class="mb-0">
-                      <small
-                        ><ion-icon class="me-2" name="people"></ion-icon
-                        >Customer Experience Advisor</small
-                      >
-                    </p>
-                  </div>
-                  <div class="card-footer bg-surface-2 border-0 py-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between gap-4"
-                    >
-                      <a href="job-detail.html" class="btn btn-primary">
-                        <span
-                          >Quick Apply
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                      <a href="mailto:info@farexel.com" class="btn btn-primary">
-                        <span
-                          >Apply via Email
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  class="card job"
-                  data-role="technical"
-                  data-experience="experienced"
-                  data-type="full-time"
-                  data-location="saudi-arabia"
-                >
-                  <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                    <p class="mb-0">SAR 5,500 - 7,500 / month</p>
-                  </div>
-                  <div class="card-body">
-                    <a
-                      href="job-detail.html"
-                      class="job-title text-decoration-none d-inline-block mb-2"
-                    >
-                      <h4 class="mb-0">Ceramic Coating Technician</h4>
-                    </a>
-                    <ul
-                      class="list-unstyled d-flex flex-wrap gap-1 gap-lg-2 mb-0"
-                    >
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="briefcase"></ion-icon
-                        >2+ years experience
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="checkmark"></ion-icon
-                        >Full-time
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="location"></ion-icon
-                        >Riyadh, Saudi Arabia
-                      </li>
-                    </ul>
-                    <p class="mb-0">
-                      <small
-                        ><ion-icon
-                          class="me-2"
-                          name="shield-checkmark"
-                        ></ion-icon
-                        >Ceramic Coating Technician</small
-                      >
-                    </p>
-                  </div>
-                  <div class="card-footer bg-surface-2 border-0 py-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between gap-4"
-                    >
-                      <a href="job-detail.html" class="btn btn-primary">
-                        <span
-                          >Quick Apply
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                      <a href="mailto:info@farexel.com" class="btn btn-primary">
-                        <span
-                          >Apply via Email
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  class="card job"
-                  data-role="detailing"
-                  data-experience="entry"
-                  data-type="full-time"
-                  data-location="saudi-arabia"
-                >
-                  <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                    <p class="mb-0">SAR 3,500 - 4,500 / month</p>
-                  </div>
-                  <div class="card-body">
-                    <a
-                      href="job-detail.html"
-                      class="job-title text-decoration-none d-inline-block mb-2"
-                    >
-                      <h4 class="mb-0">Vehicle Preparation Technician</h4>
-                    </a>
-                    <ul
-                      class="list-unstyled d-flex flex-wrap gap-1 gap-lg-2 mb-0"
-                    >
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="briefcase"></ion-icon
-                        >1+ year experience
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="checkmark"></ion-icon
-                        >Full-time
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="location"></ion-icon
-                        >Riyadh, Saudi Arabia
-                      </li>
-                    </ul>
-                    <p class="mb-0">
-                      <small
-                        ><ion-icon class="me-2" name="car-sport"></ion-icon
-                        >Vehicle Preparation Technician</small
-                      >
-                    </p>
-                  </div>
-                  <div class="card-footer bg-surface-2 border-0 py-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between gap-4"
-                    >
-                      <a href="job-detail.html" class="btn btn-primary">
-                        <span
-                          >Quick Apply
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                      <a href="mailto:info@farexel.com" class="btn btn-primary">
-                        <span
-                          >Apply <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-                <article
-                  class="card job"
-                  data-role="operations"
-                  data-experience="experienced"
-                  data-type="full-time"
-                  data-location="saudi-arabia"
-                >
-                  <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                    <p class="mb-0">SAR 4,500 - 6,000 / month</p>
-                  </div>
-                  <div class="card-body">
-                    <a
-                      href="job-detail.html"
-                      class="job-title text-decoration-none d-inline-block mb-2"
-                    >
-                      <h4 class="mb-0">Studio Operations Coordinator</h4>
-                    </a>
-                    <ul
-                      class="list-unstyled d-flex flex-wrap gap-1 gap-lg-2 mb-0"
-                    >
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="briefcase"></ion-icon
-                        >2+ years experience
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="checkmark"></ion-icon
-                        >Full-time
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <ion-icon class="icon me-1" name="location"></ion-icon
-                        >Riyadh, Saudi Arabia
-                      </li>
-                    </ul>
-                    <p class="mb-0">
-                      <small
-                        ><ion-icon class="me-2" name="clipboard"></ion-icon
-                        >Studio Operations Coordinator</small
-                      >
-                    </p>
-                  </div>
-                  <div class="card-footer bg-surface-2 border-0 py-3">
-                    <div
-                      class="d-flex align-items-center justify-content-between gap-4"
-                    >
-                      <a href="job-detail.html" class="btn btn-primary">
-                        <span
-                          >Quick Apply
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                      <a href="mailto:info@farexel.com" class="btn btn-primary">
-                        <span
-                          >Apply via Email
-                          <ion-icon class="ms-2" name="open"></ion-icon
-                        ></span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-              <div class="pagination justify-content-center gap-2 mt-4">
-                <button class="btn btn-primary">
-                  <span>Prev</span>
-                </button>
-                <button class="btn btn-secondary"><span>1</span></button>
-                <button class="btn btn-secondary"><span>2</span></button>
-                <button class="btn btn-secondary"><span>3</span></button>
-                <button class="btn btn-secondary"><span>4</span></button>
-                <button class="btn btn-primary">
-                  <span>Next</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- Fullwidth CTA -->
-      <section
-        class="section fullwidth-cta"
-        id="fullwidth-cta"
-        aria-label="Call To Action"
-      >
-        <div class="container py-4 py-lg-0">
-          <div class="row align-items-center">
-            <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
-              <div class="wrapper">
-                <h2 class="cta-title">Reserve Your Detailing Experience.</h2>
-                <p class="cta-description">
-                  From deep interior cleaning to a flawless exterior finish, we
-                  bring your vehicle back to its best. Book your detailing
-                  service today and drive away feeling like you just bought it
-                  again.
-                </p>
-                <a href="tel:+971505550184" class="cta-btn">
-                  <div class="d-flex align-items-center gap-2">
-                    <div
-                      class="icon-box d-flex justify-content-center align-items-center"
-                    >
-                      <ion-icon
-                        class="animate-pulse"
-                        name="call-sharp"
-                      ></ion-icon>
-                    </div>
-                    <div>
-                      <p class="text-sm mb-1">We are available 24x7</p>
-                      <h4 class="text-primary mb-0">+1 123456789</h4>
-                    </div>
-                  </div>
-                </a>
-              </div>
+          <!-- 01 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">About FAREXEL</h3>
+
+            <p>
+              FAREXEL provides professional automotive appearance, detailing,
+              protection, repair, and vehicle customization services in Dubai,
+              United Arab Emirates.
+            </p>
+
+            <p class="mb-0">
+              The services available through FAREXEL may include car detailing,
+              paint protection film, paint protection coating, polishing and
+              buffing, painting, scratch and dent repair, bumper and plastic
+              part painting, colour changes, and other automotive services
+              offered by FAREXEL from time to time.
+            </p>
+          </div>
+
+          <!-- 02 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Use of Our Website</h3>
+
+            <p>
+              You may use this website only for lawful purposes and in
+              accordance with these Terms.
+            </p>
+
+            <p>When using our website, you agree not to:</p>
+
+            <ul>
+              <li>
+                Use the website for any unlawful, fraudulent, or unauthorized
+                purpose
+              </li>
+              <li>
+                Attempt to gain unauthorized access to any part of the website
+                or its systems
+              </li>
+              <li>
+                Introduce malicious software, harmful code, or other damaging
+                material
+              </li>
+              <li>
+                Interfere with the normal operation or security of the website
+              </li>
+              <li>
+                Copy, reproduce, distribute, or misuse website content without
+                appropriate permission
+              </li>
+              <li>
+                Submit false, misleading, or inaccurate information through our
+                forms or communication channels
+              </li>
+            </ul>
+
+            <p class="mb-0">
+              We reserve the right to restrict or suspend access to the website
+              where we reasonably believe these Terms have been violated.
+            </p>
+          </div>
+
+          <!-- 03 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Enquiries, Quotations & Estimates</h3>
+
+            <p>
+              Information provided through our website, including service
+              descriptions, photographs, examples, estimated prices, and other
+              information, is provided for general guidance and may not
+              represent a final quotation.
+            </p>
+
+            <p>
+              The final cost of a service may depend on the vehicle, its
+              condition, required materials, level of preparation, extent of
+              damage, selected finish, labour requirements, and other factors
+              identified during an inspection or consultation.
+            </p>
+
+            <p class="mb-0">
+              A quotation or estimate provided by FAREXEL may be subject to
+              inspection and confirmation before work begins.
+            </p>
+          </div>
+
+          <!-- 04 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Bookings & Appointments</h3>
+
+            <p>
+              Where appointments are required, customers are responsible for
+              providing accurate contact and vehicle information and arriving at
+              the agreed time.
+            </p>
+
+            <p>
+              Appointment availability is subject to our operating schedule,
+              technician availability, service requirements, and workshop
+              capacity.
+            </p>
+
+            <p>
+              We may request additional information or a vehicle inspection
+              before confirming certain services.
+            </p>
+
+            <p class="mb-0">
+              FAREXEL reserves the right to reschedule an appointment where
+              reasonably necessary due to operational requirements, unforeseen
+              circumstances, vehicle condition, safety considerations, or
+              circumstances beyond our reasonable control.
+            </p>
+          </div>
+
+          <!-- 05 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">
+              Vehicle Condition & Customer Responsibility
+            </h3>
+
+            <p>
+              Customers are responsible for providing accurate information about
+              the condition, history, modifications, previous repairs,
+              paintwork, accessories, and other relevant characteristics of
+              their vehicle.
+            </p>
+
+            <p>
+              Customers should remove valuable, personal, or fragile belongings
+              from the vehicle before handing it over for service.
+            </p>
+
+            <p class="mb-0">
+              FAREXEL may document the vehicle's condition before work begins,
+              including through photographs or inspection records, where
+              reasonably necessary to assess its condition and the scope of
+              work.
+            </p>
+          </div>
+
+          <!-- 06 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Service Results & Vehicle Materials</h3>
+
+            <p>
+              Automotive detailing, paint correction, polishing, protection,
+              painting, repair, and related services may produce different
+              results depending on the age, condition, previous treatment,
+              materials, paint quality, damage, and other characteristics of a
+              vehicle.
+            </p>
+
+            <p>
+              While we aim to deliver the agreed service to a professional
+              standard, certain existing defects, damage, contamination, paint
+              imperfections, colour variations, or underlying conditions may
+              limit the final result.
+            </p>
+
+            <p class="mb-0">
+              Where a specific result cannot reasonably be guaranteed, our team
+              may explain the expected outcome before work begins.
+            </p>
+          </div>
+
+          <!-- 07 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Paint, Repair & Customisation Services</h3>
+
+            <p>
+              For painting, colour change, scratch and dent repair, panel
+              repair, bumper painting, or other bodywork services, the final
+              appearance may be affected by the existing condition of the
+              vehicle and the materials or techniques required.
+            </p>
+
+            <p>
+              Colour matching may vary depending on the vehicle's existing
+              paint, manufacturer specifications, age, exposure, previous
+              repairs, and lighting conditions.
+            </p>
+
+            <p class="mb-0">
+              Any additional work identified during preparation or inspection
+              may require customer approval and may result in additional charges
+              where applicable.
+            </p>
+          </div>
+
+          <!-- 08 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Paint Protection Film & Coating Services</h3>
+
+            <p>
+              Paint protection film, ceramic coatings, and other protective
+              products are subject to the characteristics and limitations of the
+              specific product, vehicle surface, installation conditions, and
+              ongoing vehicle use and maintenance.
+            </p>
+
+            <p>
+              Protection products are not intended to make a vehicle completely
+              immune to scratches, stone chips, environmental contamination,
+              stains, or other forms of damage.
+            </p>
+
+            <p class="mb-0">
+              Product-specific warranties, maintenance requirements, and
+              limitations, where applicable, will be subject to the terms
+              provided by the relevant manufacturer or supplier.
+            </p>
+          </div>
+
+          <!-- 09 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Pricing & Payment</h3>
+
+            <p>
+              Prices for our services may vary depending on the vehicle,
+              selected service, scope of work, materials, condition, and other
+              applicable requirements.
+            </p>
+
+            <p>
+              Unless otherwise agreed, payment is due according to the payment
+              terms communicated to the customer at the time of booking or
+              service.
+            </p>
+
+            <p>
+              Any additional work or services requested by the customer may be
+              subject to additional charges.
+            </p>
+
+            <p class="mb-0">
+              FAREXEL reserves the right to correct obvious pricing or
+              information errors before confirming a service or transaction.
+            </p>
+          </div>
+
+          <!-- 10 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Cancellations & Rescheduling</h3>
+
+            <p>
+              Customers who need to cancel or reschedule an appointment should
+              contact FAREXEL as early as reasonably possible.
+            </p>
+
+            <p>
+              Cancellation, rescheduling, deposit, or refund conditions may vary
+              depending on the service, preparation already completed, materials
+              ordered, and the terms communicated at the time of booking.
+            </p>
+
+            <p class="mb-0">
+              Any applicable cancellation or refund terms communicated to the
+              customer for a particular service will apply to that booking.
+            </p>
+          </div>
+
+          <!-- 11 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Vehicle Collection & Delivery</h3>
+
+            <p>
+              Where vehicle collection or delivery is offered, the availability
+              and conditions of the service will be communicated to the customer
+              before the service is arranged.
+            </p>
+
+            <p class="mb-0">
+              Customers are responsible for providing accurate vehicle and
+              contact information and ensuring that any required keys, access
+              instructions, or documentation are available when necessary.
+            </p>
+          </div>
+
+          <!-- 12 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Intellectual Property</h3>
+
+            <p>
+              Unless otherwise stated, the content on this website, including
+              logos, branding, text, graphics, photographs, videos, designs,
+              layouts, and other materials, is owned by or used by FAREXEL with
+              appropriate rights.
+            </p>
+
+            <p class="mb-0">
+              You may not reproduce, modify, distribute, publish, sell, or
+              otherwise use website content for commercial purposes without
+              prior written permission from FAREXEL or the applicable rights
+              holder.
+            </p>
+          </div>
+
+          <!-- 13 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Photography & Marketing Content</h3>
+
+            <p>
+              FAREXEL may photograph or document vehicles before, during, or
+              after services for quality-control, service-record, training, or
+              operational purposes where appropriate.
+            </p>
+
+            <p class="mb-0">
+              Any use of identifiable customer information, vehicle registration
+              details, or other information for public marketing purposes will
+              be handled in accordance with applicable privacy requirements and
+              any permissions that may be required.
+            </p>
+          </div>
+
+          <!-- 14 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Third-Party Products & Services</h3>
+
+            <p>
+              Certain services may involve products, materials, equipment,
+              software, payment services, communication platforms, or other
+              services supplied by third parties.
+            </p>
+
+            <p class="mb-0">
+              Where a third-party product or service is subject to its own
+              terms, warranty, or conditions, those terms may also apply.
+              FAREXEL is not responsible for terms or policies controlled
+              exclusively by independent third parties.
+            </p>
+          </div>
+
+          <!-- 15 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Limitation of Liability</h3>
+
+            <p>
+              To the extent permitted by applicable law, FAREXEL will not be
+              responsible for losses or damage arising from circumstances
+              outside our reasonable control or from pre-existing conditions,
+              defects, hidden damage, modifications, deterioration, or other
+              characteristics of a vehicle that could not reasonably have been
+              identified before or during the service.
+            </p>
+
+            <p>
+              Nothing in these Terms is intended to exclude or limit any
+              liability that cannot lawfully be excluded or limited under
+              applicable law.
+            </p>
+
+            <p class="mb-0">
+              Where a customer believes that a service has not been completed in
+              accordance with the agreed scope of work, they should contact
+              FAREXEL promptly so that the matter can be reviewed.
+            </p>
+          </div>
+
+          <!-- 16 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Force Majeure</h3>
+
+            <p class="mb-0">
+              FAREXEL will not be responsible for delays or failure to perform
+              obligations where such delay or failure results from circumstances
+              beyond our reasonable control, including natural events, severe
+              weather, government actions, interruptions to utilities or
+              services, supply-chain disruptions, labour disputes, technical
+              failures, or other unforeseen circumstances.
+            </p>
+          </div>
+
+          <!-- 17 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Third-Party Links</h3>
+
+            <p class="mb-0">
+              Our website may contain links to websites, social media platforms,
+              or other services operated by third parties. These links are
+              provided for convenience and do not necessarily represent an
+              endorsement or recommendation by FAREXEL.
+            </p>
+          </div>
+
+          <!-- 18 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Changes to These Terms</h3>
+
+            <p class="mb-0">
+              FAREXEL may update these Terms of Service from time to time to
+              reflect changes to our services, business practices, website, or
+              applicable legal requirements. Updated Terms will be published on
+              this page with the revised effective date.
+            </p>
+          </div>
+
+          <!-- 19 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Governing Law</h3>
+
+            <p>
+              These Terms are intended to be governed by the laws applicable in
+              the United Arab Emirates and the Emirate of Dubai, subject to any
+              mandatory legal requirements that may apply.
+            </p>
+
+            <p class="mb-0">
+              Any disputes arising in connection with these Terms or our
+              services will be handled in accordance with the applicable laws
+              and jurisdiction of the relevant authorities and courts in Dubai,
+              United Arab Emirates, where legally applicable.
+            </p>
+          </div>
+
+          <!-- 20 -->
+          <div class="terms-block mb-4 mb-lg-5">
+            <h3 class="mt-2 mb-3">Contact Us</h3>
+
+            <p>
+              If you have questions about these Terms of Service, our services,
+              a quotation, booking, or any other matter relating to FAREXEL, you
+              can contact us using the details below.
+            </p>
+
+            <div class="terms-contact-box mt-4">
+              <h5 class="mb-3">FAREXEL — Premium Car Detailing</h5>
+
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex gap-2 mb-2">
+                  <ion-icon name="mail" class="text-primary"></ion-icon>
+                  <a
+                    href="mailto:hello@farexel.com"
+                    class="text-decoration-none text-primary"
+                  >
+                    hello@farexel.com
+                  </a>
+                </li>
+
+                <li class="d-flex gap-2 mb-2">
+                  <ion-icon name="call" class="text-primary"></ion-icon>
+                  <a
+                    href="tel:+971505550184"
+                    class="text-decoration-none text-primary"
+                  >
+                    +971 50 555 0184
+                  </a>
+                </li>
+
+                <li class="d-flex gap-2">
+                  <ion-icon name="location" class="text-primary"></ion-icon>
+                  <span>Dubai, United Arab Emirates</span>
+                </li>
+              </ul>
             </div>
-            <div class="col-sm-12 col-lg-4 text-center text-lg-end">
-              <img
-                src="public/images/cta-img.png"
-                class="img-fluid cta-img"
-                alt="CTA Image"
-              />
-            </div>
+          </div>
+
+          <!-- Effective Date -->
+          <div class="terms-updated pt-4 border-top">
+            <p class="text-sm mb-0">
+              <strong>Effective Date:</strong> 23 September 2026
+            </p>
           </div>
         </div>
       </section>
@@ -1254,6 +1195,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- CountUp JS -->
     <script src="https://cdn.jsdelivr.net/npm/countup.js@2.9.0/dist/countUp.umd.js"></script>
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.1/dist/js/glightbox.min.js"></script>
     <!-- Main JS -->
     <script type="module" src="src/js/main.js"></script>
   </body>

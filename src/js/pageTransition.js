@@ -21,21 +21,22 @@ export function initPageTransition(onIntroComplete) {
     return;
   }
 
-  // Intro: animate pillars out on page load
-  gsap.set(pillars, { scaleY: 1 });
+  // Use rAF so the browser has painted the overlay before GSAP runs,
+  // otherwise pillars appear and vanish in a single frame (invisible).
+  requestAnimationFrame(() => {
+    gsap.set(pillars, { scaleY: 1 });
 
-  const tl = gsap.timeline({ delay: 0.1 });
-  tl.to(pillars, {
-    scaleY: 0,
-    transformOrigin: "top",
-    duration: 0.8,
-    stagger: 0.08,
-    ease: "power4.inOut",
-    // Remove overlay from DOM flow after animation, then hand off to
-    // whatever should reveal once the pillars have fully cleared.
-    onComplete: () => {
-      hideOverlay();
-      onIntroComplete?.();
-    },
+    gsap.to(pillars, {
+      scaleY: 0,
+      transformOrigin: "top",
+      duration: 0.7,
+      stagger: 0.06,
+      ease: "power4.inOut",
+      delay: 0.05,
+      onComplete: () => {
+        hideOverlay();
+        onIntroComplete?.();
+      },
+    });
   });
 }
