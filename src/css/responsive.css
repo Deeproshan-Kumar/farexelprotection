@@ -317,6 +317,12 @@
     column-count: 1;
   }
 
+  .card.consulation .icon-box .icon,
+  .card.location .icon-box .icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
   .contact-us-spinner img {
     height: 7rem;
     width: 7rem;
