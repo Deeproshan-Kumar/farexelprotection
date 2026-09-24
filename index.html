@@ -11,6 +11,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="public/favicons/apple-touch-icon.png" />
   <link rel="manifest" href="public/favicons/site.webmanifest" />
 
+  <!-- Resource Hints for CDNs and Hero Assets -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <link rel="preload" as="image" href="public/images/car-front.png" fetchpriority="high" />
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
@@ -351,8 +358,8 @@
           <div class="col-sm-12 col-lg-6 gsap-hero-image-col">
             <div class="hero-image-container position-relative d-flex align-items-center justify-content-center">
               <h2 class="caption">FAREXEL</h2>
-              <img src="public/images/car-front.png" class="car img-fluid" alt="Hero Car Image" />
-              <img src="public/images/car-light.png" class="car-light img-fluid" alt="Car Light" />
+              <img src="public/images/car-front.png" class="car img-fluid" alt="Hero Car Image" fetchpriority="high" decoding="async" />
+              <img src="public/images/car-light.png" class="car-light img-fluid" alt="Car Light" fetchpriority="high" decoding="async" />
             </div>
           </div>
         </div>
@@ -363,7 +370,7 @@
     <!-- Car Animation -->
     <div class="car-animation" aria-label="Car Animation">
       <hr class="car-route" />
-      <img src="public/images/car-top-view.png" class="moving-car img-fluid" alt="Car Top View" />
+      <img src="public/images/car-top-view.png" class="moving-car img-fluid" alt="Car Top View" loading="lazy" decoding="async" />
     </div>
 
     <!-- About Section -->
@@ -371,7 +378,7 @@
       <div class="container py-4 py-lg-5">
         <div class="row align-items-center flex-wrap-reverse gy-4 gy-lg-0">
           <div class="col-sm-12 col-lg-6 position-relative text-center">
-            <img src="public/images/about.png" class="img-fluid about-img gsap-about-img" alt="Car Large" />
+            <img src="public/images/about.png" class="img-fluid about-img gsap-about-img" alt="Car Large" loading="lazy" decoding="async" />
             <div class="image-backdrop"></div>
           </div>
           <div class="col-sm-12 col-lg-6">
@@ -466,9 +473,9 @@
     <!-- Our Vision and Mission -->
     <section class="section our-vision-mission" id="our-mission-vision" aria-label="The Journey of Excellence">
       <div class="container py-4 py-lg-5">
-        <div class="row align-items-center gy-4 gy-lg-0 vm-card">
+        <div class="row align-items-center gy-4 gy-lg-0 vm-card gsap-mission-vision-card">
           <div class="col-sm-12 col-lg-4 image-col">
-            <img src="public/images/customer-experience.png" class="img-fluid rounded-1" alt="Our Vision Image" />
+            <img src="public/images/customer-experience.png" class="img-fluid rounded-1" alt="Our Vision Image" loading="lazy" decoding="async" />
             <div class="image-caption">
               <h3 class="m-0">Our Vision</h3>
             </div>
@@ -487,9 +494,9 @@
             </p>
           </div>
         </div>
-        <div class="row align-items-center gy-4 gy-lg-0 vm-card">
+        <div class="row align-items-center gy-4 gy-lg-0 vm-card gsap-mission-vision-card">
           <div class="col-sm-12 col-lg-4 image-col">
-            <img src="public/images/customer-experience.png" class="img-fluid rounded-1" alt="Our Mission Image" />
+            <img src="public/images/customer-experience.png" class="img-fluid rounded-1" alt="Our Mission Image" loading="lazy" decoding="async" />
             <div class="image-caption">
               <h3 class="m-0">Our Mission</h3>
             </div>
@@ -577,7 +584,7 @@
             </div>
           </div>
           <div class="col-sm-12 col-lg-4 panel middle">
-            <img src="public/images/car-lg.png" class="d-block img-fluid mx-auto" alt="Car Large" />
+            <img src="public/images/car-lg.png" class="d-block img-fluid mx-auto" alt="Car Large" loading="lazy" decoding="async" />
           </div>
           <div class="col-sm-12 col-lg-4 panel right">
             <div class="d-flex flex-column gap-4">
@@ -699,7 +706,7 @@
             <div class="service-item sedan">
               <h3 class="display-1 text-center">SEDAN</h3>
               <div class="service-item__image mb-3">
-                <img alt="Sedan" class="img-fluid" src="public/images/audi-a3.webp" height="350" width="920" />
+                <img alt="Sedan" class="img-fluid" src="public/images/audi-a3.webp" height="350" width="920" loading="lazy" decoding="async" />
                 <div class="service-item__amount p-2">
                   <span class="text-sm">Starts From</span><strong>AED 350 <small>/ service</small></strong>
                 </div>
@@ -746,7 +753,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -799,7 +806,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -854,7 +861,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -909,7 +916,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -964,7 +971,7 @@
                               <ion-icon name="hammer"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1019,7 +1026,7 @@
                               <ion-icon name="color-fill"></ion-icon>
                             </div>
                             <span class="badge discount">24% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1075,7 +1082,7 @@
                               <ion-icon name="sparkles"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1131,7 +1138,7 @@
                               <ion-icon name="sunny"></ion-icon>
                             </div>
                             <span class="badge discount">10% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1186,7 +1193,7 @@
                               <ion-icon name="car"></ion-icon>
                             </div>
                             <span class="badge discount">30% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1241,7 +1248,7 @@
                               <ion-icon name="brush"></ion-icon>
                             </div>
                             <span class="badge discount">30% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1308,7 +1315,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -1361,7 +1368,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1416,7 +1423,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1471,7 +1478,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1534,7 +1541,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -1587,7 +1594,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1642,7 +1649,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1697,7 +1704,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1760,7 +1767,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -1813,7 +1820,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1868,7 +1875,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1923,7 +1930,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -1981,7 +1988,7 @@
             <div class="service-item hatchback">
               <h3 class="display-1 text-center">HATCHBACK</h3>
               <div class="service-item__image mb-3">
-                <img alt="Hatchback" class="img-fluid" src="public/images/camrey.png" height="350" width="920" />
+                <img alt="Hatchback" class="img-fluid" src="public/images/camrey.png" height="350" width="920" loading="lazy" decoding="async" />
                 <div class="service-item__amount p-2">
                   <span class="text-sm">Starts From</span><strong>AED 450 <small>/ service</small></strong>
                 </div>
@@ -2029,7 +2036,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -2082,7 +2089,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2137,7 +2144,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2192,7 +2199,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2247,7 +2254,7 @@
                               <ion-icon name="hammer"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2302,7 +2309,7 @@
                               <ion-icon name="color-fill"></ion-icon>
                             </div>
                             <span class="badge discount">24% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2358,7 +2365,7 @@
                               <ion-icon name="sparkles"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2414,7 +2421,7 @@
                               <ion-icon name="sunny"></ion-icon>
                             </div>
                             <span class="badge discount">10% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2469,7 +2476,7 @@
                               <ion-icon name="car"></ion-icon>
                             </div>
                             <span class="badge discount">30% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2524,7 +2531,7 @@
                               <ion-icon name="brush"></ion-icon>
                             </div>
                             <span class="badge discount">30% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2591,7 +2598,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -2644,7 +2651,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2699,7 +2706,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2754,7 +2761,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2817,7 +2824,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -2870,7 +2877,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2925,7 +2932,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -2980,7 +2987,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3043,7 +3050,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -3096,7 +3103,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3151,7 +3158,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3206,7 +3213,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3264,7 +3271,7 @@
             <div class="service-item suv">
               <h3 class="display-1 text-center">SUV</h3>
               <div class="service-item__image mb-3">
-                <img alt="SUV" class="img-fluid" src="public/images/SUV.png" height="350" width="920" />
+                <img alt="SUV" class="img-fluid" src="public/images/SUV.png" height="350" width="920" loading="lazy" decoding="async" />
                 <div class="service-item__amount p-2">
                   <span class="text-sm">Starts From</span><strong>AED 550 <small>/ service</small></strong>
                 </div>
@@ -3310,7 +3317,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -3363,7 +3370,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3418,7 +3425,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3473,7 +3480,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3528,7 +3535,7 @@
                               <ion-icon name="hammer"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3583,7 +3590,7 @@
                               <ion-icon name="color-fill"></ion-icon>
                             </div>
                             <span class="badge discount">24% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3639,7 +3646,7 @@
                               <ion-icon name="sparkles"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3695,7 +3702,7 @@
                               <ion-icon name="sunny"></ion-icon>
                             </div>
                             <span class="badge discount">10% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3750,7 +3757,7 @@
                               <ion-icon name="car"></ion-icon>
                             </div>
                             <span class="badge discount">30% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3805,7 +3812,7 @@
                               <ion-icon name="brush"></ion-icon>
                             </div>
                             <span class="badge discount">30% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3872,7 +3879,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -3925,7 +3932,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -3980,7 +3987,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4035,7 +4042,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4098,7 +4105,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -4151,7 +4158,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4206,7 +4213,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4261,7 +4268,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4324,7 +4331,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -4377,7 +4384,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4432,7 +4439,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4487,7 +4494,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4545,7 +4552,7 @@
             <div class="service-item luxury">
               <h3 class="display-1 text-center">LUXURY CAR</h3>
               <div class="service-item__image mb-3">
-                <img alt="Luxury" class="img-fluid" src="public/images/mustung.webp" height="350" width="920" />
+                <img alt="Luxury" class="img-fluid" src="public/images/mustung.webp" height="350" width="920" loading="lazy" decoding="async" />
                 <div class="service-item__amount p-2">
                   <span class="text-sm">Starts From</span><strong>AED 650 <small>/ service</small></strong>
                 </div>
@@ -4592,7 +4599,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -4645,7 +4652,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4700,7 +4707,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4755,7 +4762,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4810,7 +4817,7 @@
                               <ion-icon name="hammer"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4865,7 +4872,7 @@
                               <ion-icon name="color-fill"></ion-icon>
                             </div>
                             <span class="badge discount">24% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4921,7 +4928,7 @@
                               <ion-icon name="sparkles"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -4977,7 +4984,7 @@
                               <ion-icon name="sunny"></ion-icon>
                             </div>
                             <span class="badge discount">10% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5032,7 +5039,7 @@
                               <ion-icon name="car"></ion-icon>
                             </div>
                             <span class="badge discount">30% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5087,7 +5094,7 @@
                               <ion-icon name="brush"></ion-icon>
                             </div>
                             <span class="badge discount">30% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5154,7 +5161,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -5207,7 +5214,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5262,7 +5269,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5317,7 +5324,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5380,7 +5387,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -5433,7 +5440,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5488,7 +5495,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5543,7 +5550,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5606,7 +5613,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -5659,7 +5666,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5714,7 +5721,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5769,7 +5776,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5827,7 +5834,7 @@
             <div class="service-item bike">
               <h3 class="display-1 text-center">BIKE</h3>
               <div class="service-item__image mb-3">
-                <img alt="Luxury" class="img-fluid" src="public/images/H2.png" height="350" width="920" />
+                <img alt="Luxury" class="img-fluid" src="public/images/H2.png" height="350" width="920" loading="lazy" decoding="async" />
                 <div class="service-item__amount p-2">
                   <span class="text-sm">Starts From</span><strong>AED 600 <small>/ service</small></strong>
                 </div>
@@ -5874,7 +5881,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -5927,7 +5934,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -5982,7 +5989,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6037,7 +6044,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6092,7 +6099,7 @@
                               <ion-icon name="hammer"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6147,7 +6154,7 @@
                               <ion-icon name="color-fill"></ion-icon>
                             </div>
                             <span class="badge discount">24% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6203,7 +6210,7 @@
                               <ion-icon name="sparkles"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6259,7 +6266,7 @@
                               <ion-icon name="sunny"></ion-icon>
                             </div>
                             <span class="badge discount">10% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6314,7 +6321,7 @@
                               <ion-icon name="car"></ion-icon>
                             </div>
                             <span class="badge discount">30% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6369,7 +6376,7 @@
                               <ion-icon name="brush"></ion-icon>
                             </div>
                             <span class="badge discount">30% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6436,7 +6443,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -6489,7 +6496,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6544,7 +6551,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6599,7 +6606,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6662,7 +6669,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -6715,7 +6722,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6770,7 +6777,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6825,7 +6832,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6888,7 +6895,7 @@
                               <ion-icon name="car-sport"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                             <span class="badge featured">Featured</span>
                           </div>
                           <div class="card-body">
@@ -6941,7 +6948,7 @@
                               <ion-icon name="shield-checkmark"></ion-icon>
                             </div>
                             <span class="badge discount">15% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -6996,7 +7003,7 @@
                               <ion-icon name="color-palette"></ion-icon>
                             </div>
                             <span class="badge discount">25% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -7051,7 +7058,7 @@
                               <ion-icon name="construct"></ion-icon>
                             </div>
                             <span class="badge discount">20% Off</span>
-                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" />
+                            <img alt="Service Image" class="img-fluid" src="public/images/service-placeholder.jpg" loading="lazy" decoding="async" />
                           </div>
                           <div class="card-body">
                             <h6 class="mb-2">
@@ -7221,11 +7228,11 @@
           </p>
         </div>
         <div class="row mb-4 mb-lg-5">
-          <div class="col-sm-12 col-lg-6">
+          <div class="col-sm-12 col-lg-6 gsap-showcase-card">
             <div class="row gy-4 gy-lg-0">
               <div class="col-sm-12 col-lg-4">
                 <img src="public/images/car-red.png" class="img-fluid"
-                  alt="Midnight Black Range Rover after professional detailing" />
+                  alt="Midnight Black Range Rover after professional detailing" loading="lazy" decoding="async" />
               </div>
               <div class="col-sm-12 col-lg-8">
                 <h3 class="text-body mb-2">Midnight Black Range Rover</h3>
@@ -7250,11 +7257,11 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-lg-6">
+          <div class="col-sm-12 col-lg-6 gsap-showcase-card">
             <div class="row gy-4 gy-lg-0">
               <div class="col-sm-12 col-lg-4">
                 <img src="public/images/car-red.png" class="img-fluid"
-                  alt="Red coupe after paint correction and interior detailing" />
+                  alt="Red coupe after paint correction and interior detailing" loading="lazy" decoding="async" />
               </div>
               <div class="col-sm-12 col-lg-8">
                 <h3 class="text-body mb-2">Red Coupe Revival</h3>
@@ -7281,11 +7288,11 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-12 col-lg-6">
+          <div class="col-sm-12 col-lg-6 gsap-showcase-card">
             <div class="row gy-4 gy-lg-0">
               <div class="col-sm-12 col-lg-4">
                 <img src="public/images/car-red.png" class="img-fluid"
-                  alt="White SUV with front-end paint protection film" />
+                  alt="White SUV with front-end paint protection film" loading="lazy" decoding="async" />
               </div>
               <div class="col-sm-12 col-lg-8">
                 <h3 class="text-body mb-2">White SUV Protection</h3>
@@ -7310,11 +7317,11 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-12 col-lg-6">
+          <div class="col-sm-12 col-lg-6 gsap-showcase-card">
             <div class="row gy-4 gy-lg-0">
               <div class="col-sm-12 col-lg-4">
                 <img src="public/images/car-red.png" class="img-fluid"
-                  alt="Executive sedan after premium interior detailing" />
+                  alt="Executive sedan after premium interior detailing" loading="lazy" decoding="async" />
               </div>
               <div class="col-sm-12 col-lg-8">
                 <h3 class="text-body mb-2">Executive Sedan Refresh</h3>
@@ -7358,7 +7365,7 @@
           </p>
         </div>
         <div class="tour-video-container">
-          <video autoplay muted loop class="tour-video h-100 w-100" id="tour-video">
+          <video preload="none" muted loop class="tour-video h-100 w-100" id="tour-video">
             <source src="public/videos/car-detailing.mp4" />
           </video>
           <button data-size="fit"
@@ -7535,7 +7542,7 @@
               <article class="card offer">
                 <div class="row gx-0">
                   <div class="col-sm-12 col-lg-5 card-image">
-                    <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image" />
+                    <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image" loading="lazy" decoding="async" />
                     <span class="badge">34% Off</span>
                   </div>
                   <div class="col-sm-12 col-lg-7 px-0">
@@ -7597,7 +7604,7 @@
               <article class="card offer">
                 <div class="row gx-0">
                   <div class="col-sm-12 col-lg-5 card-image">
-                    <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image" />
+                    <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image" loading="lazy" decoding="async" />
                     <span class="badge">25% Off</span>
                   </div>
                   <div class="col-sm-12 col-lg-7 px-0">
@@ -7659,7 +7666,7 @@
               <article class="card offer">
                 <div class="row gx-0">
                   <div class="col-sm-12 col-lg-5 card-image">
-                    <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image" />
+                    <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image" loading="lazy" decoding="async" />
                     <span class="badge">30% Off</span>
                   </div>
                   <div class="col-sm-12 col-lg-7 px-0">
@@ -7744,7 +7751,7 @@
 
         <div class="row align-items-center gy-4 gy-lg-0">
           <div class="image-col col-sm-12 col-lg-6 gsap-cx-img-col">
-            <img src="public/images/customer-experience.png" class="img-fluid rounded-1" alt="Customer Experiences" />
+            <img src="public/images/customer-experience.png" class="img-fluid rounded-1" alt="Customer Experiences" loading="lazy" decoding="async" />
             <div class="image-caption">
               <h3 class="m-0">12 Years of Experiences</h3>
             </div>
@@ -7765,7 +7772,7 @@
               <div class="col-sm-12 col-lg-4">
                 <div class="total-reviews">
                   <img src="public/images/tripadvisor.svg" height="60" width="60" class="img-fluid rounded-circle"
-                    alt="Google Review Logo" />
+                    alt="Google Review Logo" loading="lazy" decoding="async" />
                   <h5 class="mt-2">Trip Advisor Reviews</h5>
                   <div>
                     <h6 class="text-primary fw-bold mb-1">
@@ -7783,7 +7790,7 @@
               <div class="col-sm-12 col-lg-4">
                 <div class="total-reviews">
                   <img src="public/images/google.svg" height="60" width="60" class="img-fluid rounded-circle"
-                    alt="Google Review Logo" />
+                    alt="Google Review Logo" loading="lazy" decoding="async" />
                   <h5 class="mt-2">Google Reviews</h5>
                   <div>
                     <h6 class="text-primary fw-bold mb-1">
@@ -7801,7 +7808,7 @@
               <div class="col-sm-12 col-lg-4">
                 <div class="total-reviews">
                   <img src="public/images/yelp.svg" height="60" width="60" class="img-fluid rounded-circle"
-                    alt="Google Review Logo" />
+                    alt="Google Review Logo" loading="lazy" decoding="async" />
                   <h5 class="mt-2">Yelp Reviews</h5>
                   <div>
                     <h6 class="text-primary fw-bold mb-1">
@@ -7839,7 +7846,7 @@
                   </p>
                   <div class="d-flex align-items-center gap-2">
                     <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                      class="user-profile-pic rounded-circle img-fluid" />
+                      class="user-profile-pic rounded-circle img-fluid" loading="lazy" decoding="async" />
                     <div>
                       <p class="text-sm text-body fw-semibold mb-1">
                         John Doe
@@ -7867,7 +7874,7 @@
                   </p>
                   <div class="d-flex align-items-center gap-2">
                     <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                      class="user-profile-pic rounded-circle img-fluid" />
+                      class="user-profile-pic rounded-circle img-fluid" loading="lazy" decoding="async" />
                     <div>
                       <p class="text-sm text-body fw-semibold mb-1">
                         John Doe
@@ -7894,35 +7901,7 @@
                   </p>
                   <div class="d-flex align-items-center gap-2">
                     <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                      class="user-profile-pic rounded-circle img-fluid" />
-                    <div>
-                      <p class="text-sm text-body fw-semibold mb-1">
-                        John Doe
-                      </p>
-                      <p class="text-sm fw-normal mb-0">CEO at XYZ</p>
-                    </div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="swiper-slide">
-              <article class="card testimonial gsap-testimonial-card">
-                <div class="card-body d-flex flex-column gap-3 p-lg-4">
-                  <div class="ratings d-flex align-items-center gap-1">
-                    <ion-icon class="text-warning" name="star"></ion-icon>
-                    <ion-icon class="text-warning" name="star"></ion-icon>
-                    <ion-icon class="text-warning" name="star"></ion-icon>
-                    <ion-icon class="text-warning" name="star"></ion-icon>
-                    <ion-icon class="text-warning" name="star-half"></ion-icon>
-                  </div>
-                  <p class="mb-0">
-                    “From start to finish, everything felt seamless. The
-                    results, the process and the overall experience reflected
-                    a level of care and professionalism that’s hard to find.”
-                  </p>
-                  <div class="d-flex align-items-center gap-2">
-                    <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                      class="user-profile-pic rounded-circle img-fluid" />
+                      class="user-profile-pic rounded-circle img-fluid" loading="lazy" decoding="async" />
                     <div>
                       <p class="text-sm text-body fw-semibold mb-1">
                         John Doe
@@ -7950,7 +7929,35 @@
                   </p>
                   <div class="d-flex align-items-center gap-2">
                     <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                      class="user-profile-pic rounded-circle img-fluid" />
+                      class="user-profile-pic rounded-circle img-fluid" loading="lazy" decoding="async" />
+                    <div>
+                      <p class="text-sm text-body fw-semibold mb-1">
+                        John Doe
+                      </p>
+                      <p class="text-sm fw-normal mb-0">CEO at XYZ</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-slide">
+              <article class="card testimonial gsap-testimonial-card">
+                <div class="card-body d-flex flex-column gap-3 p-lg-4">
+                  <div class="ratings d-flex align-items-center gap-1">
+                    <ion-icon class="text-warning" name="star"></ion-icon>
+                    <ion-icon class="text-warning" name="star"></ion-icon>
+                    <ion-icon class="text-warning" name="star"></ion-icon>
+                    <ion-icon class="text-warning" name="star"></ion-icon>
+                    <ion-icon class="text-warning" name="star-half"></ion-icon>
+                  </div>
+                  <p class="mb-0">
+                    “From start to finish, everything felt seamless. The
+                    results, the process and the overall experience reflected
+                    a level of care and professionalism that’s hard to find.”
+                  </p>
+                  <div class="d-flex align-items-center gap-2">
+                    <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                      class="user-profile-pic rounded-circle img-fluid" loading="lazy" decoding="async" />
                     <div>
                       <p class="text-sm text-body fw-semibold mb-1">
                         John Doe
@@ -8176,7 +8183,7 @@
           <div class="col-md-6">
             <div class="faq-visual position-relative h-100">
               <img src="public/images/faq-bg.png" class="img-fluid w-100 h-100 rounded-1"
-                alt="Red car prepared for professional detailing" />
+                alt="Red car prepared for professional detailing" loading="lazy" decoding="async" />
               <div class="faq-visual-caption position-absolute bottom-0 start-0 m-3 m-lg-4 p-4 rounded-1">
                 <p class="text-xs text-uppercase tracking-wide text-primary mb-1">
                   Still unsure?
@@ -8216,14 +8223,14 @@
               <div class="row align-items-center">
                 <div class="col-4">
                   <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div class="col-8 py-3">
                   <div class="author-info d-flex align-items-center gap-2 mb-2">
                     <div class="profile-pic">
                       <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                        alt="Author Profile Pic" loading="lazy" decoding="async" />
                     </div>
                     <p class="mb-0">
                       Written by <span class="text-black">Admin</span>
@@ -8248,14 +8255,14 @@
               <div class="row align-items-center">
                 <div class="col-4">
                   <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div class="col-8 py-3">
                   <div class="author-info d-flex align-items-center gap-2 mb-2">
                     <div class="profile-pic">
                       <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                        alt="Author Profile Pic" loading="lazy" decoding="async" />
                     </div>
                     <p class="mb-0">
                       Written by <span class="text-black">Admin</span>
@@ -8280,14 +8287,14 @@
               <div class="row align-items-center">
                 <div class="col-4">
                   <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div class="col-8 py-3">
                   <div class="author-info d-flex align-items-center gap-2 mb-2">
                     <div class="profile-pic">
                       <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                        alt="Author Profile Pic" loading="lazy" decoding="async" />
                     </div>
                     <p class="mb-0">
                       Written by <span class="text-black">Admin</span>
@@ -8436,7 +8443,7 @@
             </div>
           </div>
           <div class="col-sm-12 col-lg-4 text-center text-lg-end">
-            <img src="public/images/cta-img.png" class="img-fluid cta-img" alt="CTA Image" />
+            <img src="public/images/cta-img.png" class="img-fluid cta-img" alt="CTA Image" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -8502,7 +8509,7 @@
       <div class="footer-inner row gy-4">
         <div class="col-lg-3 gsap-footer-col">
           <a class="footer-brand d-inline-block text-decoration-none mb-3" href="index.html">
-            <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo" />
+            <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo" loading="lazy" decoding="async" />
           </a>
           <p class="text-sm">
             Premium car care for Dubai drivers who expect a clean finish,
@@ -8524,7 +8531,7 @@
           </div>
           <div class="contact-us-spinner mt-4">
             <a href="contact.html">
-              <img src="public/images/contact-spinner.png" height="160" width="160" alt="Contact Us Spinner Image" />
+              <img src="public/images/contact-spinner.png" height="160" width="160" alt="Contact Us Spinner Image" loading="lazy" decoding="async" />
             </a>
           </div>
         </div>
