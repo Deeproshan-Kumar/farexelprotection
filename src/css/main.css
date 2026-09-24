@@ -162,7 +162,14 @@ embed {
   vertical-align: middle;
 }
 
-.section-header > p {
+.section,
+.site-header .announcement-bar,
+.navbar,
+.footer {
+  padding-inline: 1rem;
+}
+
+.section-header>p {
   max-width: 35rem;
   margin-inline: auto;
 }
@@ -272,12 +279,12 @@ input[type="radio"] {
     visibility 0s linear 300ms;
 }
 
-.announcement-bar > li {
+.announcement-bar>li {
   white-space: nowrap;
 }
 
 .announcement-bar a,
-.announcement-bar > * {
+.announcement-bar>* {
   color: #ffffff;
 }
 
@@ -329,11 +336,11 @@ input[type="radio"] {
     background-color 300ms ease-in-out;
 }
 
-.site-header .navbar-nav:hover > .nav-item > .nav-link {
+.site-header .navbar-nav:hover>.nav-item>.nav-link {
   opacity: 0.5;
 }
 
-.site-header .navbar-nav:hover > .nav-item > .nav-link:hover {
+.site-header .navbar-nav:hover>.nav-item>.nav-link:hover {
   opacity: 1;
   color: var(--clr-black);
 }
@@ -510,11 +517,9 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   width: 100%;
   text-align: center;
   font-size: 7vw;
-  background: linear-gradient(
-    to bottom,
-    var(--clr-primary) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(to bottom,
+      var(--clr-primary) 0%,
+      transparent 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -563,36 +568,36 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   transition: transform 300ms ease-in-out;
 }
 
-.social-handles-widget .handle > span {
+.social-handles-widget .handle>span {
   backdrop-filter: blur(1rem);
 }
 
-.social-handles-widget .handle > span {
+.social-handles-widget .handle>span {
   background: #fb2c3625;
   color: var(--clr-primary);
 }
 
-.social-handles-widget .handle.whatsapp > span {
+.social-handles-widget .handle.whatsapp>span {
   background-color: #00c95020;
   color: #00c950;
 }
 
-.social-handles-widget .handle.insta > span {
+.social-handles-widget .handle.insta>span {
   background-color: #e1306c20;
   color: #e1306c;
 }
 
-.social-handles-widget .handle.facebook > span {
+.social-handles-widget .handle.facebook>span {
   background-color: #2b7fff20;
   color: #2b7fff;
 }
 
-.scroll-down-indicator > a {
+.scroll-down-indicator>a {
   min-height: 2.75rem;
   width: 2.75rem;
 }
 
-.scroll-down-indicator > a > img {
+.scroll-down-indicator>a>img {
   filter: invert(1);
 }
 
@@ -601,12 +606,10 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   position: absolute;
   height: 1px;
   width: 100%;
-  background: linear-gradient(
-    to left,
-    transparent,
-    var(--clr-primary),
-    transparent
-  );
+  background: linear-gradient(to left,
+      transparent,
+      var(--clr-primary),
+      transparent);
 }
 
 /* Car Animation */
@@ -623,13 +626,11 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   position: relative;
   bottom: 0;
   pointer-events: none;
-  background: repeating-linear-gradient(
-    135deg,
-    var(--clr-primary) 0,
-    var(--clr-primary) 1rem,
-    transparent 1rem,
-    transparent 1.5rem
-  );
+  background: repeating-linear-gradient(135deg,
+      var(--clr-primary) 0,
+      var(--clr-primary) 1rem,
+      transparent 1rem,
+      transparent 1.5rem);
 
   background-size: 2.5rem 100%;
   animation: separatorMove 1.2s linear infinite;
@@ -900,16 +901,14 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   width: 2rem;
   flex: 0 0 auto;
   background-color: #ffd0bd;
-  clip-path: polygon(
-    50% 0,
-    62% 38%,
-    100% 50%,
-    62% 62%,
-    50% 100%,
-    38% 62%,
-    0 50%,
-    38% 38%
-  );
+  clip-path: polygon(50% 0,
+      62% 38%,
+      100% 50%,
+      62% 62%,
+      50% 100%,
+      38% 62%,
+      0 50%,
+      38% 38%);
 }
 
 .service-strip.reversed .service-marquee {
@@ -1092,7 +1091,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   z-index: 1;
 }
 
-.achievements .container > * {
+.achievements .container>* {
   position: relative;
   z-index: 2;
 }
@@ -1127,7 +1126,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   transform: scale(1.1);
 }
 
-.card.service .card-header > .icon {
+.card.service .card-header>.icon {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -1142,8 +1141,8 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   z-index: 1;
 }
 
-.card.service .card-header > .discount,
-.card.service .card-header > .featured {
+.card.service .card-header>.discount,
+.card.service .card-header>.featured {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -1151,7 +1150,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   z-index: 1;
 }
 
-.card.service .card-header > .featured {
+.card.service .card-header>.featured {
   top: 1rem;
   left: -0.5rem;
   right: auto;
@@ -1224,8 +1223,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  border: 0.0625rem solid
-    color-mix(in srgb, var(--clr-primary) 35%, transparent);
+  border: 0.0625rem solid color-mix(in srgb, var(--clr-primary) 35%, transparent);
   border-radius: 1.25rem;
   padding: 0.35rem 0.75rem;
 }
@@ -1488,7 +1486,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   margin-bottom: 2.5rem;
 }
 
-.ba-filter-btn.active > span {
+.ba-filter-btn.active>span {
   background: var(--clr-primary);
   border-color: var(--clr-primary);
 }
@@ -1601,8 +1599,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 .ba-highlight-pill {
   font-size: 0.75rem;
   color: var(--bs-body-color);
-  border: 0.0625rem solid
-    color-mix(in srgb, var(--clr-primary) 30%, transparent);
+  border: 0.0625rem solid color-mix(in srgb, var(--clr-primary) 30%, transparent);
   font-weight: 600;
 }
 
@@ -1628,7 +1625,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   overflow: hidden;
 }
 
-.faq-visual > img {
+.faq-visual>img {
   min-height: 33rem;
   object-fit: cover;
 }
@@ -1739,12 +1736,12 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   color: var(--clr-primary);
 }
 
-.pagination .btn > span {
+.pagination .btn>span {
   padding: 0.25rem 0.75rem;
 }
 
 /* Studio Tour */
-.studio-tour .section-header > p {
+.studio-tour .section-header>p {
   margin-inline: 0;
 }
 
@@ -1778,7 +1775,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   border-right: 0.15rem solid var(--clr-primary);
 }
 
-.video-control-btn.btn[data-size="fit"] > span {
+.video-control-btn.btn[data-size="fit"]>span {
   height: 3.5rem;
   width: 3.5rem;
   font-size: 1.5rem;
@@ -1820,7 +1817,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   background: var(--bs-card-bg);
 }
 
-.job-filter-group + .job-filter-group {
+.job-filter-group+.job-filter-group {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 0.0625rem solid var(--clr-border);
@@ -2056,7 +2053,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   pointer-events: auto;
 }
 
-.scroll-to-top-btn > span {
+.scroll-to-top-btn>span {
   border-radius: 50%;
 }
 
@@ -2068,7 +2065,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   z-index: 999;
 }
 
-.whatsapp-btn.btn[data-size="fit"] > span {
+.whatsapp-btn.btn[data-size="fit"]>span {
   height: 3rem;
   width: 3rem;
   background-color: #25d366;
@@ -2101,7 +2098,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   padding-right: 2.5rem;
 }
 
-.whatsapp-chat-popup .whatsapp-chat-header > h4 {
+.whatsapp-chat-popup .whatsapp-chat-header>h4 {
   font-size: 1.25rem;
   color: #ffffff;
 }
@@ -2212,11 +2209,11 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   color: var(--clr-secondary);
 }
 
-.footer ul > li:not(:last-child) {
+.footer ul>li:not(:last-child) {
   margin-bottom: 0.75rem;
 }
 
-.footer ul > li > a {
+.footer ul>li>a {
   position: relative;
   font-size: 0.875rem;
   text-decoration: none;
@@ -2224,18 +2221,18 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   transition: 300ms color ease-in-out;
 }
 
-.footer ul > li > a .icon {
+.footer ul>li>a .icon {
   opacity: 0;
   margin-left: -1.1rem;
   margin-right: 0.25rem;
   transition: all 300ms ease-in-out;
 }
 
-.footer ul > li > a:hover {
+.footer ul>li>a:hover {
   color: var(--clr-secondary);
 }
 
-.footer ul > li > a:hover .icon {
+.footer ul>li>a:hover .icon {
   opacity: 1;
   color: var(--clr-primary-hover);
   margin-left: 0;

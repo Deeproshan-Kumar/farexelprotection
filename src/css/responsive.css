@@ -59,6 +59,10 @@
 
 /* Mobile */
 @media only screen and (max-width: 991px) {
+  body {
+    padding-top: 7rem;
+  }
+
   .logo {
     height: 2.5rem;
   }
@@ -173,6 +177,7 @@
   .site-header .announcement-bar li a {
     display: flex;
     font-size: 0.75rem;
+    white-space: nowrap;
   }
 
   .hero-image-container {
@@ -327,6 +332,10 @@
 }
 
 @media only screen and (max-width: 510px) {
+  .site-header .announcement-bar {
+    padding-inline: 0.5rem;
+  }
+
   .customer-experiences .image-col {
     padding-left: 5.25rem;
   }
@@ -340,13 +349,6 @@
     min-width: 18rem;
     margin-left: 0;
   }
-}
-
-.section,
-.site-header .announcement-bar,
-.navbar,
-.footer {
-  padding-inline: 1rem;
 }
 
 @media (min-width: 48rem) {
