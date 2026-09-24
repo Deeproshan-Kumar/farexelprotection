@@ -2,722 +2,814 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Career | FAREXEL</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <!-- Lennis CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css" />
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- App CSS -->
-    <link rel="stylesheet" href="src/css/bootstrap-override.css" />
-    <link rel="stylesheet" href="src/css/main.css" />
-    <link rel="stylesheet" href="src/css/responsive.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Career | FAREXEL</title>
+  <link rel="icon" type="image/png" href="public/favicons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="public/favicons/favicon.svg" />
+  <link rel="shortcut icon" href="public/favicons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="public/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="public/favicons/site.webmanifest" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <!-- Lennis CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="src/css/bootstrap-override.css" />
+  <link rel="stylesheet" href="src/css/main.css" />
+  <link rel="stylesheet" href="src/css/responsive.css" />
 </head>
 
 <body>
-    <!-- Page Transition -->
-    <div id="page-transition" class="pillars-overlay" aria-hidden="true">
-        <div class="pillar"></div>
-        <div class="pillar"></div>
-        <div class="pillar"></div>
-        <div class="pillar"></div>
-        <div class="pillar"></div>
-        <div class="pillar"></div>
+  <!-- Page Transition -->
+  <div id="page-transition" class="pillars-overlay" aria-hidden="true">
+    <div class="pillar"></div>
+    <div class="pillar"></div>
+    <div class="pillar"></div>
+    <div class="pillar"></div>
+    <div class="pillar"></div>
+    <div class="pillar"></div>
+  </div>
+
+  <!-- Site Header -->
+  <header class="site-header" id="site-header">
+    <div class="announcement-bar bg-primary">
+      <div class="container py-1 py-lg-2">
+        <div class="row align-items-center">
+          <div class="col-sm-12 col-lg-6">
+            <ul
+              class="list-unstyled d-flex justify-content-between justify-content-lg-start align-items-center gap-2 gap-xl-4 text-sm mb-0">
+              <li class="action mail">
+                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                    name="mail"></ion-icon>contact@farexel.com</a>
+              </li>
+              <li class="action readonly">
+                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Fri :
+                09:00am - 08:00pm
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-12 col-lg-6">
+            <ul
+              class="list-unstyled d-flex justify-content-between justify-content-lg-end align-items-center justify-content-end gap-2 gap-xl-4 text-sm mb-0">
+              <li class="action call">
+                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="call"></ion-icon>+91
+                  1234567890</a>
+              </li>
+              <li class="action switch-lang">
+                <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
+                <select name="lang" id="lang" class="lang">
+                  <option value="en" selected>EN</option>
+                </select>
+              </li>
+              <li class="action login">
+                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="person"></ion-icon>Login</a>
+              </li>
+              <li class="action register">
+                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
+                    name="person"></ion-icon>Register</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Site Header -->
-    <header class="site-header" id="site-header">
-        <div class="announcement-bar bg-primary">
-            <div class="container py-1 py-lg-2">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-lg-6">
-                        <ul
-                            class="list-unstyled d-flex justify-content-between justify-content-lg-start align-items-center gap-2 gap-xl-4 text-sm mb-0">
-                            <li class="action mail">
-                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
-                                        name="mail"></ion-icon>contact@farexel.com</a>
-                            </li>
-                            <li class="action readonly">
-                                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Fri :
-                                09:00am - 08:00pm
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-12 col-lg-6">
-                        <ul
-                            class="list-unstyled d-flex justify-content-between justify-content-lg-end align-items-center justify-content-end gap-2 gap-xl-4 text-sm mb-0">
-                            <li class="action call">
-                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
-                                        name="call"></ion-icon>+91
-                                    1234567890</a>
-                            </li>
-                            <li class="action switch-lang">
-                                <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
-                                <select name="lang" id="lang" class="lang">
-                                    <option value="en" selected>EN</option>
-                                </select>
-                            </li>
-                            <li class="action login">
-                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
-                                        name="person"></ion-icon>Login</a>
-                            </li>
-                            <li class="action register">
-                                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
-                                        name="person"></ion-icon>Register</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container py-lg-2">
+        <a class="navbar-brand me-0 p-0" href="index.html">
+          <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo" />
+        </a>
+        <div class="d-none d-lg-block">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link rounded-1" aria-current="page" href="index.html"><ion-icon
+                  name="home"></ion-icon>Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link rounded-1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <ion-icon name="information-circle"></ion-icon>About
+              </a>
+              <ul class="dropdown-menu px-2">
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+                <li>
+                  <a class="dropdown-item" href="certificates.html">Certificates</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="our-team.html">Our Team</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                </li>
+                <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-1" href="services.html"><ion-icon name="settings"></ion-icon>Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-1" href="customer-experience.html"><ion-icon
+                  name="pricetag"></ion-icon>Customer Experience</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link rounded-1 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false"><ion-icon name="people"></ion-icon>Portfolio</a>
+              <ul class="dropdown-menu px-2">
+                <li>
+                  <a class="rounded-1 dropdown-item" href="photos.html">Photos</a>
+                </li>
+                <li>
+                  <a class="rounded-1 dropdown-item" href="videos.html">Videos</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-1 active" href="career.html"><ion-icon name="briefcase"></ion-icon>Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link rounded-1" href="contact.html"><ion-icon name="call"></ion-icon>Contact Us</a>
+            </li>
+          </ul>
         </div>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container py-lg-2">
-                <a class="navbar-brand me-0 p-0" href="index.html">
-                    <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo">
-                </a>
-                <div class="d-none d-lg-block">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link rounded-1" aria-current="page" href="index.html"><ion-icon
-                                    name="home"></ion-icon>Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link rounded-1 dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <ion-icon name="information-circle"></ion-icon>About
-                            </a>
-                            <ul class="dropdown-menu px-2">
-                                <li><a class="dropdown-item" href="about.html">About</a></li>
-                                <li><a class="dropdown-item" href="certificates.html">Certificates</a></li>
-                                <li><a class="dropdown-item" href="our-team.html">Our Team</a></li>
-                                <li><a class="dropdown-item" href="testimonials.html">Testimonials</a></li>
-                                <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link rounded-1" href="services.html"><ion-icon
-                                    name="settings"></ion-icon>Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link rounded-1" href="customer-experience.html"><ion-icon
-                                    name="pricetag"></ion-icon>Customer Experience</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link rounded-1 dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false"><ion-icon
-                                    name="people"></ion-icon>Portfolio</a>
-                            <ul class="dropdown-menu px-2">
-                                <li><a class="rounded-1 dropdown-item" href="photos.html">Photos</a></li>
-                                <li><a class="rounded-1 dropdown-item" href="videos.html">Videos</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link rounded-1 active" href="career.html"><ion-icon
-                                    name="briefcase"></ion-icon>Career</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link rounded-1" href="contact.html"><ion-icon name="call"></ion-icon>Contact
-                                Us</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="mobile-menu">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                About
-                            </a>
-                            <ul class="dropdown-menu px-2">
-                                <li><a class="dropdown-item" href="about.html">About</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="our-team.html">Our Team</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="testimonials.html">Testimonials</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="faqs.html">FAQs</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="customer-experience.html">Customer Experience</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">Portfolio</a>
-                            <ul class="dropdown-menu px-2">
-                                <li><a class="dropdown-item" href="photos.html">Photos</a></li>
-                                <li><a class="dropdown-item" href="videos.html">Videos</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="career.html">Career</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="career.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="header-actions d-flex justify-content-end align-items-center gap-2">
-                    <button data-size="fit" class="btn btn-primary" id="theme-toggle-btn">
-                        <span>
-                            <ion-icon class="icon" name="sunny"></ion-icon>
-                        </span>
-                    </button>
-                    <a href="contact.html" data-size="md" class="btn btn-primary d-none d-lg-inline-block">
-                        <span>
-                            <ion-icon name="call" class="me-1"></ion-icon><span class="d-none d-lg-inline-block">Book
-                                Now</span>
-                        </span>
-                    </a>
-                    <button class="navbar-toggler btn btn-primary d-lg-none" id="navbar-toggler" type="button"
-                        data-size="fit">
-                        <span>
-                            <ion-icon class="icon" name="menu"></ion-icon>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <main class="main" id="main">
-        <!-- Subpage Banner -->
-        <section class="section subpage-banner" id="subpage-banner" aria-label="Subpage Banner">
-            <div class="container position-relative py-4 py-lg-5">
-                <h1>Senior Automotive Detailer</h1>
-                <div class="breadcrumb">
-                    <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
-                        <li>
-                            <a href="index.html"
-                                class="text-decoration-none text-primary d-flex align-items-center gap-2">
-                                <ion-icon name="home" class="icon"></ion-icon>Home
-                            </a>
-                        </li>
-                        <ion-icon name="chevron-forward"></ion-icon>
-                        <li>
-                            <a href="career.html" class="text-decoration-none d-flex align-items-center gap-2">
-                                Career
-                            </a>
-                        </li>
-                        <ion-icon name="chevron-forward"></ion-icon>
-                        <li>
-                            Senior Automotive Detailer
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Job Detail -->
-        <section class="section job-description" id="job-description" aria-label="Job Description">
-            <div class="container py-4 py-lg-5">
-                <header class="job-header">
-                    <p>
-                        We are looking for an experienced and detail-oriented Senior Automotive
-                        Detailer to join our team. The ideal candidate will have strong
-                        automotive detailing skills, a passion for vehicle care, and the ability
-                        to maintain high-quality standards while working efficiently.
-                    </p>
-                </header>
-
-                <div class="job-section">
-                    <h2>Job Overview</h2>
-                    <ul>
-                        <li><strong>Position:</strong> Senior Automotive Detailer</li>
-                        <li><strong>Employment Type:</strong> Full-Time</li>
-                        <li><strong>Department:</strong> Vehicle Care &amp; Detailing</li>
-                        <li><strong>Experience:</strong> 3+ years in automotive detailing</li>
-                        <li><strong>Location:</strong> [Location]</li>
-                        <li><strong>Reports To:</strong> Detailing Manager / Service Manager</li>
-                    </ul>
-                </div>
-
-                <div class="job-section">
-                    <h2>Job Description</h2>
-                    <p>
-                        As a Senior Automotive Detailer, you will be responsible for delivering
-                        high-quality interior and exterior vehicle detailing services. You will
-                        inspect vehicles, identify detailing requirements, perform advanced
-                        cleaning and restoration procedures, and ensure every vehicle meets the
-                        company's quality standards before handover.
-                    </p>
-                </div>
-
-                <div class="job-section">
-                    <h2>Key Responsibilities</h2>
-                    <ul>
-                        <li>Perform comprehensive interior and exterior automotive detailing.</li>
-                        <li>Wash, clean, polish, wax, and protect vehicle exteriors.</li>
-                        <li>Perform interior vacuuming, shampooing, steam cleaning, and conditioning.</li>
-                        <li>Carry out paint correction, polishing, and surface preparation.</li>
-                        <li>Apply ceramic coatings, paint protection products, and other protective treatments as
-                            required.</li>
-                        <li>Clean and restore wheels, tires, glass, trim, and other vehicle surfaces.</li>
-                        <li>Inspect vehicles before and after detailing to ensure quality standards are met.</li>
-                        <li>Identify stains, scratches, paint imperfections, and other detailing requirements.</li>
-                        <li>Operate detailing equipment, pressure washers, polishers, extractors, steam cleaners, and
-                            other tools safely.</li>
-                        <li>Use automotive cleaning chemicals and products according to manufacturer guidelines.</li>
-                        <li>Maintain detailing tools, equipment, work areas, and vehicle bays in clean and safe
-                            condition.</li>
-                        <li>Guide junior detailers and provide practical training when required.</li>
-                        <li>Manage detailing tasks efficiently while maintaining attention to detail.</li>
-                        <li>Follow company safety procedures and vehicle handling guidelines.</li>
-                    </ul>
-                </div>
-
-                <div class="job-section">
-                    <h2>Required Qualifications &amp; Experience</h2>
-                    <ul>
-                        <li>3+ years of professional automotive detailing experience.</li>
-                        <li>Strong knowledge of automotive cleaning, polishing, and detailing techniques.</li>
-                        <li>Hands-on experience with paint correction and surface polishing.</li>
-                        <li>Experience using professional detailing tools and equipment.</li>
-                        <li>Knowledge of automotive cleaning chemicals and protective products.</li>
-                        <li>Ability to identify different vehicle surfaces and select appropriate cleaning methods.</li>
-                        <li>Good understanding of vehicle safety and proper handling procedures.</li>
-                        <li>Valid driving license is an advantage.</li>
-                    </ul>
-                </div>
-
-                <div class="job-section">
-                    <h2>Key Skills</h2>
-                    <ul>
-                        <li>Automotive Detailing</li>
-                        <li>Paint Correction</li>
-                        <li>Machine Polishing</li>
-                        <li>Interior Detailing</li>
-                        <li>Exterior Detailing</li>
-                        <li>Ceramic Coating Application</li>
-                        <li>Vehicle Inspection</li>
-                        <li>Equipment Handling</li>
-                        <li>Quality Control</li>
-                        <li>Team Leadership</li>
-                        <li>Time Management</li>
-                        <li>Attention to Detail</li>
-                    </ul>
-                </div>
-
-                <div class="job-section">
-                    <h2>What We Offer</h2>
-                    <ul>
-                        <li>Competitive salary based on experience and skills.</li>
-                        <li>Opportunity to work with a professional automotive team.</li>
-                        <li>Training and development opportunities.</li>
-                        <li>Performance-based incentives.</li>
-                        <li>Professional and supportive work environment.</li>
-                        <li>Opportunities for career growth and advancement.</li>
-                    </ul>
-                </div>
-
-                <div class="job-section">
-                    <h2>Ideal Candidate</h2>
-                    <p>
-                        The ideal candidate is passionate about automobiles, takes pride in
-                        delivering exceptional workmanship, and has a strong eye for detail.
-                        You should be reliable, physically fit, safety-conscious, and capable of
-                        working independently as well as leading or supporting a detailing team.
-                    </p>
-                </div>
-
-                <div class="job-section">
-                    <h2>How to Apply</h2>
-                    <p>
-                        If you have the required experience and are passionate about automotive
-                        detailing, submit your updated resume along with your relevant
-                        experience and contact details.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Application Form -->
-        <section class="section job-application-form" id="job-application-form" aria-label="Job Application Form">
-            <div class="container py-4 py-lg-5">
-                <h2>Apply Now</h2>
-                <form action="" method="">
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-6 py-2">
-                            <label for="first-name" class="d-block mb-1">First Name<span
-                                    class="asterisk">*</span></label>
-                            <input type="text" name="first-name" id="first-name" class="form-control" required>
-                        </div>
-                        <div class="col-sm-12 col-lg-6 py-2">
-                            <label for="last-name" class="d-block mb-1">Last Name<span class="asterisk">*</span></label>
-                            <input type="text" name="last-name" id="last-name" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-6 py-2">
-                            <label for="email" class="d-block mb-1">Email<span class="asterisk">*</span></label>
-                            <input type="email" name="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="col-sm-12 col-lg-6 py-2">
-                            <label for="mobile" class="d-block mb-1">Mobile<span class="asterisk">*</span></label>
-                            <input type="tel" name="mobile" id="mobile" class="form-control">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-6 py-2">
-                            <label for="role" class="d-block mb-1">Role<span class="asterisk">*</span></label>
-                            <div class="position-relative">
-                                <select name="role" id="role" class="form-control pe-4" required>
-                                    <option value="default" selected>--Choose--</option>
-                                    <option value="senior-automotive-detailer">Senior Automotive Detailer</option>
-                                    <option value="paint-correction-specialist">Paint Correction Specialist</option>
-                                    <option value="customer-experience-advisor">Customer Experience Advisor</option>
-                                    <option value="ceramic-coating-technician">Ceramic Coating Technician</option>
-                                    <option value="vehicle-preparation-technician">Vehicle Preparation Technician
-                                    </option>
-                                    <option value="studio-operation-coordinator">Studio Operation Coordinator</option>
-                                </select>
-                                <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-lg-6 py-2">
-                            <label for="experience" class="d-block mb-1">Experience (in years)<span
-                                    class="asterisk">*</span></label>
-                            <input type="number" name="experience" id="experience" class="form-control" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 py-2">
-                            <label for="file" class="resume-upload-label">
-                                <div class="resume-upload-icon">
-                                    <i class="bi bi-cloud-arrow-up"></i>
-                                </div>
-
-                                <div class="resume-upload-content">
-                                    <ion-icon name="cloud-upload-outline" class="text-black fs-2"></ion-icon>
-                                    <p class="text-black mb-1">
-                                        <span>Choose a file</span> or drag and drop it here
-                                    </p>
-                                    <p class="text-12">PDF, DOC, DOCX — Max. file size 5 MB</p>
-                                    <button class="btn btn-secondary" type="button">
-                                        <span>Browse File</span>
-                                    </button>
-                                </div>
-                            </label>
-                            <input type="file" name="resume" id="file" class="d-none" accept=".pdf,.doc,.docx" />
-                            <div id="file-name" class="file-name mt-2"></div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 py-2">
-                            <label for="message" class="d-block mb-1">Cover Letter</label>
-                            <textarea name="message" id="message" rows="5" class="form-control"></textarea>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 py-2">
-                            <button class="btn btn-primary" data-size="lg" type="submit" id="contact-btn">
-                                <span>Request Consultation<ion-icon name="send" class="icon ms-1"></ion-icon></span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </section>
-
-        <!-- Fullwidth CTA -->
-        <section class="section fullwidth-cta" id="fullwidth-cta" aria-label="Fullwidth CTA">
-            <div class="container py-4 py-lg-0">
-                <div class="row align-items-center">
-                    <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
-                        <div class="wrapper">
-                            <h2 class="cta-title">Reserve Your Detailing Experience.</h2>
-                            <p class="cta-description">
-                                From deep interior cleaning to a flawless exterior finish, we
-                                bring your vehicle back to its best. Book your detailing
-                                service today and drive away feeling like you just bought it
-                                again.
-                            </p>
-                            <a href="tel:+971505550184" class="cta-btn">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="icon-box d-flex justify-content-center align-items-center">
-                                        <ion-icon class="animate-pulse" name="call-sharp"></ion-icon>
-                                    </div>
-                                    <div>
-                                        <p class="text-sm mb-1">We are available 24x7</p>
-                                        <h4 class="text-primary mb-0">+1 123456789</h4>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-lg-4 text-center text-lg-end">
-                        <img src="public/images/cta-img.png" class="img-fluid cta-img" alt="CTA Image" />
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Whatsapp Chat Popup -->
-    <div class="whatsapp-chat-popup" id="whatsapp-chat-popup" aria-label="Whatsapp Chat Popup">
-        <div class="whatsapp-chat-header">
-            <h4 class="mb-0">Hello! How can we help you?</h4>
-            <button class="whatsapp-chat-close" id="whatsapp-chat-close">
-                <ion-icon name="close-outline"></ion-icon>
-            </button>
+        <div class="mobile-menu">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu px-2">
+                <li><a class="dropdown-item" href="about.html">About</a></li>
+                <li>
+                  <a class="dropdown-item" href="our-team.html">Our Team</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="testimonials.html">Testimonials</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="faqs.html">FAQs</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="customer-experience.html">Customer Experience</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Portfolio</a>
+              <ul class="dropdown-menu px-2">
+                <li>
+                  <a class="dropdown-item" href="photos.html">Photos</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="videos.html">Videos</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="career.html">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
         </div>
-        <div class="whatsapp-chat-body">
-            <div class="whatsapp-chat-info">
+        <div class="header-actions d-flex justify-content-end align-items-center gap-2">
+          <button data-size="fit" class="btn btn-primary" id="theme-toggle-btn">
+            <span>
+              <ion-icon class="icon" name="sunny"></ion-icon>
+            </span>
+          </button>
+          <a href="contact.html" data-size="md" class="btn btn-primary d-none d-lg-inline-block">
+            <span>
+              <ion-icon name="call" class="me-1"></ion-icon><span class="d-none d-lg-inline-block">Book Now</span>
+            </span>
+          </a>
+          <button class="navbar-toggler btn btn-primary d-lg-none" id="navbar-toggler" type="button" data-size="fit">
+            <span>
+              <ion-icon class="icon" name="menu"></ion-icon>
+            </span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main" id="main">
+    <!-- Subpage Banner -->
+    <section class="section subpage-banner" id="subpage-banner" aria-label="Subpage Banner">
+      <div class="container position-relative py-4 py-lg-5">
+        <h1>Senior Automotive Detailer</h1>
+        <div class="breadcrumb">
+          <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
+            <li>
+              <a href="index.html" class="text-decoration-none text-primary d-flex align-items-center gap-2">
+                <ion-icon name="home" class="icon"></ion-icon>Home
+              </a>
+            </li>
+            <ion-icon name="chevron-forward"></ion-icon>
+            <li>
+              <a href="career.html" class="text-decoration-none d-flex align-items-center gap-2">
+                Career
+              </a>
+            </li>
+            <ion-icon name="chevron-forward"></ion-icon>
+            <li>Senior Automotive Detailer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Job Detail -->
+    <section class="section job-description" id="job-description" aria-label="Job Description">
+      <div class="container py-4 py-lg-5">
+        <header class="job-header mb-4">
+          <h2 class="mb-2">Senior Automotive Detailer</h2>
+          <ul class="list-unstyled d-flex flex-wrap gap-1 gap-md-2 gap-lg-3 bg-surface-2 p-2 rounded-1">
+            <li class="d-flex align-items-center">
+              <ion-icon class="icon me-1" name="briefcase"></ion-icon>1+ year experience
+            </li>
+            <li class="d-flex align-items-center">
+              <ion-icon class="icon me-1" name="checkmark"></ion-icon>Full-time
+            </li>
+            <li class="d-flex align-items-center">
+              <ion-icon class="icon me-1" name="location"></ion-icon>Riyadh, Saudi Arabia
+            </li>
+          </ul>
+          <p>
+            We are looking for an experienced and detail-oriented Senior
+            Automotive Detailer to join our team. The ideal candidate will
+            have strong automotive detailing skills, a passion for vehicle
+            care, and the ability to maintain high-quality standards while
+            working efficiently.
+          </p>
+        </header>
+
+        <hr class="mb-4 mb-lg-5" />
+
+        <div class="row">
+          <div class="col-sm-12 col-lg-6">
+            <div class="job-section">
+              <h2>Job Overview</h2>
+              <ul>
+                <li><strong>Position:</strong> Senior Automotive Detailer</li>
+                <li><strong>Employment Type:</strong> Full-Time</li>
+                <li><strong>Department:</strong> Vehicle Care &amp; Detailing</li>
+                <li>
+                  <strong>Experience:</strong> 3+ years in automotive detailing
+                </li>
+                <li><strong>Location:</strong> [Location]</li>
+                <li>
+                  <strong>Reports To:</strong> Detailing Manager / Service Manager
+                </li>
+              </ul>
+            </div>
+
+            <div class="job-section">
+              <h2>Job Description</h2>
+              <p>
+                As a Senior Automotive Detailer, you will be responsible for
+                delivering high-quality interior and exterior vehicle detailing
+                services. You will inspect vehicles, identify detailing
+                requirements, perform advanced cleaning and restoration
+                procedures, and ensure every vehicle meets the company's quality
+                standards before handover.
+              </p>
+            </div>
+
+            <div class="job-section">
+              <h2>Key Responsibilities</h2>
+              <ul>
+                <li>
+                  Perform comprehensive interior and exterior automotive
+                  detailing.
+                </li>
+                <li>Wash, clean, polish, wax, and protect vehicle exteriors.</li>
+                <li>
+                  Perform interior vacuuming, shampooing, steam cleaning, and
+                  conditioning.
+                </li>
+                <li>
+                  Apply ceramic coatings, paint protection products, and other
+                  protective treatments as required.
+                </li>
+                <li>
+                  Clean and restore wheels, tires, glass, trim, and other vehicle
+                  surfaces.
+                </li>
+                <li>
+                  Inspect vehicles before and after detailing to ensure quality
+                  standards are met.
+                </li>
+                <li>
+                  Identify stains, scratches, paint imperfections, and other
+                  detailing requirements.
+                </li>
+                <li>
+                  Operate detailing equipment, pressure washers, polishers,
+                  extractors, steam cleaners, and other tools safely.
+                </li>
+                <li>
+                  Use automotive cleaning chemicals and products according to
+                  manufacturer guidelines.
+                </li>
+                <li>
+                  Maintain detailing tools, equipment, work areas, and vehicle
+                  bays in clean and safe condition.
+                </li>
+                <li>
+                  Guide junior detailers and provide practical training when
+                  required.
+                </li>
+              </ul>
+            </div>
+
+            <div class="job-section">
+              <h2>Required Qualifications &amp; Experience</h2>
+              <ul>
+                <li>3+ years of professional automotive detailing experience.</li>
+                <li>
+                  Strong knowledge of automotive cleaning, polishing, and
+                  detailing techniques.
+                </li>
+                <li>
+                  Hands-on experience with paint correction and surface polishing.
+                </li>
+                <li>
+                  Experience using professional detailing tools and equipment.
+                </li>
+                <li>
+                  Ability to identify different vehicle surfaces and select
+                  appropriate cleaning methods.
+                </li>
+                <li>
+                  Good understanding of vehicle safety and proper handling
+                  procedures.
+                </li>
+                <li>Valid driving license is an advantage.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12 col-lg-6">
+            <div class="job-section">
+              <h2>Key Skills</h2>
+              <ul>
+                <li>Automotive Detailing</li>
+                <li>Paint Correction</li>
+                <li>Machine Polishing</li>
+                <li>Interior Detailing</li>
+                <li>Exterior Detailing</li>
+                <li>Ceramic Coating Application</li>
+                <li>Vehicle Inspection</li>
+                <li>Equipment Handling</li>
+                <li>Quality Control</li>
+                <li>Team Leadership</li>
+                <li>Time Management</li>
+                <li>Attention to Detail</li>
+              </ul>
+            </div>
+
+            <div class="job-section">
+              <h2>What We Offer</h2>
+              <ul>
+                <li>Competitive salary based on experience and skills.</li>
+                <li>Opportunity to work with a professional automotive team.</li>
+                <li>Training and development opportunities.</li>
+                <li>Performance-based incentives.</li>
+                <li>Professional and supportive work environment.</li>
+                <li>Opportunities for career growth and advancement.</li>
+              </ul>
+            </div>
+
+            <div class="job-section">
+              <h2>Ideal Candidate</h2>
+              <p>
+                The ideal candidate is passionate about automobiles, takes pride
+                in delivering exceptional workmanship, and has a strong eye for
+                detail. You should be reliable, physically fit, safety-conscious,
+                and capable of working independently as well as leading or
+                supporting a detailing team.
+              </p>
+            </div>
+
+            <div class="job-section">
+              <h2>How to Apply</h2>
+              <p>
+                If you have the required experience and are passionate about
+                automotive detailing, submit your updated resume along with your
+                relevant experience and contact details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="section job-application-form" id="job-application-form" aria-label="Job Application Form">
+      <div class="container py-4 py-lg-5">
+        <div class="section-header text-center mb-4 mb-lg-4" style="
+              translate: none;
+              rotate: none;
+              scale: none;
+              opacity: 1;
+              transform: translate(0px, 0px);
+            ">
+          <h2 class="d-inline-block position-relative pb-2">
+            Start Your Career Transformation
+          </h2>
+          <p class="mb-0">
+            Fill this form to start your career transformation journey with
+            FAREXEL.
+          </p>
+        </div>
+        <form action="" method="" class="career-form">
+          <div class="row">
+            <div class="col-sm-12 col-lg-6 py-2">
+              <label for="first-name" class="d-block mb-1">First Name<span class="asterisk">*</span></label>
+              <input type="text" name="first-name" id="first-name" class="form-control" required />
+            </div>
+            <div class="col-sm-12 col-lg-6 py-2">
+              <label for="last-name" class="d-block mb-1">Last Name<span class="asterisk">*</span></label>
+              <input type="text" name="last-name" id="last-name" class="form-control" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-lg-6 py-2">
+              <label for="email" class="d-block mb-1">Email<span class="asterisk">*</span></label>
+              <input type="email" name="email" id="email" class="form-control" required />
+            </div>
+            <div class="col-sm-12 col-lg-6 py-2">
+              <label for="mobile" class="d-block mb-1">Mobile<span class="asterisk">*</span></label>
+              <input type="tel" name="mobile" id="mobile" class="form-control" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 col-lg-6 py-2">
+              <label for="role" class="d-block mb-1">Role<span class="asterisk">*</span></label>
+              <div class="position-relative">
+                <select name="role" id="role" class="form-control pe-4" required>
+                  <option value="default" selected>--Choose--</option>
+                  <option value="senior-automotive-detailer">
+                    Senior Automotive Detailer
+                  </option>
+                  <option value="paint-correction-specialist">
+                    Paint Correction Specialist
+                  </option>
+                  <option value="customer-experience-advisor">
+                    Customer Experience Advisor
+                  </option>
+                  <option value="ceramic-coating-technician">
+                    Ceramic Coating Technician
+                  </option>
+                  <option value="vehicle-preparation-technician">
+                    Vehicle Preparation Technician
+                  </option>
+                  <option value="studio-operation-coordinator">
+                    Studio Operation Coordinator
+                  </option>
+                </select>
+                <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
+              </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 py-2">
+              <label for="experience" class="d-block mb-1">Experience (in years)<span class="asterisk">*</span></label>
+              <input type="number" name="experience" id="experience" class="form-control" required />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12 py-2">
+              <label for="file" class="resume-upload-label">
+                <div class="resume-upload-icon">
+                  <i class="bi bi-cloud-arrow-up"></i>
+                </div>
+
+                <div class="resume-upload-content">
+                  <ion-icon name="cloud-upload-outline" class="text-black fs-2"></ion-icon>
+                  <p class="text-black mb-1">
+                    <span>Choose a file</span> or drag and drop it here
+                  </p>
+                  <p class="text-12">PDF, DOC, DOCX — Max. file size 5 MB</p>
+                  <button class="btn btn-secondary" type="button">
+                    <span>Browse File</span>
+                  </button>
+                </div>
+              </label>
+              <input type="file" name="resume" id="file" class="d-none" accept=".pdf,.doc,.docx" />
+              <div id="file-name" class="file-name mt-2"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 py-2">
+              <label for="message" class="d-block mb-1">Cover Letter</label>
+              <textarea name="message" id="message" rows="5" class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 py-2">
+              <button class="btn btn-primary" data-size="lg" type="submit" id="contact-btn">
+                <span>Request Consultation<ion-icon name="send" class="icon ms-1"></ion-icon></span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Fullwidth CTA -->
+    <section class="section fullwidth-cta" id="fullwidth-cta" aria-label="Fullwidth CTA">
+      <div class="container py-4 py-lg-0">
+        <div class="row align-items-center">
+          <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
+            <div class="wrapper">
+              <h2 class="cta-title">Reserve Your Detailing Experience.</h2>
+              <p class="cta-description">
+                From deep interior cleaning to a flawless exterior finish, we
+                bring your vehicle back to its best. Book your detailing
+                service today and drive away feeling like you just bought it
+                again.
+              </p>
+              <a href="tel:+971505550184" class="cta-btn">
                 <div class="d-flex align-items-center gap-2">
-                    <div class="business-profile-pic">A</div>
-                    <div class="business-info">
-                        <h6 class="mb-0">FAREXEL - Premium Car Detailing</h6>
-                        <p class="mb-0"><small>Business Account</small></p>
-                    </div>
+                  <div class="icon-box d-flex justify-content-center align-items-center">
+                    <ion-icon class="animate-pulse" name="call-sharp"></ion-icon>
+                  </div>
+                  <div>
+                    <p class="text-sm mb-1">We are available 24x7</p>
+                    <h4 class="text-primary mb-0">+1 123456789</h4>
+                  </div>
                 </div>
+              </a>
             </div>
-            <div class="whatsapp-chat-message-box">
-                <p class="mb-0">Click below to chat on WhatsApp or send us an email to <a href="mailto:info@farexel.com"
-                        class="text-decoration-none text-primary">hello@farexel.com</a>
-                </p>
-            </div>
-            <div class="whatsapp-chat-option">
-                <div class="d-flex align-items-center gap-2" id="launch-whatsapp">
-                    <div class="business-profile-pic whatsapp">
-                        <ion-icon name="logo-whatsapp" class="icon"></ion-icon>
-                    </div>
-                    <div class="business-info">
-                        <h6 class="mb-0">Chat with us</h6>
-                        <p class="mb-0"><small>FAREXEL - Premium Car Detailing</small></p>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="col-sm-12 col-lg-4 text-center text-lg-end">
+            <img src="public/images/cta-img.png" class="img-fluid cta-img" alt="CTA Image" />
+          </div>
         </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Whatsapp Chat Popup -->
+  <div class="whatsapp-chat-popup" id="whatsapp-chat-popup" aria-label="Whatsapp Chat Popup">
+    <div class="whatsapp-chat-header">
+      <h4 class="mb-0">Hello! How can we help you?</h4>
+      <button class="whatsapp-chat-close" id="whatsapp-chat-close">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
     </div>
-
-    <!-- Scroll to Top Button -->
-    <button class="btn btn-primary scroll-to-top-btn" id="scroll-to-top-btn" data-size="fit"
-        aria-label="Scroll To Top Button">
-        <span>
-            <ion-icon name="chevron-up"></ion-icon>
-        </span>
-    </button>
-
-    <!-- WhatsApp Button -->
-    <button class="btn btn-primary whatsapp-btn" id="whatsapp-btn" data-size="fit" aria-label="WhatsApp Chat Button">
-        <span>
-            <ion-icon name="logo-whatsapp"></ion-icon>
-        </span>
-    </button>
-
-    <!-- Site Footer -->
-    <footer class="footer" id="footer" aria-label="Footer">
-        <div class="container">
-            <div class="footer-inner row gy-4">
-                <div class="col-lg-3">
-                    <a class="footer-brand d-inline-block text-decoration-none mb-3" href="index.html">
-                        <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo">
-                    </a>
-                    <p class="text-sm">
-                        Premium car care for Dubai drivers who expect a clean finish,
-                        careful workmanship, and a straightforward experience.
-                    </p>
-                    <div class="social-handles-widget d-flex align-items-center gap-3">
-                        <a href="#" title="Email" data-size="fit" class="handle mail btn btn-secondary">
-                            <span><ion-icon name="mail"></ion-icon></span>
-                        </a>
-                        <a href="#" title="WhatsApp" data-size="fit" class="handle whatsapp btn btn-secondary">
-                            <span><ion-icon name="logo-whatsapp"></ion-icon></span>
-                        </a>
-                        <a href="#" title="Instagram" data-size="fit" class="handle insta btn btn-secondary">
-                            <span><ion-icon name="logo-instagram"></ion-icon></span>
-                        </a>
-                        <a href="#" title="Facebook" data-size="fit" class="handle facebook btn btn-secondary">
-                            <span><ion-icon name="logo-facebook"></ion-icon></span>
-                        </a>
-                    </div>
-                    <div class="contact-us-spinner mt-4">
-                        <a href="contact.html">
-                            <img src="public/images/contact-spinner.png" height="160" width="160"
-                                alt="Contact Us Spinner Image">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h6 class="text-uppercase tracking-wider">Explore</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="index.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Home</a>
-                        </li>
-                        <li>
-                            <a href="about.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>About</a>
-                        </li>
-                        <li>
-                            <a href="services.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Services</a>
-                        </li>
-                        <li>
-                            <a href="customer-experience.html"><ion-icon class="icon"
-                                    name="arrow-forward"></ion-icon>Customer
-                                Experience</a>
-                        </li>
-                        <li>
-                            <a href="blog.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Blog</a>
-                        </li>
-                        <li>
-                            <a href="career.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Career</a>
-                        </li>
-                        <li>
-                            <a href="contact.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h6 class="text-uppercase tracking-wider">Services</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Car
-                                Detailing</a>
-                        </li>
-                        <li>
-                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Paint
-                                Protection Film</a>
-                        </li>
-                        <li>
-                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Full
-                                Car Painting</a>
-                        </li>
-                        <li>
-                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Panel
-                                Painting</a>
-                        </li>
-                        <li>
-                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Scratch & Dent Repair</a>
-                        </li>
-                        <li>
-                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Color
-                                Change</a>
-                        </li>
-                        <li>
-                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Paint
-                                Protection Coating</a>
-                        </li>
-                        <li>
-                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Polishing and Buffing</a>
-                        </li>
-                        <li>
-                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Bumper
-                                & Plastic Part Painting</a>
-                        </li>
-                        <li>
-                            <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Custom
-                                Painting</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h6 class="text-uppercase tracking-wider">Get in Touch</h6>
-                    <ul class="list-unstyled mb-0">
-                        <li class="icon-box d-flex gap-2">
-                            <div class="icon">
-                                <ion-icon name="mail"></ion-icon>
-                            </div>
-                            <div>
-                                <p class="text-xs text-uppercase tracking-wider mb-0">
-                                    Email Us
-                                </p>
-                                <a href="mailto:info@farexel.com"
-                                    class="text-decoration-none text-sm">hello@farexel.com</a>
-                            </div>
-                        </li>
-                        <li class="icon-box d-flex gap-2">
-                            <div class="icon">
-                                <ion-icon name="call"></ion-icon>
-                            </div>
-                            <div>
-                                <p class="text-xs text-uppercase tracking-wider mb-0">
-                                    Call Us
-                                </p>
-                                <a href="tel:+971505550184" class="text-decoration-none text-sm">+971 50 555 0184</a>
-                            </div>
-                        </li>
-                        <li class="icon-box d-flex gap-2">
-                            <div class="icon">
-                                <ion-icon name="location"></ion-icon>
-                            </div>
-                            <div>
-                                <p class="text-xs text-uppercase tracking-wider mb-0">
-                                    Location
-                                </p>
-                                <a href="#contact-us" class="text-decoration-none text-sm">Dubai, United Arab
-                                    Emirates</a>
-                            </div>
-                        </li>
-                    </ul>
-                    <h6 class="text-uppercase tracking-wider mt-4">Subscribe</h6>
-                    <p class="text-12">Subscribe to our newsletter and stay updated with our offer.</p>
-                    <form action="" method="" class="d-flex align-items-center gap-2">
-                        <input type="email" name="email" id="email" class="form-control" placeholder="Your Email...">
-                        <button type="submit" class="btn btn-primary">
-                            <span>Subscribe</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            <div class="row align-items-center copyright-bar">
-                <div class="col-sm-12 col-lg-6">
-                    <p class="text-sm text-center text-lg-start mb-0">
-                        &copy; 2026
-                        <a href="#" class="text-primary text-decoration-none">FAREXEL</a>. All rights reserved.
-                    </p>
-                </div>
-                <div class="col-sm-12 col-lg-6">
-                    <ul class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end gap-4 mb-0">
-                        <li class="mb-0">
-                            <a href="#" class="text-decoration-none">Privacy Policy</a>
-                        </li>
-                        <li class="mb-0">
-                            <a href="#" class="text-decoration-none">Terms of Service</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <div class="whatsapp-chat-body">
+      <div class="whatsapp-chat-info">
+        <div class="d-flex align-items-center gap-2">
+          <div class="business-profile-pic">A</div>
+          <div class="business-info">
+            <h6 class="mb-0">FAREXEL - Premium Car Detailing</h6>
+            <p class="mb-0"><small>Business Account</small></p>
+          </div>
         </div>
-    </footer>
+      </div>
+      <div class="whatsapp-chat-message-box">
+        <p class="mb-0">
+          Click below to chat on WhatsApp or send us an email to
+          <a href="mailto:info@farexel.com" class="text-decoration-none text-primary">hello@farexel.com</a>
+        </p>
+      </div>
+      <div class="whatsapp-chat-option">
+        <div class="d-flex align-items-center gap-2" id="launch-whatsapp">
+          <div class="business-profile-pic whatsapp">
+            <ion-icon name="logo-whatsapp" class="icon"></ion-icon>
+          </div>
+          <div class="business-info">
+            <h6 class="mb-0">Chat with us</h6>
+            <p class="mb-0"><small>FAREXEL - Premium Car Detailing</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Ionicons JS -->
-    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <!-- Lennis -->
-    <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
-    <!-- GSAP -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
-    <!-- ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- CountUp JS -->
-    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.9.0/dist/countUp.umd.js"></script>
-    <!-- Main JS -->
-    <script type="module" src="src/js/main.js"></script>
+  <!-- Scroll to Top Button -->
+  <button class="btn btn-primary scroll-to-top-btn" id="scroll-to-top-btn" data-size="fit"
+    aria-label="Scroll To Top Button">
+    <span>
+      <ion-icon name="chevron-up"></ion-icon>
+    </span>
+  </button>
+
+  <!-- WhatsApp Button -->
+  <button class="btn btn-primary whatsapp-btn" id="whatsapp-btn" data-size="fit" aria-label="WhatsApp Chat Button">
+    <span>
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </span>
+  </button>
+
+  <!-- Site Footer -->
+  <footer class="footer" id="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer-inner row gy-4">
+        <div class="col-lg-3">
+          <a class="footer-brand d-inline-block text-decoration-none mb-3" href="index.html">
+            <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo" />
+          </a>
+          <p class="text-sm">
+            Premium car care for Dubai drivers who expect a clean finish,
+            careful workmanship, and a straightforward experience.
+          </p>
+          <div class="social-handles-widget d-flex align-items-center gap-3">
+            <a href="#" title="Email" data-size="fit" class="handle mail btn btn-secondary">
+              <span><ion-icon name="mail"></ion-icon></span>
+            </a>
+            <a href="#" title="WhatsApp" data-size="fit" class="handle whatsapp btn btn-secondary">
+              <span><ion-icon name="logo-whatsapp"></ion-icon></span>
+            </a>
+            <a href="#" title="Instagram" data-size="fit" class="handle insta btn btn-secondary">
+              <span><ion-icon name="logo-instagram"></ion-icon></span>
+            </a>
+            <a href="#" title="Facebook" data-size="fit" class="handle facebook btn btn-secondary">
+              <span><ion-icon name="logo-facebook"></ion-icon></span>
+            </a>
+          </div>
+          <div class="contact-us-spinner mt-4">
+            <a href="contact.html">
+              <img src="public/images/contact-spinner.png" height="160" width="160" alt="Contact Us Spinner Image" />
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="text-uppercase tracking-wider">Explore</h6>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="index.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Home</a>
+            </li>
+            <li>
+              <a href="about.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>About</a>
+            </li>
+            <li>
+              <a href="services.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Services</a>
+            </li>
+            <li>
+              <a href="customer-experience.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Customer
+                Experience</a>
+            </li>
+            <li>
+              <a href="blog.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Blog</a>
+            </li>
+            <li>
+              <a href="career.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Career</a>
+            </li>
+            <li>
+              <a href="contact.html"><ion-icon class="icon" name="arrow-forward"></ion-icon>Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="text-uppercase tracking-wider">Services</h6>
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Car
+                Detailing</a>
+            </li>
+            <li>
+              <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Paint
+                Protection Film</a>
+            </li>
+            <li>
+              <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Full
+                Car Painting</a>
+            </li>
+            <li>
+              <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Panel
+                Painting</a>
+            </li>
+            <li>
+              <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Scratch & Dent Repair</a>
+            </li>
+            <li>
+              <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Color
+                Change</a>
+            </li>
+            <li>
+              <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Paint
+                Protection Coating</a>
+            </li>
+            <li>
+              <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Polishing and Buffing</a>
+            </li>
+            <li>
+              <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Bumper
+                & Plastic Part Painting</a>
+            </li>
+            <li>
+              <a href="#"><ion-icon class="icon" name="arrow-forward"></ion-icon>Custom
+                Painting</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="text-uppercase tracking-wider">Get in Touch</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="icon-box d-flex gap-2">
+              <div class="icon">
+                <ion-icon name="mail"></ion-icon>
+              </div>
+              <div>
+                <p class="text-xs text-uppercase tracking-wider mb-0">
+                  Email Us
+                </p>
+                <a href="mailto:info@farexel.com" class="text-decoration-none text-sm">hello@farexel.com</a>
+              </div>
+            </li>
+            <li class="icon-box d-flex gap-2">
+              <div class="icon">
+                <ion-icon name="call"></ion-icon>
+              </div>
+              <div>
+                <p class="text-xs text-uppercase tracking-wider mb-0">
+                  Call Us
+                </p>
+                <a href="tel:+971505550184" class="text-decoration-none text-sm">+971 50 555 0184</a>
+              </div>
+            </li>
+            <li class="icon-box d-flex gap-2">
+              <div class="icon">
+                <ion-icon name="location"></ion-icon>
+              </div>
+              <div>
+                <p class="text-xs text-uppercase tracking-wider mb-0">
+                  Location
+                </p>
+                <a href="#contact-us" class="text-decoration-none text-sm">Dubai, United Arab Emirates</a>
+              </div>
+            </li>
+          </ul>
+          <h6 class="text-uppercase tracking-wider mt-4">Subscribe</h6>
+          <p class="text-12">
+            Subscribe to our newsletter and stay updated with our offer.
+          </p>
+          <form action="" method="" class="d-flex align-items-center gap-2">
+            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email..." />
+            <button type="submit" class="btn btn-primary">
+              <span>Subscribe</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="row align-items-center copyright-bar">
+        <div class="col-sm-12 col-lg-6">
+          <p class="text-sm text-center text-lg-start mb-0">
+            &copy; 2026
+            <a href="#" class="text-primary text-decoration-none">FAREXEL</a>.
+            All rights reserved.
+          </p>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <ul class="list-unstyled d-flex flex-wrap justify-content-center justify-content-md-end gap-4 mb-0">
+            <li class="mb-0">
+              <a href="privacy-policy.html" class="text-decoration-none">Privacy Policy</a>
+            </li>
+            <li class="mb-0">
+              <a href="terms-of-service.html" class="text-decoration-none">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Ionicons JS -->
+  <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <!-- Lennis -->
+  <script src="https://unpkg.com/lenis@1.3.26/dist/lenis.min.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+  <!-- ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- CountUp JS -->
+  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.9.0/dist/countUp.umd.js"></script>
+  <!-- Main JS -->
+  <script type="module" src="src/js/main.js"></script>
 </body>
 
 </html>

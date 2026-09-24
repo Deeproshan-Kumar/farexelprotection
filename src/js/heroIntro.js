@@ -18,8 +18,8 @@ export function initHeroIntro() {
   // natural, fully-visible state instead of animating them in.
   if (REDUCED_MOTION) return null;
 
-  const header = document.querySelector(".site-header");
-  const hero = document.querySelector("#hero");
+  const header = document.querySelector("#site-header, .site-header");
+  const hero = document.querySelector("#hero, .hero");
   if (!header && !hero) return null;
 
   const logo = header?.querySelector(".navbar-brand");
@@ -27,12 +27,10 @@ export function initHeroIntro() {
   const headerActions = header?.querySelector(".header-actions");
   const headerActionItems = headerActions ? headerActions.children : null;
 
-  // The hero's first column holds every piece of hero copy, in the exact
-  // order it should reveal — animate its direct children as one sequence.
-  const heroColumns = hero?.querySelectorAll(".col-sm-12.col-lg-6");
-  const heroContent = heroColumns?.[0];
+  // Animate hero content column direct children and hero image column
+  const heroContent = hero?.querySelector(".gsap-hero-content-col");
   const heroItems = heroContent?.children;
-  const heroImageColumn = heroColumns?.[1];
+  const heroImageColumn = hero?.querySelector(".gsap-hero-image-col");
 
   const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
 
