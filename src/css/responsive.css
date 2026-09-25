@@ -291,7 +291,6 @@
     padding: 0.25rem;
   }
 
-  /* Showcase */
   .showcase-of-excellence .wrapper .work p {
     font-size: 0.875rem;
   }
@@ -335,20 +334,17 @@
     justify-content: flex-start;
   }
 
-  /* Achievements */
   .achievements .icon-box .icon {
     width: 2.5rem;
     height: 2.5rem;
     padding: 1rem;
   }
 
-  /* Video */
   .video-control-btn.btn[data-size="fit"] span {
     width: 2.5rem;
     height: 2.5rem;
   }
 
-  /* Services */
   .service-item h3 {
     margin-bottom: -1rem;
   }
@@ -362,12 +358,10 @@
     bottom: 0.25rem;
   }
 
-  /* Blog */
   .blogs .blog .blog-title h5 {
     font-size: 1rem;
   }
 
-  /* Careers */
   .career-header .row>div,
   .career-header .row>div:last-child .d-flex {
     width: 100%;
@@ -402,14 +396,12 @@
     column-count: 1;
   }
 
-  /* Cards */
   .card.consulation .icon-box .icon,
   .card.location .icon-box .icon {
     width: 2rem;
     height: 2rem;
   }
 
-  /* Floating controls */
   .contact-us-spinner img {
     width: 7rem;
     height: 7rem;
@@ -421,6 +413,12 @@
 
   .scroll-to-top-btn {
     right: 1.2rem;
+  }
+
+  input.form-control,
+  select.form-control,
+  input[type='submit'] {
+    height: 3.25rem;
   }
 }
 

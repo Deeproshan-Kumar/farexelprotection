@@ -1138,6 +1138,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 
 .services .card.service .card-header {
   position: relative;
+  height: 12.5rem;
   overflow: hidden;
 }
 
@@ -1206,6 +1207,20 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   background: var(--clr-primary);
 }
 
+.card.service .card-body ul {
+  height: 8rem;
+  overflow-y: auto;
+}
+
+.card.service .card-body ul::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+.card.service .card-body h1,
+.card.service .card-body h2,
+.card.service .card-body h3,
+.card.service .card-body h4,
+.card.service .card-body h5,
 .card.service .card-body h6 {
   display: inline-flex;
   flex-wrap: wrap;
@@ -1229,6 +1244,10 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 .selected-services-summary {
   border-top: 0.0625rem solid var(--clr-border);
   border-bottom: 0.0625rem solid var(--clr-border);
+}
+
+.selected-services-summary img {
+  filter: drop-shadow(0px 1rem 2rem rgba(255, 0, 0, 0.35));
 }
 
 .selected-services-summary ul {

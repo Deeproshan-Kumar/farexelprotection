@@ -1,122 +1,172 @@
-# FAREXEL Protection — Premium Automotive Detailing Studio
+# FAREXEL Protection — Luxury Automotive & Motorcycle Detailing Studio
 
-FAREXEL Protection is a responsive automotive detailing studio website for presenting premium vehicle care services, paint protection film (PPF), ceramic coating, ISO certifications, customer experiences, and interactive booking estimation.
+**FAREXEL Protection** is an elite, high-performance web platform built for a premier automotive and motorcycle protection studio. The platform presents comprehensive vehicle preservation solutions — including self-healing Paint Protection Film (PPF), multi-layer Nano Ceramic coatings, high-rejection solar window films, signature restorative detailing, and custom interior appointments.
 
-The project is built as a lightweight static website with semantic HTML5, custom CSS, ES modules, and browser-delivered third-party libraries. It does not require a bundler, framework, package manager, or build step.
+Designed with an unapologetic dark luxury aesthetic, the site pairs precision craftsmanship with modern web technologies: semantic HTML5, modular CSS3 architecture, native ES6+ JavaScript modules, hardware-accelerated GSAP animations, and interactive client utility tools.
 
-## Features
+---
 
-- **Responsive Architecture**: Pixel-perfect design tailored for mobile, tablet, desktop, and ultra-wide displays.
-- **Interactive Service Calculator (`services.html`)**: Select service cards to dynamically aggregate total price (AED), estimated turnaround time (Business Hours), vehicle category, and selected package badges with smooth scroll to booking form.
-- **Industry Certificates (`certificates.html`)**: Showcase studio credentials including ISO 9001:2015, Master Detailer certifications, IDA memberships, Ceramic Coating & PPF Installer standards, and Nanotech surface protection.
-- **GSAP ScrollTrigger Reveal Animations**: Scroll-based reveal animations across homepage counters, Client Experiences image & content blocks, home ratings, video galleries, photo grids, customer stories, team profiles, and service summaries.
-- **Lenis Smooth Scroll**: Buttery smooth scrolling integrated with GSAP ScrollTrigger timeline management.
-- **Theme Toggle**: Dark and light theme toggle with `localStorage` state persistence.
-- **Full Section Accessibility (`aria-label`)**: 100% section-level ARIA accessibility pass across all 15 HTML pages.
-- **Swiper Carousels**: Interactive carousels for promotional offers and client testimonials.
-- **Responsive Navigation**: Mobile slide-out menu, interactive header top bar, and pillar transition overlay.
-- **Ionicons Integration**: Vector iconography for actions, features, ratings, and vehicle categories.
+## Key Highlights & Features
 
-## Pages
+### 1. Interactive Multi-Vehicle Service Matrix (`services.html` & `index.html`)
+- **5 Vehicle Classifications**: Tailored service options and tiered pricing across **Sedan**, **Hatchback**, **SUV**, **Luxury Car**, and **Motorcycle / Bike**.
+- **6 Structured Service Categories**:
+  - **Paint Protection (PPF)**: Basic PPF, Front PPF, Complete Body Glossy, Complete Body Matte, Complete Body Colour, and Interior PPF.
+  - **Window Tinting**: Basic, Premium, Advanced, Signature Heat Rejection, and Ultimate Visibility Windshield.
+  - **Car Detailing**: Basic Detailing, Premium Detailing & Interior Care, and 7-Step Signature Finish.
+  - **Nano Ceramic**: Nano Ceramic Basic, Premium, Premium Features, Interior Protection, and Complete Package.
+  - **Signature Packages**: Signature Protection Package and Nano Ceramic Complete Suite.
+  - **Motorcycle Services**: Express Wash, Premium Polishing Care, FAREXEL Premium Bike Care, and Brake Caliper Painting.
+- **Standardized Currency**: All pricing formatted consistently in **SAR** (Saudi Riyal) across both catalog views.
+- **Visual Excellence**: Every service card features high-resolution imagery served directly from `public/services/` with semantic `<h5>` card typography.
 
-| Page | File | Purpose |
+### 2. Real-Time Service Estimator & Booking Integration (`servicesSummary.js`)
+- Click-to-select interactive service cards with real-time feedback.
+- Dynamic aggregation of total cost (**SAR**), estimated turnaround time (**Business Hours**), and active vehicle category.
+- Instant synchronization with the on-page booking form with smooth scroll anchoring.
+
+### 3. Interactive Before-and-After Transformation Gallery (`customer-experience.html`)
+- Drag-and-slide dual-layer image comparison sliders with touch and keyboard accessibility (`role="slider"`).
+- Dynamic category filter buttons matching the studio's official service categories:
+  - *All Services*, *Paint Protection (PPF)*, *Window Tinting*, *Car Detailing*, *Nano Ceramic*, *Signature Packages*, and *Bike Services*.
+  - Multi-category support ensuring fluid animations with instant visibility and zero blank filter states.
+
+### 4. Bespoke Visual Design & Luxury Theme Engine
+- **Dark Mode by Default**: Tailored dark theme featuring deep onyx backgrounds (`#0a0a0c`), crimson brand accents (`#fb2c36`), and refined glassmorphic cards.
+- **Theme Switcher**: Instant dark/light mode toggle with persistence via browser `localStorage`.
+- **Editorial Typography**: Styled with Google Fonts **Syne** (bold geometric headings) and **Inter** (crystal-clear body legibility).
+
+### 5. Fluid Animation & Scrolling Architecture
+- **Lenis Smooth Scrolling**: Decoupled, momentum-based scrolling synced with GSAP.
+- **GSAP 3 & ScrollTrigger**: Staggered card reveals, hero banner entrance timelines, and tab-switch animation guards.
+- **Tab Switch Resilience**: Automated clearing of inline transforms (`clearProps`) upon tab change to guarantee instant element visibility.
+
+### 6. Full Accessibility & Modern SEO
+- 100% semantic HTML5 architecture with comprehensive `aria-label`, `aria-hidden`, and ARIA role coverage across all 18 pages.
+- Structured metadata, OpenGraph tags, unique element identifiers, and mobile-optimized viewport configurations.
+
+---
+
+## Site Pages Directory
+
+| Page | File | Description |
 | --- | --- | --- |
-| Home | `index.html` | Studio homepage, signature services, before/after, and client reviews |
-| About | `about.html` | Studio story, craftsmanship process, and company details |
-| Services | `services.html` | Interactive service catalog, duration calculator & booking form |
-| Certificates | `certificates.html` | Verified studio credentials, certifications, and quality standards |
-| Customer Experience | `customer-experience.html` | Client journey, detailed case studies, and before/after comparisons |
-| Blog | `blog.html` | Detailing guides, paint maintenance articles, and news |
-| Blog Detail | `blog-detail.html` | Full article view with reader recommendations |
-| Career | `career.html` | Team career opportunities, benefits, and application submission |
-| Job Detail | `job-detail.html` | Individual job role requirements and application form |
-| Contact | `contact.html` | Location details, workshop map, direct inquiry, and working hours |
-| Our Team | `our-team.html` | Detailer profiles, master technician credentials, and selection process |
-| Testimonials | `testimonials.html` | Detailed client reviews and video testimonials |
-| FAQs | `faqs.html` | Comprehensive answers regarding booking, PPF, and ceramic coating |
-| Photos | `photos.html` | Filterable high-res gallery of completed detailing projects |
-| Videos | `videos.html` | Video showcase of vehicle transformations and application processes |
+| **Home** | `index.html` | Studio overview, hero showcase, featured service matrix, highlights, and client stories |
+| **About Us** | `about.html` | Studio heritage, master technician standards, and detailing philosophy |
+| **Services & Estimator** | `services.html` | Complete multi-vehicle service catalog, interactive quote calculator, and booking inquiry |
+| **Customer Experience** | `customer-experience.html` | Client journey, transformation case studies, and interactive Before/After comparison gallery |
+| **Certificates & Standards** | `certificates.html` | Studio credentials, ISO 9001:2015 certifications, and certified installer badges |
+| **Our Team** | `our-team.html` | Master detailer profiles, specialist credentials, and artisan biographies |
+| **Leadership Insights** | `leadership-insights.html` | Executive perspectives on automotive preservation and detailing innovation |
+| **Photos Gallery** | `photos.html` | High-resolution portfolio of completed client vehicles and studio work |
+| **Videos Showcase** | `videos.html` | Cinematic transformation videos and workshop process reels |
+| **Testimonials** | `testimonials.html` | Verified customer reviews, video feedback, and client ratings |
+| **FAQs** | `faqs.html` | Comprehensive answers regarding PPF warranties, ceramic care, and booking policies |
+| **Blog & News** | `blog.html` | Detailing guides, paint maintenance articles, and studio updates |
+| **Blog Detail** | `blog-detail.html` | In-depth automotive care guide view with related article recommendations |
+| **Careers** | `career.html` | Studio culture, open artisan positions, technician perks, and application intake |
+| **Job Detail** | `job-detail.html` | Role specifications, candidate requirements, and direct resume upload form |
+| **Contact Us** | `contact.html` | Workshop address, interactive map, direct inquiry form, and studio hours |
+| **Privacy Policy** | `privacy-policy.html` | Data governance, client privacy commitments, and cookie disclosures |
+| **Terms of Service** | `terms-of-service.html` | Workshop service warranties, booking terms, and customer guidelines |
+
+---
 
 ## Technology Stack
 
-### Core Frontend
-- **HTML5**: Semantic markup with complete ARIA support (`aria-label`, `aria-hidden`, `role`).
-- **CSS3**: Modern CSS custom properties, flexbox, grid, glassmorphism, and responsive breakpoints.
-- **JavaScript (ES Modules)**: Native browser modules (`import`/`export`) without compilation overhead.
+- **Markup**: Semantic HTML5 with complete ARIA role coverage
+- **Styling**: Vanilla CSS3 Custom Properties (Design Tokens), Flexbox, CSS Grid
+- **Framework & Components**: [Bootstrap 5.3.8](https://getbootstrap.com/) (Grid and Utilities)
+- **Icons**: [Ionicons 8.0.13](https://ionic.io/ionicons)
+- **Animations**: [GSAP 3.15.0](https://gsap.com/) & [ScrollTrigger](https://gsap.com/scrolltrigger/)
+- **Smooth Scroll**: [Lenis 1.3.26](https://lenis.darkroom.engineering/)
+- **Carousels**: [Swiper 11](https://swiperjs.com/)
+- **Architecture**: Native ES6+ Modules (`type="module"`) — zero build tools or bundlers required
 
-### Third-Party Libraries (via CDN)
-- [Bootstrap 5.3.8](https://getbootstrap.com/)
-- [Ionicons 8.0.13](https://ionic.io/ionicons)
-- [Lenis 1.3.26](https://lenis.darkroom.engineering/) (Smooth Scroll)
-- [GSAP 3.15.0](https://gsap.com/) & ScrollTrigger
-- [Swiper 11](https://swiperjs.com/)
+---
 
 ## Project Structure
 
 ```text
-.
-├── index.html
-├── about.html
-├── blog.html
-├── blog-detail.html
-├── career.html
-├── certificates.html
-├── contact.html
-├── customer-experience.html
-├── faqs.html
-├── job-detail.html
-├── our-team.html
-├── photos.html
-├── services.html
-├── testimonials.html
-├── videos.html
-├── README.md
+farexel-protection/
+├── index.html                      # Homepage
+├── about.html                      # Studio About Page
+├── blog.html                       # Blog Catalog
+├── blog-detail.html                # Single Blog Post
+├── career.html                     # Careers & Opportunities
+├── certificates.html               # Quality & ISO Certifications
+├── contact.html                    # Contact & Workshop Map
+├── customer-experience.html        # Case Studies & Before/After Sliders
+├── faqs.html                       # Frequently Asked Questions
+├── job-detail.html                 # Job Description & Application
+├── leadership-insights.html        # Executive & Industry Insights
+├── our-team.html                   # Artisan & Technician Team
+├── photos.html                     # High-Resolution Photo Gallery
+├── privacy-policy.html             # Privacy Policy
+├── services.html                   # Interactive Service Matrix & Booking
+├── terms-of-service.html           # Terms of Service
+├── testimonials.html               # Customer Reviews & Video Feedback
+├── videos.html                     # Detailing Reel Showcase
+├── .gitignore                      # Git Ignore Rules
+├── README.md                       # Platform Documentation
 ├── public/
+│   ├── favicons/                   # Browser Favicons & App Icons
 │   ├── images/
-│   │   └── certificates/
-│   └── videos/
+│   │   ├── before-after/           # Before & After Slider Image Assets
+│   │   ├── certificates/           # Certification Badges & Documents
+│   │   └── ...                     # Studio & Team Photography
+│   ├── services/                   # 24 Dedicated Real Service Cards Images
+│   └── videos/                     # Detailing & Workshop Video Footage
 └── src/
     ├── css/
-    │   ├── bootstrap-override.css
-    │   ├── main.css
-    │   └── responsive.css
+    │   ├── bootstrap-override.css  # Component Style Resets & Overrides
+    │   ├── main.css                # Core Design Tokens, Layout & Utilities
+    │   └── responsive.css          # Viewport-Specific Responsive Rules
     └── js/
-        ├── heroIntro.js
-        ├── init.js
-        ├── main.js
-        ├── pageTransition.js
-        ├── scrollAnimations.js
-        ├── servicesSummary.js
-        └── toggleTheme.js
+        ├── beforeAfterSlider.js    # Before/After Image Slider & Multi-Category Filter
+        ├── heroIntro.js            # Hero Entrance GSAP Timelines
+        ├── init.js                 # Widget Initializers (Swipers, Lightbox, Counters)
+        ├── main.js                 # Application Entry Point & Lifecycle Orchestration
+        ├── pageTransition.js       # Smooth Page Intro/Outro Transitions
+        ├── scrollAnimations.js     # GSAP ScrollTrigger Animations & Tab Visibility
+        ├── servicesSummary.js      # Dynamic Service Selection & SAR Quote Aggregator
+        └── toggleTheme.js          # Dark / Light Theme Manager with LocalStorage
 ```
 
-## Getting Started
+---
 
-### Quick Start (Local Server)
+## Local Development & Setup
 
-Since the project uses ES modules (`import`/`export`), it must be served via a local web server:
+Because the platform uses native browser ES modules (`import` / `export`), pages must be served via an HTTP server rather than opened as raw file URLs (`file:///`).
 
-#### Option 1: Python 3
+### Running Locally
+
+Choose any of the following lightweight servers:
+
+#### Option 1: Python 3 (Built-in)
 ```bash
-python -m http.server 4173
+python -m http.server 8080
 ```
-Open [http://localhost:4173](http://localhost:4173) in your browser.
+Then navigate to [http://localhost:8080](http://localhost:8080).
 
 #### Option 2: Node.js / npx
 ```bash
 npx serve .
 ```
 
-#### Option 3: VS Code Live Server
-Right-click `index.html` in VS Code and choose **Open with Live Server**.
+#### Option 3: VS Code Live Server Extension
+Right-click on `index.html` or `services.html` and select **"Open with Live Server"**.
 
-## Development Guidelines
+---
 
-- **Services Summary Logic**: Located in `src/js/servicesSummary.js`. Listens to card selections across all vehicle tabs and updates summary elements (`#summary-total-time`, `#summary-total-price`, `#summary-selected-services`, `#summary-vehicle-type`).
-- **Animations**: GSAP ScrollTrigger reveals are managed in `src/js/scrollAnimations.js`.
-- **Theme Manager**: Dark/light theme handler is configured in `src/js/toggleTheme.js`.
-- **Accessibility**: Ensure any new `<section>` tag includes a descriptive `aria-label`.
+## Production Deployment
 
-## Deployment
+FAREXEL Protection is 100% static and requires no compilation step. The repository can be deployed directly to modern static hosting solutions:
 
-FAREXEL Protection can be deployed directly to static hosting providers (GitHub Pages, Netlify, Vercel, Cloudflare Pages, AWS S3) by deploying the root folder. No build step or bundler is required.
+- **Cloudflare Pages**
+- **Vercel**
+- **Netlify**
+- **GitHub Pages**
+- **AWS S3 + CloudFront**
+
+Ensure that server response headers include proper caching for static assets (`public/`) and `text/html` headers for clean routing.

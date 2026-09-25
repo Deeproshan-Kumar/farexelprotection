@@ -146,11 +146,19 @@ export function initCategoryFilters() {
 
       // Filter animation
       items.forEach((item) => {
-        const itemCategory = item.getAttribute("data-category");
+        const itemCategory = item.getAttribute("data-category") || "";
+        const categories = itemCategory.trim().split(/\s+/);
 
-        if (selectedCategory === "all" || itemCategory === selectedCategory) {
+        if (selectedCategory === "all" || categories.includes(selectedCategory)) {
           item.classList.add("is-visible");
           item.style.display = "block";
+          const card = item.querySelector(".ba-card");
+          if (card) {
+            if (typeof gsap !== "undefined") {
+              gsap.set(card, { clearProps: "opacity,transform,skewY" });
+            }
+            card.style.opacity = "1";
+          }
           requestAnimationFrame(() => {
             item.style.opacity = "1";
             item.style.transform = "translateY(0) scale(1)";
