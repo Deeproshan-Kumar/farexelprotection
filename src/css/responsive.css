@@ -47,6 +47,11 @@
   .hero h1 {
     font-size: 3rem;
   }
+
+  .hero-image-container .caption {
+    position: relative;
+    top: 1.5rem;
+  }
 }
 
 /* ---------------------------------------------------------
