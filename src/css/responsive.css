@@ -1,6 +1,68 @@
-@media only screen and (min-width: 992px) {
+/* =========================================================
+   Responsive Styles
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   Large Desktop: 1536px+
+   --------------------------------------------------------- */
+@media only screen and (min-width: 1536px) {
+
+  .section,
+  .site-header .announcement-bar,
+  .navbar,
+  .footer {
+    padding-inline: 3rem;
+  }
+}
+
+/* ---------------------------------------------------------
+   Desktop: 1280px - 1535px
+   --------------------------------------------------------- */
+@media only screen and (min-width: 1280px) {
+
+  .section,
+  .site-header .announcement-bar,
+  .navbar,
+  .footer {
+    padding-inline: 2rem;
+  }
+}
+
+/* ---------------------------------------------------------
+   Desktop: 1025px+
+   --------------------------------------------------------- */
+@media only screen and (min-width: 1025px) {
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+
+  .mobile-menu .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
   .hero h1 {
     font-size: 3rem;
+  }
+}
+
+/* ---------------------------------------------------------
+   Desktop / Tablet Landscape: 992px+
+   --------------------------------------------------------- */
+@media only screen and (min-width: 992px) {
+  .navbar-expand-lg .navbar-toggler {
+    display: block;
+  }
+
+  .mobile-menu .navbar-nav {
+    flex-direction: column;
+  }
+
+  .mobile-menu .navbar-nav .dropdown-menu {
+    position: static;
   }
 
   .how-we-works .section-header {
@@ -18,10 +80,10 @@
     position: absolute;
     top: -4.3rem;
     left: 50%;
-    transform: translateX(-50%);
-    height: 4rem;
     width: 0.25rem;
+    height: 4rem;
     background: linear-gradient(var(--clr-primary), transparent);
+    transform: translateX(-50%);
     transition: all 300ms ease-in-out;
   }
 
@@ -31,23 +93,51 @@
   }
 }
 
+/* ---------------------------------------------------------
+   Desktop: Up to 1440px
+   --------------------------------------------------------- */
 @media only screen and (max-width: 1440px) {
   .fullwidth-cta::before {
-    bottom: 0;
     top: auto;
+    bottom: 0;
     left: 62.5%;
-    height: 13rem;
     width: 13rem;
+    height: 13rem;
   }
 }
 
+/* ---------------------------------------------------------
+   Tablet / Smaller Desktop: Up to 1200px
+   --------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
   .fullwidth-cta::before {
     display: none;
   }
 }
 
+/* ---------------------------------------------------------
+   Tablet: 768px - 1024px
+   --------------------------------------------------------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+  .section,
+  .site-header .announcement-bar,
+  .navbar,
+  .footer {
+    padding-inline: 2rem;
+  }
+}
+
+/* ---------------------------------------------------------
+   Tablet / Mobile: Up to 1024px
+   --------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
+
+  .site-header .navbar-nav .dropdown-menu::before,
+  .announcement-bar .action.login::before {
+    display: none;
+  }
+
   .site-header .navbar-nav .nav-link {
     padding: 0.75rem;
   }
@@ -57,7 +147,9 @@
   }
 }
 
-/* Mobile */
+/* ---------------------------------------------------------
+   Mobile: Up to 991px
+   --------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
   body {
     padding-top: 7rem;
@@ -71,15 +163,11 @@
     padding: 0.75rem;
   }
 
-  .site-header .navbar-nav .dropdown-menu::before {
-    display: none;
-  }
-
-  .announcement-bar .action.login::before {
-    display: none;
-  }
-
-  .hero-image-container::before {
+  .hero-image-container::before,
+  .why-choose-us .icon-box::before,
+  .why-choose-us .icon-box::after,
+  .why-choose-us .panel.left .icon-box::before,
+  .why-choose-us .panel.left .icon-box::after {
     display: none;
   }
 
@@ -92,20 +180,13 @@
   }
 
   .hero .separator {
-    height: 0.25rem;
     bottom: 1.25rem;
+    height: 0.25rem;
   }
 
   .moving-car {
-    max-width: 6rem;
     bottom: 0.75rem;
-  }
-
-  .why-choose-us .icon-box::before,
-  .why-choose-us .icon-box::after,
-  .why-choose-us .panel.left .icon-box::before,
-  .why-choose-us .panel.left .icon-box::after {
-    display: none;
+    max-width: 6rem;
   }
 
   .farexel-services .nav-tabs.parent {
@@ -113,13 +194,13 @@
   }
 
   .farexel-services .nav-tabs.parent .nav-link {
-    font-size: 0.875rem;
     padding: 0.5rem;
+    font-size: 0.875rem;
   }
 
   .blogs .blog .profile-pic {
-    height: 2.5rem;
     width: 2.5rem;
+    height: 2.5rem;
   }
 
   .career-form,
@@ -129,6 +210,10 @@
 
   .subpage-banner-img {
     display: none;
+  }
+
+  .video-in-text h2 {
+    font-size: 12vw;
   }
 
   .map-container {
@@ -168,6 +253,9 @@
   }
 }
 
+/* ---------------------------------------------------------
+   Mobile: Up to 767px
+   --------------------------------------------------------- */
 @media only screen and (max-width: 767px) {
   body {
     font-size: 0.875rem;
@@ -180,18 +268,14 @@
     white-space: nowrap;
   }
 
-  .hero-image-container {
-    padding-top: 2rem;
-  }
-
   .service-strip .service-marquee__group {
     gap: 1.5rem;
     padding-inline: 1rem;
   }
 
   .service-strip .service-marquee__group i {
-    height: 0.8rem;
     width: 0.8rem;
+    height: 0.8rem;
   }
 
   .about .contact-handle {
@@ -202,6 +286,7 @@
     padding: 0.25rem;
   }
 
+  /* Showcase */
   .showcase-of-excellence .wrapper .work p {
     font-size: 0.875rem;
   }
@@ -220,17 +305,11 @@
     padding: 2rem;
   }
 
-  .showcase-of-excellence .wrapper .work:nth-child(even) .img-col {
-    border-right: 0;
-  }
-
-  .showcase-of-excellence .wrapper .work:nth-child(odd) .img-col {
-    border-left: 0;
-  }
-
   .showcase-of-excellence .wrapper .work:nth-child(even) .img-col,
   .showcase-of-excellence .wrapper .work:nth-child(odd) .img-col {
     padding: 0;
+    border-right: 0;
+    border-left: 0;
   }
 
   .showcase-of-excellence .wrapper .work .content-col {
@@ -239,33 +318,32 @@
 
   .showcase-of-excellence .wrapper .work:nth-child(even) .content-col {
     border-left: 0.0625rem solid var(--clr-border);
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-inline: 1rem;
   }
 
   .showcase-of-excellence .wrapper .work:nth-child(odd) .content-col {
     border-left: 0.0625rem solid var(--clr-border);
-    border-right: 0.0625rem solid var(--clr-border);
-    border-right: 0;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-inline: 1rem;
   }
 
   .showcase-of-excellence .wrapper .work:nth-child(even) .tags {
     justify-content: flex-start;
   }
 
+  /* Achievements */
   .achievements .icon-box .icon {
-    height: 2.5rem;
     width: 2.5rem;
+    height: 2.5rem;
     padding: 1rem;
   }
 
+  /* Video */
   .video-control-btn.btn[data-size="fit"] span {
-    height: 2.5rem;
     width: 2.5rem;
+    height: 2.5rem;
   }
 
+  /* Services */
   .service-item h3 {
     margin-bottom: -1rem;
   }
@@ -279,10 +357,12 @@
     bottom: 0.25rem;
   }
 
+  /* Blog */
   .blogs .blog .blog-title h5 {
     font-size: 1rem;
   }
 
+  /* Careers */
   .career-header .row>div,
   .career-header .row>div:last-child .d-flex {
     width: 100%;
@@ -317,15 +397,17 @@
     column-count: 1;
   }
 
+  /* Cards */
   .card.consulation .icon-box .icon,
   .card.location .icon-box .icon {
-    height: 2rem;
     width: 2rem;
+    height: 2rem;
   }
 
+  /* Floating controls */
   .contact-us-spinner img {
-    height: 7rem;
     width: 7rem;
+    height: 7rem;
   }
 
   .whatsapp-btn {
@@ -337,6 +419,9 @@
   }
 }
 
+/* ---------------------------------------------------------
+   Small Mobile: Up to 510px
+   --------------------------------------------------------- */
 @media only screen and (max-width: 510px) {
   .site-header .announcement-bar {
     padding-inline: 0.5rem;
@@ -344,6 +429,10 @@
 
   .customer-experiences .image-col {
     padding-left: 5.25rem;
+  }
+
+  .video-in-text {
+    height: 25rem;
   }
 
   .whatsapp-chat-popup {
@@ -354,45 +443,5 @@
   .site-header .navbar-nav .dropdown-menu {
     min-width: 18rem;
     margin-left: 0;
-  }
-}
-
-@media (min-width: 48rem) {
-
-  .section,
-  .site-header .announcement-bar,
-  .navbar,
-  .footer {
-    padding-inline: 2rem;
-  }
-}
-
-@media (min-width: 64rem) {
-
-  .section,
-  .site-header .announcement-bar,
-  .navbar,
-  .footer {
-    padding-inline: 2rem;
-  }
-}
-
-@media (min-width: 80rem) {
-
-  .section,
-  .site-header .announcement-bar,
-  .navbar,
-  .foote {
-    padding-inline: 2rem;
-  }
-}
-
-@media (min-width: 96rem) {
-
-  .section,
-  .site-header .announcement-bar,
-  .navbar,
-  .footer {
-    padding-inline: 3rem;
   }
 }

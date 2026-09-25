@@ -233,6 +233,41 @@ export function initOffersSwiper() {
   });
 }
 
+// Init tranformation swiper
+export function initTransformationSwiper() {
+  const offersSwiper = document.querySelector(".transformation-swiper");
+  if (!offersSwiper) return;
+
+  new Swiper(offersSwiper, {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    speed: 800,
+    autoplay: {
+      delay: 7000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+
+    pagination: {
+      el: ".transformation-swiper .swiper-pagination",
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: ".transformation-swiper .swiper-button-next",
+      prevEl: ".transformation-swiper .swiper-button-prev",
+    },
+
+    breakpoints: {
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 24,
+      },
+    },
+  });
+}
+
 // Init file upload
 export function initFileUpload() {
   const file = document.querySelector("#file");

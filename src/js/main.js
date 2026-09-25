@@ -10,6 +10,7 @@ import {
   initTourVideoPlayer,
   initTestimonialSwiper,
   initOffersSwiper,
+  initTransformationSwiper,
   initScrollToTop,
   initTextHoverAnimation,
   initTeamCardTilt,
@@ -144,6 +145,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Offers swiper
   initOffersSwiper();
+
+  // Transformation swiper
+  initTransformationSwiper();
 
   // File upload
   initFileUpload();

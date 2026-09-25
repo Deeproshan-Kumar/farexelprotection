@@ -68,9 +68,7 @@ function waveReveal(
         trigger: container,
         start: "top 88%",
         // Swiper loop clones slides — don't reverse-animate them on scroll-up
-        toggleActions: playOnce
-          ? "play none none none"
-          : "play none none none",
+        toggleActions: playOnce ? "play none none none" : "play none none none",
       },
       ...vars,
     });
@@ -245,14 +243,20 @@ export function initScrollAnimations() {
 
   // ─── #about-hero (about page hero) ──────────────────────────────────────────
   revealGroup("#about-hero .gsap-about-intro-img", { scale: 0.93, y: 16 });
-  revealGroup("#about-hero .gsap-about-intro-content", { y: 32, duration: 0.85 });
+  revealGroup("#about-hero .gsap-about-intro-content", {
+    y: 32,
+    duration: 0.85,
+  });
 
   // ─── About page — values grid & stats ───────────────────────────────────────
-  waveReveal(".gsap-about-values-grid", ".gsap-value-card", { y: 40, skewY: 0 });
+  waveReveal(".gsap-about-values-grid", ".gsap-value-card", {
+    y: 40,
+    skewY: 0,
+  });
   revealGroup(".gsap-about-stats-item", { y: 24, duration: 0.7 });
 
-  // ─── #our-mission-vision ────────────────────────────────────────────────────
-  waveReveal("#our-mission-vision", ".gsap-mission-vision-card, .vm-card", {
+  // ─── Our vision and mission ────────────────────────────────────────────────────
+  waveReveal("#our-vision-mission", ".vm-card .card-container", {
     y: 36,
     skewY: 0,
   });
@@ -277,10 +281,15 @@ export function initScrollAnimations() {
   waveReveal("#offers .swiper-wrapper", ".swiper-slide", {}, true);
 
   // ─── #customer-stories — Testimonial swiper (blog-style wave) ──────────────
-  waveReveal("#customer-stories .swiper-wrapper", ".gsap-testimonial-card", {
-    y: 48,
-    skewY: 0,
-  }, true);
+  waveReveal(
+    "#customer-stories .swiper-wrapper",
+    ".gsap-testimonial-card",
+    {
+      y: 48,
+      skewY: 0,
+    },
+    true,
+  );
 
   // ─── #our-amenities ──────────────────────────────────────────────────────────
   waveReveal("#our-amenities", ".amenity");
@@ -302,16 +311,23 @@ export function initScrollAnimations() {
   });
 
   // ─── Rating platforms & testimonials grid ────────────────────────────────────
-  waveReveal(".gsap-cx-platform-cards", ".gsap-platform-card", { y: 48, skewY: 0 });
+  waveReveal(".gsap-cx-platform-cards", ".gsap-platform-card", {
+    y: 48,
+    skewY: 0,
+  });
 
   // ─── Reviews grid (Customer Experience page) ─────────────────────────────────
   waveReveal(".gsap-cx-reviews-row", { y: 48, skewY: 0 });
 
   // ─── Testimonials page grid ───────────────────────────────────────────────────
-  waveReveal(".testimonial-grid, #customer-experiences", ".gsap-testimonial-card", {
-    y: 48,
-    skewY: 0,
-  });
+  waveReveal(
+    ".testimonial-grid, #customer-experiences",
+    ".gsap-testimonial-card",
+    {
+      y: 48,
+      skewY: 0,
+    },
+  );
 
   // ─── Selected Services Summary ───────────────────────────────────────────────
   revealGroup(".selected-services-summary .summary-card", {
@@ -325,7 +341,9 @@ export function initScrollAnimations() {
   // ─── #ce-hero (Customer Experience page hero) ────────────────────────────────
   const ceHero = document.querySelector("#ce-hero");
   if (ceHero) {
-    const heroImg = ceHero.querySelector(".gsap-ce-hero-img img") || ceHero.querySelector("img");
+    const heroImg =
+      ceHero.querySelector(".gsap-ce-hero-img img") ||
+      ceHero.querySelector("img");
     const heroContent = ceHero.querySelector(".gsap-ce-hero-content");
     const heroItems = heroContent ? heroContent.children : [];
 
@@ -361,7 +379,10 @@ export function initScrollAnimations() {
   }
 
   // ─── #before-after — filter buttons + comparison cards ───────────────────────
-  waveReveal("#before-after .gsap-ba-grid", ".gsap-ba-card", { y: 40, skewY: 0 });
+  waveReveal("#before-after .gsap-ba-grid", ".gsap-ba-card", {
+    y: 40,
+    skewY: 0,
+  });
 
   const beforeAfterSection = document.querySelector("#before-after");
   if (beforeAfterSection) {
@@ -450,7 +471,10 @@ export function initScrollAnimations() {
   waveReveal("#careers .job-layout", ".job", { y: 48, skewY: 0 });
 
   // ─── #blogs ──────────────────────────────────────────────────────────────────
-  waveReveal("#blogs > .container > .row.gy-4", ":scope > div", { y: 48, skewY: 0 });
+  waveReveal("#blogs > .container > .row.gy-4", ":scope > div", {
+    y: 48,
+    skewY: 0,
+  });
   waveReveal("#blogs .col-lg-7 > .blogs-list", ":scope > article");
   pinBlogIntro();
   pinRecentBlogs();
@@ -461,11 +485,17 @@ export function initScrollAnimations() {
 
   // ─── #contact-form ───────────────────────────────────────────────────────────
   revealGroup(".gsap-contact-form-cols", { y: 32, duration: 0.8 });
-  waveReveal("#contact-form .consultation-list", ".consulation", { y: 40, skewY: 0 });
+  waveReveal("#contact-form .consultation-list", ".consulation", {
+    y: 40,
+    skewY: 0,
+  });
 
   // ─── #studio-location ────────────────────────────────────────────────────────
   revealGroup("#studio-location .map-container", { scale: 0.96, y: 0 });
-  waveReveal("#studio-location .our-locations", ":scope > div", { y: 48, skewY: 0 });
+  waveReveal("#studio-location .our-locations", ":scope > div", {
+    y: 48,
+    skewY: 0,
+  });
 
   // ─── #text-anim — letter-by-letter wave ──────────────────────────────────────
   waveTextReveal("#text-anim .anim-txt");
