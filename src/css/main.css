@@ -1403,6 +1403,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 
 /* Showcase of Excellence */
 .showcase-of-excellence .tags .tag {
+  font-weight: 500;
   background-color: #fb2c3620;
   padding: 0.25rem 0.5rem;
 }
