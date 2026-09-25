@@ -382,6 +382,7 @@ input[type="radio"] {
 }
 
 .site-header .navbar-nav .dropdown-item:hover {
+  color: #ffffff;
   background: var(--clr-primary);
   transition: 0s;
 }
@@ -403,7 +404,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 }
 
 .site-header .navbar-nav .dropdown-item:hover .dropdown-item-icon {
-  background: var(--clr-black);
+  background: #ffffff;
   transition: 0s;
 }
 
@@ -420,10 +421,10 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 
 .mobile-menu {
   position: absolute;
-  top: 3.5rem;
+  top: 6.2rem;
   inset-inline: 0;
   width: auto;
-  height: calc(100vh - 3.5rem);
+  height: calc(100vh - 8.4375rem);
   overflow-y: auto;
   background: var(--clr-surface);
   padding: 0.75rem;
@@ -431,6 +432,10 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   pointer-events: none;
   transform: translate3d(100%, 0, 0);
   transition: 300ms transform ease-in-out;
+}
+
+.site-header.is-scrolled .mobile-menu {
+  height: calc(100vh - 6.125rem);
 }
 
 .mobile-menu.active {
@@ -492,29 +497,21 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   border-radius: 0.25rem;
 }
 
-.hero-image-container {
-  padding-top: 4.5rem;
-}
-
 .hero-image-container .car {
   pointer-events: none;
 }
 
 .hero-image-container .car-light {
   position: absolute;
-  top: 73%;
-  left: 50%;
+  top: 72%;
+  left: 26%;
   transform: translate(-50%, -50%);
   animation: lightBlink 3s linear infinite;
   pointer-events: none;
-  max-width: 120%;
+  max-width: 113%;
 }
 
 .hero-image-container .caption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   text-align: center;
   font-size: 7vw;
   background: linear-gradient(to bottom,
@@ -525,7 +522,6 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   color: transparent;
   margin-bottom: 0;
   -webkit-text-fill-color: transparent;
-  z-index: -1;
 }
 
 @keyframes lightBlink {
@@ -719,29 +715,57 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   margin-bottom: 1.5rem;
 }
 
-.our-vision-mission .vm-card .image-col {
+.our-vision-mission .vm-card .card-container {
   position: relative;
-  padding: 2rem 4rem;
-  padding-right: 1rem;
+  padding: 2rem 3rem;
 }
 
-.our-vision-mission .vm-card .image-col img {
+.our-vision-mission .vm-card .card-container.vision {
+  padding-right: 0;
+}
+
+.our-vision-mission .vm-card .card-container.mission {
+  padding-left: 0;
+}
+
+.our-vision-mission .vm-card .card-container .card {
+  min-height: 14.5rem;
+}
+
+.our-vision-mission .vm-card .card-container.vision .card {
   border-left: 0.25rem groove var(--clr-primary);
 }
 
-.our-vision-mission .vm-card .image-caption {
-  background: linear-gradient(to right, var(--clr-primary), transparent);
+.our-vision-mission .vm-card .card-container.mission .card {
+  border-right: 0.25rem groove var(--clr-primary);
+}
+
+.our-vision-mission .vm-card .card-container img {
+  border-left: 0.25rem groove var(--clr-primary);
+}
+
+.our-vision-mission .vm-card .card-container .image-caption {
   position: absolute;
   top: 0;
-  left: 1rem;
   height: 100%;
   width: 50%;
   border-radius: 0.25rem;
-  writing-mode: sideways-lr;
   text-align: center;
   color: #ffffff;
   padding: 0.5rem;
   z-index: -1;
+}
+
+.our-vision-mission .vm-card .card-container.vision .image-caption {
+  left: 0;
+  writing-mode: sideways-lr;
+  background: linear-gradient(to right, var(--clr-primary), transparent);
+}
+
+.our-vision-mission .vm-card .card-container.mission .image-caption {
+  right: 0;
+  writing-mode: sideways-rl;
+  background: linear-gradient(to right, transparent, var(--clr-primary));
 }
 
 /* Why Choose Us */
@@ -1230,7 +1254,6 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 
 /* Showcase of Excellence */
 
-
 /* Text Animation */
 .anim-txt {
   font-size: 9vw;
@@ -1387,6 +1410,63 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 /* Our Team */
 .card.team .icon {
   font-size: 1.35rem;
+}
+
+/* Leadership Insights */
+.video-in-text {
+  position: relative;
+  height: 35rem;
+  overflow: hidden;
+}
+
+.video-in-text video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-in-text h2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 6vw;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  color: var(--clr-black);
+  background: var(--clr-white);
+  mix-blend-mode: multiply;
+  padding: 1rem;
+  padding-top: 4rem;
+}
+
+.video-in-text img {
+  position: relative;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+html[data-bs-theme="light"] .video-in-text h2 {
+  mix-blend-mode: lighten;
+}
+
+.leadership-insights .insight h2 span {
+  display: inline-block;
+  border-bottom: 0.25rem solid var(--clr-primary);
+}
+
+.insights-container .insight:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 /* Customer Experience */
@@ -2177,6 +2257,10 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   left: 0;
   filter: brightness(0.5);
   object-fit: cover;
+}
+
+.subpage-banner .breadcrumb {
+  color: #ffffff;
 }
 
 .subpage-banner h1,
