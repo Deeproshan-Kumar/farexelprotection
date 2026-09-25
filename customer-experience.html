@@ -455,67 +455,32 @@
         <div class="d-flex flex-wrap justify-content-center gap-2 mb-4 mb-lg-5 ba-filter-group"
           aria-label="Category filter menu">
           <button class="btn btn-secondary ba-filter-btn px-3 py-2 active" data-filter="all">
-            <span><ion-icon name="grid-outline" class="icon me-1"></ion-icon> All
-              Services</span>
+            <span><ion-icon name="grid-outline" class="icon me-1"></ion-icon> All Services</span>
           </button>
-          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="paint-correction">
-            <span><ion-icon name="color-palette-outline" class="icon me-1"></ion-icon>
-              Paint Correction</span>
-          </button>
-          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="interior">
-            <span><ion-icon name="car-sport-outline" class="icon me-1"></ion-icon>
-              Interior Detailing</span>
-          </button>
-          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="ceramic">
-            <span><ion-icon name="shield-checkmark-outline" class="icon me-1"></ion-icon>
-              Ceramic Coating</span>
-          </button>
-          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="wheels">
-            <span><ion-icon name="disc-outline" class="icon me-1"></ion-icon>
-              Wheel & Tire Care</span>
-          </button>
-          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="exterior">
-            <span><ion-icon name="sparkles-outline" class="icon me-1"></ion-icon>
-              Exterior Detailing</span>
-          </button>
-          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="ppf-matt">
-            <span><ion-icon name="layers-outline" class="icon me-1"></ion-icon>
-              PPF Matt</span>
-          </button>
-          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="ppf-glossy">
-            <span><ion-icon name="sparkles-outline" class="icon me-1"></ion-icon>
-              PPF Glossy</span>
+          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="ppf">
+            <span><ion-icon name="shield-half-outline" class="icon me-1"></ion-icon> Paint Protection (PPF)</span>
           </button>
           <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="window-tinting">
-            <span><ion-icon name="sunny-outline" class="icon me-1"></ion-icon>
-              Window Tinting</span>
+            <span><ion-icon name="contrast-outline" class="icon me-1"></ion-icon> Window Tinting</span>
+          </button>
+          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="car-detailing">
+            <span><ion-icon name="sparkles-outline" class="icon me-1"></ion-icon> Car Detailing</span>
           </button>
           <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="nano-ceramic">
-            <span><ion-icon name="shield-checkmark-outline" class="icon me-1"></ion-icon>
-              Nano Ceramic</span>
+            <span><ion-icon name="diamond-outline" class="icon me-1"></ion-icon> Nano Ceramic</span>
           </button>
-          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="packages">
-            <span><ion-icon name="gift-outline" class="icon me-1"></ion-icon>
-              Packages</span>
-          </button>
-          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="express-wash">
-            <span><ion-icon name="flash-outline" class="icon me-1"></ion-icon>
-              Express Wash</span>
-          </button>
-          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="floor-mats">
-            <span><ion-icon name="grid-outline" class="icon me-1"></ion-icon>
-              Custom Floor Mats</span>
+          <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="signature-packages">
+            <span><ion-icon name="ribbon-outline" class="icon me-1"></ion-icon> Signature Packages</span>
           </button>
           <button class="btn btn-secondary ba-filter-btn px-3 py-2" data-filter="bike">
-            <span><ion-icon name="bicycle-outline" class="icon me-1"></ion-icon>
-              Bike Services</span>
+            <span><ion-icon name="bicycle-outline" class="icon me-1"></ion-icon> Bike Services</span>
           </button>
         </div>
 
         <!-- Comparison Cards Grid -->
         <div class="row justify-content-center gy-4 gsap-ba-grid">
           <!-- Item 1: Paint Correction -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="paint-correction">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="car-detailing signature-packages">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider"
                 aria-label="Paint correction before and after image slider" aria-valuemin="0" aria-valuemax="100"
@@ -575,7 +540,7 @@
           </div>
 
           <!-- Item 2: Interior Detailing -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="interior">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="car-detailing">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider"
                 aria-label="Interior detailing before and after image slider" aria-valuemin="0" aria-valuemax="100"
@@ -635,7 +600,7 @@
           </div>
 
           <!-- Item 3: Ceramic Coating -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="ceramic">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="nano-ceramic">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider"
                 aria-label="Ceramic coating before and after image slider" aria-valuemin="0" aria-valuemax="100"
@@ -696,7 +661,7 @@
           </div>
 
           <!-- Item 4: Wheel & Tire Care -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="wheels">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="car-detailing">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider"
                 aria-label="Wheel and tire care before and after image slider" aria-valuemin="0" aria-valuemax="100"
@@ -756,7 +721,7 @@
           </div>
 
           <!-- Item 5: Exterior Detailing -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="exterior">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="car-detailing">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider"
                 aria-label="Exterior detailing before and after image slider" aria-valuemin="0" aria-valuemax="100"
@@ -815,7 +780,7 @@
             </article>
           </div>
           <!-- Item 6: PPF Matt -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="ppf-matt">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="ppf">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider" aria-label="PPF Matt before and after image slider"
                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
@@ -873,7 +838,7 @@
           </div>
 
           <!-- Item 7: PPF Glossy -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="ppf-glossy">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="ppf">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider" aria-label="PPF Glossy before and after image slider"
                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
@@ -1055,7 +1020,7 @@
           </div>
 
           <!-- Item 10: Express Wash -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="express-wash">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="car-detailing">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider" aria-label="Express wash before and after image slider"
                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
@@ -1115,7 +1080,7 @@
           </div>
 
           <!-- Item 11: Custom Floor Mats Installation -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="floor-mats">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="signature-packages">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider"
                 aria-label="Custom floor mats installation before and after image slider" aria-valuemin="0"
@@ -1144,10 +1109,10 @@
               </div>
               <div class="card-body d-flex flex-column">
                 <div class="text-uppercase tracking-wider fw-bold text-primary mb-1 text-sm ba-card-category">
-                  Custom Floor Mats
+                  Signature Packages & Interior
                 </div>
                 <h4 class="ba-card-title mb-2">
-                  Precision-Fit 3D Custom Mat Installation
+                  Precision-Fit 3D Custom Mat & Interior Care
                 </h4>
                 <p class="card-text ba-card-desc text-muted flex-grow-1 mb-3">
                   Laser-measured, vehicle-specific 3D floor mats installed
@@ -1169,14 +1134,14 @@
                     Anti-Slip Backing</span>
                 </div>
                 <a href="services.html" class="btn btn-primary w-100 mt-auto">
-                  <span>Book Floor Mats<ion-icon class="ms-1" name="arrow-forward"></ion-icon></span>
+                  <span>Explore Signature Packages<ion-icon class="ms-1" name="arrow-forward"></ion-icon></span>
                 </a>
               </div>
             </article>
           </div>
 
           <!-- Item 12: Bike PPF -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="bike">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="bike ppf">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider" aria-label="Bike PPF before and after image slider"
                 aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
@@ -1236,7 +1201,7 @@
           </div>
 
           <!-- Item 13: Bike Ceramic Coating -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="bike">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="bike nano-ceramic">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider"
                 aria-label="Bike ceramic coating before and after image slider" aria-valuemin="0" aria-valuemax="100"
@@ -1297,7 +1262,7 @@
           </div>
 
           <!-- Item 14: Bike Detailing -->
-          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="bike">
+          <div class="col-md-6 col-lg-6 col-xl-4 ba-item" data-category="bike car-detailing">
             <article class="card ba-card gsap-ba-card">
               <div class="ba-slider" tabindex="0" role="slider"
                 aria-label="Bike full detailing before and after image slider" aria-valuemin="0" aria-valuemax="100"

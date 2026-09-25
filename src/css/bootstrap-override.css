@@ -136,6 +136,12 @@
   flex: 1;
 }
 
+input.form-control,
+select.form-control,
+input[type='submit'] {
+  height: 3.25rem;
+}
+
 .search-icon,
 .select-icon {
   position: absolute;

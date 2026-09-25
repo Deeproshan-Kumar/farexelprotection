@@ -130,8 +130,29 @@ function initServiceCardAnimations() {
 
   // On tab switch the newly shown container may already be in viewport
   // but was previously hidden — recheck all after Bootstrap toggles classes
-  document.addEventListener("shown.bs.tab", () => {
-    setTimeout(() => containers.forEach((c) => animateContainer(c)), 80);
+  document.addEventListener("shown.bs.tab", (e) => {
+    const targetSelector = e.target ? e.target.getAttribute("data-bs-target") : null;
+    if (targetSelector) {
+      const pane = document.querySelector(targetSelector);
+      if (pane) {
+        const sItems = pane.querySelectorAll(".service-item");
+        sItems.forEach((si) => {
+          gsap.set(si, { opacity: 1, y: 0, clearProps: "transform,opacity" });
+        });
+        const cItems = pane.querySelectorAll("ul.services li");
+        cItems.forEach((li) => {
+          gsap.to(li, { opacity: 1, y: 0, skewY: 0, duration: 0.35, overwrite: "auto" });
+        });
+      }
+    }
+    setTimeout(() => {
+      containers.forEach((c) => {
+        if (c.offsetParent) animateContainer(c);
+      });
+      if (typeof ScrollTrigger !== "undefined") {
+        ScrollTrigger.refresh();
+      }
+    }, 50);
   });
 }
 
@@ -237,7 +258,7 @@ export function initScrollAnimations() {
   revealGroup("#achievements", { y: 20, duration: 0.7 });
 
   // ─── #farexel-services (homepage services strip) ─────────────────────────────
-  revealGroup("#farexel-services .service-item", { y: 32, duration: 0.8 });
+  revealGroup("#farexel-services .tab-pane.show.active .service-item", { y: 32, duration: 0.8 });
   revealGroup(".gsap-booking-form-col", { y: 32, duration: 0.8 });
   revealGroup(".service-marquee", { y: 20, duration: 0.7 });
 

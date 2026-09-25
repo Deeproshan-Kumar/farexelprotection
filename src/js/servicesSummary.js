@@ -40,12 +40,12 @@ export function initServicesSummary() {
     // Select all selected cards across all vehicle tabs
     const selectedCards = document.querySelectorAll(".card.service.selected");
     let totalHours = 0;
-    let totalPriceAED = 0;
+    let totalPriceSAR = 0;
     const selectedTitles = [];
 
     selectedCards.forEach((card) => {
       // Extract title
-      const titleEl = card.querySelector(".card-body h6");
+      const titleEl = card.querySelector(".card-body h5, .card-body h6");
       let titleText = "Service";
       if (titleEl) {
         const clone = titleEl.cloneNode(true);
@@ -54,11 +54,11 @@ export function initServicesSummary() {
         titleText = clone.textContent.trim();
       }
 
-      // Extract price e.g. "AED 350" or "AED 4,400"
+      // Extract price e.g. "SAR 900" or "12,500 SAR"
       const priceBadge = card.querySelector(".card-body .price");
       if (priceBadge) {
         const priceNum = parseInt(priceBadge.textContent.replace(/[^\d]/g, ""), 10);
-        if (!isNaN(priceNum)) totalPriceAED += priceNum;
+        if (!isNaN(priceNum)) totalPriceSAR += priceNum;
       }
 
       // Extract time e.g. "8 Business Hours"
@@ -84,7 +84,7 @@ export function initServicesSummary() {
     }
 
     if (summaryTotalPriceEl) {
-      summaryTotalPriceEl.textContent = `AED ${totalPriceAED.toLocaleString()}`;
+      summaryTotalPriceEl.textContent = `SAR ${totalPriceSAR.toLocaleString()}`;
     }
 
     if (summarySelectedServicesEl) {
