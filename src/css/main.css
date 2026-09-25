@@ -170,7 +170,7 @@ embed {
 }
 
 .section-header>p {
-  max-width: 35rem;
+  max-width: 40rem;
   margin-inline: auto;
 }
 
@@ -728,8 +728,8 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   padding-left: 0;
 }
 
-.our-vision-mission .vm-card .card-container .card {
-  min-height: 14.5rem;
+.our-vision-mission .vm-card .card-container .card-body {
+  min-height: 19.25rem;
 }
 
 .our-vision-mission .vm-card .card-container.vision .card {
