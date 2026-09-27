@@ -2186,14 +2186,14 @@ html[data-bs-theme="light"] .video-in-text h2 {
 .fullwidth-cta::before {
   content: "";
   position: absolute;
-  top: -1.6rem;
+  top: auto;
   left: 56.5%;
   transform: translateX(-50%);
   height: 17.85rem;
   width: 17.85rem;
   background-image: url(../../public/images/cta-bg.png);
   background-repeat: no-repeat;
-  background-position: bottom bottom;
+  background-position: bottom;
   background-size: contain;
 }
 

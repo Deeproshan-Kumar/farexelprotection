@@ -136,12 +136,6 @@
   flex: 1;
 }
 
-input.form-control,
-select.form-control,
-input[type='submit'] {
-  height: 3.25rem;
-}
-
 .search-icon,
 .select-icon {
   position: absolute;
@@ -221,31 +215,37 @@ input[type='submit'] {
   transition: opacity 300ms ease-in-out;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 640px) {
   .container {
     max-width: 40rem;
   }
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 768px) {
   .container {
     max-width: 51rem;
   }
+
+  input.form-control,
+  select.form-control,
+  input[type='submit'] {
+    height: 3.25rem;
+  }
 }
 
-@media (min-width: 64rem) {
+@media (min-width: 1024px) {
   .container {
     max-width: 63rem;
   }
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 1200px) {
   .container {
     max-width: 80rem;
   }
 }
 
-@media (min-width: 96rem) {
+@media (min-width: 1536px) {
   .container {
     max-width: 97rem;
   }

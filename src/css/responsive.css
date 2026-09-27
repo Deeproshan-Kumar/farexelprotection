@@ -273,6 +273,19 @@
     white-space: nowrap;
   }
 
+  .hero-image-container .car-light {
+    top: 66%;
+    left: 26%;
+  }
+
+  .about .counters .counter h3 {
+    font-size: 1.25rem;
+  }
+
+  .our-vision-mission .vm-card .card-container .image-caption {
+    padding: 0.75rem;
+  }
+
   .service-strip .service-marquee__group {
     gap: 1.5rem;
     padding-inline: 1rem;
@@ -281,10 +294,6 @@
   .service-strip .service-marquee__group i {
     width: 0.8rem;
     height: 0.8rem;
-  }
-
-  .about .contact-handle {
-    width: 100%;
   }
 
   .countdown-timer .screen {
@@ -413,12 +422,6 @@
 
   .scroll-to-top-btn {
     right: 1.2rem;
-  }
-
-  input.form-control,
-  select.form-control,
-  input[type='submit'] {
-    height: 3.25rem;
   }
 }
 
