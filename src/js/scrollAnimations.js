@@ -481,6 +481,126 @@ export function initScrollAnimations() {
   // ─── #team ───────────────────────────────────────────────────────────────────
   waveReveal("#team .col-lg-10 > .row", ":scope > div", { y: 48, skewY: 0 });
 
+  // ─── #leadership-insights ───────────────────────────────────────────────────
+  const insightRows = gsap.utils.toArray("#leadership-insights .insight");
+  if (insightRows.length) {
+    insightRows.forEach((row, idx) => {
+      const textCol = row.querySelector(".col-lg-6:not(.img-col)");
+      const imgCol = row.querySelector(".img-col");
+      const isEven = idx % 2 === 1;
+
+      if (textCol) {
+        gsap.fromTo(
+          textCol.children,
+          { y: 36, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.85,
+            stagger: 0.12,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: row,
+              start: "top 85%",
+              toggleActions: "restart none restart none",
+            },
+          },
+        );
+      }
+
+      if (imgCol) {
+        const profilePic = imgCol.querySelector(".profile-pic");
+        const shapes = imgCol.querySelectorAll(
+          ".circle, .rect, .triangle, #circle, #rect, #triangle, #rectange, .img-decoration",
+        );
+
+        if (profilePic) {
+          gsap.fromTo(
+            profilePic,
+            { scale: 0.85, opacity: 0, x: isEven ? -40 : 40 },
+            {
+              scale: 1,
+              opacity: 1,
+              x: 0,
+              duration: 0.9,
+              ease: "power3.out",
+              clearProps: "transform,opacity",
+              scrollTrigger: {
+                trigger: row,
+                start: "top 85%",
+                toggleActions: "restart none restart none",
+              },
+            },
+          );
+        }
+
+        if (shapes.length) {
+          gsap.fromTo(
+            shapes,
+            { scale: 0, opacity: 0, rotation: 45 },
+            {
+              scale: 1,
+              opacity: 1,
+              rotation: 0,
+              duration: 0.7,
+              stagger: 0.08,
+              ease: "back.out(1.7)",
+              clearProps: "transform,opacity",
+              scrollTrigger: {
+                trigger: row,
+                start: "top 85%",
+                toggleActions: "restart none restart none",
+              },
+            },
+          );
+        }
+      }
+    });
+  }
+
+  // ─── #video-in-text (Leadership Insights video section) ──────────────────────
+  const videoInText = document.querySelector("#video-in-text");
+  if (videoInText) {
+    const vH2 = videoInText.querySelector("h2");
+    const vLogo = videoInText.querySelector(".logo");
+    if (vH2) {
+      gsap.fromTo(
+        vH2,
+        { scale: 0.92, y: 32, opacity: 0 },
+        {
+          scale: 1,
+          y: 0,
+          opacity: 1,
+          duration: 0.9,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: videoInText,
+            start: "top 85%",
+            toggleActions: "restart none restart none",
+          },
+        },
+      );
+    }
+    if (vLogo) {
+      gsap.fromTo(
+        vLogo,
+        { y: 24, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.75,
+          delay: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: videoInText,
+            start: "top 85%",
+            toggleActions: "restart none restart none",
+          },
+        },
+      );
+    }
+  }
+
   // ─── #selection-process ──────────────────────────────────────────────────────
   waveReveal("#selection-process .row", ":scope > div", { y: 48, skewY: 0 });
 
