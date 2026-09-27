@@ -14,6 +14,7 @@ import {
   initScrollToTop,
   initTextHoverAnimation,
   initTeamCardTilt,
+  initLeadershipHoverAnimation,
   initMediaLightbox,
   initJobFilters,
   initBlogFilters,
@@ -109,6 +110,9 @@ window.addEventListener("DOMContentLoaded", () => {
   // Team card tilt
   initTeamCardTilt();
 
+  // Leadership insights hover parallax animation
+  initLeadershipHoverAnimation();
+
   // Photo and video lightbox
   initMediaLightbox();
 
@@ -118,11 +122,10 @@ window.addEventListener("DOMContentLoaded", () => {
   // Blog filters
   initBlogFilters();
 
-  // Build the header/hero reveal now — paused, but its .from() tweens hide
-  // those elements immediately so nothing flashes visible under the overlay
+  // Build hero intro timeline (paused)
   const heroIntroTl = initHeroIntro();
 
-  // Page transition intro, then play the header/hero reveal once it clears
+  // Page transition pillars wipe, smoothly triggering hero reveal as pillars lift
   initPageTransition(() => heroIntroTl?.play());
 
   // Live date/time

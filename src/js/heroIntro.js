@@ -14,52 +14,27 @@ const REDUCED_MOTION = window.matchMedia(
 export function initHeroIntro() {
   if (typeof gsap === "undefined") return null;
 
-  // Respect the user's motion preference — leave header/hero in their
-  // natural, fully-visible state instead of animating them in.
+  // Respect the user's motion preference
   if (REDUCED_MOTION) return null;
 
-  const header = document.querySelector("#site-header, .site-header");
   const hero = document.querySelector("#hero, .hero");
-  if (!header && !hero) return null;
-
-  const logo = header?.querySelector(".navbar-brand");
-  const navItems = header?.querySelectorAll(".nav-item");
-  const headerActions = header?.querySelector(".header-actions");
-  const headerActionItems = headerActions ? headerActions.children : null;
+  if (!hero) return null;
 
   // Animate hero content column direct children and hero image column
-  const heroContent = hero?.querySelector(".gsap-hero-content-col");
+  const heroContent = hero.querySelector(".gsap-hero-content-col");
   const heroItems = heroContent?.children;
-  const heroImageColumn = hero?.querySelector(".gsap-hero-image-col");
+  const heroImageColumn = hero.querySelector(".gsap-hero-image-col");
 
-  const tl = gsap.timeline({ paused: true, defaults: { ease: "power3.out" } });
-
-  if (logo) {
-    tl.from(logo, { y: -16, opacity: 0, duration: 0.5 });
-  }
-
-  if (navItems?.length) {
-    tl.from(
-      navItems,
-      { y: -14, opacity: 0, duration: 0.45, stagger: 0.06 },
-      "-=0.3",
-    );
-  }
-
-  if (headerActionItems?.length) {
-    tl.from(
-      headerActionItems,
-      { y: -14, opacity: 0, duration: 0.4, stagger: 0.08 },
-      "-=0.25",
-    );
-  }
+  // Paused timeline that triggers during the pillar wipe handoff
+  const tl = gsap.timeline({ paused: true, defaults: { ease: "power2.out" } });
 
   if (heroItems?.length) {
-    tl.from(
-      heroItems,
-      { y: 26, opacity: 0, duration: 0.55, stagger: 0.14 },
-      "-=0.1",
-    );
+    tl.from(heroItems, {
+      y: 20,
+      opacity: 0,
+      duration: 0.45,
+      stagger: 0.05,
+    });
   }
 
   if (heroImageColumn) {
@@ -67,13 +42,13 @@ export function initHeroIntro() {
       heroImageColumn,
       {
         opacity: 0,
-        scale: 0.75,
-        duration: 0.9,
-        ease: "power3.out",
+        scale: 0.94,
+        duration: 0.5,
       },
-      "-=0.5",
+      "-=0.35",
     );
   }
 
   return tl;
 }
+

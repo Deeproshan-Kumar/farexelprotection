@@ -1,8 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <meta charset="utf-8" />
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-bs-theme", savedTheme);
+      }
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Career | FAREXEL</title>
   <link rel="icon" type="image/png" href="public/favicons/favicon-96x96.png" sizes="96x96" />
@@ -657,7 +666,9 @@
           <div class="col-sm-12 col-lg-8 py-3 py-lg-5">
             <div class="wrapper">
               <h2 class="cta-title">Reserve Your FAREXEL Experience.</h2>
-              <p class="cta-description">Precision begins with understanding what matters to you. From the first conversation to the final handover, every detail is handled with the same care you give to what you drive. Tell us what you need - we'll take it from there.
+              <p class="cta-description">Precision begins with understanding what matters to you. From the first
+                conversation to the final handover, every detail is handled with the same care you give to what you
+                drive. Tell us what you need - we'll take it from there.
               </p>
               <a href="#" class="cta-btn">
                 <div class="d-flex align-items-center gap-2">

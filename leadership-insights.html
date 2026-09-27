@@ -1,8 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="utf-8" />
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-bs-theme", savedTheme);
+      }
+    })();
+  </script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Leadership Insights | FAREXEL</title>
     <link rel="icon" type="image/png" href="public/favicons/favicon-96x96.png" sizes="96x96" />
@@ -368,9 +377,9 @@
         <section class="section leadership-insights" id="leadership-insights" aria-label="Leadership Insights">
             <div class="container py-4 py-lg-5">
                 <div class="insights-container" id="insights-container">
-                    <div class="insight row align-items-center gx-0 gy-4 gy-lg-0 mb-4">
+                    <div class="insight row align-items-center gy-4 gy-lg-0 py-4 py-lg-5">
                         <div class="col-sm-12 col-lg-6">
-                            <h2 class="mb-4">Message from<br /><span>Founder</span></h2>
+                            <h2 class="display-4 fw-bold mb-4">Message from<br /><span>Founder</span></h2>
                             <p>
                                 Arjun Mehra is a fictional leadership figure who represents the importance of
                                 leading by example. His philosophy is based on the belief that a leader should
@@ -386,14 +395,19 @@
                                 tasks, they are more likely to develop the same attitude toward their own work.
                             </p>
                         </div>
-                        <div class="col-sm-12 col-lg-6 p-0 text-center">
-                            <img src="public/images/team-placeholder.jpg" alt="Arjun Mehra's Photograph"
-                                class="img-fluid">
+                        <div class="col-sm-12 col-lg-6 position-relative text-center img-col">
+                            <img src="public/images/team-placeholder.jpg" height="480" width="480"
+                                alt="Arjun Mehra's Photograph" class="img-fluid profile-pic" />
+                            <img src="public/images/image-decoration.webp"
+                                class="img-fluid img-decoration pointer-events-none" alt="Image Decoration" />
+                            <span class="circle" id="circle"></span>
+                            <span class="rect" id="rect"></span>
+                            <span class="triangle" id="triangle"></span>
                         </div>
                     </div>
-                    <div class="insight row align-items-center gx-0 gy-4 gy-lg-0 mb-4">
+                    <div class="insight row align-items-center gy-4 gy-lg-0 py-4 py-lg-5">
                         <div class="col-sm-12 col-lg-6">
-                            <h2 class="mb-4">Message from<br /><span>CTO</span></h2>
+                            <h2 class="display-4 fw-bold mb-4">Message from<br /><span>CTO</span></h2>
                             <p>
                                 Rohan Kapoor is a fictional leadership figure who represents the value of
                                 consistency and customer trust. His philosophy is simple: a business earns its
@@ -410,14 +424,19 @@
                                 recommended.
                             </p>
                         </div>
-                        <div class="col-sm-12 col-lg-6 p-0 text-center">
-                            <img src="public/images/team-placeholder.jpg" alt="Rohan Kapoor's Photograph"
-                                class="img-fluid">
+                        <div class="col-sm-12 col-lg-6 position-relative text-center img-col">
+                            <img src="public/images/team-placeholder.jpg" height="480" width="480"
+                                alt="Rohan Kapoor's Photograph" class="img-fluid profile-pic" />
+                            <img src="public/images/image-decoration.webp"
+                                class="img-fluid img-decoration pointer-events-none" alt="Image Decoration" />
+                            <span class="circle" id="circle"></span>
+                            <span class="rect" id="rect"></span>
+                            <span class="triangle" id="triangle"></span>
                         </div>
                     </div>
-                    <div class="insight row align-items-center gx-0 gy-4 gy-lg-0 mb-4">
+                    <div class="insight row align-items-center gy-4 gy-lg-0 py-4 py-lg-5">
                         <div class="col-sm-12 col-lg-6">
-                            <h2 class="mb-4">Message from<br /><span>CFO</span></h2>
+                            <h2 class="display-4 fw-bold mb-4">Message from<br /><span>CFO</span></h2>
                             <p>
                                 Arnav Sharma is a fictional leadership figure who focuses on creating memorable
                                 customer experiences. His philosophy goes beyond simply completing a service.
@@ -434,9 +453,14 @@
                                 completed, can make the experience feel more professional.
                             </p>
                         </div>
-                        <div class="col-sm-12 col-lg-6 p-0 text-center">
-                            <img src="public/images/team-placeholder.jpg" alt="Arnav Sharma's Photograph"
-                                class="img-fluid">
+                        <div class="col-sm-12 col-lg-6 position-relative text-center img-col">
+                            <img src="public/images/team-placeholder.jpg" height="480" width="480"
+                                alt="Arnav Sharma's Photograph" class="img-fluid profile-pic" />
+                            <img src="public/images/image-decoration.webp"
+                                class="img-fluid img-decoration pointer-events-none" alt="Image Decoration" />
+                            <span class="circle" id="circle"></span>
+                            <span class="rect" id="rect"></span>
+                            <span class="triangle" id="triangle"></span>
                         </div>
                     </div>
                 </div>

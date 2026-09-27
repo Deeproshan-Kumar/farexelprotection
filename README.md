@@ -170,3 +170,10 @@ FAREXEL Protection is 100% static and requires no compilation step. The reposito
 - **AWS S3 + CloudFront**
 
 Ensure that server response headers include proper caching for static assets (`public/`) and `text/html` headers for clean routing.
+
+---
+
+## Developer
+
+- **Deeproshan Kumar**
+

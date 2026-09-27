@@ -85,33 +85,29 @@ function initServiceCardAnimations() {
 
   const seen = new WeakSet();
 
-  // Pre-hide ALL service items immediately so there's no flash before
-  // the IntersectionObserver fires and kicks off the reveal animation.
-  containers.forEach((c) => {
-    const items = c.querySelectorAll("ul.services li");
-    if (items.length) gsap.set(items, { opacity: 0, y: 36, skewY: 8 });
-  });
-
   function animateContainer(container) {
     if (seen.has(container)) return;
-
-    const items = container.querySelectorAll("ul.services li");
-    if (!items.length) return;
 
     // Skip if inside a hidden tab pane (offsetParent is null when not rendered)
     if (!container.offsetParent) return;
 
+    const items = container.querySelectorAll("ul.services li");
+    if (!items.length) return;
+
     seen.add(container);
 
-    gsap.to(items, {
-      y: 0,
-      opacity: 1,
-      skewY: 0,
-      duration: 0.45,
-      ease: "power3.out",
-      stagger: { each: 0.05, from: "start", ease: "sine.inOut" },
-      overwrite: "auto",
-    });
+    gsap.fromTo(
+      items,
+      { y: 24, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.4,
+        ease: "power2.out",
+        stagger: { each: 0.04, from: "start" },
+        overwrite: "auto",
+      },
+    );
   }
 
   // IntersectionObserver fires when each container scrolls into view
@@ -141,7 +137,7 @@ function initServiceCardAnimations() {
         });
         const cItems = pane.querySelectorAll("ul.services li");
         cItems.forEach((li) => {
-          gsap.to(li, { opacity: 1, y: 0, skewY: 0, duration: 0.35, overwrite: "auto" });
+          gsap.to(li, { opacity: 1, y: 0, skewY: 0, duration: 0.25, overwrite: "auto" });
         });
       }
     }
@@ -258,7 +254,7 @@ export function initScrollAnimations() {
   revealGroup("#achievements", { y: 20, duration: 0.7 });
 
   // ─── #farexel-services (homepage services strip) ─────────────────────────────
-  revealGroup("#farexel-services .tab-pane.show.active .service-item", { y: 32, duration: 0.8 });
+  revealGroup("#farexel-services .tab-pane.show.active .service-item", { y: 32, duration: 0.5 });
   revealGroup(".gsap-booking-form-col", { y: 32, duration: 0.8 });
   revealGroup(".service-marquee", { y: 20, duration: 0.7 });
 
@@ -543,14 +539,14 @@ export function initScrollAnimations() {
   // ─── Re-measure once everything (images, fonts) has loaded ───────────────────
   window.addEventListener("load", () => ScrollTrigger.refresh());
 
-  // ─── Re-measure when lazy-loaded images finish downloading ───────────────────
+  // ─── Re-measure when lazy-loaded images finish downloading (debounced) ──────
   let imgRefreshTimer;
   document.addEventListener(
     "load",
     (e) => {
       if (e.target && e.target.tagName === "IMG") {
         clearTimeout(imgRefreshTimer);
-        imgRefreshTimer = setTimeout(() => ScrollTrigger.refresh(), 150);
+        imgRefreshTimer = setTimeout(() => ScrollTrigger.refresh(), 350);
       }
     },
     true,
