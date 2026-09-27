@@ -9,10 +9,13 @@ function hideOverlay() {
 
 export function initPageTransition(onIntroComplete) {
   const pillars = document.querySelectorAll(".pillar");
-  if (!pillars.length) {
+  const overlay = document.getElementById("page-transition");
+  if (!pillars.length || !overlay) {
     onIntroComplete?.();
     return;
   }
+
+  overlay.style.display = "flex";
 
   // The overlay covers the viewport, so never leave it up if GSAP is missing
   if (typeof gsap === "undefined") {
@@ -21,22 +24,25 @@ export function initPageTransition(onIntroComplete) {
     return;
   }
 
-  // Use rAF so the browser has painted the overlay before GSAP runs,
-  // otherwise pillars appear and vanish in a single frame (invisible).
+  // Snappy, energetic pillar wipe (total ~0.5s)
   requestAnimationFrame(() => {
     gsap.set(pillars, { scaleY: 1 });
 
     gsap.to(pillars, {
       scaleY: 0,
       transformOrigin: "top",
-      duration: 0.7,
-      stagger: 0.06,
-      ease: "power4.inOut",
-      delay: 0.05,
+      duration: 0.45,
+      stagger: 0.04,
+      ease: "power3.inOut",
       onComplete: () => {
         hideOverlay();
-        onIntroComplete?.();
       },
     });
+
+    // Seamless handoff: trigger hero intro as pillars lift
+    if (onIntroComplete) {
+      setTimeout(onIntroComplete, 160);
+    }
   });
 }
+

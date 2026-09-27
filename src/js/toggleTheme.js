@@ -12,6 +12,7 @@ export function toggleTheme(el) {
       document.documentElement.getAttribute("data-bs-theme") === "dark";
     const newTheme = isDark ? "light" : "dark";
 
+    document.documentElement.classList.add("theme-transitioning");
     document.documentElement.setAttribute("data-bs-theme", newTheme);
 
     if (btnIcon) {
@@ -19,5 +20,9 @@ export function toggleTheme(el) {
     }
 
     localStorage.setItem("theme", newTheme);
+
+    setTimeout(() => {
+      document.documentElement.classList.remove("theme-transitioning");
+    }, 350);
   });
 }

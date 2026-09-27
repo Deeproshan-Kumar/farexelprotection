@@ -1,8 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <meta charset="utf-8" />
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-bs-theme", savedTheme);
+      }
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Our Team | FAREXEL</title>
   <link rel="icon" type="image/png" href="public/favicons/favicon-96x96.png" sizes="96x96" />

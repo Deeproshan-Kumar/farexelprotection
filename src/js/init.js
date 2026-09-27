@@ -632,3 +632,117 @@ export function initWhatsappWidget(
     if (!whatsappWindow) window.location.href = "https://wa.me/+11234567890";
   });
 }
+
+// Interactive mouse hover parallax animation for Leadership Insights decorative shapes
+export function initLeadershipHoverAnimation() {
+  if (typeof gsap === "undefined") return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const imgCols = document.querySelectorAll(
+    ".leadership-insights .img-col, .insights-container .img-col"
+  );
+  if (!imgCols.length) return;
+
+  imgCols.forEach((col) => {
+    // Find decorative elements within this img-col
+    const circle = col.querySelector("#circle, .circle");
+    const rect = col.querySelector("#rect, .rect");
+    const triangle = col.querySelector("#triangle, #rectange, .triangle");
+    const imgDeco = col.querySelector(".img-decoration");
+
+    const layers = [
+      { el: circle, factor: 55, speed: 2 },
+      { el: rect, factor: 42, speed: 2 },
+      { el: triangle, factor: 50, speed: 2 },
+      { el: imgDeco, factor: 28, speed: 1.5 },
+    ].filter((item) => item.el !== null);
+
+    if (!layers.length) return;
+
+    // Track active numeric state for each layer to animate smoothly with GSAP
+    const stateList = layers.map((layer) => ({
+      layer,
+      x: 0,
+    }));
+
+    let lastClientX = null;
+    let velocityX = 0;
+
+    const onMouseEnter = (e) => {
+      lastClientX = e.clientX;
+      velocityX = 0;
+    };
+
+    const onMouseMove = (e) => {
+      const bounds = col.getBoundingClientRect();
+      if (!bounds.width) return;
+
+      // Position relative to center of img-col: normalized from -1 (left edge) to +1 (right edge)
+      const centerX = bounds.left + bounds.width / 2;
+      const normalizedX = Math.max(
+        -1,
+        Math.min(1, (e.clientX - centerX) / (bounds.width / 2))
+      );
+
+      // Instantaneous movement direction (mouse pointer delta)
+      let movementDeltaX = 0;
+      if (lastClientX !== null) {
+        movementDeltaX = e.clientX - lastClientX;
+      } else if (typeof e.movementX === "number") {
+        movementDeltaX = e.movementX;
+      }
+      lastClientX = e.clientX;
+
+      // Dampen velocity for fluid momentum kick
+      velocityX = velocityX * 0.65 + movementDeltaX * 0.35;
+      const impulse = Math.max(-20, Math.min(20, -velocityX * 0.75));
+
+      // Translate in OPPOSITE direction:
+      // When mouse moves RIGHT (positive X), elements translateX LEFT (negative)
+      // When mouse moves LEFT (negative X), elements translateX RIGHT (positive)
+      stateList.forEach((itemState) => {
+        const rawTargetX = -normalizedX * itemState.layer.factor + impulse;
+        const maxLimit = itemState.layer.factor * 1.25;
+        const targetX = Math.max(-maxLimit, Math.min(maxLimit, rawTargetX));
+
+        gsap.to(itemState, {
+          x: targetX,
+          duration: itemState.layer.speed,
+          ease: "power2.out",
+          overwrite: "auto",
+          onUpdate: () => {
+            itemState.layer.el.style.setProperty(
+              "--tx",
+              `${itemState.x.toFixed(2)}px`
+            );
+          },
+        });
+      });
+    };
+
+    const onMouseLeave = () => {
+      lastClientX = null;
+      velocityX = 0;
+
+      // Smoothly reset back to 0px on hover exit
+      stateList.forEach((itemState) => {
+        gsap.to(itemState, {
+          x: 0,
+          duration: 0.75,
+          ease: "power3.out",
+          overwrite: "auto",
+          onUpdate: () => {
+            itemState.layer.el.style.setProperty(
+              "--tx",
+              `${itemState.x.toFixed(2)}px`
+            );
+          },
+        });
+      });
+    };
+
+    col.addEventListener("mouseenter", onMouseEnter);
+    col.addEventListener("mousemove", onMouseMove);
+    col.addEventListener("mouseleave", onMouseLeave);
+  });
+}

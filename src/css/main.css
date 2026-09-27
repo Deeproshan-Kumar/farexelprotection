@@ -11,27 +11,8 @@
   --site-navbar-height: 4.3125rem;
 }
 
-/* Light theme (default) */
+/* Dark theme (default for FAREXEL) */
 :root,
-[data-bs-theme="light"] {
-  --clr-secondary: #09090b;
-  --clr-text: #52525b;
-  --clr-heading: #09090b;
-  --clr-black: #000000;
-  --clr-white: #ffffff;
-  --clr-surface: #fafafa;
-  --clr-surface-2: #f4f4f5;
-  --clr-border: #e4e4e7;
-
-  --bs-body-bg: var(--clr-surface);
-  --bs-body-color: var(--clr-text);
-  --bs-emphasis-color: var(--clr-heading);
-  --bs-secondary-bg: var(--clr-surface-2);
-  --bs-tertiary-bg: var(--clr-surface-2);
-  --bs-border-color: var(--clr-border);
-}
-
-/* Dark theme */
 [data-bs-theme="dark"] {
   --clr-secondary: #fafafa;
   --clr-text: #9f9fa9;
@@ -41,6 +22,25 @@
   --clr-surface: #09090b;
   --clr-surface-2: #18181b99;
   --clr-border: #27272a;
+
+  --bs-body-bg: var(--clr-surface);
+  --bs-body-color: var(--clr-text);
+  --bs-emphasis-color: var(--clr-heading);
+  --bs-secondary-bg: var(--clr-surface-2);
+  --bs-tertiary-bg: var(--clr-surface-2);
+  --bs-border-color: var(--clr-border);
+}
+
+/* Light theme */
+[data-bs-theme="light"] {
+  --clr-secondary: #09090b;
+  --clr-text: #52525b;
+  --clr-heading: #09090b;
+  --clr-black: #000000;
+  --clr-white: #ffffff;
+  --clr-surface: #fafafa;
+  --clr-surface-2: #f4f4f5;
+  --clr-border: #e4e4e7;
 
   --bs-body-bg: var(--clr-surface);
   --bs-body-color: var(--clr-text);
@@ -79,10 +79,16 @@ body {
   color: var(--clr-text);
   overflow-x: hidden;
   padding-top: var(--site-header-offset);
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease,
-    padding-top 300ms ease;
+  transition: padding-top 300ms ease;
+}
+
+/* Smooth transition only when user clicks theme toggle, not during page load */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+  transition-delay: 0s !important;
 }
 
 body.header-condensed {
@@ -629,6 +635,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
       transparent 1.5rem);
 
   background-size: 2.5rem 100%;
+  will-change: background-position;
   animation: separatorMove 1.2s linear infinite;
 }
 
@@ -645,36 +652,32 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 .moving-car {
   position: absolute;
   bottom: 0;
-  right: -10rem;
+  right: 0;
   max-width: 10rem;
   pointer-events: none;
+  will-change: transform;
   animation: carMovement 20s linear infinite;
 }
 
 @keyframes carMovement {
   0% {
-    right: -10rem;
-    transform: rotateY(180deg) translateX(0);
+    transform: translate3d(10rem, 0, 0) rotateY(180deg);
   }
 
   25% {
-    right: 25%;
-    transform: rotateY(180deg) translateX(-1rem);
+    transform: translate3d(calc(-25vw - 1rem), 0, 0) rotateY(180deg);
   }
 
   50% {
-    right: 50%;
-    transform: rotateY(180deg) translateX(1rem);
+    transform: translate3d(calc(-50vw + 1rem), 0, 0) rotateY(180deg);
   }
 
   75% {
-    right: 75%;
-    transform: rotateY(180deg) translateX(-1rem);
+    transform: translate3d(calc(-75vw - 1rem), 0, 0) rotateY(180deg);
   }
 
   100% {
-    right: 110%;
-    transform: rotateY(180deg) translateX(0);
+    transform: translate3d(calc(-100vw - 10rem), 0, 0) rotateY(180deg);
   }
 }
 
@@ -1394,8 +1397,21 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 }
 
 .card.process::before {
-  height: 10%;
-  width: 10%;
+  content: attr(data-step);
+  position: absolute;
+  height: auto;
+  width: auto;
+  top: 1rem;
+  left: auto;
+  right: 1rem;
+  transform: unset;
+  line-height: 1;
+  font-size: 3rem;
+  font-family: "Syne", sans-serif;
+  opacity: 35%;
+  pointer-events: none;
+  background: transparent;
+  filter: blur(0);
 }
 
 .card.process .card-body::before {
@@ -1487,6 +1503,101 @@ html[data-bs-theme="light"] .video-in-text h2 {
 
 .insights-container .insight:nth-child(even) {
   flex-direction: row-reverse;
+}
+
+.insights-container .insight .img-col {
+  padding: 2.5rem 1rem;
+}
+
+.leadership-insights .insight .profile-pic {
+  max-width: 30rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  animation: animateProfilePic 5s linear infinite;
+}
+
+@keyframes animateProfilePic {
+  50% {
+    transform: translateY(-1rem);
+  }
+}
+
+.img-decoration,
+.leadership-insights .insight .img-decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  --tx: 0px;
+  transform: translate(calc(-50% + var(--tx, 0px)), -50%);
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 2;
+  will-change: transform;
+}
+
+.leadership-insights .insight .circle,
+.leadership-insights .insight #circle {
+  position: absolute;
+  top: 0;
+  left: 32.5%;
+  border-style: solid;
+  border-width: 1rem;
+  border-color: var(--clr-primary);
+  border-radius: 3rem;
+  transform-origin: 50% 50%;
+  width: 4.375rem;
+  height: 4.375rem;
+  display: block;
+  background: transparent;
+  backface-visibility: visible;
+  opacity: 1;
+  --tx: 0px;
+  transform: translateX(var(--tx, 0px)) perspective(37.5rem) rotate(15deg) rotateY(180deg);
+  z-index: 3;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.leadership-insights .insight .rect,
+.leadership-insights .insight #rect {
+  position: absolute;
+  top: 0;
+  right: 32.5%;
+  transform-origin: 50% 50%;
+  width: 4.375rem;
+  height: 4.375rem;
+  display: block;
+  background: #ffff00;
+  backface-visibility: visible;
+  opacity: 1;
+  --tx: 0px;
+  transform: translateX(var(--tx, 0px)) perspective(37.5rem) rotate(-25deg) rotateY(180deg);
+  z-index: 3;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.leadership-insights .insight .triangle,
+.leadership-insights .insight #triangle,
+.leadership-insights .insight #rectange {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0;
+  clip-path: polygon(50% 100%, 0% 0%, 100% 0%, 50% 100%);
+  transform-origin: 50% 50%;
+  width: 4.375rem;
+  height: 3.75rem;
+  display: block;
+  background: #13d6c3;
+  backface-visibility: visible;
+  opacity: 1;
+  --tx: 0px;
+  transform: translate(calc(-50% + var(--tx, 0px)), -50%) perspective(37.5rem) rotate(-15deg) rotateY(180deg);
+  z-index: 3;
+  pointer-events: none;
+  will-change: transform;
 }
 
 /* Customer Experience */
