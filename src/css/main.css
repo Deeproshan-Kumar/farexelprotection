@@ -67,6 +67,11 @@
   background-color: var(--clr-primary);
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 4.3125rem;
@@ -178,6 +183,10 @@ embed {
 .section-header>p {
   max-width: 40rem;
   margin-inline: auto;
+}
+
+.section-header.content-lg>p {
+  max-width: 65rem;
 }
 
 .section-header h2 {
@@ -427,7 +436,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 
 .mobile-menu {
   position: absolute;
-  top: 6.2rem;
+  top: 4.125rem;
   inset-inline: 0;
   width: auto;
   height: calc(100vh - 8.4375rem);
@@ -509,12 +518,12 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 
 .hero-image-container .car-light {
   position: absolute;
-  top: 72%;
-  left: 26%;
-  transform: translate(-50%, -50%);
+  top: 73.5%;
+  left: 15%;
+  transform: translate(-50%, -50%) scale(1.15);
   animation: lightBlink 3s linear infinite;
   pointer-events: none;
-  max-width: 113%;
+  max-width: 112%;
 }
 
 .hero-image-container .caption {
@@ -723,6 +732,13 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   padding: 2rem 3rem;
 }
 
+.our-vision-mission .vm-card .icon-box .icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  min-width: 3.2rem;
+  font-size: 1.5rem;
+}
+
 .our-vision-mission .vm-card .card-container.vision {
   padding-right: 0;
 }
@@ -839,6 +855,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 .why-choose-us .icon-box .icon {
   height: 3.2rem;
   width: 3.2rem;
+  min-width: 3.2rem;
   font-size: 1.5rem;
 }
 
@@ -1086,7 +1103,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 }
 
 .service-req-form {
-  background-color: var(--clr-border);
+  border: 0.0625rem solid var(--clr-border);
   border-radius: 0.25rem;
   padding: 2rem;
 }
@@ -1126,7 +1143,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 .achievements .icon-box .icon {
   height: 3.25rem;
   width: 3.25rem;
-  border: 0.0625rem solid var(--clr-primary);
+  min-width: 3.25rem;
   padding: 0.5rem;
 }
 
@@ -1273,8 +1290,6 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   border-radius: 1.25rem;
   padding: 0.35rem 0.75rem;
 }
-
-/* Showcase of Excellence */
 
 /* Text Animation */
 .anim-txt {
@@ -1441,6 +1456,11 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   font-weight: 500;
   background-color: #fb2c3620;
   padding: 0.25rem 0.5rem;
+}
+
+/* Studio Tour */
+.studioTourSwiper .swiper-slide img {
+  height: 43.75rem !important;
 }
 
 /* Our Team */
@@ -1624,6 +1644,21 @@ html[data-bs-theme="light"] .video-in-text h2 {
   color: #ffffff;
   padding: 0.5rem;
   z-index: -1;
+}
+
+.customer-experiences .nav-tabs {
+  border-bottom: 0;
+}
+
+.customer-experiences .nav-tabs .nav-link {
+  color: var(--bs-nav-tabs-link-active-color);
+  border: 0;
+  border-bottom: 0.25rem solid transparent;
+}
+
+.customer-experiences .nav-tabs .nav-link.active {
+  background: #fb2c3620;
+  border-bottom: 0.25rem solid var(--clr-primary);
 }
 
 .customer-experiences .total-reviews {
@@ -1928,6 +1963,15 @@ html[data-bs-theme="light"] .video-in-text h2 {
   align-self: flex-start;
 }
 
+.card.blog .thumbnail {
+  height: 100%;
+  width: 100%;
+}
+
+.card.blog img.thumbnail {
+  object-fit: cover;
+}
+
 .blogs .blog .blog-title {
   text-decoration: none;
 }
@@ -1949,47 +1993,6 @@ html[data-bs-theme="light"] .video-in-text h2 {
 
 .pagination .btn>span {
   padding: 0.25rem 0.75rem;
-}
-
-/* Studio Tour */
-.studio-tour .section-header>p {
-  margin-inline: 0;
-}
-
-.tour-video-container {
-  position: relative;
-  height: 60vh;
-  background: color-mix(in srgb, var(--bs-body-bg) 92%, transparent);
-  backdrop-filter: blur(0.5rem);
-  padding: 0.75rem;
-}
-
-.tour-video-container::before,
-.tour-video-container::after {
-  content: "";
-  position: absolute;
-  height: 10rem;
-  width: 10rem;
-}
-
-.tour-video-container::before {
-  top: 0;
-  left: 0;
-  border-top: 0.15rem solid var(--clr-primary);
-  border-left: 0.15rem solid var(--clr-primary);
-}
-
-.tour-video-container::after {
-  bottom: 0;
-  right: 0;
-  border-bottom: 0.15rem solid var(--clr-primary);
-  border-right: 0.15rem solid var(--clr-primary);
-}
-
-.video-control-btn.btn[data-size="fit"]>span {
-  height: 3.5rem;
-  width: 3.5rem;
-  font-size: 1.5rem;
 }
 
 /* Our Amenities */
@@ -2066,7 +2069,7 @@ html[data-bs-theme="light"] .video-in-text h2 {
 }
 
 .career-form {
-  background-color: var(--clr-border);
+  border: 0.0625rem solid var(--clr-border);
   border-radius: 0.25rem;
   padding: 2rem;
 }
@@ -2187,7 +2190,7 @@ html[data-bs-theme="light"] .video-in-text h2 {
   content: "";
   position: absolute;
   top: auto;
-  left: 56.5%;
+  left: 58%;
   transform: translateX(-50%);
   height: 17.85rem;
   width: 17.85rem;
@@ -2456,6 +2459,7 @@ html[data-bs-theme="light"] .video-in-text h2 {
 .icon-box .icon {
   height: 2.25rem;
   width: 2.25rem;
+  min-width: 2.25rem;
   display: grid;
   place-items: center;
   background: #fb2c3625;

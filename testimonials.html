@@ -52,12 +52,12 @@
             <ul
               class="list-unstyled d-flex justify-content-between justify-content-lg-start align-items-center gap-1 gap-lg-2 gap-xl-4 text-sm mb-0">
               <li class="action mail">
-                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
-                    name="mail"></ion-icon>contact@farexel.com</a>
+                <a href="mailto:info@faresco.sa" class="text-decoration-none"><ion-icon class="icon me-1"
+                    name="mail"></ion-icon> info@faresco.sa</a>
               </li>
               <li class="action readonly">
-                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Fri :
-                09:00am - 08:00pm
+                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Sun :
+                09:00am - 10:30pm
               </li>
             </ul>
           </div>
@@ -65,8 +65,8 @@
             <ul
               class="list-unstyled d-flex justify-content-between justify-content-lg-end align-items-center justify-content-end gap-1 gap-lg-2 gap-xl-4 text-sm mb-0">
               <li class="action call">
-                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="call"></ion-icon>+91
-                  1234567890</a>
+                <a href="tel:+966555188194" class="text-decoration-none"><ion-icon class="icon me-1"
+                    name="call"></ion-icon>+966 55 518 8194</a>
               </li>
               <li class="action switch-lang">
                 <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
@@ -358,245 +358,671 @@
         </div>
 
         <div class="row align-items-center gy-4 gy-lg-0">
-          <div class="col-sm-12 col-lg-6 gsap-cx-img-col">
-            <img src="public/images/customer-experience.png" class="img-fluid rounded-1" alt="Customer Experiences" />
+          <div class="image-col col-sm-12 col-lg-6 gsap-cx-img-col">
+            <img src="public/images/customer-experience.jpg" class="img-fluid rounded-1" alt="Customer Experiences"
+              loading="lazy" decoding="async" />
+            <div class="image-caption">
+              <h3 class="m-0">12 Years of Experiences</h3>
+            </div>
           </div>
           <div class="col-sm-12 col-lg-6 gsap-cx-content-col">
             <h4>Customer Experiences & Reflections</h4>
             <p>Not just in the transformation - but in how you are treated throughout the experience. From clear
               guidance and transparent communication to meticulous workmanship and genuine attention to your
               requirements, every interaction is designed to leave an impression worth remembering.</p>
-            <div class="row mt-2 mt-lg-4">
-              <div class="col-sm-12 col-lg-4">
-                <div class="total-reviews">
-                  <img src="public/images/tripadvisor.svg" height="75" width="75" class="img-fluid rounded-circle"
-                    alt="Google Review Logo" />
-                  <h5 class="mt-2">Trip Advisor Reviews</h5>
-                  <div>
-                    <h6 class="text-primary fw-bold mb-1">
-                      (4.5)
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-half"></ion-icon>
-                    </h6>
-                    <p class="mb-0">1.25K+ Reviews</p>
+            <ul class="nav nav-tabs" id="ratingsTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="trip-advisor-reviews-tab" data-bs-toggle="tab"
+                  data-bs-target="#trip-advisor-reviews" type="button" role="tab" aria-controls="trip-advisor-reviews"
+                  aria-selected="false">
+                  <div class="total-reviews">
+                    <img src="public/images/tripadvisor.svg" height="60" width="60" class="img-fluid rounded-circle"
+                      alt="TripAdvisor Review Logo" loading="lazy" decoding="async" />
+                    <h5 class="mt-2">Trip Advisor Reviews</h5>
+                    <div>
+                      <h6 class="text-primary fw-bold mb-1">
+                        (4.5)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star-half"></ion-icon>
+                      </h6>
+                      <p class="mb-0">125+ Reviews</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-sm-12 col-lg-4">
-                <div class="total-reviews">
-                  <img src="public/images/google.svg" height="75" width="75" class="img-fluid rounded-circle"
-                    alt="Google Review Logo" />
-                  <h5 class="mt-2">Google Reviews</h5>
-                  <div>
-                    <h6 class="text-primary fw-bold mb-1">
-                      (4.0)
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star-outline"></ion-icon>
-                    </h6>
-                    <p class="mb-0">5K+ Reviews</p>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="google-reviews-tab" data-bs-toggle="tab"
+                  data-bs-target="#google-reviews" type="button" role="tab" aria-controls="google-reviews"
+                  aria-selected="true">
+                  <div class="total-reviews">
+                    <img src="public/images/google.svg" height="60" width="60" class="img-fluid rounded-circle"
+                      alt="Google Review Logo" loading="lazy" decoding="async" />
+                    <h5 class="mt-2">Google Reviews</h5>
+                    <div>
+                      <h6 class="text-primary fw-bold mb-1">
+                        (5.0)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </h6>
+                      <p class="mb-0">122+ Reviews</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-sm-12 col-lg-4">
-                <div class="total-reviews">
-                  <img src="public/images/yelp.svg" height="75" width="75" class="img-fluid rounded-circle"
-                    alt="Google Review Logo" />
-                  <h5 class="mt-2">Yelp Reviews</h5>
-                  <div>
-                    <h6 class="text-primary fw-bold mb-1">
-                      (4.0)
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                      <ion-icon name="star"></ion-icon>
-                    </h6>
-                    <p class="mb-0">2K+ Reviews</p>
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="yelp-reviews-tab" data-bs-toggle="tab" data-bs-target="#yelp-reviews"
+                  type="button" role="tab" aria-controls="yelp-reviews" aria-selected="false">
+                  <div class="total-reviews">
+                    <img src="public/images/yelp.svg" height="60" width="60" class="img-fluid rounded-circle"
+                      alt="Yelp Review Logo" loading="lazy" decoding="async" />
+                    <h5 class="mt-2">Yelp Reviews</h5>
+                    <div>
+                      <h6 class="text-primary fw-bold mb-1">
+                        (4.0)
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                        <ion-icon name="star"></ion-icon>
+                      </h6>
+                      <p class="mb-0">100+ Reviews</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="row testimonial-grid gy-4 mt-4">
-          <div class="col-sm-12 col-lg-4">
-            <article class="card testimonial">
-              <div class="card-body d-flex flex-column gap-3 p-lg-4">
-                <div class="ratings d-flex align-items-center gap-1">
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star-half"></ion-icon>
-                </div>
-                <p class="mb-0">
-                  What stood out was the way the team handled everything from the beginning. They understood
-                  exactly what I wanted, explained the service clearly before starting, and kept the process completely
-                  transparent. The detailing result was excellent, but the professionalism and attention to my
-                  requirements made the experience even better.
-                </p>
-                <div class="d-flex align-items-center gap-3">
-                  <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                    class="user-profile-pic rounded-circle img-fluid" />
-                  <div>
-                    <p class="text-sm text-body fw-semibold mb-1">Faisal Al-Qahtani</p>
-                    <p class="text-sm fw-normal mb-0">Entrepreneur - Riyadh, Saudi Arabia</p>
+        <div class="tab-content">
+          <!-- Trip Advisor Reviews -->
+          <div class="tab-pane fade" id="trip-advisor-reviews" role="tabpanel"
+            aria-labelledby="trip-advisor-reviews-tab">
+            <div class="row testimonial-grid gy-4 mt-4">
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “What stood out was the way the team handled everything from the beginning. They understood
+                        exactly what I wanted, explained the service clearly before starting, and kept the process
+                        completely
+                        transparent. The detailing result was excellent, but the professionalism and attention to my
+                        requirements made the experience even better.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Faisal Al-Qahtani</p>
+                        <p class="text-sm fw-normal mb-0">Entrepreneur - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </article>
               </div>
-            </article>
-          </div>
-          <div class="col-sm-12 col-lg-4">
-            <article class="card testimonial">
-              <div class="card-body d-flex flex-column gap-3 p-lg-4">
-                <div class="ratings d-flex align-items-center gap-1">
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                </div>
-                <p class="mb-0">
-                  I appreciated that FAREXEL did not simply recommend services - they first understood what my
-                  car actually needed. The team explained the options, the expected work and the process clearly.
-                  Everything felt organised, precise and genuinely customer-focused, right through to the final
-                  handover.
-                </p>
-                <div class="d-flex align-items-center gap-3">
-                  <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                    class="user-profile-pic rounded-circle img-fluid" />
-                  <div>
-                    <p class="text-sm text-body fw-semibold mb-1">Omar Al-Harbi</p>
-                    <p class="text-sm fw-normal mb-0">Business Owner - Riyadh, Saudi Arabia</p>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “I appreciated that FAREXEL did not simply recommend services - they first understood what my
+                        car actually needed. The team explained the options, the expected work and the process clearly.
+                        Everything felt organised, precise and genuinely customer-focused, right through to the final
+                        handover.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Omar Al-Harbi</p>
+                        <p class="text-sm fw-normal mb-0">Business Owner - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </article>
               </div>
-            </article>
-          </div>
-          <div class="col-sm-12 col-lg-4">
-            <article class="card testimonial">
-              <div class="card-body d-flex flex-column gap-3 p-lg-4">
-                <div class="ratings d-flex align-items-center gap-1">
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star-half"></ion-icon>
-                </div>
-                <p class="mb-0">
-                  The quality of the work was impressive, but what I valued most was the care throughout the
-                  visit. The team treated my car with real attention, kept me informed and made the entire experience
-                  comfortable. It felt less like leaving my car at a workshop and more like trusting it to people who
-                  genuinely understand why it matters to its owner.
-                </p>
-                <div class="d-flex align-items-center gap-3">
-                  <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                    class="user-profile-pic rounded-circle img-fluid" />
-                  <div>
-                    <p class="text-sm text-body fw-semibold mb-1">Khalid Al-Otaibi</p>
-                    <p class="text-sm fw-normal mb-0">Executive - Riyadh, Saudi Arabia</p>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “The quality of the work was impressive, but what I valued most was the care throughout the
+                        visit. The team treated my car with real attention, kept me informed and made the entire
+                        experience
+                        comfortable. It felt less like leaving my car at a workshop and more like trusting it to people
+                        who
+                        genuinely understand why it matters to its owner.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Khalid Al-Otaibi</p>
+                        <p class="text-sm fw-normal mb-0">Executive - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </article>
               </div>
-            </article>
-          </div>
-          <div class="col-sm-12 col-lg-4">
-            <article class="card testimonial">
-              <div class="card-body d-flex flex-column gap-3 p-lg-4">
-                <div class="ratings d-flex align-items-center gap-1">
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star-half"></ion-icon>
-                </div>
-                <p class="mb-0">
-                  From choosing the right service to the final result, everything was explained clearly. I
-                  especially liked the transparency before the work began - there were no confusing recommendations or
-                  unnecessary additions. The team knew exactly what they were doing and delivered with impressive
-                  attention to detail.
-                </p>
-                <div class="d-flex align-items-center gap-3">
-                  <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                    class="user-profile-pic rounded-circle img-fluid" />
-                  <div>
-                    <p class="text-sm text-body fw-semibold mb-1">Abdulrahman Al-Dosari</p>
-                    <p class="text-sm fw-normal mb-0">Real Estate Investor - Riyadh, Saudi Arabia</p>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “From choosing the right service to the final result, everything was explained clearly. I
+                        especially liked the transparency before the work began - there were no confusing
+                        recommendations or
+                        unnecessary additions. The team knew exactly what they were doing and delivered with impressive
+                        attention to detail.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Abdulrahman Al-Dosari</p>
+                        <p class="text-sm fw-normal mb-0">Real Estate Investor - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </article>
               </div>
-            </article>
-          </div>
-          <div class="col-sm-12 col-lg-4">
-            <article class="card testimonial">
-              <div class="card-body d-flex flex-column gap-3 p-lg-4">
-                <div class="ratings d-flex align-items-center gap-1">
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star-half"></ion-icon>
-                </div>
-                <p class="mb-0">
-                  FAREXEL gave me more than the result I expected. The team listened carefully to what I wanted,
-                  guided me through the available options and handled the car with remarkable care. The entire
-                  experience felt professional, calm and very well organised.
-                </p>
-                <div class="d-flex align-items-center gap-3">
-                  <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                    class="user-profile-pic rounded-circle img-fluid" />
-                  <div>
-                    <p class="text-sm text-body fw-semibold mb-1">Nasser Al-Shammari</p>
-                    <p class="text-sm fw-normal mb-0">Private Business Consultant - Riyadh, Saudi Arabia</p>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “FAREXEL gave me more than the result I expected. The team listened carefully to what I wanted,
+                        guided me through the available options and handled the car with remarkable care. The entire
+                        experience felt professional, calm and very well organised.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Nasser Al-Shammari</p>
+                        <p class="text-sm fw-normal mb-0">Private Business Consultant - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </article>
               </div>
-            </article>
-          </div>
-          <div class="col-sm-12 col-lg-4">
-            <article class="card testimonial">
-              <div class="card-body d-flex flex-column gap-3 p-lg-4">
-                <div class="ratings d-flex align-items-center gap-1">
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star"></ion-icon>
-                  <ion-icon class="text-warning" name="star-half"></ion-icon>
-                </div>
-                <p class="mb-0">
-                  The difference was not only visible on the car - it was visible in the way the team worked.
-                  Every stage was handled with patience and precision, and I never felt rushed into a decision. That
-                  level of communication and care is what makes the experience memorable.
-                </p>
-                <div class="d-flex align-items-center gap-3">
-                  <img src="public/images/default-user.jpg" alt="User Profile Pic"
-                    class="user-profile-pic rounded-circle img-fluid" />
-                  <div>
-                    <p class="text-sm text-body fw-semibold mb-1">Saad Al-Mutairi</p>
-                    <p class="text-sm fw-normal mb-0">Entrepreneur - Riyadh, Saudi Arabia</p>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “The difference was not only visible on the car - it was visible in the way the team worked.
+                        Every stage was handled with patience and precision, and I never felt rushed into a decision.
+                        That
+                        level of communication and care is what makes the experience memorable.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Saad Al-Mutairi</p>
+                        <p class="text-sm fw-normal mb-0">Entrepreneur - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                </article>
               </div>
-            </article>
+            </div>
+            <div class="text-center mt-4">
+              <a href="https://maps.app.goo.gl/zXyibEeJmHZApPDj6" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary">
+                <span>Read All Reviews<ion-icon name="open-outline" class="ms-1"></ion-icon></span>
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="pagination justify-content-center gap-2 mt-4">
-          <button class="btn btn-primary">
-            <span>Prev</span>
-          </button>
-          <button class="btn btn-secondary"><span>1</span></button>
-          <button class="btn btn-secondary"><span>2</span></button>
-          <button class="btn btn-secondary"><span>3</span></button>
-          <button class="btn btn-secondary"><span>4</span></button>
-          <button class="btn btn-primary">
-            <span>Next</span>
-          </button>
+
+          <!-- Google Reviews (Active by default, Akhilesh Kumar Shukla first) -->
+          <div class="tab-pane fade show active" id="google-reviews" role="tabpanel"
+            aria-labelledby="google-reviews-tab">
+            <div class="row testimonial-grid gy-4 mt-4">
+              <!-- 1. Akhilesh Kumar Shukla (First Testimonial) -->
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “I recently had the opportunity to visit this incredible PPF and car detailing workshop, and
+                        honestly, it felt far beyond a normal automotive workspace — it felt like a world-class
+                        automotive studio built with passion, professionalism, and vision.<br />
+                        I got the car detailed and full front protection done and the final outcome came out amazing.
+                        Kudos to the professional team of Farexel Protection.
+                        Way to go ! A must visit<br />
+                        Highly recommended 🙏😍”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Akhilesh Kumar Shukla</p>
+                        <p class="text-sm fw-normal mb-0">Google Verified Client</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 2. Abdul Shaim -->
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “Guys, new in town at Al Khobar and I'm really impressed! The customer service was excellent —
+                        very friendly, welcoming, and professional vibes throughout. And about the car… absolutely
+                        amazing! I genuinely loved it. The finishing and overall quality were perfect. Highly
+                        recommended for anyone looking for a great experience!”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Abdul Shaim</p>
+                        <p class="text-sm fw-normal mb-0">Google Verified Client</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 3. Alankar Tiwari -->
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “I gave my brand new Toyota Corolla Car to Faraxel for PPF coating and mat fitting in the car.
+                        Overall my experience was fabulous and seamless, the car was picked up from my place as I was
+                        unable to travel due to work related exigencies and day wise updates were shared by Faraxel
+                        team. Eventually I got a much better product than I expected and at a reasonable price delivered
+                        at my home.
+                        The hallmark of Faraxel is their sincerity, professionalism and high quality workmanship.
+                        Kudos to team Faraxel and I strongly recommend them to all !!!”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Alankar Tiwari</p>
+                        <p class="text-sm fw-normal mb-0">Google Verified Client</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 4. Tashkin Akbar -->
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “Truly Amazing...Thanks to FAREXEL PROTECTION TEAM...AMAZING work...truly translating their
+                        slogan "*Excellence Redefined*...its unbelievable, couldn't believe on my own eyes the final
+                        product.<br />
+                        My Ford expedition looks as good as brand new...<br />
+                        Special thanks to the owner and GM Mrs Abida for leading such a lovely and professional team
+                        with such an expertise.<br />
+                        Thank you FAREXEL Team.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Tashkin Akbar</p>
+                        <p class="text-sm fw-normal mb-0">Google Verified Client</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 5. Mohammed Aswin -->
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “Outstanding PPF job! The precision, edge-tucking, and attention to detail are second to none.
+                        My car looks amazing, completely protected, and glossy as ever. Great customer service and
+                        expert craftsmanship—I wouldn't trust my vehicle anywhere else!”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Mohammed Aswin</p>
+                        <p class="text-sm fw-normal mb-0">Google Verified Client</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 6. Sinans Mohammed -->
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “Excellent service and very good quality tint. Professional team and clean installation. Highly
+                        recommended!”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Sinans Mohammed</p>
+                        <p class="text-sm fw-normal mb-0">Google Verified Client</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <a href="https://maps.app.goo.gl/zXyibEeJmHZApPDj6" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary">
+                <span>Read All Reviews<ion-icon name="open-outline" class="ms-1"></ion-icon></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Yelp Reviews -->
+          <div class="tab-pane fade" id="yelp-reviews" role="tabpanel" aria-labelledby="yelp-reviews-tab">
+            <div class="row testimonial-grid gy-4 mt-4">
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “What stood out was the way the team handled everything from the beginning. They understood
+                        exactly what I wanted, explained the service clearly before starting, and kept the process
+                        completely
+                        transparent. The detailing result was excellent, but the professionalism and attention to my
+                        requirements made the experience even better.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Faisal Al-Qahtani</p>
+                        <p class="text-sm fw-normal mb-0">Entrepreneur - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “I appreciated that FAREXEL did not simply recommend services - they first understood what my
+                        car actually needed. The team explained the options, the expected work and the process clearly.
+                        Everything felt organised, precise and genuinely customer-focused, right through to the final
+                        handover.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Omar Al-Harbi</p>
+                        <p class="text-sm fw-normal mb-0">Business Owner - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “The quality of the work was impressive, but what I valued most was the care throughout the
+                        visit. The team treated my car with real attention, kept me informed and made the entire
+                        experience
+                        comfortable. It felt less like leaving my car at a workshop and more like trusting it to people
+                        who
+                        genuinely understand why it matters to its owner.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Khalid Al-Otaibi</p>
+                        <p class="text-sm fw-normal mb-0">Executive - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “From choosing the right service to the final result, everything was explained clearly. I
+                        especially liked the transparency before the work began - there were no confusing
+                        recommendations or
+                        unnecessary additions. The team knew exactly what they were doing and delivered with impressive
+                        attention to detail.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Abdulrahman Al-Dosari</p>
+                        <p class="text-sm fw-normal mb-0">Real Estate Investor - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “FAREXEL gave me more than the result I expected. The team listened carefully to what I wanted,
+                        guided me through the available options and handled the car with remarkable care. The entire
+                        experience felt professional, calm and very well organised.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Nasser Al-Shammari</p>
+                        <p class="text-sm fw-normal mb-0">Private Business Consultant - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-4">
+                <article class="card testimonial h-100">
+                  <div class="card-body d-flex flex-column justify-content-between gap-3 p-lg-4">
+                    <div>
+                      <div class="ratings d-flex align-items-center gap-1 mb-2">
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star"></ion-icon>
+                        <ion-icon class="text-warning" name="star-half"></ion-icon>
+                      </div>
+                      <p class="mb-0">
+                        “The difference was not only visible on the car - it was visible in the way the team worked.
+                        Every stage was handled with patience and precision, and I never felt rushed into a decision.
+                        That
+                        level of communication and care is what makes the experience memorable.”
+                      </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="public/images/default-user.jpg" alt="User Profile Pic"
+                        class="user-profile-pic rounded-circle img-fluid" />
+                      <div>
+                        <p class="text-sm text-body fw-semibold mb-1">Saad Al-Mutairi</p>
+                        <p class="text-sm fw-normal mb-0">Entrepreneur - Riyadh, Saudi Arabia</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <a href="https://maps.app.goo.gl/zXyibEeJmHZApPDj6" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary">
+                <span>Read All Reviews<ion-icon name="open" class="ms-1"></ion-icon></span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -612,14 +1038,14 @@
                 conversation to the final handover, every detail is handled with the same care you give to what you
                 drive. Tell us what you need - we'll take it from there.
               </p>
-              <a href="#" class="cta-btn">
+              <a href="tel:+966555188194" class="cta-btn">
                 <div class="d-flex align-items-center gap-2">
                   <div class="icon-box d-flex justify-content-center align-items-center">
                     <ion-icon class="animate-pulse" name="call-sharp"></ion-icon>
                   </div>
                   <div>
                     <p class="text-sm mb-1">We are available 24x7</p>
-                    <h4 class="text-primary mb-0">+966 XX XXX XXXX</h4>
+                    <h4 class="text-primary mb-0">+966 55 518 8194</h4>
                   </div>
                 </div>
               </a>
@@ -654,7 +1080,7 @@
       <div class="whatsapp-chat-message-box">
         <p class="mb-0">
           Click below to chat on WhatsApp or send us an email to
-          <a href="mailto:contact@farexel.com" class="text-decoration-none text-primary">hello@farexel.com</a>
+          <a href="mailto:info@faresco.sa" class="text-decoration-none text-primary">info@faresco.sa</a>
         </p>
       </div>
       <div class="whatsapp-chat-option">
@@ -686,25 +1112,28 @@
   </button>
 
   <!-- Site Footer -->
-  <footer class="footer" id="footer">
+  <footer class="footer" id="footer" aria-label="Footer">
     <div class="container">
       <div class="footer-inner row gy-4">
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <a class="footer-brand d-inline-block text-decoration-none mb-3" href="index.html">
-            <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo" />
+            <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo" loading="lazy"
+              decoding="async" />
           </a>
           <p class="text-sm">
             Premium car care for Dubai drivers who expect a clean finish,
             careful workmanship, and a straightforward experience.
           </p>
           <div class="social-handles-widget d-flex align-items-center gap-3">
-            <a href="#" title="Email" data-size="fit" class="handle mail btn btn-secondary">
+            <a href="mailto:info@faresco.sa" title="Email" data-size="fit" class="handle mail btn btn-secondary">
               <span><ion-icon name="mail"></ion-icon></span>
             </a>
-            <a href="#" title="WhatsApp" data-size="fit" class="handle whatsapp btn btn-secondary">
+            <a href="https://wa.me/966555188194" target="_blank" rel="noopener noreferrer" title="WhatsApp"
+              data-size="fit" class="handle whatsapp btn btn-secondary">
               <span><ion-icon name="logo-whatsapp"></ion-icon></span>
             </a>
-            <a href="#" title="Instagram" data-size="fit" class="handle insta btn btn-secondary">
+            <a href="https://www.instagram.com/farexelprotection" target="_blank" rel="noopener noreferrer"
+              title="Instagram" data-size="fit" class="handle insta btn btn-secondary">
               <span><ion-icon name="logo-instagram"></ion-icon></span>
             </a>
             <a href="#" title="Facebook" data-size="fit" class="handle facebook btn btn-secondary">
@@ -713,11 +1142,12 @@
           </div>
           <div class="contact-us-spinner mt-4">
             <a href="contact.html">
-              <img src="public/images/contact-spinner.png" height="160" width="160" alt="Contact Us Spinner Image" />
+              <img src="public/images/contact-spinner.png" height="160" width="160" alt="Contact Us Spinner Image"
+                loading="lazy" decoding="async" />
             </a>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Explore</h6>
           <ul class="list-unstyled mb-0">
             <li>
@@ -744,7 +1174,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Services</h6>
           <ul class="list-unstyled mb-0">
             <li>
@@ -787,7 +1217,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Get in Touch</h6>
           <ul class="list-unstyled mb-0">
             <li class="icon-box d-flex gap-2">
@@ -798,7 +1228,7 @@
                 <p class="text-xs text-uppercase tracking-wider mb-0">
                   Email Us
                 </p>
-                <a href="mailto:contact@farexel.com" class="text-decoration-none text-sm">hello@farexel.com</a>
+                <a href="mailto:info@faresco.sa" class="text-decoration-none text-sm">info@faresco.sa</a>
               </div>
             </li>
             <li class="icon-box d-flex gap-2">
@@ -809,7 +1239,7 @@
                 <p class="text-xs text-uppercase tracking-wider mb-0">
                   Call Us
                 </p>
-                <a href="tel:+971505550184" class="text-decoration-none text-sm">+971 50 555 0184</a>
+                <a href="tel:+966555188194" class="text-decoration-none text-sm">+966 55 518 8194</a>
               </div>
             </li>
             <li class="icon-box d-flex gap-2">
@@ -820,7 +1250,9 @@
                 <p class="text-xs text-uppercase tracking-wider mb-0">
                   Location
                 </p>
-                <a href="#contact-us" class="text-decoration-none text-sm">Dubai, United Arab Emirates</a>
+                <a href="https://www.google.com/maps?cid=12548156101973577217&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed"
+                  target="_blank" rel="noopener noreferrer" class="text-decoration-none text-sm">AL NAKHEEL BUILDING,
+                  SHOWROOM NO 2, AL JANUBIA, Al Khobar 34621, Saudi Arabia</a>
               </div>
             </li>
           </ul>

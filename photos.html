@@ -54,12 +54,12 @@
             <ul
               class="list-unstyled d-flex justify-content-between justify-content-lg-start align-items-center gap-1 gap-lg-2 gap-xl-4 text-sm mb-0">
               <li class="action mail">
-                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
-                    name="mail"></ion-icon>contact@farexel.com</a>
+                <a href="mailto:info@faresco.sa" class="text-decoration-none"><ion-icon class="icon me-1"
+                    name="mail"></ion-icon> info@faresco.sa</a>
               </li>
               <li class="action readonly">
-                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Fri :
-                09:00am - 08:00pm
+                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Sun :
+                09:00am - 10:30pm
               </li>
             </ul>
           </div>
@@ -67,8 +67,8 @@
             <ul
               class="list-unstyled d-flex justify-content-between justify-content-lg-end align-items-center justify-content-end gap-1 gap-lg-2 gap-xl-4 text-sm mb-0">
               <li class="action call">
-                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="call"></ion-icon>+91
-                  1234567890</a>
+                <a href="tel:+966555188194" class="text-decoration-none"><ion-icon class="icon me-1"
+                    name="call"></ion-icon>+966 55 518 8194</a>
               </li>
               <li class="action switch-lang">
                 <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
@@ -347,161 +347,213 @@
     <!-- Photos -->
     <section class="section photos" id="photos" aria-label="Detailing Gallery Photos">
       <div class="container py-4 py-lg-5">
+        <div class="section-header">
+          <div class="section-header text-center mb-4 mb-lg-4">
+            <h2 class="d-inline-block position-relative pb-2">
+              A Glimpse Into the FAREXEL World
+            </h2>
+            <p class="mb-0">Beyond the detailing bay, there is a team, a culture and a shared passion for doing
+              things right. Explore moments from the people, spaces and relationships that make
+              FAREXEL what it is.</p>
+          </div>
+        </div>
         <div class="row filters gy-3 gy-lg-0 mb-4">
-          <div class="col-sm-12 col-lg-6">Showing 1–9 of 15 results</div>
+          <div class="col-sm-12 col-lg-6" id="photos-count">Showing 1–9 of 9 results</div>
           <div class="col-sm-12 col-lg-6">
             <div class="position-relative">
-              <select name="sort" id="sort" class="sorting form-control pe-4">
-                <option value="default">Default</option>
-                <option value="newest">Newest</option>
-                <option value="oldest">Oldest</option>
+              <select name="sort" id="sort" class="sorting form-control pe-4" aria-label="Filter photo moments">
+                <option value="all" selected>All Moments</option>
+                <option value="latest">Latest Moments</option>
+                <option value="oldest">Oldest Moments</option>
+                <option value="our-studio">Our Studio</option>
+                <option value="behind-the-craft">Behind the Craft</option>
+                <option value="team-and-collaboration">Team & Collaboration</option>
+                <option value="client-moments">Client Moments</option>
+                <option value="celebrations">Celebrations</option>
+                <option value="farexel-culture">FAREXEL Culture</option>
+                <option value="memorable-moments">Memorable Moments</option>
               </select>
               <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
             </div>
           </div>
         </div>
         <div class="row gy-4">
-          <div class="col-sm-12 col-md-6 col-lg-4">
+          <!-- 1. Inside the FAREXEL Studio -->
+          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="our-studio behind-the-craft memorable-moments" data-order="1">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <img src="public/images/surface-refinement.jpg" height="280" width="500"
-                  alt="Precision Surface Refinement" class="img-fluid w-100" />
+                  alt="Inside the FAREXEL Studio" class="img-fluid w-100" />
                 <a class="magnifier glightbox" href="public/images/surface-refinement.jpg" data-gallery="FAREXEL-media"
-                  aria-label="Open Precision Surface Refinement">
+                  data-title="Inside the FAREXEL Studio" data-description="The space where precision meets passion."
+                  aria-label="Open Inside the FAREXEL Studio">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
               <div class="card-body">
-                <p class="text-primary mb-0">Paint Correction</p>
-                <h4 class="mb-0">Precision Surface Refinement</h4>
+                <p class="text-primary mb-0"><small>Our Studio</small></p>
+                <h4 class="mb-0">Inside the FAREXEL Studio</h4>
+                <p class="text-sm mb-0">The space where precision meets passion.</p>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+
+          <!-- 2. Behind Every Detail -->
+          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="behind-the-craft farexel-culture memorable-moments" data-order="2">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <img src="public/images/interior-detailing.jpg" height="280" width="500"
-                  alt="Interior Detailing Excellence" class="img-fluid w-100" />
+                  alt="Behind Every Detail" class="img-fluid w-100" />
                 <a class="magnifier glightbox" href="public/images/interior-detailing.jpg" data-gallery="FAREXEL-media"
-                  aria-label="Open Interior Detailing Excellence">
+                  data-title="Behind Every Detail" data-description="Our team at work, turning expertise into craftsmanship."
+                  aria-label="Open Behind Every Detail">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
               <div class="card-body">
-                <p class="text-primary mb-0">Interior Care</p>
-                <h4 class="mb-0">Interior Detailing Excellence</h4>
+                <p class="text-primary mb-0"><small>Behind the Craft</small></p>
+                <h4 class="mb-0">Behind Every Detail</h4>
+                <p class="text-sm mb-0">Our team at work, turning expertise into craftsmanship.</p>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+
+          <!-- 3. One Team. One Standard. -->
+          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="team-and-collaboration farexel-culture memorable-moments" data-order="3">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <img src="public/images/client-experience.jpg" height="280" width="500"
-                  alt="Client Experience & Consultation" class="img-fluid w-100" />
+                  alt="One Team. One Standard." class="img-fluid w-100" />
                 <a class="magnifier glightbox" href="public/images/client-experience.jpg" data-gallery="FAREXEL-media"
-                  aria-label="Open Client Experience and Consultation">
+                  data-title="One Team. One Standard." data-description="Collaboration that keeps every detail moving in the right direction."
+                  aria-label="Open One Team. One Standard.">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
               <div class="card-body">
-                <p class="text-primary mb-0">Consultation</p>
-                <h4 class="mb-2">Client Experience & Consultation</h4>
+                <p class="text-primary mb-0"><small>Team & Collaboration</small></p>
+                <h4 class="mb-0">One Team. One Standard.</h4>
+                <p class="text-sm mb-0">Collaboration that keeps every detail moving in the right direction.</p>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+
+          <!-- 4. Client Moments -->
+          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="client-moments memorable-moments" data-order="4">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/paint-enhancement.jpg" height="280" width="500" alt="Advance Paint Enhancement"
+                <img src="public/images/paint-enhancement.jpg" height="280" width="500" alt="Client Moments"
                   class="img-fluid w-100" />
                 <a class="magnifier glightbox" href="public/images/paint-enhancement.jpg" data-gallery="FAREXEL-media"
-                  aria-label="Open Advance Paint Enhancement">
+                  data-title="Client Moments" data-description="Building relationships beyond the service bay."
+                  aria-label="Open Client Moments">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
               <div class="card-body">
-                <p class="text-primary mb-0">Surface Protection</p>
-                <h4 class="mb-0">Advance Paint Enhancement</h4>
+                <p class="text-primary mb-0"><small>Client Moments</small></p>
+                <h4 class="mb-0">Client Moments</h4>
+                <p class="text-sm mb-0">Building relationships beyond the service bay.</p>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+
+          <!-- 5. The People Behind FAREXEL -->
+          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="farexel-culture team-and-collaboration memorable-moments" data-order="5">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <img src="public/images/premium-finish-protection.jpg" height="280" width="500"
-                  alt="Premium Finish Protection" class="img-fluid w-100" />
+                  alt="The People Behind FAREXEL" class="img-fluid w-100" />
                 <a class="magnifier glightbox" href="public/images/premium-finish-protection.jpg"
-                  data-gallery="FAREXEL-media" aria-label="Open Premium Finish Protection">
+                  data-gallery="FAREXEL-media" data-title="The People Behind FAREXEL" data-description="Passion, personality and pride behind every experience."
+                  aria-label="Open The People Behind FAREXEL">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
               <div class="card-body">
-                <p class="text-primary mb-0">Ceramic Coating</p>
-                <h4 class="mb-0">Premium Finish Protection</h4>
+                <p class="text-primary mb-0"><small>FAREXEL Culture</small></p>
+                <h4 class="mb-0">The People Behind FAREXEL</h4>
+                <p class="text-sm mb-0">Passion, personality and pride behind every experience.</p>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+
+          <!-- 6. Crafted Together -->
+          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="team-and-collaboration behind-the-craft memorable-moments" data-order="6">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <img src="public/images/premium-finish-detailing.jpg" height="280" width="500"
-                  alt="Premium Finish Detailing" class="img-fluid w-100" />
+                  alt="Crafted Together" class="img-fluid w-100" />
                 <a class="magnifier glightbox" href="public/images/premium-finish-detailing.jpg"
-                  data-gallery="FAREXEL-media" aria-label="Open Premium Finish Detailing">
+                  data-gallery="FAREXEL-media" data-title="Crafted Together" data-description="Great work begins with a team that works as one."
+                  aria-label="Open Crafted Together">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
               <div class="card-body">
-                <p class="text-primary mb-0">Ceramic Coating</p>
-                <h4 class="mb-0">Premium Finish Detailing</h4>
+                <p class="text-primary mb-0"><small>Team & Collaboration</small></p>
+                <h4 class="mb-0">Crafted Together</h4>
+                <p class="text-sm mb-0">Great work begins with a team that works as one.</p>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+
+          <!-- 7. Moments Worth Remembering -->
+          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="memorable-moments celebrations farexel-culture" data-order="7">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <img src="public/images/suspension-and-underbody.jpg" height="280" width="500"
-                  alt="Suspension & Underbody Care" class="img-fluid w-100" />
+                  alt="Moments Worth Remembering" class="img-fluid w-100" />
                 <a class="magnifier glightbox" href="public/images/suspension-and-underbody.jpg"
-                  data-gallery="FAREXEL-media" aria-label="Open Suspension and Underbody Care">
+                  data-gallery="FAREXEL-media" data-title="Moments Worth Remembering" data-description="The people, occasions and memories that shape our journey."
+                  aria-label="Open Moments Worth Remembering">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
               <div class="card-body">
-                <p class="text-primary mb-0">Underbody Care</p>
-                <h4 class="mb-0">Suspension & Underbody Care</h4>
+                <p class="text-primary mb-0"><small>Memorable Moments</small></p>
+                <h4 class="mb-0">Moments Worth Remembering</h4>
+                <p class="text-sm mb-0">The people, occasions and memories that shape our journey.</p>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+
+          <!-- 8. Celebrating Together -->
+          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="celebrations farexel-culture memorable-moments" data-order="8">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <img src="public/images/client-experience.jpg" height="280" width="500"
-                  alt="Red Vehicle Exterior Finish" class="img-fluid w-100" />
+                  alt="Celebrating Together" class="img-fluid w-100" />
                 <a class="magnifier glightbox" href="public/images/client-experience.jpg" data-gallery="FAREXEL-media"
-                  aria-label="Open Red Vehicle Exterior Finish">
+                  data-title="Celebrating Together" data-description="Because milestones are better when the whole team shares them."
+                  aria-label="Open Celebrating Together">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
               <div class="card-body">
-                <p class="text-primary mb-0">Exterior Detailing</p>
-                <h4 class="mb-2">Red Vehicle Exterior Finish</h4>
+                <p class="text-primary mb-0"><small>Celebrations</small></p>
+                <h4 class="mb-0">Celebrating Together</h4>
+                <p class="text-sm mb-0">Because milestones are better when the whole team shares them.</p>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
+
+          <!-- 9. The FAREXEL Culture -->
+          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="farexel-culture our-studio behind-the-craft memorable-moments" data-order="9">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/surface-refinement.jpg" height="280" width="500" alt="Executive Vehicle Care"
+                <img src="public/images/surface-refinement.jpg" height="280" width="500" alt="The FAREXEL Culture"
                   class="img-fluid w-100" />
                 <a class="magnifier glightbox" href="public/images/surface-refinement.jpg" data-gallery="FAREXEL-media"
-                  aria-label="Open Executive Vehicle Care">
+                  data-title="The FAREXEL Culture" data-description="Professional in our work. Connected beyond it."
+                  aria-label="Open The FAREXEL Culture">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
               <div class="card-body">
-                <p class="text-primary mb-0">Premium Finish</p>
-                <h4 class="mb-0">Executive Vehicle Care</h4>
+                <p class="text-primary mb-0"><small>FAREXEL Culture</small></p>
+                <h4 class="mb-0">The FAREXEL Culture</h4>
+                <p class="text-sm mb-0">Professional in our work. Connected beyond it.</p>
               </div>
             </article>
           </div>
@@ -533,14 +585,14 @@
                 conversation to the final handover, every detail is handled with the same care you give to what you
                 drive. Tell us what you need - we'll take it from there.
               </p>
-              <a href="#" class="cta-btn">
+              <a href="tel:+966555188194" class="cta-btn">
                 <div class="d-flex align-items-center gap-2">
                   <div class="icon-box d-flex justify-content-center align-items-center">
                     <ion-icon class="animate-pulse" name="call-sharp"></ion-icon>
                   </div>
                   <div>
                     <p class="text-sm mb-1">We are available 24x7</p>
-                    <h4 class="text-primary mb-0">+966 XX XXX XXXX</h4>
+                    <h4 class="text-primary mb-0">+966 55 518 8194</h4>
                   </div>
                 </div>
               </a>
@@ -575,7 +627,7 @@
       <div class="whatsapp-chat-message-box">
         <p class="mb-0">
           Click below to chat on WhatsApp or send us an email to
-          <a href="mailto:contact@farexel.com" class="text-decoration-none text-primary">hello@farexel.com</a>
+          <a href="mailto:info@faresco.sa" class="text-decoration-none text-primary">info@faresco.sa</a>
         </p>
       </div>
       <div class="whatsapp-chat-option">
@@ -607,25 +659,28 @@
   </button>
 
   <!-- Site Footer -->
-  <footer class="footer" id="footer">
+  <footer class="footer" id="footer" aria-label="Footer">
     <div class="container">
       <div class="footer-inner row gy-4">
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <a class="footer-brand d-inline-block text-decoration-none mb-3" href="index.html">
-            <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo" />
+            <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo" loading="lazy"
+              decoding="async" />
           </a>
           <p class="text-sm">
             Premium car care for Dubai drivers who expect a clean finish,
             careful workmanship, and a straightforward experience.
           </p>
           <div class="social-handles-widget d-flex align-items-center gap-3">
-            <a href="#" title="Email" data-size="fit" class="handle mail btn btn-secondary">
+            <a href="mailto:info@faresco.sa" title="Email" data-size="fit" class="handle mail btn btn-secondary">
               <span><ion-icon name="mail"></ion-icon></span>
             </a>
-            <a href="#" title="WhatsApp" data-size="fit" class="handle whatsapp btn btn-secondary">
+            <a href="https://wa.me/966555188194" target="_blank" rel="noopener noreferrer" title="WhatsApp"
+              data-size="fit" class="handle whatsapp btn btn-secondary">
               <span><ion-icon name="logo-whatsapp"></ion-icon></span>
             </a>
-            <a href="#" title="Instagram" data-size="fit" class="handle insta btn btn-secondary">
+            <a href="https://www.instagram.com/farexelprotection" target="_blank" rel="noopener noreferrer"
+              title="Instagram" data-size="fit" class="handle insta btn btn-secondary">
               <span><ion-icon name="logo-instagram"></ion-icon></span>
             </a>
             <a href="#" title="Facebook" data-size="fit" class="handle facebook btn btn-secondary">
@@ -634,11 +689,12 @@
           </div>
           <div class="contact-us-spinner mt-4">
             <a href="contact.html">
-              <img src="public/images/contact-spinner.png" height="160" width="160" alt="Contact Us Spinner Image" />
+              <img src="public/images/contact-spinner.png" height="160" width="160" alt="Contact Us Spinner Image"
+                loading="lazy" decoding="async" />
             </a>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Explore</h6>
           <ul class="list-unstyled mb-0">
             <li>
@@ -665,7 +721,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Services</h6>
           <ul class="list-unstyled mb-0">
             <li>
@@ -708,7 +764,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Get in Touch</h6>
           <ul class="list-unstyled mb-0">
             <li class="icon-box d-flex gap-2">
@@ -719,7 +775,7 @@
                 <p class="text-xs text-uppercase tracking-wider mb-0">
                   Email Us
                 </p>
-                <a href="mailto:contact@farexel.com" class="text-decoration-none text-sm">hello@farexel.com</a>
+                <a href="mailto:info@faresco.sa" class="text-decoration-none text-sm">info@faresco.sa</a>
               </div>
             </li>
             <li class="icon-box d-flex gap-2">
@@ -730,7 +786,7 @@
                 <p class="text-xs text-uppercase tracking-wider mb-0">
                   Call Us
                 </p>
-                <a href="tel:+971505550184" class="text-decoration-none text-sm">+971 50 555 0184</a>
+                <a href="tel:+966555188194" class="text-decoration-none text-sm">+966 55 518 8194</a>
               </div>
             </li>
             <li class="icon-box d-flex gap-2">
@@ -741,7 +797,9 @@
                 <p class="text-xs text-uppercase tracking-wider mb-0">
                   Location
                 </p>
-                <a href="#contact-us" class="text-decoration-none text-sm">Dubai, United Arab Emirates</a>
+                <a href="https://www.google.com/maps?cid=12548156101973577217&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed"
+                  target="_blank" rel="noopener noreferrer" class="text-decoration-none text-sm">AL NAKHEEL BUILDING,
+                  SHOWROOM NO 2, AL JANUBIA, Al Khobar 34621, Saudi Arabia</a>
               </div>
             </li>
           </ul>

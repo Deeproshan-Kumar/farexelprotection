@@ -52,12 +52,12 @@
             <ul
               class="list-unstyled d-flex justify-content-between justify-content-lg-start align-items-center gap-1 gap-lg-2 gap-xl-4 text-sm mb-0">
               <li class="action mail">
-                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1"
-                    name="mail"></ion-icon>contact@farexel.com</a>
+                <a href="mailto:info@faresco.sa" class="text-decoration-none"><ion-icon class="icon me-1"
+                    name="mail"></ion-icon> info@faresco.sa</a>
               </li>
               <li class="action readonly">
-                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Fri :
-                09:00am - 08:00pm
+                <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Sun :
+                09:00am - 10:30pm
               </li>
             </ul>
           </div>
@@ -65,8 +65,8 @@
             <ul
               class="list-unstyled d-flex justify-content-between justify-content-lg-end align-items-center justify-content-end gap-1 gap-lg-2 gap-xl-4 text-sm mb-0">
               <li class="action call">
-                <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="call"></ion-icon>+91
-                  1234567890</a>
+                <a href="tel:+966555188194" class="text-decoration-none"><ion-icon class="icon me-1"
+                    name="call"></ion-icon>+966 55 518 8194</a>
               </li>
               <li class="action switch-lang">
                 <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
@@ -342,6 +342,16 @@
 
     <section class="section blogs" id="blogs" aria-label="Articles and Insights">
       <div class="container py-4 py-lg-5">
+        <div class="section-header">
+          <div class="section-header text-center mb-4 mb-lg-4">
+            <h2 class="d-inline-block position-relative pb-2">
+              The FAREXEL Journal
+            </h2>
+            <p class="mb-0">A considered look at the craft behind exceptional automotive care - from preserving
+              what you own to understanding what truly makes a difference.</p>
+          </div>
+        </div>
+
         <div class="row filters gy-3 gy-lg-0 mb-4">
           <div class="col-sm-12 col-md-6 col-lg-3">
             <div class="position-relative">
@@ -384,276 +394,505 @@
           </div>
         </div>
         <div class="row gy-4">
-          <div class="col-sm-12 col-lg-6">
-            <article class="card blog">
-              <div class="row align-items-center">
+          <!-- Card 1 -->
+          <div class="col-sm-12 col-lg-6" data-category="exterior">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
                 <div class="col-4">
-                  <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                  <div class="thumbnail h-100">
+                    <img src="public/images/blogs/blog-01.jpg" class="img-fluid thumbnail h-100 w-100" alt="Why Exceptional Car Care Begins Long Before the Finish" />
                   </div>
                 </div>
-                <div class="col-8 py-3">
-                  <div class="author-info d-flex align-items-center gap-2 mb-2">
-                    <div class="profile-pic">
-                      <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
                     </div>
-                    <p class="mb-0">
-                      Written by <span class="text-black">FAREXEL</span>
-                    </p>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">Why Exceptional Car Care Begins Long Before the Finish</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>September 18, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>7 min read
+                      </li>
+                    </ul>
                   </div>
-                  <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                    <h5 class="mb-0">The Right Time to Detail Your Car - Before the Finish Tells You</h5>
-                  </a>
-                  <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="calendar"></ion-icon>September 12, 2026
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="time"></ion-icon>7 min
-                      read
-                    </li>
-                  </ul>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-lg-6">
-            <article class="card blog">
-              <div class="row align-items-center">
+
+          <!-- Card 2 -->
+          <div class="col-sm-12 col-lg-6" data-category="protection">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
                 <div class="col-4">
-                  <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                  <div class="thumbnail h-100">
+                    <img src="public/images/blogs/blog-02.jpg" class="img-fluid thumbnail h-100 w-100" alt="PPF or Ceramic Protection? Understanding What Your Car Truly Needs" />
                   </div>
                 </div>
-                <div class="col-8 py-3">
-                  <div class="author-info d-flex align-items-center gap-2 mb-2">
-                    <div class="profile-pic">
-                      <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
                     </div>
-                    <p class="mb-0">
-                      Written by <span class="text-black">FAREXEL</span>
-                    </p>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">PPF or Ceramic Protection? Understanding What Your Car Truly Needs</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>September 15, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>9 min read
+                      </li>
+                    </ul>
                   </div>
-                  <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                    <h5 class="mb-0">PPF, Ceramic or Both? Understanding What Your Car Actually Needs</h5>
-                  </a>
-                  <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="calendar"></ion-icon>September 08, 2026
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="time"></ion-icon>9 min
-                      read
-                    </li>
-                  </ul>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-lg-6">
-            <article class="card blog">
-              <div class="row align-items-center">
+
+          <!-- Card 3 -->
+          <div class="col-sm-12 col-lg-6" data-category="exterior">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
                 <div class="col-4">
-                  <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                  <div class="thumbnail h-100">
+                    <img src="public/images/blogs/blog-03.jpg" class="img-fluid thumbnail h-100 w-100" alt="The Difference Between a Clean Car and a Properly Refined One" />
                   </div>
                 </div>
-                <div class="col-8 py-3">
-                  <div class="author-info d-flex align-items-center gap-2 mb-2">
-                    <div class="profile-pic">
-                      <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
                     </div>
-                    <p class="mb-0">
-                      Written by <span class="text-black">FAREXEL</span>
-                    </p>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">The Difference Between a Clean Car and a Properly Refined One</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>September 12, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>8 min read
+                      </li>
+                    </ul>
                   </div>
-                  <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                    <h5 class="mb-0">Beyond the Shine: What Professional Detailing Really Changes</h5>
-                  </a>
-                  <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="calendar"></ion-icon>September 03, 2026
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="time"></ion-icon>8 min
-                      read
-                    </li>
-                  </ul>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-lg-6">
-            <article class="card blog">
-              <div class="row align-items-center">
+
+          <!-- Card 4 -->
+          <div class="col-sm-12 col-lg-6" data-category="maintenance">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
                 <div class="col-4">
-                  <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                  <div class="thumbnail h-100">
+                    <img src="public/images/surface-refinement.jpg" class="img-fluid thumbnail h-100 w-100" alt="What Daily Driving Quietly Takes Away From Your Car’s Appearance" />
                   </div>
                 </div>
-                <div class="col-8 py-3">
-                  <div class="author-info d-flex align-items-center gap-2 mb-2">
-                    <div class="profile-pic">
-                      <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
                     </div>
-                    <p class="mb-0">
-                      Written by <span class="text-black">FAREXEL</span>
-                    </p>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">What Daily Driving Quietly Takes Away From Your Car’s Appearance</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>September 08, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>6 min read
+                      </li>
+                    </ul>
                   </div>
-                  <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                    <h5 class="mb-0">
-                      How to Protect Your Paint Between Details
-                    </h5>
-                  </a>
-                  <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="calendar"></ion-icon>January 28, 2026
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="time"></ion-icon>7 min
-                      read
-                    </li>
-                  </ul>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-lg-6">
-            <article class="card blog">
-              <div class="row align-items-center">
+
+          <!-- Card 5 -->
+          <div class="col-sm-12 col-lg-6" data-category="exterior">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
                 <div class="col-4">
-                  <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                  <div class="thumbnail h-100">
+                    <img src="public/images/paint-enhancement.jpg" class="img-fluid thumbnail h-100 w-100" alt="Inside the Craft: What Separates Professional Detailing From Routine Cleaning" />
                   </div>
                 </div>
-                <div class="col-8 py-3">
-                  <div class="author-info d-flex align-items-center gap-2 mb-2">
-                    <div class="profile-pic">
-                      <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
                     </div>
-                    <p class="mb-0">
-                      Written by <span class="text-black">FAREXEL</span>
-                    </p>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">Inside the Craft: What Separates Professional Detailing From Routine Cleaning</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>September 04, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>8 min read
+                      </li>
+                    </ul>
                   </div>
-                  <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                    <h5 class="mb-0">A Simple Guide to Cleaner Wheels</h5>
-                  </a>
-                  <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="calendar"></ion-icon>January 29, 2026
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="time"></ion-icon>6 min
-                      read
-                    </li>
-                  </ul>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-lg-6">
-            <article class="card blog">
-              <div class="row align-items-center">
+
+          <!-- Card 6 -->
+          <div class="col-sm-12 col-lg-6" data-category="protection">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
                 <div class="col-4">
-                  <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                  <div class="thumbnail h-100">
+                    <img src="public/images/premium-finish-protection.jpg" class="img-fluid thumbnail h-100 w-100" alt="Preserving the Presence of a Car You Were Proud to Choose" />
                   </div>
                 </div>
-                <div class="col-8 py-3">
-                  <div class="author-info d-flex align-items-center gap-2 mb-2">
-                    <div class="profile-pic">
-                      <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
                     </div>
-                    <p class="mb-0">
-                      Written by <span class="text-black">FAREXEL</span>
-                    </p>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">Preserving the Presence of a Car You Were Proud to Choose</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>August 30, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>7 min read
+                      </li>
+                    </ul>
                   </div>
-                  <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                    <h5 class="mb-0">Interior Care Tips for Busy Drivers</h5>
-                  </a>
-                  <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="calendar"></ion-icon>January 30, 2026
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="time"></ion-icon>9 min
-                      read
-                    </li>
-                  </ul>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-lg-6">
-            <article class="card blog">
-              <div class="row align-items-center">
+
+          <!-- Card 7 -->
+          <div class="col-sm-12 col-lg-6" data-category="protection">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
                 <div class="col-4">
-                  <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                  <div class="thumbnail h-100">
+                    <img src="public/images/premium-finish-detailing.jpg" class="img-fluid thumbnail h-100 w-100" alt="Paint Correction Explained: Restoring Clarity Without Compromise" />
                   </div>
                 </div>
-                <div class="col-8 py-3">
-                  <div class="author-info d-flex align-items-center gap-2 mb-2">
-                    <div class="profile-pic">
-                      <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
                     </div>
-                    <p class="mb-0">
-                      Written by <span class="text-black">FAREXEL</span>
-                    </p>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">Paint Correction Explained: Restoring Clarity Without Compromise</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>August 25, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>9 min read
+                      </li>
+                    </ul>
                   </div>
-                  <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                    <h5 class="mb-0">When Should You Book a Full Detail?</h5>
-                  </a>
-                  <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="calendar"></ion-icon>January 31, 2026
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="time"></ion-icon>8 min
-                      read
-                    </li>
-                  </ul>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-sm-12 col-lg-6">
-            <article class="card blog">
-              <div class="row align-items-center">
+
+          <!-- Card 8 -->
+          <div class="col-sm-12 col-lg-6" data-category="interior">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
                 <div class="col-4">
-                  <div class="thumbnail">
-                    <img src="public/images/car-red.png" class="img-fluid thumbnail" alt="Red Car" />
+                  <div class="thumbnail h-100">
+                    <img src="public/images/interior-detailing.jpg" class="img-fluid thumbnail h-100 w-100" alt="The Interior Is Part of the Experience - Not an Afterthought" />
                   </div>
                 </div>
-                <div class="col-8 py-3">
-                  <div class="author-info d-flex align-items-center gap-2 mb-2">
-                    <div class="profile-pic">
-                      <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
-                        alt="Author Profile Pic" />
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
                     </div>
-                    <p class="mb-0">
-                      Written by <span class="text-black">FAREXEL</span>
-                    </p>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">The Interior Is Part of the Experience - Not an Afterthought</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>August 20, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>7 min read
+                      </li>
+                    </ul>
                   </div>
-                  <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
-                    <h5 class="mb-0">Rainy Season Car Care Essentials</h5>
-                  </a>
-                  <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="calendar"></ion-icon>February 1, 2026
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <ion-icon class="icon me-1" name="time"></ion-icon>6 min
-                      read
-                    </li>
-                  </ul>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="col-sm-12 col-lg-6" data-category="maintenance">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
+                <div class="col-4">
+                  <div class="thumbnail h-100">
+                    <img src="public/images/client-experience.jpg" class="img-fluid thumbnail h-100 w-100" alt="How to Choose the Right Level of Care for Your Car or Bike" />
+                  </div>
+                </div>
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
+                    </div>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">How to Choose the Right Level of Care for Your Car or Bike</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>August 15, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>8 min read
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="col-sm-12 col-lg-6" data-category="maintenance">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
+                <div class="col-4">
+                  <div class="thumbnail h-100">
+                    <img src="public/images/customer-experience.jpg" class="img-fluid thumbnail h-100 w-100" alt="What Makes a Detailing Experience Worth Coming Back To?" />
+                  </div>
+                </div>
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
+                    </div>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">What Makes a Detailing Experience Worth Coming Back To?</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>August 10, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>6 min read
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 11 -->
+          <div class="col-sm-12 col-lg-6" data-category="protection">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
+                <div class="col-4">
+                  <div class="thumbnail h-100">
+                    <img src="public/images/suspension-and-underbody.jpg" class="img-fluid thumbnail h-100 w-100" alt="The Science Behind a Finish That Holds Its Presence" />
+                  </div>
+                </div>
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
+                    </div>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">The Science Behind a Finish That Holds Its Presence</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>August 04, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>9 min read
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 12 -->
+          <div class="col-sm-12 col-lg-6" data-category="exterior">
+            <article class="card blog h-100" style="cursor: pointer;" onclick="window.location.href='blog-detail.html'">
+              <div class="row align-items-stretch g-0 h-100">
+                <div class="col-4">
+                  <div class="thumbnail h-100">
+                    <img src="public/images/blogs/blog-01.jpg" class="img-fluid thumbnail h-100 w-100" alt="Caring for Your Bike With the Same Precision as Your Car" />
+                  </div>
+                </div>
+                <div class="col-8 p-3 d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="author-info d-flex align-items-center gap-2 mb-2">
+                      <div class="profile-pic">
+                        <img src="public/images/default-user.jpg" class="img-fluid rounded-circle"
+                          alt="Author Profile Pic" />
+                      </div>
+                      <p class="mb-0">
+                        Written by <span class="text-black">FAREXEL</span>
+                      </p>
+                    </div>
+                    <a href="blog-detail.html" class="blog-title d-inline-block mb-2" onclick="event.stopPropagation();">
+                      <h5 class="mb-0">Caring for Your Bike With the Same Precision as Your Car</h5>
+                    </a>
+                    <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-2">
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="calendar"></ion-icon>July 28, 2026
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <ion-icon class="icon me-1" name="time"></ion-icon>7 min read
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="pt-2">
+                    <a href="blog-detail.html" class="btn btn-primary d-inline-block" data-size="sm" onclick="event.stopPropagation();">
+                      <span class="d-inline-flex align-items-center gap-1">Read the Full Insight <ion-icon name="arrow-forward-outline"></ion-icon></span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </article>
@@ -685,14 +924,14 @@
                 conversation to the final handover, every detail is handled with the same care you give to what you
                 drive. Tell us what you need - we'll take it from there.
               </p>
-              <a href="#" class="cta-btn">
+              <a href="tel:+966555188194" class="cta-btn">
                 <div class="d-flex align-items-center gap-2">
                   <div class="icon-box d-flex justify-content-center align-items-center">
                     <ion-icon class="animate-pulse" name="call-sharp"></ion-icon>
                   </div>
                   <div>
                     <p class="text-sm mb-1">We are available 24x7</p>
-                    <h4 class="text-primary mb-0">+966 XX XXX XXXX</h4>
+                    <h4 class="text-primary mb-0">+966 55 518 8194</h4>
                   </div>
                 </div>
               </a>
@@ -727,7 +966,7 @@
       <div class="whatsapp-chat-message-box">
         <p class="mb-0">
           Click below to chat on WhatsApp or send us an email to
-          <a href="mailto:contact@farexel.com" class="text-decoration-none text-primary">hello@farexel.com</a>
+          <a href="mailto:info@faresco.sa" class="text-decoration-none text-primary">info@faresco.sa</a>
         </p>
       </div>
       <div class="whatsapp-chat-option">
@@ -759,25 +998,28 @@
   </button>
 
   <!-- Site Footer -->
-  <footer class="footer" id="footer">
+  <footer class="footer" id="footer" aria-label="Footer">
     <div class="container">
       <div class="footer-inner row gy-4">
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <a class="footer-brand d-inline-block text-decoration-none mb-3" href="index.html">
-            <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo" />
+            <img src="public/images/logo.png" alt="Logo" height="38" width="200" class="img-fluid logo" loading="lazy"
+              decoding="async" />
           </a>
           <p class="text-sm">
             Premium car care for Dubai drivers who expect a clean finish,
             careful workmanship, and a straightforward experience.
           </p>
           <div class="social-handles-widget d-flex align-items-center gap-3">
-            <a href="#" title="Email" data-size="fit" class="handle mail btn btn-secondary">
+            <a href="mailto:info@faresco.sa" title="Email" data-size="fit" class="handle mail btn btn-secondary">
               <span><ion-icon name="mail"></ion-icon></span>
             </a>
-            <a href="#" title="WhatsApp" data-size="fit" class="handle whatsapp btn btn-secondary">
+            <a href="https://wa.me/966555188194" target="_blank" rel="noopener noreferrer" title="WhatsApp"
+              data-size="fit" class="handle whatsapp btn btn-secondary">
               <span><ion-icon name="logo-whatsapp"></ion-icon></span>
             </a>
-            <a href="#" title="Instagram" data-size="fit" class="handle insta btn btn-secondary">
+            <a href="https://www.instagram.com/farexelprotection" target="_blank" rel="noopener noreferrer"
+              title="Instagram" data-size="fit" class="handle insta btn btn-secondary">
               <span><ion-icon name="logo-instagram"></ion-icon></span>
             </a>
             <a href="#" title="Facebook" data-size="fit" class="handle facebook btn btn-secondary">
@@ -786,11 +1028,12 @@
           </div>
           <div class="contact-us-spinner mt-4">
             <a href="contact.html">
-              <img src="public/images/contact-spinner.png" height="160" width="160" alt="Contact Us Spinner Image" />
+              <img src="public/images/contact-spinner.png" height="160" width="160" alt="Contact Us Spinner Image"
+                loading="lazy" decoding="async" />
             </a>
           </div>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Explore</h6>
           <ul class="list-unstyled mb-0">
             <li>
@@ -817,7 +1060,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Services</h6>
           <ul class="list-unstyled mb-0">
             <li>
@@ -860,7 +1103,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-lg-3">
+        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Get in Touch</h6>
           <ul class="list-unstyled mb-0">
             <li class="icon-box d-flex gap-2">
@@ -871,7 +1114,7 @@
                 <p class="text-xs text-uppercase tracking-wider mb-0">
                   Email Us
                 </p>
-                <a href="mailto:contact@farexel.com" class="text-decoration-none text-sm">hello@farexel.com</a>
+                <a href="mailto:info@faresco.sa" class="text-decoration-none text-sm">info@faresco.sa</a>
               </div>
             </li>
             <li class="icon-box d-flex gap-2">
@@ -882,7 +1125,7 @@
                 <p class="text-xs text-uppercase tracking-wider mb-0">
                   Call Us
                 </p>
-                <a href="tel:+971505550184" class="text-decoration-none text-sm">+971 50 555 0184</a>
+                <a href="tel:+966555188194" class="text-decoration-none text-sm">+966 55 518 8194</a>
               </div>
             </li>
             <li class="icon-box d-flex gap-2">
@@ -893,7 +1136,9 @@
                 <p class="text-xs text-uppercase tracking-wider mb-0">
                   Location
                 </p>
-                <a href="#contact-us" class="text-decoration-none text-sm">Dubai, United Arab Emirates</a>
+                <a href="https://www.google.com/maps?cid=12548156101973577217&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=IN&source=embed"
+                  target="_blank" rel="noopener noreferrer" class="text-decoration-none text-sm">AL NAKHEEL BUILDING,
+                  SHOWROOM NO 2, AL JANUBIA, Al Khobar 34621, Saudi Arabia</a>
               </div>
             </li>
           </ul>

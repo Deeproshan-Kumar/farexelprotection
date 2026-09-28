@@ -48,6 +48,10 @@
     font-size: 3rem;
   }
 
+  .hero-image-container .car {
+    transform: scale(1.15) translateX(-3rem);
+  }
+
   .hero-image-container .caption {
     position: relative;
     top: 1.5rem;
@@ -147,8 +151,9 @@
     padding: 0.75rem;
   }
 
-  .tour-video-container {
-    height: auto;
+  .hero-image-container .car-light {
+    left: 25%;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
@@ -178,6 +183,10 @@
 
   .car {
     transform: scale(1);
+  }
+
+  .hero-image-container .car-light {
+    top: 67%;
   }
 
   .datetime {
