@@ -142,22 +142,6 @@ export function initStatsCounters() {
   counters.forEach((counter) => observer.observe(counter));
 }
 
-// Init tour video player function
-export function initTourVideoPlayer(videoCtrlBtn, video, videoCtrlIcon) {
-  if (!videoCtrlBtn || !video || !videoCtrlIcon) return;
-  video.pause();
-
-  videoCtrlBtn.addEventListener("click", () => {
-    if (video.paused) {
-      video.play();
-      videoCtrlIcon.setAttribute("name", "pause");
-    } else {
-      video.pause();
-      videoCtrlIcon.setAttribute("name", "play");
-    }
-  });
-}
-
 // Init testimonial swiper
 export function initTestimonialSwiper() {
   const testimonialSwiper = document.querySelector(".testimonial-swiper");
@@ -264,6 +248,28 @@ export function initTransformationSwiper() {
         slidesPerView: 2,
         spaceBetween: 24,
       },
+    },
+  });
+}
+
+// Init studio tour swiper
+export function initStudioTourSwiper() {
+  const studioSwiper = document.querySelector(
+    ".studioToutSwiper, #studioTourSwiper, .studio-tour-swiper",
+  );
+  if (!studioSwiper) return;
+
+  new Swiper(studioSwiper, {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    speed: 800,
+    allowTouchMove: false,
+    simulateTouch: false,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: false,
     },
   });
 }
@@ -470,18 +476,24 @@ export function initBlogFilters() {
   grid.after(emptyState);
 
   const getCategory = (card) => {
+    if (card.dataset.category) return card.dataset.category;
+    const article = card.querySelector("article");
+    if (article?.dataset.category) return article.dataset.category;
     const text = card.textContent.toLowerCase();
     if (
       text.includes("ppf") ||
       text.includes("ceramic") ||
-      text.includes("paint")
+      text.includes("paint") ||
+      text.includes("protection")
     )
       return "protection";
     if (text.includes("interior")) return "interior";
     if (
       text.includes("rainy") ||
       text.includes("regular") ||
-      text.includes("full detail")
+      text.includes("full detail") ||
+      text.includes("maintenance") ||
+      text.includes("care")
     )
       return "maintenance";
     return "exterior";
@@ -492,6 +504,8 @@ export function initBlogFilters() {
       card.querySelector(".meta-info li")?.textContent.trim() || "";
     return Date.parse(dateText.replace(/^[^A-Za-z]*/, "")) || 0;
   };
+
+  const pagination = blogSection.querySelector(".pagination");
 
   function applyFilters() {
     const query = searchInput.value.trim().toLowerCase();
@@ -516,6 +530,9 @@ export function initBlogFilters() {
     });
     matchingCards.forEach((card) => grid.append(card));
     emptyState.hidden = matchingCards.length > 0;
+    if (pagination) {
+      pagination.style.display = matchingCards.length < cards.length ? "none" : "";
+    }
     if (typeof ScrollTrigger !== "undefined") {
       setTimeout(() => ScrollTrigger.refresh(), 100);
     }
@@ -533,6 +550,76 @@ export function initBlogFilters() {
   searchInput.addEventListener("search", applyFilters);
   searchInput.addEventListener("keydown", (event) => {
     if (event.key === "Enter") applyFilters();
+  });
+}
+
+// Filter and sort Photo and Video gallery cards from the sort/filter dropdown
+export function initPhotoGalleryFilters() {
+  const gallerySections = document.querySelectorAll("#photos, #videos");
+  if (!gallerySections.length) return;
+
+  gallerySections.forEach((section) => {
+    const sortSelect = section.querySelector("#sort");
+    const countEl = section.querySelector("#photos-count, #videos-count");
+    const grid = section.querySelector(".row.gy-4");
+    const items = [...(grid?.querySelectorAll(".photo-item, .video-item") || [])];
+    const pagination = section.querySelector(".pagination");
+
+    if (!sortSelect || !grid || !items.length) return;
+
+    function applyFilters() {
+      const value = sortSelect.value;
+      let matchingItems = [];
+
+      if (value === "all") {
+        matchingItems = [...items].sort((a, b) => {
+          return (Number(a.dataset.order) || 0) - (Number(b.dataset.order) || 0);
+        });
+      } else if (value === "latest") {
+        matchingItems = [...items].sort((a, b) => {
+          return (Number(b.dataset.order) || 0) - (Number(a.dataset.order) || 0);
+        });
+      } else if (value === "oldest") {
+        matchingItems = [...items].sort((a, b) => {
+          return (Number(a.dataset.order) || 0) - (Number(b.dataset.order) || 0);
+        });
+      } else {
+        matchingItems = items.filter((item) => {
+          const categories = (item.dataset.category || "").split(/\s+/);
+          return categories.includes(value);
+        });
+        matchingItems.sort((a, b) => {
+          return (Number(a.dataset.order) || 0) - (Number(b.dataset.order) || 0);
+        });
+      }
+
+      items.forEach((item) => {
+        const isVisible = matchingItems.includes(item);
+        item.hidden = !isVisible;
+        item.style.display = isVisible ? "" : "none";
+      });
+
+      matchingItems.forEach((item) => grid.append(item));
+
+      const totalVisible = matchingItems.length;
+      if (countEl) {
+        if (totalVisible === 0) {
+          countEl.textContent = "Showing 0 results";
+        } else {
+          countEl.textContent = `Showing 1–${totalVisible} of ${totalVisible} results`;
+        }
+      }
+
+      if (pagination) {
+        pagination.style.display = totalVisible < items.length ? "none" : "";
+      }
+
+      if (typeof ScrollTrigger !== "undefined") {
+        setTimeout(() => ScrollTrigger.refresh(), 100);
+      }
+    }
+
+    sortSelect.addEventListener("change", applyFilters);
   });
 }
 
@@ -624,12 +711,12 @@ export function initWhatsappWidget(
     whatsappChatPopup.classList.remove("d-block");
 
     const whatsappWindow = window.open(
-      "https://wa.me/+11234567890",
+      "https://wa.me/966555188194",
       "_blank",
       "noopener,noreferrer",
     );
 
-    if (!whatsappWindow) window.location.href = "https://wa.me/+11234567890";
+    if (!whatsappWindow) window.location.href = "https://wa.me/966555188194";
   });
 }
 

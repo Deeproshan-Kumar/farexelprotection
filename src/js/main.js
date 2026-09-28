@@ -7,10 +7,10 @@ import {
   initDateTime,
   initOfferCountdowns,
   initStatsCounters,
-  initTourVideoPlayer,
   initTestimonialSwiper,
   initOffersSwiper,
   initTransformationSwiper,
+  initStudioTourSwiper,
   initScrollToTop,
   initTextHoverAnimation,
   initTeamCardTilt,
@@ -18,6 +18,7 @@ import {
   initMediaLightbox,
   initJobFilters,
   initBlogFilters,
+  initPhotoGalleryFilters,
   initWhatsappWidget,
   initFileUpload,
 } from "./init.js";
@@ -122,6 +123,9 @@ window.addEventListener("DOMContentLoaded", () => {
   // Blog filters
   initBlogFilters();
 
+  // Photo gallery filters
+  initPhotoGalleryFilters();
+
   // Build hero intro timeline (paused)
   const heroIntroTl = initHeroIntro();
 
@@ -137,12 +141,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // Stats counters
   initStatsCounters();
 
-  // Tour video player
-  let tourVideo = document.querySelector("#tour-video"),
-    videoCtrlBtn = document.querySelector("#video-control-btn"),
-    videoCtrlIcon = document.querySelector("#video-control-icon");
-  initTourVideoPlayer(videoCtrlBtn, tourVideo, videoCtrlIcon);
-
   // Testimonial swiper
   initTestimonialSwiper();
 
@@ -151,6 +149,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Transformation swiper
   initTransformationSwiper();
+
+  // Studio tour swiper
+  initStudioTourSwiper();
 
   // File upload
   initFileUpload();
