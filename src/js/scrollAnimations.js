@@ -75,15 +75,21 @@ function waveReveal(
   });
 }
 
-// Service card reveal — Luxury automotive elevation & scale reveal
+// Service card reveal — Tab-aware & mobile-resilient luxury elevation
 function initServiceCardAnimations() {
   const containers = document.querySelectorAll(".our-services");
   if (!containers.length) return;
 
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
   const animatedContainers = new WeakSet();
 
+  function isElementVisible(el) {
+    if (!el) return false;
+    return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+  }
+
   function revealItems(container, isTabSwitch = false) {
-    if (!container.offsetParent) return;
+    if (!isElementVisible(container)) return;
     if (!isTabSwitch && animatedContainers.has(container)) return;
 
     const items = container.querySelectorAll("ul.services li");
@@ -92,81 +98,113 @@ function initServiceCardAnimations() {
     animatedContainers.add(container);
     gsap.killTweensOf(items);
 
-    if (isTabSwitch) {
-      // Tab switch: snappy, refined fade + micro-elevation & subtle kinetic tilt
+    if (isMobile) {
+      // Mobile: snappy, fluid lift to avoid frame drops or stuck opacity
       gsap.fromTo(
         items,
-        { y: 16, opacity: 0, scale: 0.985, skewY: 2 },
+        { opacity: isTabSwitch ? 0 : 0.2, y: 12 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          skewY: 0,
+          duration: 0.45,
+          stagger: 0.04,
+          ease: "power2.out",
+          clearProps: "transform,opacity,visibility",
+          overwrite: "auto",
+        },
+      );
+    } else if (isTabSwitch) {
+      // Desktop Tab Switch: refined subtle lift & cascade
+      gsap.fromTo(
+        items,
+        { y: 16, opacity: 0, scale: 0.985, skewY: 1.5 },
         {
           y: 0,
           opacity: 1,
           scale: 1,
           skewY: 0,
-          duration: 0.75,
+          duration: 0.65,
           ease: "power3.out",
           stagger: {
-            amount: 0.20,
+            amount: 0.18,
             grid: "auto",
             from: "start",
           },
-          clearProps: "all",
+          clearProps: "transform,opacity,visibility",
           overwrite: "auto",
         },
       );
     } else {
-      // Scroll reveal: sophisticated luxury elevation with subtle kinetic skew & silky deceleration
-      gsap.to(items, {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        skewY: 0,
-        duration: 0.75,
-        ease: "power3.out",
-        stagger: {
-          amount: 0.20,
-          grid: "auto",
-          from: "start",
+      // Desktop Scroll reveal: silky automotive elevation
+      gsap.fromTo(
+        items,
+        { y: 22, opacity: 0, scale: 0.96, skewY: 2 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          skewY: 0,
+          duration: 0.7,
+          ease: "power3.out",
+          stagger: {
+            amount: 0.2,
+            grid: "auto",
+            from: "start",
+          },
+          clearProps: "transform,opacity,visibility",
+          overwrite: "auto",
         },
-        clearProps: "all",
-        overwrite: "auto",
-      });
+      );
     }
   }
 
-  // Pre-set off-screen items immediately at page load so there is ZERO flash or flicker
-  containers.forEach((c) => {
-    const items = c.querySelectorAll("ul.services li");
-    if (!items.length) return;
+  // Handle intersection observer with threshold: 0 and generous rootMargin so it triggers reliably on mobile & desktop
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && isElementVisible(entry.target)) {
+            revealItems(entry.target, false);
+          }
+        });
+      },
+      { threshold: 0, rootMargin: "150px 0px 100px 0px" },
+    );
 
-    if (c.offsetParent) {
+    containers.forEach((c) => io.observe(c));
+  } else {
+    // Fallback: reveal all immediately if IO not supported
+    containers.forEach((c) => revealItems(c, false));
+  }
+
+  // Check immediately on load for visible containers
+  containers.forEach((c) => {
+    if (isElementVisible(c)) {
       const rect = c.getBoundingClientRect();
-      const inView = rect.top < window.innerHeight && rect.bottom > 0;
-      if (inView) {
-        // Already inside viewport at load: smooth immediate entrance
+      if (rect.top < window.innerHeight + 100 && rect.bottom > -100) {
         revealItems(c, false);
-        return;
       }
     }
-
-    // Set initial offscreen state upfront: subtle depth offset and kinetic skew
-    gsap.set(items, { opacity: 0, y: 22, scale: 0.85, skewY: 5 });
   });
 
-  // IntersectionObserver for smooth scroll trigger
-  const io = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          revealItems(entry.target, false);
-        }
-      });
-    },
-    { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
-  );
+  // Tab switch handler: activates both parent tabs and nested sub-tabs
+  function handleTabChange(targetPane) {
+    if (!targetPane) return;
 
-  containers.forEach((c) => io.observe(c));
+    const paneContainers = targetPane.querySelectorAll(".our-services");
+    paneContainers.forEach((c) => {
+      if (isElementVisible(c)) {
+        revealItems(c, true);
+      }
+    });
 
-  // On tab switch: trigger refined grid-cascade animation on active tab
+    if (typeof ScrollTrigger !== "undefined") {
+      ScrollTrigger.refresh();
+    }
+  }
+
   document.addEventListener("shown.bs.tab", (e) => {
     const targetSelector = e.target
       ? e.target.getAttribute("data-bs-target") || e.target.getAttribute("href")
@@ -174,19 +212,45 @@ function initServiceCardAnimations() {
 
     if (targetSelector && targetSelector.startsWith("#")) {
       const pane = document.querySelector(targetSelector);
-      if (pane) {
-        const paneContainers = pane.querySelectorAll(".our-services");
-        paneContainers.forEach((c) => {
-          if (!c.offsetParent) return;
-          revealItems(c, true);
-        });
-      }
-    }
+      handleTabChange(pane);
 
-    if (typeof ScrollTrigger !== "undefined") {
-      ScrollTrigger.refresh();
+      // Secondary check after tab transition completes to guarantee visibility
+      setTimeout(() => {
+        handleTabChange(pane);
+      }, 150);
     }
   });
+
+  // Failsafe safety net: On scroll or after load, ensure any visible card in view is never stuck at opacity 0
+  const ensureVisibilitySafetyNet = () => {
+    containers.forEach((c) => {
+      if (isElementVisible(c)) {
+        const rect = c.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const items = c.querySelectorAll("ul.services li");
+          items.forEach((item) => {
+            if (window.getComputedStyle(item).opacity === "0") {
+              gsap.to(item, {
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                skewY: 0,
+                duration: 0.3,
+                clearProps: "all",
+                overwrite: "auto",
+              });
+            }
+          });
+        }
+      }
+    });
+  };
+
+  window.addEventListener("scroll", ensureVisibilitySafetyNet, {
+    passive: true,
+  });
+  setTimeout(ensureVisibilitySafetyNet, 500);
+  setTimeout(ensureVisibilitySafetyNet, 1200);
 }
 
 // Letter-by-letter wave for the "FAREXEL" text-anim heading — same wave

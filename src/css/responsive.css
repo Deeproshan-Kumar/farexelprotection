@@ -305,6 +305,10 @@
     height: 0.8rem;
   }
 
+  .studioTourSwiper .swiper-slide img {
+    height: auto !important;
+  }
+
   .countdown-timer .screen {
     padding: 0.25rem;
   }
