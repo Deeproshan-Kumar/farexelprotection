@@ -11,6 +11,7 @@ import {
   initOffersSwiper,
   initTransformationSwiper,
   initStudioTourSwiper,
+  initCertificateSwipers,
   initScrollToTop,
   initTextHoverAnimation,
   initTeamCardTilt,
@@ -152,6 +153,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Studio tour swiper
   initStudioTourSwiper();
+
+  // Certificate card swipers
+  initCertificateSwipers();
 
   // File upload
   initFileUpload();

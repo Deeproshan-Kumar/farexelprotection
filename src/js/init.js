@@ -260,6 +260,7 @@ export function initStudioTourSwiper() {
   if (!studioSwiper) return;
 
   new Swiper(studioSwiper, {
+    autoHeight: true,
     slidesPerView: 1,
     spaceBetween: 24,
     loop: true,
@@ -271,6 +272,43 @@ export function initStudioTourSwiper() {
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
     },
+  });
+}
+
+// Init certificate swipers inside cards
+export function initCertificateSwipers() {
+  if (typeof Swiper === "undefined") return;
+  const certificateSwipers = document.querySelectorAll(".certificate-swiper");
+  if (!certificateSwipers.length) return;
+
+  certificateSwipers.forEach((swiperEl) => {
+    const slides = swiperEl.querySelectorAll(".swiper-slide");
+    const hasMultipleSlides = slides.length > 1;
+    const prevBtn = swiperEl.querySelector(".swiper-button-prev");
+    const nextBtn = swiperEl.querySelector(".swiper-button-next");
+
+    if (!hasMultipleSlides) {
+      if (prevBtn) prevBtn.style.display = "none";
+      if (nextBtn) nextBtn.style.display = "none";
+      return;
+    }
+
+    new Swiper(swiperEl, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      speed: 600,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      navigation: {
+        nextEl: nextBtn,
+        prevEl: prevBtn,
+      },
+      watchOverflow: true,
+    });
   });
 }
 

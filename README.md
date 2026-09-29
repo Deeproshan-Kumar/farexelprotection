@@ -176,6 +176,3 @@ Ensure that server response headers include proper caching for static assets (`p
 ## Developer
 
 - **Deeproshan Kumar**
-
-
-Certificates page + additional services
