@@ -230,10 +230,6 @@
     font-size: 12vw;
   }
 
-  .map-container {
-    padding-bottom: 0;
-  }
-
   .map-container iframe {
     height: 14rem;
   }
