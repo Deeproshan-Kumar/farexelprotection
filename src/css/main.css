@@ -514,13 +514,14 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 
 .hero-image-container .car {
   pointer-events: none;
+  filter: drop-shadow(0.05rem 0.05rem 0.25rem currentColor);
 }
 
 .hero-image-container .car-light {
   position: absolute;
   top: 73.5%;
-  left: 15%;
-  transform: translate(-50%, -50%) scale(1.15);
+  left: 25%;
+  transform: translate(-50%, -50%);
   animation: lightBlink 3s linear infinite;
   pointer-events: none;
   max-width: 112%;
@@ -1102,10 +1103,13 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   color: #ffffff;
 }
 
-.service-req-form {
-  border: 0.0625rem solid var(--clr-border);
-  border-radius: 0.25rem;
-  padding: 2rem;
+.scroll-indicator {
+  position: absolute;
+  bottom: -1.25rem;
+  right: 0;
+  display: block;
+  filter: invert(1) brightness(0.75);
+  pointer-events: none;
 }
 
 /* Achievements */
@@ -1228,7 +1232,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 }
 
 .card.service .card-body ul {
-  height: 8rem;
+  height: 7rem;
   overflow-y: auto;
 }
 
@@ -1305,6 +1309,10 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   -webkit-text-stroke: 0.0625rem var(--clr-border);
 }
 
+section.team .anim-txt {
+  font-size: 5.4vw;
+}
+
 /* Exclusive Offers */
 .card.offer::before {
   opacity: 25%;
@@ -1319,6 +1327,11 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 
 .card.offer .old-price {
   text-decoration: line-through;
+}
+
+.card.offer .card-body ul {
+  height: 8.5rem;
+  overflow-y: auto;
 }
 
 .countdown-timer {
@@ -1459,6 +1472,34 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 }
 
 /* Studio Tour */
+.studioTourSwiper {
+  position: relative;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.studioTourSwiper::before,
+.studioTourSwiper::after {
+  content: "";
+  position: absolute;
+  height: 10rem;
+  width: 10rem;
+}
+
+.studioTourSwiper::before {
+  top: 0;
+  left: 0;
+  border-top: 0.0875rem solid red;
+  border-left: 0.0875rem solid red;
+}
+
+.studioTourSwiper::after {
+  bottom: 0;
+  right: 0;
+  border-right: 0.0875rem solid red;
+  border-bottom: 0.0875rem solid red;
+}
+
 .studioTourSwiper .swiper-slide img {
   height: 43.75rem !important;
 }
@@ -1545,11 +1586,6 @@ html[data-bs-theme="light"] .video-in-text h2 {
 
 .img-decoration,
 .leadership-insights .insight .img-decoration {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  --tx: 0px;
-  transform: translate(calc(-50% + var(--tx, 0px)), -50%);
   object-fit: contain;
   pointer-events: none;
   z-index: 2;
@@ -1653,12 +1689,12 @@ html[data-bs-theme="light"] .video-in-text h2 {
 .customer-experiences .nav-tabs .nav-link {
   color: var(--bs-nav-tabs-link-active-color);
   border: 0;
-  border-bottom: 0.25rem solid transparent;
+  border-radius: 0.25rem;
 }
 
 .customer-experiences .nav-tabs .nav-link.active {
   background: #fb2c3620;
-  border-bottom: 0.25rem solid var(--clr-primary);
+  border-left: 0.25rem solid var(--clr-primary);
 }
 
 .customer-experiences .total-reviews {
@@ -1666,6 +1702,8 @@ html[data-bs-theme="light"] .video-in-text h2 {
 }
 
 .customer-experiences .total-reviews img {
+  height: 5.75rem;
+  width: 5.75rem;
   padding: 0.35rem;
   border: 0.0625rem solid #fb2c3650;
 }
@@ -2280,7 +2318,9 @@ html[data-bs-theme="light"] .video-in-text h2 {
   display: none;
 }
 
-.career-form {
+.career-form,
+.service-req-form,
+.contact-form {
   border: 0.0625rem solid var(--clr-border);
   border-radius: 0.25rem;
   padding: 2rem;

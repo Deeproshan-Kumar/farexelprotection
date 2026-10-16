@@ -326,7 +326,7 @@
     <!-- Hero Section -->
     <section class="section hero" id="hero" aria-label="Hero Section">
       <div class="container position-relative">
-        <div class="row align-items-center py-4 py-md-5">
+        <div class="row align-items-center gy-4 gy-lg-0 py-4 py-md-5">
           <div class="col-sm-12 col-lg-6 gsap-hero-content-col">
             <p>
               Available for
@@ -344,18 +344,24 @@
               precision and care, giving every machine the presence it deserves.
             </p>
             <p>Because when you love what you drive, ordinary was never meant to be enough.</p>
-            <div class="badges d-flex align-items-center flex-wrap gap-3 mt-lg-4 mt-xl-5">
+            <div class="badges d-flex align-items-center flex-wrap gap-2 gap-lg-3 mt-lg-4 mt-xl-5">
               <span class="position-relative badge text-bg-primary text-sm">
-                <ion-icon name="construct" class="icon me-2"></ion-icon>Engineered Precision
+                <ion-icon name="construct" class="icon me-1 me-lg-2"></ion-icon>Engineered Precision
               </span>
               <span class="position-relative badge text-bg-primary text-sm">
-                <ion-icon name="color-wand" class="icon me-2"></ion-icon>Refined Craftsmanship
+                <ion-icon name="flame" class="icon me-1 me-lg-2"></ion-icon>Unmatched Care
               </span>
               <span class="position-relative badge text-bg-primary text-sm">
-                <ion-icon name="flame" class="icon me-2"></ion-icon>Unmatched Care
+                <ion-icon name="color-wand" class="icon me-1 me-lg-2"></ion-icon>Refined Craftsmanship
+              </span>
+              <span class="position-relative scroll-down-indicator d-flex d-md-none align-items-center">
+                <a href="#about"
+                  class="relative h-100 bg-primary d-inline-flex justify-content-center align-items-center gap-2 rounded-1 border-0 cursor-pointer p-2">
+                  <img src="public/images/double-arrow-down.svg" height="18" width="18" alt="Scroll Down" />
+                </a>
               </span>
             </div>
-            <div class="position-relative scroll-down-indicator d-flex align-items-center my-4 my-lg-5">
+            <div class="position-relative scroll-down-indicator d-none d-md-flex align-items-center my-4 my-lg-5">
               <a href="#about"
                 class="relative h-100 bg-primary d-inline-flex justify-content-center align-items-center gap-2 rounded-1 border-0 cursor-pointer p-2">
                 <img src="public/images/double-arrow-down.svg" height="18" width="18" alt="Scroll Down" />
@@ -477,69 +483,6 @@
               <div class="counter text-center">
                 <h3 class="text-black text-uppercase mb-0">CRAFTSMANSHIP</h3>
                 <span>Without Compromise</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Vision and Mission -->
-    <section class="section our-vision-mission" id="our-mission-vision" aria-label="The Journey of Excellence">
-      <div class="container py-4 py-md-5">
-        <div class="row align-items-center gy-4 gy-lg-0 vm-card">
-          <div class="col-sm-12 col-lg-6">
-            <div class="card-container vision">
-              <div class="card">
-                <div class="card-body">
-                  <div class="icon-box d-flex align-items-md-center flex-column flex-md-row gap-3 mb-3">
-                    <div class="icon">
-                      <ion-icon name="search"></ion-icon>
-                    </div>
-                    <h2 class="fs-4 mb-0">To Become the Name Behind Exceptional Automotive Care</h2>
-                  </div>
-                  <ul>
-                    <li class="mb-2">To be a leading destination in the automotive care industry, redefining excellence
-                      through
-                      innovation, quality and trust.</li>
-                    <li>Our goal is to provide premium services that set new standards in the industry,
-                      ensuring complete customer satisfaction through exceptional value, professionalism and
-                      reliability.
-                      We strive to be our customers' first choice for automotive care in every region we serve.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="image-caption">
-                <h3 class="m-0">Our Vision</h3>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-lg-6">
-            <div class="card-container mission">
-              <div class="card">
-                <div class="card-body">
-                  <div class="icon-box d-flex align-items-md-center flex-column flex-md-row gap-3 mb-3">
-                    <div class="icon">
-                      <ion-icon name="speedometer"></ion-icon>
-                    </div>
-                    <h2 class="fs-4 mb-0">To Turn Exceptional Care Into an Everyday Standard</h2>
-                  </div>
-                  <ul>
-                    <li class="mb-2">To deliver innovative solutions and premium automotive care services that exceed
-                      our customers'
-                      expectations.</li>
-                    <li class="mb-2">We are committed to preserving and enhancing the performance and appearance of
-                      every vehicle
-                      through the highest quality standards, cutting-edge technologies and a team of experienced
-                      professionals.</li>
-                    <li>Our mission is to build lasting relationships with our customers based on trust and quality and
-                      to
-                      pursue excellence at every stage of the customer experience.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="image-caption right">
-                <h3 class="m-0">Our Mission</h3>
               </div>
             </div>
           </div>
@@ -12717,11 +12660,12 @@
             </h2>
             <p class="mb-0">Specialized customizations, architectural solutions, and bespoke interior refinements
               tailored to your exact specifications.</p>
+            <img src="public/images/scroll-indicator.png" alt="Scroll Indicator" class="scroll-indicator">
           </div>
         </div>
 
         <div class="our-services">
-          <ul class="services row justify-content-center list-unstyled gy-4 mb-0 ps-0">
+          <ul class="services row flex-nowrap overflow-x-auto no-scrollbar list-unstyled gy-4 mb-0 ps-0">
             <!-- 1. Custom Premium Floor Mats -->
             <li class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
               <article class="card service h-100">
@@ -13065,7 +13009,7 @@
           <span class="d-inline-block">E</span>
           <span class="d-inline-block">L</span>
         </h2>
-        <p class="text-center mb-0">Where Automotive Passion Meets Refined Craftsmanship.</p>
+        <p class="text-center mb-0">Excellence Redefined</p>
       </div>
     </section>
 
@@ -13140,6 +13084,7 @@
           <p>Where Craftsmanship Leaves Its Mark</p>
           <p class="mb-0">​A closer look at the machines entrusted to FAREXEL - refined through precision, protected
             with purpose, and finished to a standard worth remembering.</p>
+          <img src="public/images/scroll-indicator.png" alt="Scroll Indicator" class="scroll-indicator">
         </div>
 
         <!-- Comparison Cards Grid -->
@@ -13410,17 +13355,17 @@
         <!-- Photos -->
         <div class="swiper studioTourSwiper" id="studioTourSwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide h-lg-auto">
+            <div class="swiper-slide w-100 h-lg-auto">
               <img src="public/images/studio-shot-01.jpg" alt="Inside FAREXEL Studio - Precision Detailing Bay"
                 class="img-fluid w-100 object-fit-cover rounded-1" height="684" width="1380" loading="lazy"
                 decoding="async">
             </div>
-            <div class="swiper-slide h-lg-auto">
+            <div class="swiper-slide w-100 h-lg-auto">
               <img src="public/images/studio-shot-02.jpg" alt="Inside FAREXEL Studio - Paint Protection Suite"
                 class="img-fluid w-100 object-fit-cover rounded-1" height="684" width="1380" loading="lazy"
                 decoding="async">
             </div>
-            <div class="swiper-slide h-lg-auto">
+            <div class="swiper-slide w-100 h-lg-auto">
               <img src="public/images/studio-shot-03.jpg" alt="Inside FAREXEL Studio - Handover & Inspection Area"
                 class="img-fluid w-100 object-fit-cover rounded-1" height="684" width="1380" loading="lazy"
                 decoding="async">
@@ -13515,52 +13460,6 @@
               </div>
             </article>
           </div>
-
-          <!-- Premium Restrooms -->
-          <div class="cols-sm-12 col-md-6 col-lg-4">
-            <article class="card amenity">
-              <div class="card-body">
-                <div class="d-flex align-items-center gap-2 mb-3">
-                  <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
-                    <ion-icon name="restaurant"></ion-icon>
-                  </div>
-                  <h6 class="mb-0">Premium Restrooms</h6>
-                </div>
-                <p class="text-sm mb-0">
-                  Clean, well-maintained facilities are part of the standard — because attention to detail should extend
-                  beyond the detailing bay.
-                </p>
-              </div>
-              <div class="card-footer border-0">
-                <p class="text-sm mb-0">
-                  <ion-icon name="restaurant"></ion-icon>Comfort, Maintained
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <!-- Kids' Space -->
-          <div class="cols-sm-12 col-md-6 col-lg-4">
-            <article class="card amenity">
-              <div class="card-body">
-                <div class="d-flex align-items-center gap-2 mb-3">
-                  <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
-                    <ion-icon name="balloon"></ion-icon>
-                  </div>
-                  <h6 class="mb-0">Kids' Space</h6>
-                </div>
-                <p class="text-sm mb-0">
-                  A dedicated space for younger guests, giving families a more relaxed and enjoyable experience while
-                  their car or bike is being cared for.
-                </p>
-              </div>
-              <div class="card-footer border-0">
-                <p class="text-sm mb-0">
-                  <ion-icon cl name="balloon"></ion-icon>A Space for Little Ones
-                </p>
-              </div>
-            </article>
-          </div>
         </div>
       </div>
     </section>
@@ -13586,33 +13485,81 @@
                     <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image"
                       loading="lazy" decoding="async" />
                     <span class="badge">20% Off</span>
-                    <span class="badge badge-secondary bg-success">Featured</span>
+                    <span class="badge badge-secondary bg-success">Signature</span>
                   </div>
                   <div class="col-sm-12 col-md-7 px-0">
                     <div class="card-body">
-                      <h4>Interior PPF</h4>
-                      <p>A dedicated protection solution for selected interior surfaces, designed to help preserve their
-                        original appearance against everyday use and surface wear.</p>
+                      <h4>Signature Protection Package</h4>
+                      <p>A complete protection package combining detailing, paint protection, heat-rejection tinting,
+                        interior protection and premium floor mats for comprehensive automotive care.</p>
                       <div class="offer-price mb-4">
-                        <span class="old-price">SAR 349</span>
-                        <strong class="text-black">SAR 299</strong>
+                        <span class="old-price">SAR 16250</span>
+                        <strong class="text-black">SAR 12500</strong>
                       </div>
                       <ul class="list-unstyled d-flex flex-column gap-1">
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Interior Protection Film
+                          Interior Detailing
                         </li>
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Surface Protection
+                          Exterior Detailing
                         </li>
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Interior Surface Preservation
+                          Engine Cleaning
                         </li>
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Precision Application
+                          Wheels & Tires Detailing
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          FAREXEL 7S Treatment
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Water Spot Removal
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          FAREXEL Premium PPF
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Full-Body PPF Application
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Anti-Yellowing Protection
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Scratch & Stain Resistance
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Self-Healing Technology
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          FAREXEL Premium Tint
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Heat Rejection
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          10-Year Tint Warranty
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Interior Nano Ceramic
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Premium Floor Mats
                         </li>
                       </ul>
                       <div class="row gx-0 countdown-timer" data-countdown="2d 8h 30m">
@@ -13648,33 +13595,49 @@
                     <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image"
                       loading="lazy" decoding="async" />
                     <span class="badge">25% Off</span>
-                    <span class="badge badge-secondary bg-warning">Singature</span>
+                    <span class="badge badge-secondary bg-warning">Featured</span>
                   </div>
                   <div class="col-sm-12 col-md-7 px-0">
                     <div class="card-body">
-                      <h4>Ultimate Visibility Window Tinting</h4>
-                      <p>Advanced thermal tinting designed to enhance cabin comfort while adding protection against
-                        heat and UV exposure without compromising visual clarity.</p>
+                      <h4>FAREXEL Complete Body - Matte Finish</h4>
+                      <p>Full-body PPF protection with a refined matte finish, combining surface protection with
+                        long-lasting finish preservation.</p>
                       <div class="offer-price mb-4">
-                        <span class="old-price">SAR 449</span>
-                        <strong class="text-black">SAR 399</strong>
+                        <span class="old-price">SAR 17680</span>
+                        <strong class="text-black">SAR 13600</strong>
                       </div>
                       <ul class="list-unstyled d-flex flex-column gap-1">
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Premium Thermal Tint
+                          Full-Body Protection
                         </li>
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Heat Rejection
+                          Self-Healing Properties
                         </li>
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          UV Protection
+                          Matte Finish
                         </li>
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Windshield Protection Film
+                          Protection Against Scratches
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Protection Against Fading & Yellowing
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Stain Resistance
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          Rust & Corrosion Resistance
+                        </li>
+                        <li>
+                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
+                          5-Year Warranty
                         </li>
                       </ul>
                       <div class="row gx-0 countdown-timer" data-countdown="4d 15h 45m 20s">
@@ -13710,33 +13673,29 @@
                     <img src="public/images/offers-placeholder.jpg" class="img-fluid h-100" alt="Offer Image"
                       loading="lazy" decoding="async" />
                     <span class="badge">30% Off</span>
-                    <span class="badge badge-secondary bg-info">Premium Protection</span>
+                    <span class="badge badge-secondary bg-info">Premium</span>
                   </div>
                   <div class="col-sm-12 col-md-7 px-0">
                     <div class="card-body">
-                      <h4>Full Glass Nano Ceramic</h4>
-                      <p>A dedicated glass protection treatment designed to enhance surface performance and maintain a
-                        clearer, clearer glass finish across the vehicle.</p>
+                      <h4>FAREXEL Premium Bike Care</h4>
+                      <p>Comprehensive motorcycle protection combining deep detailing, 10-year PPF coverage and nano
+                        ceramic coating.</p>
                       <div class="offer-price mb-4">
-                        <span class="old-price">SAR 499</span>
-                        <strong class="text-black">SAR 449</strong>
+                        <span class="old-price">SAR 2730</span>
+                        <strong class="text-black">SAR 2100</strong>
                       </div>
                       <ul class="list-unstyled d-flex flex-column gap-1">
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Full Glass Nano Ceramic
+                          10-Year PPF Warranty
                         </li>
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Glass Surface Protection
+                          Deep Detailing
                         </li>
                         <li>
                           <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Enhanced Surface Clarity
-                        </li>
-                        <li>
-                          <ion-icon class="icon text-primary me-1" name="checkmark-done"></ion-icon>
-                          Long-Lasting Protection
+                          Nano Ceramic Coating
                         </li>
                       </ul>
                       <div class="row gx-0 countdown-timer" data-countdown="6d 12h 20m 10s">
@@ -13798,41 +13757,21 @@
           </div>
           <div class="col-sm-12 col-lg-6 gsap-cx-content-col">
             <h4>Customer Experiences & Reflections</h4>
-            <p>Not just in the transformation - but in how you are treated throughout the experience. From clear
+            <p class="mb-lg-4">Not just in the transformation - but in how you are treated throughout the experience.
+              From clear
               guidance and transparent communication to meticulous workmanship and genuine attention to your
               requirements, every interaction is designed to leave an impression worth remembering.</p>
-            <ul class="nav nav-tabs flex-column flex-md-row align-items-center align-items-md-start" id="ratingsTab" role="tablist">
+            <ul class="nav nav-tabs flex-column flex-md-row align-items-center align-items-md-start" id="ratingsTab"
+              role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="trip-advisor-reviews-tab" data-bs-toggle="tab"
-                  data-bs-target="#trip-advisor-reviews" type="button" role="tab" aria-controls="trip-advisor-reviews"
-                  aria-selected="false">
-                  <div class="total-reviews">
-                    <img src="public/images/tripadvisor.svg" height="60" width="60" class="img-fluid rounded-circle"
-                      alt="Google Review Logo" loading="lazy" decoding="async" />
-                    <h5 class="mt-2">Trip Advisor Reviews</h5>
-                    <div>
-                      <h6 class="text-primary fw-bold mb-1">
-                        (4.5)
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star-half"></ion-icon>
-                      </h6>
-                      <p class="mb-0">125+ Reviews</p>
-                    </div>
-                  </div>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="google-reviews-tab" data-bs-toggle="tab"
+                <button class="nav-link px-3 py-2 active" id="google-reviews-tab" data-bs-toggle="tab"
                   data-bs-target="#google-reviews" type="button" role="tab" aria-controls="google-reviews"
                   aria-selected="true">
-                  <div class="total-reviews">
+                  <div class="total-reviews text-start d-flex align-items-center gap-2">
                     <img src="public/images/google.svg" height="60" width="60" class="img-fluid rounded-circle"
                       alt="Google Review Logo" loading="lazy" decoding="async" />
-                    <h5 class="mt-2">Google Reviews</h5>
                     <div>
+                      <h5 class="mb-2">Google Reviews</h5>
                       <h6 class="text-primary fw-bold mb-1">
                         (5.0)
                         <ion-icon name="star"></ion-icon>
@@ -13842,27 +13781,6 @@
                         <ion-icon name="star-outline"></ion-icon>
                       </h6>
                       <p class="mb-0">122+ Reviews</p>
-                    </div>
-                  </div>
-                </button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="yelp-reviews-tab" data-bs-toggle="tab" data-bs-target="#yelp-reviews"
-                  type="button" role="tab" aria-controls="yelp-reviews" aria-selected="false">
-                  <div class="total-reviews">
-                    <img src="public/images/yelp.svg" height="60" width="60" class="img-fluid rounded-circle"
-                      alt="Google Review Logo" loading="lazy" decoding="async" />
-                    <h5 class="mt-2">Yelp Reviews</h5>
-                    <div>
-                      <h6 class="text-primary fw-bold mb-1">
-                        (4.0)
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                        <ion-icon name="star"></ion-icon>
-                      </h6>
-                      <p class="mb-0">100+ Reviews</p>
                     </div>
                   </div>
                 </button>
@@ -14719,7 +14637,8 @@
                   <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
                     <h5 class="mb-0">The Right Time to Detail Your Car - Before the Finish Tells You</h5>
                   </a>
-                  <p class="d-none d-md-block">A practical guide to recognising the early signs of surface wear, neglected interiors and fading
+                  <p class="d-none d-md-block">A practical guide to recognising the early signs of surface wear,
+                    neglected interiors and fading
                     finish - and why timely detailing can make a difference.</p>
                   <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
                     <li>
@@ -14754,7 +14673,8 @@
                   <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
                     <h5 class="mb-0">PPF, Ceramic or Both? Understanding What Your Car Actually Needs</h5>
                   </a>
-                  <p class="d-none d-md-block">Protection is not one-size-fits-all. Understand how different protection approaches serve different
+                  <p class="d-none d-md-block">Protection is not one-size-fits-all. Understand how different protection
+                    approaches serve different
                     surfaces, driving habits and ownership priorities.</p>
                   <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
                     <li>
@@ -14788,7 +14708,8 @@
                   <a href="blog-detail.html" class="blog-title d-inline-block mb-2">
                     <h5 class="mb-0">Beyond the Shine: What Professional Detailing Really Changes</h5>
                   </a>
-                  <p class="d-none d-md-block">Professional detailing goes beyond making a car look clean. Discover how careful surface
+                  <p class="d-none d-md-block">Professional detailing goes beyond making a car look clean. Discover how
+                    careful surface
                     preparation, interior care and finishing work transform the ownership experience.</p>
                   <ul class="meta-info list-unstyled d-flex flex-wrap gap-1 gap-lg-4 mb-0">
                     <li>
@@ -15004,8 +14925,8 @@
               decoding="async" />
           </a>
           <p class="text-sm">
-            Premium car care for Dubai drivers who expect a clean finish,
-            careful workmanship, and a straightforward experience.
+            FAREXEL transforms that passion into an uncompromising standard of craftsmanship, precision and care, giving
+            every machine the presence it deserves.
           </p>
           <div class="social-handles-widget d-flex align-items-center gap-3">
             <a href="mailto:info@faresco.sa" title="Email" data-size="fit" class="handle mail btn btn-secondary">
@@ -15030,7 +14951,7 @@
             </a>
           </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
+        <div class="col-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Explore</h6>
           <ul class="list-unstyled mb-0">
             <li>
@@ -15057,7 +14978,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-3 gsap-footer-col">
+        <div class="col-6 col-lg-3 gsap-footer-col">
           <h6 class="text-uppercase tracking-wider">Services</h6>
           <ul class="list-unstyled mb-0">
             <li>
