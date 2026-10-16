@@ -723,6 +723,12 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   font-size: 1.5rem;
 }
 
+.client-reviews video {
+  background: var(--clr-surface-2);
+  aspect-ratio: 3/4;
+  border-radius: 0.25rem;
+}
+
 /* Our Vision and Mission */
 .our-vision-mission .vm-card:not(:last-child) {
   margin-bottom: 1.5rem;
@@ -1232,12 +1238,49 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
 }
 
 .card.service .card-body ul {
-  height: 7rem;
+  max-height: 7rem;
   overflow-y: auto;
 }
 
 .card.service .card-body ul::-webkit-scrollbar {
   width: 0.25rem;
+}
+
+/* Old/original price display in service cards */
+.card.service .card-body .old-price {
+  text-decoration: line-through;
+  color: var(--clr-text);
+  font-weight: 400;
+}
+
+/* Features toggle button in service & offer cards */
+.features-toggle {
+  color: var(--clr-primary);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 200ms ease;
+  cursor: pointer;
+  user-select: none;
+  background: none;
+  border: none;
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.features-toggle:hover {
+  color: var(--clr-primary-hover);
+  text-decoration: none;
+}
+
+.features-toggle .toggle-icon {
+  transition: transform 300ms ease;
+  font-size: 0.9rem;
+}
+
+.features-toggle[aria-expanded="true"] .toggle-icon {
+  transform: rotate(180deg);
 }
 
 .card.service .card-body h1,
@@ -1330,7 +1373,7 @@ section.team .anim-txt {
 }
 
 .card.offer .card-body ul {
-  height: 8.5rem;
+  max-height: 10rem;
   overflow-y: auto;
 }
 
@@ -1921,6 +1964,10 @@ html[data-bs-theme="light"] .video-in-text h2 {
 }
 
 /* Portfolio */
+.masonary-grid .photo-item {
+  margin-bottom: 1.2rem;
+}
+
 .card.photo::after {
   content: "";
   position: absolute;
@@ -1930,7 +1977,6 @@ html[data-bs-theme="light"] .video-in-text h2 {
 
 .card.photo .card-header {
   position: relative;
-  height: 17.5rem;
   border-radius: 0.25rem;
   border: 0.0625rem solid var(--clr-border);
   overflow: hidden;
@@ -2435,20 +2481,6 @@ html[data-bs-theme="light"] .video-in-text h2 {
 /* Fullwidth CTA */
 .fullwidth-cta {
   background-color: var(--clr-dark-surface);
-}
-
-.fullwidth-cta::before {
-  content: "";
-  position: absolute;
-  top: auto;
-  left: 58%;
-  transform: translateX(-50%);
-  height: 17.85rem;
-  width: 17.85rem;
-  background-image: url(../../public/images/cta-bg.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
 }
 
 .fullwidth-cta .wrapper {

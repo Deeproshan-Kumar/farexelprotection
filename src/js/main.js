@@ -22,6 +22,7 @@ import {
   initPhotoGalleryFilters,
   initWhatsappWidget,
   initFileUpload,
+  initFeaturesToggle,
 } from "./init.js";
 import { toggleTheme } from "./toggleTheme.js";
 import { initPageTransition } from "./pageTransition.js";
@@ -182,4 +183,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Services page interactive summary & card selection
   initServicesSummary();
+
+  // Features toggle (Show / Hide features in service & offer cards)
+  initFeaturesToggle();
 });
