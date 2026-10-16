@@ -263,12 +263,13 @@ export function initStudioTourSwiper() {
     autoHeight: true,
     slidesPerView: 1,
     spaceBetween: 24,
+    effect: 'fade',
     loop: true,
-    speed: 800,
+    speed: 1500,
     allowTouchMove: false,
     simulateTouch: false,
     autoplay: {
-      delay: 2500,
+      delay: 4000,
       disableOnInteraction: false,
       pauseOnMouseEnter: false,
     },
@@ -869,5 +870,30 @@ export function initLeadershipHoverAnimation() {
     col.addEventListener("mouseenter", onMouseEnter);
     col.addEventListener("mousemove", onMouseMove);
     col.addEventListener("mouseleave", onMouseLeave);
+  });
+}
+
+/**
+ * initFeaturesToggle
+ * Updates "Show Features" / "Hide Features" label on collapse toggle buttons
+ * when Bootstrap collapse panels inside .card.service or .card.offer are shown/hidden.
+ */
+export function initFeaturesToggle() {
+  document.querySelectorAll('[id^="features-list-"]').forEach((collapseEl) => {
+    const btn = document.querySelector(
+      `[data-bs-target="#${collapseEl.id}"]`
+    );
+    if (!btn) return;
+
+    const updateLabel = (isOpen) => {
+      btn.childNodes.forEach((node) => {
+        if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+          node.textContent = isOpen ? " Hide Features" : " Show Features";
+        }
+      });
+    };
+
+    collapseEl.addEventListener("show.bs.collapse", () => updateLabel(true));
+    collapseEl.addEventListener("hide.bs.collapse", () => updateLabel(false));
   });
 }
