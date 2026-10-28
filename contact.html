@@ -70,10 +70,8 @@
                     name="call"></ion-icon>+966 55 518 8194</a>
               </li>
               <li class="action switch-lang">
-                <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
-                <select name="lang" id="lang" class="lang">
-                  <option value="en" selected>EN</option>
-                </select>
+                <ion-icon class="icon me-1" name="language"></ion-icon>
+                <div id="google_translate_element"></div>
               </li>
               <li class="action login">
                 <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="person"></ion-icon>Login</a>
@@ -137,6 +135,14 @@
                   </a>
                 </li>
                 <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="career.html">
+                    <span class="dropdown-item-icon">
+                      <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    Career
+                  </a>
+                </li>
+                <li>
                   <a class="dropdown-item d-flex align-items-center gap-2" href="testimonials.html">
                     <span class="dropdown-item-icon">
                       <ion-icon name="happy-outline"></ion-icon>
@@ -187,9 +193,6 @@
               <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-1" href="career.html"><ion-icon name="briefcase"></ion-icon>Career</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link rounded-1 active" href="contact.html"><ion-icon name="call"></ion-icon>Contact Us</a>
             </li>
           </ul>
@@ -235,6 +238,14 @@
                       <ion-icon name="pencil-outline"></ion-icon>
                     </span>
                     Leadership Insights
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="career.html">
+                    <span class="dropdown-item-icon">
+                      <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    Career
                   </a>
                 </li>
                 <li>
@@ -287,9 +298,6 @@
               <a class="nav-link rounded-1" href="blog.html">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="career.html">Career</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link active" href="contact.html">Contact</a>
             </li>
           </ul>
@@ -318,7 +326,6 @@
   <main class="main" id="main">
     <!-- Subpage Banner -->
     <section class="subpage-banner" id="subpage-banner" aria-label="Contact Us Banner">
-      <img src="public/images/banners/contact-banner.jpg" alt="Contact Banner" class="img-fluid w-100 h-100" />
       <div class="section">
         <div class="container position-relative py-4 py-md-5">
           <h1>Contact Us</h1>
@@ -329,7 +336,7 @@
           <div class="breadcrumb">
             <ul class="list-unstyled mb-0 d-flex align-items-center gap-2 ps-0 mb-0">
               <li>
-                <a href="index.html" class="text-decoration-none text-primary d-flex align-items-center gap-2">
+                <a href="index.html" class="text-decoration-none fw-semibold d-flex align-items-center gap-2">
                   <ion-icon name="home" class="icon"></ion-icon>Home
                 </a>
               </li>
@@ -409,7 +416,7 @@
               </div>
             </form>
           </div>
-          <div class="col-sm-12 col-lg-6 gsap-contact-form-cols">
+          <div class="col-sm-12 col-lg-6 contact-details gsap-contact-form-cols">
             <div class="d-flex flex-column gap-4">
               <article class="card consulation">
                 <div class="card-header d-flex align-items-center gap-2 bg-transparent border-0 py-3">
@@ -468,25 +475,25 @@
                 <div class="card-body pt-0">
                   <ul class="list-unstyled row gy-2 mb-0">
                     <li class="col-6">
-                      - Monday: 09:00am - 10:30pm
+                      - Monday: 01:00 - 10:30pm
                     </li>
                     <li class="col-6">
-                      - Tuesday: 09:00am - 10:30pm
+                      - Tuesday: 01:00 - 10:30pm
                     </li>
                     <li class="col-6">
-                      - Wednesday: 09:00am - 10:30pm
+                      - Wednesday: 01:00 - 10:30pm
                     </li>
                     <li class="col-6">
-                      - Thursday: 09:00am - 10:30pm
+                      - Thursday: 01:00 - 10:30pm
                     </li>
                     <li class="col-6 text-primary">
-                      - Friday: 05:00pm - 11:00pm
+                      - Friday: 05:00 - 11:00pm
                     </li>
                     <li class="col-6">
-                      - Saturday: 09:00am - 10:30pm
+                      - Saturday: 01:00 - 10:30pm
                     </li>
                     <li class="col-6">
-                      - Sunday: 09:00am - 10:30pm
+                      - Sunday: 01:00 - 10:30pm
                     </li>
                   </ul>
                 </div>
@@ -556,7 +563,8 @@
             <div class="col-sm-12 col-lg-4">
               <article class="card location">
                 <div class="card-body d-flex justify-content-center align-items-center">
-                  <h3 class="mb-0">Comming Soon...</h3>
+                  <h3 class="mb-0">Comming Soon<span class="dot"></span><span class="dot"></span><span
+                      class="dot"></span></h3>
                 </div>
               </article>
             </div>
@@ -767,7 +775,8 @@
           <p class="text-12">
             Subscribe to our newsletter and stay updated with our offer.
           </p>
-          <form action="" method="" class="d-flex align-items-stretch gap-2">
+          <form action="https://formsubmit.co/deeproshankumar123@gmail.com" method="POST" class="d-flex align-items-stretch gap-2">
+            <input type="hidden" name="_subject" class="d-none" value="New Newsletter Subscription!" />
             <input type="email" name="email" id="email" class="form-control" placeholder="Your Email..." />
             <button type="submit" class="btn btn-primary">
               <span>Subscribe</span>

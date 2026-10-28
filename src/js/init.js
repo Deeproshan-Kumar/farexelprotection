@@ -263,7 +263,7 @@ export function initStudioTourSwiper() {
     autoHeight: true,
     slidesPerView: 1,
     spaceBetween: 24,
-    effect: 'fade',
+    effect: "fade",
     loop: true,
     speed: 1500,
     allowTouchMove: false,
@@ -277,12 +277,104 @@ export function initStudioTourSwiper() {
 }
 
 // Init certificate swipers inside cards
-export function initCertificateSwipers() {
+export function initCertificateSwiper() {
   if (typeof Swiper === "undefined") return;
   const certificateSwipers = document.querySelectorAll(".certificate-swiper");
   if (!certificateSwipers.length) return;
 
   certificateSwipers.forEach((swiperEl) => {
+    const slides = swiperEl.querySelectorAll(".swiper-slide");
+    const hasMultipleSlides = slides.length > 1;
+    const prevBtn = swiperEl.querySelector(".swiper-button-prev");
+    const nextBtn = swiperEl.querySelector(".swiper-button-next");
+
+    if (!hasMultipleSlides) {
+      if (prevBtn) prevBtn.style.display = "none";
+      if (nextBtn) nextBtn.style.display = "none";
+      return;
+    }
+
+    new Swiper(swiperEl, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      speed: 600,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      navigation: {
+        nextEl: nextBtn,
+        prevEl: prevBtn,
+      },
+      watchOverflow: true,
+    });
+  });
+}
+
+// Init intro videos swiper
+export function initIntroVideosSwiper() {
+  if (typeof Swiper === "undefined") return;
+  const introVideosSwiper = document.querySelectorAll(".intro-videos-swiper");
+  if (!introVideosSwiper.length) return;
+
+  introVideosSwiper.forEach((swiperEl) => {
+    const slides = swiperEl.querySelectorAll(".swiper-slide");
+    const hasMultipleSlides = slides.length > 1;
+    const prevBtn = swiperEl.querySelector(".swiper-button-prev");
+    const nextBtn = swiperEl.querySelector(".swiper-button-next");
+
+    if (!hasMultipleSlides) {
+      if (prevBtn) prevBtn.style.display = "none";
+      if (nextBtn) nextBtn.style.display = "none";
+      return;
+    }
+
+    new Swiper(swiperEl, {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      loop: true,
+      speed: 600,
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      navigation: {
+        nextEl: nextBtn,
+        prevEl: prevBtn,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+        },
+
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+        },
+      },
+      watchOverflow: true,
+    });
+  });
+}
+
+// Init intro videos swiper
+export function initCustomerExperienceSwiper() {
+  if (typeof Swiper === "undefined") return;
+  const introVideosSwiper = document.querySelectorAll(
+    ".customer-experience-swiper",
+  );
+  if (!introVideosSwiper.length) return;
+
+  introVideosSwiper.forEach((swiperEl) => {
     const slides = swiperEl.querySelectorAll(".swiper-slide");
     const hasMultipleSlides = slides.length > 1;
     const prevBtn = swiperEl.querySelector(".swiper-button-prev");
@@ -387,6 +479,8 @@ export function initMediaLightbox() {
     selector: ".glightbox",
     touchNavigation: true,
     loop: true,
+    preload: false,
+    autoplayVideos: true,
   });
 }
 
@@ -570,7 +664,8 @@ export function initBlogFilters() {
     matchingCards.forEach((card) => grid.append(card));
     emptyState.hidden = matchingCards.length > 0;
     if (pagination) {
-      pagination.style.display = matchingCards.length < cards.length ? "none" : "";
+      pagination.style.display =
+        matchingCards.length < cards.length ? "none" : "";
     }
     if (typeof ScrollTrigger !== "undefined") {
       setTimeout(() => ScrollTrigger.refresh(), 100);
@@ -601,7 +696,9 @@ export function initPhotoGalleryFilters() {
     const sortSelect = section.querySelector("#sort");
     const countEl = section.querySelector("#photos-count, #videos-count");
     const grid = section.querySelector(".row.gy-4");
-    const items = [...(grid?.querySelectorAll(".photo-item, .video-item") || [])];
+    const items = [
+      ...(grid?.querySelectorAll(".media, .video-item") || []),
+    ];
     const pagination = section.querySelector(".pagination");
 
     if (!sortSelect || !grid || !items.length) return;
@@ -612,15 +709,21 @@ export function initPhotoGalleryFilters() {
 
       if (value === "all") {
         matchingItems = [...items].sort((a, b) => {
-          return (Number(a.dataset.order) || 0) - (Number(b.dataset.order) || 0);
+          return (
+            (Number(a.dataset.order) || 0) - (Number(b.dataset.order) || 0)
+          );
         });
       } else if (value === "latest") {
         matchingItems = [...items].sort((a, b) => {
-          return (Number(b.dataset.order) || 0) - (Number(a.dataset.order) || 0);
+          return (
+            (Number(b.dataset.order) || 0) - (Number(a.dataset.order) || 0)
+          );
         });
       } else if (value === "oldest") {
         matchingItems = [...items].sort((a, b) => {
-          return (Number(a.dataset.order) || 0) - (Number(b.dataset.order) || 0);
+          return (
+            (Number(a.dataset.order) || 0) - (Number(b.dataset.order) || 0)
+          );
         });
       } else {
         matchingItems = items.filter((item) => {
@@ -628,7 +731,9 @@ export function initPhotoGalleryFilters() {
           return categories.includes(value);
         });
         matchingItems.sort((a, b) => {
-          return (Number(a.dataset.order) || 0) - (Number(b.dataset.order) || 0);
+          return (
+            (Number(a.dataset.order) || 0) - (Number(b.dataset.order) || 0)
+          );
         });
       }
 
@@ -765,7 +870,7 @@ export function initLeadershipHoverAnimation() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   const imgCols = document.querySelectorAll(
-    ".leadership-insights .img-col, .insights-container .img-col"
+    ".leadership-insights .img-col, .insights-container .img-col",
   );
   if (!imgCols.length) return;
 
@@ -807,7 +912,7 @@ export function initLeadershipHoverAnimation() {
       const centerX = bounds.left + bounds.width / 2;
       const normalizedX = Math.max(
         -1,
-        Math.min(1, (e.clientX - centerX) / (bounds.width / 2))
+        Math.min(1, (e.clientX - centerX) / (bounds.width / 2)),
       );
 
       // Instantaneous movement direction (mouse pointer delta)
@@ -839,7 +944,7 @@ export function initLeadershipHoverAnimation() {
           onUpdate: () => {
             itemState.layer.el.style.setProperty(
               "--tx",
-              `${itemState.x.toFixed(2)}px`
+              `${itemState.x.toFixed(2)}px`,
             );
           },
         });
@@ -860,7 +965,7 @@ export function initLeadershipHoverAnimation() {
           onUpdate: () => {
             itemState.layer.el.style.setProperty(
               "--tx",
-              `${itemState.x.toFixed(2)}px`
+              `${itemState.x.toFixed(2)}px`,
             );
           },
         });
@@ -875,20 +980,18 @@ export function initLeadershipHoverAnimation() {
 
 /**
  * initFeaturesToggle
- * Updates "Show Features" / "Hide Features" label on collapse toggle buttons
+ * Updates "Explore Coverage" / "Close Coverage" label on collapse toggle buttons
  * when Bootstrap collapse panels inside .card.service or .card.offer are shown/hidden.
  */
 export function initFeaturesToggle() {
   document.querySelectorAll('[id^="features-list-"]').forEach((collapseEl) => {
-    const btn = document.querySelector(
-      `[data-bs-target="#${collapseEl.id}"]`
-    );
+    const btn = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
     if (!btn) return;
 
     const updateLabel = (isOpen) => {
       btn.childNodes.forEach((node) => {
         if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
-          node.textContent = isOpen ? " Hide Features" : " Show Features";
+          node.textContent = isOpen ? " Close Coverage" : " Explore Coverage";
         }
       });
     };

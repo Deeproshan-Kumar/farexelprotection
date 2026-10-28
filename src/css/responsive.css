@@ -15,6 +15,12 @@
   }
 }
 
+@media only screen and (min-width: 1367px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
 /* ---------------------------------------------------------
    Desktop: 1280px - 1535px
    --------------------------------------------------------- */
@@ -42,10 +48,6 @@
 
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
   }
 
   .hero-image-container .caption {
@@ -275,13 +277,37 @@
     white-space: nowrap;
   }
 
+  .site-header .announcement-bar .goog-te-gadget .goog-te-combo {
+    max-width: 6.375rem !important;
+    font-size: 0.6875rem !important;
+    padding: 0.0625rem 0.25rem !important;
+  }
+
   .hero-image-container .car-light {
     top: 66%;
     left: 26%;
   }
 
-  .hero .badges .badge {
-    padding: 0.75rem 0.5rem;
+  /* Hero Spotlight Mobile Layout: clean focus on car, no beam cutting through header text */
+  .hero-spotlight .spotlight-fixture,
+  .hero-spotlight .spotlight-beams,
+  .hero-spotlight .spotlight-dust {
+    display: none !important;
+  }
+
+  .hero-spotlight .spotlight-interactive {
+    background: radial-gradient(32.5rem circle at 50% 72%,
+        rgba(251, 44, 54, 0.22) 0%,
+        rgba(251, 44, 54, 0.08) 40%,
+        transparent 70%) !important;
+  }
+
+  .hero-keyword-item {
+    gap: 0.5rem;
+  }
+
+  .hero-keyword-text {
+    font-size: 0.8rem;
   }
 
   .hero-image-container .caption {

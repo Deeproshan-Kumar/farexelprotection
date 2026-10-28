@@ -11,7 +11,9 @@ import {
   initOffersSwiper,
   initTransformationSwiper,
   initStudioTourSwiper,
-  initCertificateSwipers,
+  initCertificateSwiper,
+  initIntroVideosSwiper,
+  initCustomerExperienceSwiper,
   initScrollToTop,
   initTextHoverAnimation,
   initTeamCardTilt,
@@ -33,6 +35,7 @@ import {
   initCategoryFilters,
 } from "./beforeAfterSlider.js";
 import { initServicesSummary } from "./servicesSummary.js";
+import { initGoogleTranslate } from "./translator.js";
 
 // Mobile Menu
 function handleMobileMenu(navbarToggler, target) {
@@ -130,7 +133,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Build hero intro timeline (paused)
   const heroIntroTl = initHeroIntro();
-
+// 
   // Page transition pillars wipe, smoothly triggering hero reveal as pillars lift
   initPageTransition(() => heroIntroTl?.play());
 
@@ -155,8 +158,14 @@ window.addEventListener("DOMContentLoaded", () => {
   // Studio tour swiper
   initStudioTourSwiper();
 
-  // Certificate card swipers
-  initCertificateSwipers();
+  // Certificate card swiper
+  initCertificateSwiper();
+
+  // Intro video swiper
+  initIntroVideosSwiper();
+
+  // Customer experience swiper
+  initCustomerExperienceSwiper();
 
   // File upload
   initFileUpload();
@@ -179,11 +188,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Before and after image slider & category filters
   initBeforeAfterSliders();
+
   initCategoryFilters();
 
   // Services page interactive summary & card selection
   initServicesSummary();
 
-  // Features toggle (Show / Hide features in service & offer cards)
+  // Features toggle (Show / Close Coverage in service & offer cards)
   initFeaturesToggle();
+
+  // Google Translate
+  initGoogleTranslate();
 });

@@ -69,10 +69,8 @@
                     name="call"></ion-icon>+966 55 518 8194</a>
               </li>
               <li class="action switch-lang">
-                <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
-                <select name="lang" id="lang" class="lang">
-                  <option value="en" selected>EN</option>
-                </select>
+                <ion-icon class="icon me-1" name="language"></ion-icon>
+                <div id="google_translate_element"></div>
               </li>
               <li class="action login">
                 <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="person"></ion-icon>Login</a>
@@ -136,6 +134,14 @@
                   </a>
                 </li>
                 <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="career.html">
+                    <span class="dropdown-item-icon">
+                      <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    Career
+                  </a>
+                </li>
+                <li>
                   <a class="dropdown-item d-flex align-items-center gap-2" href="testimonials.html">
                     <span class="dropdown-item-icon">
                       <ion-icon name="happy-outline"></ion-icon>
@@ -186,9 +192,6 @@
               <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-1" href="career.html"><ion-icon name="briefcase"></ion-icon>Career</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link rounded-1" href="contact.html"><ion-icon name="call"></ion-icon>Contact Us</a>
             </li>
           </ul>
@@ -234,6 +237,14 @@
                       <ion-icon name="pencil-outline"></ion-icon>
                     </span>
                     Leadership Insights
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="career.html">
+                    <span class="dropdown-item-icon">
+                      <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    Career
                   </a>
                 </li>
                 <li>
@@ -286,9 +297,6 @@
               <a class="nav-link rounded-1" href="blog.html">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="career.html">Career</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
@@ -317,7 +325,6 @@
   <main class="main" id="main">
     <!-- Subpage Banner -->
     <section class="subpage-banner" id="subpage-banner" aria-label="Our Team Hero Banner">
-      <img src="public/images/banners/team-banner.jpg" alt="Team Banner" class="img-fluid w-100 h-100" />
       <div class="section">
         <div class="container position-relative py-4 py-md-5">
           <h1>Meet Our Team</h1>
@@ -328,7 +335,7 @@
           <div class="breadcrumb">
             <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
               <li>
-                <a href="index.html" class="text-decoration-none text-primary d-flex align-items-center gap-2">
+                <a href="index.html" class="text-decoration-none fw-semibold d-flex align-items-center gap-2">
                   <ion-icon name="home" class="icon"></ion-icon>Home
                 </a>
               </li>
@@ -383,14 +390,22 @@
                   <div class="card-body text-center">
                     <h4>Saad Al-Mutairi</h4>
                     <p class="text-primary mb-2"><small>Head of Detailing</small></p>
-                    <p class="text-sm text-secondary mb-0">
-                      Overseeing detailing execution, process discipline and final quality across interior and exterior
-                      work, ensuring every service is delivered consistently to FAREXEL standards.
-                    </p>
                   </div>
-                  <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                  <div class="card-footer bg-transparent border-0 py-3">
                     <ul
                       class="list-unstyled mb-0 social-handles d-flex align-items-center justify-content-center gap-2">
+                      <li>
+                        <a href="#" target="_blank">
+                          <ion-icon class="icon" style="color: #00ff80c2" name="logo-whatsapp"
+                            aria-hidden="true"></ion-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank">
+                          <ion-icon class="icon" style="color: #f21818" name="mail-outline" name="mail-outline"
+                            aria-hidden="true"></ion-icon>
+                        </a>
+                      </li>
                       <li>
                         <a href="#" target="_blank">
                           <ion-icon class="icon" style="color: #1877f2" name="logo-facebook"
@@ -425,14 +440,22 @@
                   <div class="card-body text-center">
                     <h4>Faisal Al-Qahtani</h4>
                     <p class="text-primary mb-2"><small>Detailing Operations & Quality Control</small></p>
-                    <p class="text-sm text-secondary mb-0">
-                      Overseeing detailing execution, process discipline and final quality across interior and exterior
-                      work, ensuring every service is delivered consistently to FAREXEL standards.
-                    </p>
                   </div>
-                  <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                  <div class="card-footer bg-transparent border-0 py-3">
                     <ul
                       class="list-unstyled mb-0 social-handles d-flex align-items-center justify-content-center gap-2">
+                      <li>
+                        <a href="#" target="_blank">
+                          <ion-icon class="icon" style="color: #00ff80c2" name="logo-whatsapp"
+                            aria-hidden="true"></ion-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank">
+                          <ion-icon class="icon" style="color: #f21818" name="mail-outline" name="mail-outline"
+                            aria-hidden="true"></ion-icon>
+                        </a>
+                      </li>
                       <li>
                         <a href="#" target="_blank">
                           <ion-icon class="icon" style="color: #1877f2" name="logo-facebook"
@@ -467,14 +490,22 @@
                   <div class="card-body text-center">
                     <h4>Omar Al-Harbi</h4>
                     <p class="text-primary mb-2"><small>Paint Correction & Polishing Specialist</small></p>
-                    <p class="text-sm text-secondary mb-0">
-                      Specialised in paint correction, polishing and surface refinement, with a focus on restoring
-                      clarity, depth and a refined finish while respecting the condition of the paint.
-                    </p>
                   </div>
-                  <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                  <div class="card-footer bg-transparent border-0 py-3">
                     <ul
                       class="list-unstyled mb-0 social-handles d-flex align-items-center justify-content-center gap-2">
+                      <li>
+                        <a href="#" target="_blank">
+                          <ion-icon class="icon" style="color: #00ff80c2" name="logo-whatsapp"
+                            aria-hidden="true"></ion-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank">
+                          <ion-icon class="icon" style="color: #f21818" name="mail-outline" name="mail-outline"
+                            aria-hidden="true"></ion-icon>
+                        </a>
+                      </li>
                       <li>
                         <a href="#" target="_blank">
                           <ion-icon class="icon" style="color: #1877f2" name="logo-facebook"
@@ -509,14 +540,22 @@
                   <div class="card-body text-center">
                     <h4>Khalid Al-Otaibi</h4>
                     <p class="text-primary mb-2"><small>Protection & Film Specialist</small></p>
-                    <p class="text-sm text-secondary mb-0">
-                      Focused on advanced protection solutions including Paint Protection Film, Nano Ceramic treatments
-                      and window films, with precision application and careful surface preparation at every stage.
-                    </p>
                   </div>
-                  <div class="card-footer bg-transparent border-0 pt-0 pb-3">
+                  <div class="card-footer bg-transparent border-0 py-3">
                     <ul
                       class="list-unstyled mb-0 social-handles d-flex align-items-center justify-content-center gap-2">
+                      <li>
+                        <a href="#" target="_blank">
+                          <ion-icon class="icon" style="color: #00ff80c2" name="logo-whatsapp"
+                            aria-hidden="true"></ion-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank">
+                          <ion-icon class="icon" style="color: #f21818" name="mail-outline" name="mail-outline"
+                            aria-hidden="true"></ion-icon>
+                        </a>
+                      </li>
                       <li>
                         <a href="#" target="_blank">
                           <ion-icon class="icon" style="color: #1877f2" name="logo-facebook"
@@ -547,7 +586,8 @@
     <hr />
 
     <!-- Our Rigorous Selection Process -->
-    <section class="section selection-process" id="selection-process" aria-label="Master Detailer Selection Process">
+    <section class="section how-we-works selection-process" id="selection-process"
+      aria-label="Master Detailer Selection Process">
       <div class="container py-4 py-md-5">
         <div class="section-header text-center mb-4 mb-lg-4">
           <h2 class="d-inline-block position-relative pb-2">
@@ -556,14 +596,14 @@
         </div>
         <div class="row gy-4 gy-xl-0">
           <div class="col-sm-12 col-md-6 col-lg-3">
-            <article class="card sp h-100">
-              <div class="card-header bg-transparent border-0">
-                <div class="icon-box d-flex align-items-center justify-content-center pt-3">
-                  <ion-icon class="icon p-3" name="school-outline" aria-hidden="true"></ion-icon>
+            <article class="card process h-100" data-step="01">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="school-outline" aria-hidden="true"></ion-icon>
                 </div>
+                <h5 class="mb-0">01 - Mastery Assessment</h5>
               </div>
               <div class="card-body">
-                <h4>01 - Mastery Assessment</h4>
                 <p>
                   We evaluate more than technical ability - we assess precision, control, consistency,
                   surface awareness and the ability to execute delicate work without compromising the
@@ -573,14 +613,14 @@
             </article>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-3">
-            <article class="card sp h-100">
-              <div class="card-header bg-transparent border-0">
-                <div class="icon-box d-flex align-items-center justify-content-center pt-3">
-                  <ion-icon class="icon p-3" name="trophy-outline" aria-hidden="true"></ion-icon>
+            <article class="card process h-100" data-step="02">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="trophy-outline" aria-hidden="true"></ion-icon>
                 </div>
+                <h5 class="mb-0">02 - Proven Craft Experience</h5>
               </div>
               <div class="card-body">
-                <h4>02 - Proven Craft Experience</h4>
                 <p>
                   Experience must be demonstrated, not simply claimed. Every specialist is assessed
                   through their previous work, practical capability and consistency in delivering
@@ -590,14 +630,14 @@
             </article>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-3">
-            <article class="card sp h-100">
-              <div class="card-header bg-transparent border-0">
-                <div class="icon-box d-flex align-items-center justify-content-center pt-3">
-                  <ion-icon class="icon p-3" name="construct-outline" aria-hidden="true"></ion-icon>
+            <article class="card process h-100" data-step="03">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="construct-outline" aria-hidden="true"></ion-icon>
                 </div>
+                <h5 class="mb-0">03 - Refinement Through Training</h5>
               </div>
               <div class="card-body">
-                <h4>03 - Refinement Through Training</h4>
                 <p>
                   Joining FAREXEL is not the end of learning. Our specialists continue refining their
                   techniques, product knowledge, equipment handling, and detailing practices to stay
@@ -607,14 +647,14 @@
             </article>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-3">
-            <article class="card sp h-100">
-              <div class="card-header bg-transparent border-0">
-                <div class="icon-box d-flex align-items-center justify-content-center pt-3">
-                  <ion-icon class="icon p-3" name="sparkles-outline" aria-hidden="true"></ion-icon>
+            <article class="card process h-100" data-step="04">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="sparkles-outline" aria-hidden="true"></ion-icon>
                 </div>
+                <h5 class="mb-0">04 - Professional Standards</h5>
               </div>
               <div class="card-body">
-                <h4>04 - Professional Standards</h4>
                 <p>
                   Skill earns consideration; discipline earns trust. We expect every specialist to uphold
                   precision, cleanliness, responsibility, attention to detail and respect for every car and
@@ -860,7 +900,8 @@
           <p class="text-12">
             Subscribe to our newsletter and stay updated with our offer.
           </p>
-          <form action="" method="" class="d-flex align-items-stretch gap-2">
+          <form action="https://formsubmit.co/deeproshankumar123@gmail.com" method="POST" class="d-flex align-items-stretch gap-2">
+            <input type="hidden" name="_subject" class="d-none" value="New Newsletter Subscription!" />
             <input type="email" name="email" id="email" class="form-control" placeholder="Your Email..." />
             <button type="submit" class="btn btn-primary">
               <span>Subscribe</span>

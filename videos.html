@@ -71,10 +71,8 @@
                     name="call"></ion-icon>+966 55 518 8194</a>
               </li>
               <li class="action switch-lang">
-                <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
-                <select name="lang" id="lang" class="lang">
-                  <option value="en" selected>EN</option>
-                </select>
+                <ion-icon class="icon me-1" name="language"></ion-icon>
+                <div id="google_translate_element"></div>
               </li>
               <li class="action login">
                 <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="person"></ion-icon>Login</a>
@@ -138,6 +136,14 @@
                   </a>
                 </li>
                 <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="career.html">
+                    <span class="dropdown-item-icon">
+                      <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    Career
+                  </a>
+                </li>
+                <li>
                   <a class="dropdown-item d-flex align-items-center gap-2" href="testimonials.html">
                     <span class="dropdown-item-icon">
                       <ion-icon name="happy-outline"></ion-icon>
@@ -188,9 +194,6 @@
               <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-1" href="career.html"><ion-icon name="briefcase"></ion-icon>Career</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link rounded-1" href="contact.html"><ion-icon name="call"></ion-icon>Contact Us</a>
             </li>
           </ul>
@@ -236,6 +239,14 @@
                       <ion-icon name="pencil-outline"></ion-icon>
                     </span>
                     Leadership Insights
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="career.html">
+                    <span class="dropdown-item-icon">
+                      <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    Career
                   </a>
                 </li>
                 <li>
@@ -288,9 +299,6 @@
               <a class="nav-link rounded-1" href="blog.html">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="career.html">Career</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
@@ -319,8 +327,6 @@
   <main class="main" id="main">
     <!-- Subpage Banner -->
     <section class="subpage-banner" id="subpage-banner" aria-label="Videos Hero Banner">
-      <img src="public/images/banners/portfolio-video-banner.jpg" alt="Portfolio Video Banner"
-        class="img-fluid w-100 h-100" />
       <div class="section">
         <div class="container position-relative py-4 py-md-5">
           <h1>Videos</h1>
@@ -328,7 +334,7 @@
           <div class="breadcrumb">
             <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
               <li>
-                <a href="index.html" class="text-decoration-none text-primary d-flex align-items-center gap-2">
+                <a href="index.html" class="text-decoration-none fw-semibold d-flex align-items-center gap-2">
                   <ion-icon name="home" class="icon"></ion-icon>Home
                 </a>
               </li>
@@ -378,212 +384,228 @@
             </div>
           </div>
         </div>
-        <div class="row gy-4">
-          <!-- 1. A Day Inside FAREXEL -->
-          <div class="col-sm-12 col-md-6 col-lg-4 photo-item"
+        <div class="masonary-grid">
+          <div class="media"
             data-category="studio-life behind-the-scenes farexel-stories" data-order="1">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/car-detailing.mp4" />
+                  <source src="public/videos/bike/BikeVideo1.mp4" />
                 </video>
-                <a class="magnifier glightbox" href="public/videos/car-detailing.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="A Day Inside FAREXEL"
-                  data-description="From the first arrival to the final handover - experience our studio in motion."
-                  aria-label="Open A Day Inside FAREXEL video">
+                <a class="magnifier glightbox" href="public/videos/bike/BikeVideo1.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="A Day Inside FAREXEL">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Studio Life</small></p>
-                <h4 class="mb-0">A Day Inside FAREXEL</h4>
-                <p class="text-sm mb-0">From the first arrival to the final handover - experience our studio in motion.
-                </p>
               </div>
             </article>
           </div>
 
-          <!-- 2. Behind the Craft -->
-          <div class="col-sm-12 col-md-6 col-lg-4 photo-item"
+          <div class="media"
             data-category="behind-the-scenes studio-life farexel-stories" data-order="2">
             <article class="card photo border-0">
               <div class="card-header p-0 border-0">
                 <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/car-detailing-2.mp4" />
+                  <source src="public/videos/bike/BikeVideo2.mp4" />
                 </video>
-                <a class="magnifier glightbox" href="public/videos/car-detailing-2.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Behind the Craft"
-                  data-description="See the concentration, coordination and care behind every detail."
-                  aria-label="Open Behind the Craft video">
+                <a class="magnifier glightbox" href="public/videos/bike/BikeVideo2.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="Behind the Craft">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Behind the Scenes</small></p>
-                <h4 class="mb-0">Behind the Craft</h4>
-                <p class="text-sm mb-0">See the concentration, coordination and care behind every detail.</p>
               </div>
             </article>
           </div>
 
-          <!-- 3. Meet the FAREXEL Team -->
-          <div class="col-sm-12 col-md-6 col-lg-4 photo-item"
+          <div class="media"
             data-category="our-team team-collaborations farexel-stories" data-order="3">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/car-detailing.mp4" />
+                  <source src="public/videos/bike/BikeVideo3.mp4" />
                 </video>
-                <a class="magnifier glightbox" href="public/videos/car-detailing.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Meet the FAREXEL Team"
-                  data-description="The people, personalities and expertise behind the brand."
-                  aria-label="Open Meet the FAREXEL Team video">
+                <a class="magnifier glightbox" href="public/videos/bike/BikeVideo3.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="Meet the FAREXEL Team">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Our Team</small></p>
-                <h4 class="mb-0">Meet the FAREXEL Team</h4>
-                <p class="text-sm mb-0">The people, personalities and expertise behind the brand.</p>
               </div>
             </article>
           </div>
 
-          <!-- 4. Where Teams Become Stronger -->
-          <div class="col-sm-12 col-md-6 col-lg-4 photo-item"
+          <div class="media"
             data-category="team-collaborations our-team farexel-stories" data-order="4">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/car-detailing-2.mp4" />
+                  <source src="public/videos/bike/BikeVideo4.mp4" />
                 </video>
-                <a class="magnifier glightbox" href="public/videos/car-detailing-2.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Where Teams Become Stronger"
-                  data-description="Collaboration, communication and a shared commitment to the FAREXEL standard."
-                  aria-label="Open Where Teams Become Stronger video">
+                <a class="magnifier glightbox" href="public/videos/bike/BikeVideo4.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="Where Teams Become Stronger">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Team Collaborations</small></p>
-                <h4 class="mb-0">Where Teams Become Stronger</h4>
-                <p class="text-sm mb-0">Collaboration, communication and a shared commitment to the FAREXEL standard.
-                </p>
               </div>
             </article>
           </div>
 
-          <!-- 5. From Consultation to Handover -->
-          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="studio-life client-moments farexel-stories"
+          <div class="media" data-category="studio-life client-moments farexel-stories"
             data-order="5">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/car-detailing.mp4" />
+                  <source src="public/videos/intro/IntroVideo1.mp4" />
                 </video>
-                <a class="magnifier glightbox" href="public/videos/car-detailing.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="From Consultation to Handover"
-                  data-description="The people-first experience that happens around every service."
-                  aria-label="Open From Consultation to Handover video">
+                <a class="magnifier glightbox" href="public/videos/intro/IntroVideo1.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="From Consultation to Handover">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Studio Life</small></p>
-                <h4 class="mb-0">From Consultation to Handover</h4>
-                <p class="text-sm mb-0">The people-first experience that happens around every service.</p>
               </div>
             </article>
           </div>
 
-          <!-- 6. Client Moments at FAREXEL -->
-          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="client-moments farexel-stories"
+          <div class="media" data-category="client-moments farexel-stories"
             data-order="6">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/car-detailing-2.mp4" />
+                  <source src="public/videos/intro/IntroVideo2.mp4" />
                 </video>
-                <a class="magnifier glightbox" href="public/videos/car-detailing-2.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Client Moments at FAREXEL"
-                  data-description="More than a service interaction - relationships built through trust."
-                  aria-label="Open Client Moments at FAREXEL video">
+                <a class="magnifier glightbox" href="public/videos/intro/IntroVideo2.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="Client Moments at FAREXEL">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Client Moments</small></p>
-                <h4 class="mb-0">Client Moments at FAREXEL</h4>
-                <p class="text-sm mb-0">More than a service interaction - relationships built through trust.</p>
               </div>
             </article>
           </div>
 
-          <!-- 7. Celebrating the Journey -->
-          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="celebrations our-team farexel-stories"
+          <div class="media" data-category="celebrations our-team farexel-stories"
             data-order="7">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/car-detailing.mp4" />
+                  <source src="public/videos/intro/IntroVideo3.mp4" />
                 </video>
-                <a class="magnifier glightbox" href="public/videos/car-detailing.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Celebrating the Journey"
-                  data-description="The milestones and moments that make our journey worth remembering."
-                  aria-label="Open Celebrating the Journey video">
+                <a class="magnifier glightbox" href="public/videos/intro/IntroVideo3.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="Celebrating the Journey">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Celebrations</small></p>
-                <h4 class="mb-0">Celebrating the Journey</h4>
-                <p class="text-sm mb-0">The milestones and moments that make our journey worth remembering.</p>
               </div>
             </article>
           </div>
 
-          <!-- 8. Life Beyond the Detailing Bay -->
-          <div class="col-sm-12 col-md-6 col-lg-4 photo-item"
+          <div class="media"
             data-category="farexel-stories our-team team-collaborations celebrations" data-order="8">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/car-detailing-2.mp4" />
+                  <source src="public/videos/intro/IntroVideo4.mp4" />
                 </video>
-                <a class="magnifier glightbox" href="public/videos/car-detailing-2.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Life Beyond the Detailing Bay"
-                  data-description="The culture, camaraderie and everyday moments that define our team."
-                  aria-label="Open Life Beyond the Detailing Bay video">
+                <a class="magnifier glightbox" href="public/videos/intro/IntroVideo4.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="Life Beyond the Detailing Bay">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>FAREXEL Stories</small></p>
-                <h4 class="mb-0">Life Beyond the Detailing Bay</h4>
-                <p class="text-sm mb-0">The culture, camaraderie and everyday moments that define our team.</p>
               </div>
             </article>
           </div>
 
-          <!-- 9. FAREXEL - In Our Own Words -->
-          <div class="col-sm-12 col-md-6 col-lg-4 photo-item" data-category="farexel-stories our-team studio-life"
+          <div class="media" data-category="farexel-stories our-team studio-life"
             data-order="9">
             <article class="card photo border-0">
               <div class="card-header p-0">
                 <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/car-detailing.mp4" />
+                  <source src="public/videos/works/WorkingVideo1.mp4" />
                 </video>
-                <a class="magnifier glightbox" href="public/videos/car-detailing.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words"
-                  data-description="Our people, our philosophy and what drives us every day"
-                  aria-label="Open FAREXEL - In Our Own Words video">
+                <a class="magnifier glightbox" href="public/videos/works/WorkingVideo1.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>FAREXEL Stories</small></p>
-                <h4 class="mb-0">FAREXEL - In Our Own Words</h4>
-                <p class="text-sm mb-0">Our people, our philosophy and what drives us every day</p>
+            </article>
+          </div>
+
+          <div class="media" data-category="farexel-stories our-team studio-life"
+            data-order="10">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <video autoplay muted loop playsinline height="280" width="500">
+                  <source src="public/videos/works/WorkingVideo2.mp4" />
+                </video>
+                <a class="magnifier glightbox" href="public/videos/works/WorkingVideo2.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="farexel-stories our-team studio-life"
+            data-order="11">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <video autoplay muted loop playsinline height="280" width="500">
+                  <source src="public/videos/works/WorkingVideo3.mp4" />
+                </video>
+                <a class="magnifier glightbox" href="public/videos/works/WorkingVideo3.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="farexel-stories our-team studio-life"
+            data-order="12">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <video autoplay muted loop playsinline height="280" width="500">
+                  <source src="public/videos/works/WorkingVideo4.mp4" />
+                </video>
+                <a class="magnifier glightbox" href="public/videos/works/WorkingVideo4.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="farexel-stories our-team studio-life"
+            data-order="13">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <video autoplay muted loop playsinline height="280" width="500">
+                  <source src="public/videos/client/ClientVideo1.mp4" />
+                </video>
+                <a class="magnifier glightbox" href="public/videos/client/ClientVideo1.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="farexel-stories our-team studio-life"
+            data-order="14">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <video autoplay muted loop playsinline height="280" width="500">
+                  <source src="public/videos/client/ClientVideo2.mp4" />
+                </video>
+                <a class="magnifier glightbox" href="public/videos/client/ClientVideo2.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="farexel-stories our-team studio-life"
+            data-order="15">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <video autoplay muted loop playsinline height="280" width="500">
+                  <source src="public/videos/client/ClientVideo3.mp4" />
+                </video>
+                <a class="magnifier glightbox" href="public/videos/client/ClientVideo3.mp4" data-type="video"
+                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
               </div>
             </article>
           </div>
@@ -837,7 +859,8 @@
           <p class="text-12">
             Subscribe to our newsletter and stay updated with our offer.
           </p>
-          <form action="" method="" class="d-flex align-items-stretch gap-2">
+          <form action="https://formsubmit.co/deeproshankumar123@gmail.com" method="POST" class="d-flex align-items-stretch gap-2">
+            <input type="hidden" name="_subject" class="d-none" value="New Newsletter Subscription!" />
             <input type="email" name="email" id="email" class="form-control" placeholder="Your Email..." />
             <button type="submit" class="btn btn-primary">
               <span>Subscribe</span>

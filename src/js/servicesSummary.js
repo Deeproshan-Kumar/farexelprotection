@@ -6,7 +6,6 @@ export function initServicesSummary() {
   if (!summarySection) return; // Only runs on Services page where summary section exists!
 
   const summaryVehicleTypeEl = document.querySelector("#summary-vehicle-type");
-  const summaryTotalTimeEl = document.querySelector("#summary-total-time");
   const summaryTotalPriceEl = document.querySelector("#summary-total-price");
   const summarySelectedCountEl = document.querySelector("#summary-selected-count");
   const summarySelectedServicesEl = document.querySelector("#summary-selected-services");
@@ -39,7 +38,6 @@ export function initServicesSummary() {
 
     // Select all selected cards across all vehicle tabs
     const selectedCards = document.querySelectorAll(".card.service.selected");
-    let totalHours = 0;
     let totalPriceSAR = 0;
     const selectedTitles = [];
 
@@ -61,26 +59,11 @@ export function initServicesSummary() {
         if (!isNaN(priceNum)) totalPriceSAR += priceNum;
       }
 
-      // Extract time e.g. "8 Business Hours"
-      const cardFooter = card.querySelector(".card-footer");
-      const textToSearch = cardFooter ? cardFooter.textContent : card.textContent;
-      const normalizedFooter = textToSearch.replace(/\s+/g, " ");
-      const match = normalizedFooter.match(/(\d+)\s*Business\s*Hours?/i) ||
-        normalizedFooter.match(/(\d+)\s*Hours?/i) ||
-        normalizedFooter.match(/(\d+)\s*Hrs?/i);
-      if (match) {
-        totalHours += parseInt(match[1], 10);
-      }
-
       selectedTitles.push(titleText);
     });
 
     if (summarySelectedCountEl) {
       summarySelectedCountEl.textContent = selectedCards.length;
-    }
-
-    if (summaryTotalTimeEl) {
-      summaryTotalTimeEl.innerHTML = `${totalHours} Business Hours`;
     }
 
     if (summaryTotalPriceEl) {

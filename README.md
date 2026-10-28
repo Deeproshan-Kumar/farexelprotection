@@ -22,7 +22,7 @@ Designed with an unapologetic dark luxury aesthetic, the site pairs precision cr
 
 ### 2. Real-Time Service Estimator & Booking Integration (`servicesSummary.js`)
 - Click-to-select interactive service cards with real-time feedback.
-- Dynamic aggregation of total cost (**SAR**), estimated turnaround time (**Business Hours**), and active vehicle category.
+- Dynamic aggregation of total cost (**SAR**), active vehicle category, and flexible installment payment integration (**Tabby & Tamara**).
 - Instant synchronization with the on-page booking form with smooth scroll anchoring.
 
 ### 3. Interactive Before-and-After Transformation Gallery (`customer-experience.html`)
