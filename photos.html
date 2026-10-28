@@ -71,10 +71,8 @@
                     name="call"></ion-icon>+966 55 518 8194</a>
               </li>
               <li class="action switch-lang">
-                <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
-                <select name="lang" id="lang" class="lang">
-                  <option value="en" selected>EN</option>
-                </select>
+                <ion-icon class="icon me-1" name="language"></ion-icon>
+                <div id="google_translate_element"></div>
               </li>
               <li class="action login">
                 <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="person"></ion-icon>Login</a>
@@ -138,6 +136,14 @@
                   </a>
                 </li>
                 <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="career.html">
+                    <span class="dropdown-item-icon">
+                      <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    Career
+                  </a>
+                </li>
+                <li>
                   <a class="dropdown-item d-flex align-items-center gap-2" href="testimonials.html">
                     <span class="dropdown-item-icon">
                       <ion-icon name="happy-outline"></ion-icon>
@@ -188,9 +194,6 @@
               <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-1" href="career.html"><ion-icon name="briefcase"></ion-icon>Career</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link rounded-1" href="contact.html"><ion-icon name="call"></ion-icon>Contact Us</a>
             </li>
           </ul>
@@ -236,6 +239,14 @@
                       <ion-icon name="pencil-outline"></ion-icon>
                     </span>
                     Leadership Insights
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="career.html">
+                    <span class="dropdown-item-icon">
+                      <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    Career
                   </a>
                 </li>
                 <li>
@@ -288,9 +299,6 @@
               <a class="nav-link rounded-1" href="blog.html">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="career.html">Career</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
@@ -319,8 +327,6 @@
   <main class="main" id="main">
     <!-- Subpage Banner -->
     <section class="subpage-banner" id="subpage-banner" aria-label="Photo Gallery Hero Banner">
-      <img src="public/images/banners/portfolio-image-banner.jpg" alt="Portfolio Photo Banner"
-        class="img-fluid w-100 h-100" />
       <div class="section">
         <div class="container position-relative py-4 py-md-5">
           <h1>Photos</h1>
@@ -328,7 +334,7 @@
           <div class="breadcrumb">
             <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
               <li>
-                <a href="index.html" class="text-decoration-none text-primary d-flex align-items-center gap-2">
+                <a href="index.html" class="text-decoration-none fw-semibold d-flex align-items-center gap-2">
                   <ion-icon name="home" class="icon"></ion-icon>Home
                 </a>
               </li>
@@ -378,192 +384,357 @@
           </div>
         </div>
         <div class="masonary-grid">
-          <!-- 1. Inside the FAREXEL Studio -->
-          <div class="photo-item" data-category="our-studio behind-the-craft memorable-moments" data-order="1">
+          <div class="media" data-category="our-studio behind-the-craft memorable-moments" data-order="1">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/surface-refinement.jpg" height="280" width="500" alt="Inside the FAREXEL Studio"
+                <img src="public/images/posts/Image1.jpg" height="280" width="500" alt="Inside the FAREXEL Studio"
                   class="img-fluid w-100" />
-                <a class="magnifier glightbox" href="public/images/surface-refinement.jpg" data-gallery="FAREXEL-media"
-                  data-title="Inside the FAREXEL Studio" data-description="The space where precision meets passion."
-                  aria-label="Open Inside the FAREXEL Studio">
+                <a class="magnifier glightbox" href="public/images/posts/Image1.jpg" data-gallery="FAREXEL-media"
+                  data-title="Inside the FAREXEL Studio" aria-label="Open Inside the FAREXEL Studio">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Our Studio</small></p>
-                <h4 class="mb-0">Inside the FAREXEL Studio</h4>
-                <p class="text-sm mb-0">The space where precision meets passion.</p>
               </div>
             </article>
           </div>
 
-          <!-- 2. Behind Every Detail -->
-          <div class="photo-item" data-category="behind-the-craft farexel-culture memorable-moments" data-order="2">
+          <div class="media" data-category="behind-the-craft farexel-culture memorable-moments" data-order="2">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/interior-detailing.jpg" height="280" width="500" alt="Behind Every Detail"
+                <img src="public/images/posts/Image2.jpg" height="280" width="500" alt="Behind Every Detail"
                   class="img-fluid w-100" />
-                <a class="magnifier glightbox" href="public/images/interior-detailing.jpg" data-gallery="FAREXEL-media"
-                  data-title="Behind Every Detail"
-                  data-description="Our team at work, turning expertise into craftsmanship."
-                  aria-label="Open Behind Every Detail">
+                <a class="magnifier glightbox" href="public/images/posts/Image2.jpg" data-gallery="FAREXEL-media"
+                  data-title="Behind Every Detail" aria-label="Open Behind Every Detail">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Behind the Craft</small></p>
-                <h4 class="mb-0">Behind Every Detail</h4>
-                <p class="text-sm mb-0">Our team at work, turning expertise into craftsmanship.</p>
               </div>
             </article>
           </div>
 
-          <!-- 3. One Team. One Standard. -->
-          <div class="photo-item" data-category="team-and-collaboration farexel-culture memorable-moments"
+          <div class="media" data-category="team-and-collaboration farexel-culture memorable-moments"
             data-order="3">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/client-experience.jpg" height="280" width="500" alt="One Team. One Standard."
+                <img src="public/images/posts/Image3.jpg" height="280" width="500" alt="One Team. One Standard."
                   class="img-fluid w-100" />
-                <a class="magnifier glightbox" href="public/images/client-experience.jpg" data-gallery="FAREXEL-media"
-                  data-title="One Team. One Standard."
-                  data-description="Collaboration that keeps every detail moving in the right direction."
-                  aria-label="Open One Team. One Standard.">
+                <a class="magnifier glightbox" href="public/images/posts/Image3.jpg" data-gallery="FAREXEL-media"
+                  data-title="One Team. One Standard." aria-label="Open One Team. One Standard.">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Team & Collaboration</small></p>
-                <h4 class="mb-0">One Team. One Standard.</h4>
-                <p class="text-sm mb-0">Collaboration that keeps every detail moving in the right direction.</p>
               </div>
             </article>
           </div>
 
-          <!-- 4. Client Moments -->
-          <div class="photo-item" data-category="client-moments memorable-moments" data-order="4">
+          <div class="media" data-category="client-moments memorable-moments" data-order="4">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/paint-enhancement.jpg" height="280" width="500" alt="Client Moments"
+                <img src="public/images/posts/Image4.jpg" height="280" width="500" alt="Client Moments"
                   class="img-fluid w-100" />
-                <a class="magnifier glightbox" href="public/images/paint-enhancement.jpg" data-gallery="FAREXEL-media"
-                  data-title="Client Moments" data-description="Building relationships beyond the service bay."
-                  aria-label="Open Client Moments">
+                <a class="magnifier glightbox" href="public/images/posts/Image4.jpg" data-gallery="FAREXEL-media"
+                  data-title="Client Moments" aria-label="Open Client Moments">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Client Moments</small></p>
-                <h4 class="mb-0">Client Moments</h4>
-                <p class="text-sm mb-0">Building relationships beyond the service bay.</p>
               </div>
             </article>
           </div>
 
-          <!-- 5. The People Behind FAREXEL -->
-          <div class="photo-item" data-category="farexel-culture team-and-collaboration memorable-moments"
+          <div class="media" data-category="farexel-culture team-and-collaboration memorable-moments"
             data-order="5">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/premium-finish-protection.jpg" height="280" width="500"
-                  alt="The People Behind FAREXEL" class="img-fluid w-100" />
-                <a class="magnifier glightbox" href="public/images/premium-finish-protection.jpg"
-                  data-gallery="FAREXEL-media" data-title="The People Behind FAREXEL"
-                  data-description="Passion, personality and pride behind every experience."
-                  aria-label="Open The People Behind FAREXEL">
+                <img src="public/images/posts/Image5.jpg" height="280" width="500" alt="The People Behind FAREXEL"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Image5.jpg" data-gallery="FAREXEL-media"
+                  data-title="The People Behind FAREXEL" aria-label="Open The People Behind FAREXEL">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>FAREXEL Culture</small></p>
-                <h4 class="mb-0">The People Behind FAREXEL</h4>
-                <p class="text-sm mb-0">Passion, personality and pride behind every experience.</p>
               </div>
             </article>
           </div>
 
-          <!-- 6. Crafted Together -->
-          <div class="photo-item" data-category="team-and-collaboration behind-the-craft memorable-moments"
+          <div class="media" data-category="team-and-collaboration behind-the-craft memorable-moments"
             data-order="6">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/premium-finish-detailing.jpg" height="280" width="500" alt="Crafted Together"
+                <img src="public/images/posts/Image6.jpg" height="280" width="500" alt="Crafted Together"
                   class="img-fluid w-100" />
-                <a class="magnifier glightbox" href="public/images/premium-finish-detailing.jpg"
-                  data-gallery="FAREXEL-media" data-title="Crafted Together"
-                  data-description="Great work begins with a team that works as one."
-                  aria-label="Open Crafted Together">
+                <a class="magnifier glightbox" href="public/images/posts/Image6.jpg" data-gallery="FAREXEL-media"
+                  data-title="Crafted Together" aria-label="Open Crafted Together">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Team & Collaboration</small></p>
-                <h4 class="mb-0">Crafted Together</h4>
-                <p class="text-sm mb-0">Great work begins with a team that works as one.</p>
               </div>
             </article>
           </div>
 
-          <!-- 7. Moments Worth Remembering -->
-          <div class="photo-item" data-category="memorable-moments celebrations farexel-culture" data-order="7">
+          <div class="media" data-category="memorable-moments celebrations farexel-culture" data-order="7">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/suspension-and-underbody.jpg" height="280" width="500"
-                  alt="Moments Worth Remembering" class="img-fluid w-100" />
-                <a class="magnifier glightbox" href="public/images/suspension-and-underbody.jpg"
-                  data-gallery="FAREXEL-media" data-title="Moments Worth Remembering"
-                  data-description="The people, occasions and memories that shape our journey."
-                  aria-label="Open Moments Worth Remembering">
+                <img src="public/images/posts/Image7.jpg" height="280" width="500" alt="Moments Worth Remembering"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Image7.jpg" data-gallery="FAREXEL-media"
+                  data-title="Moments Worth Remembering" aria-label="Open Moments Worth Remembering">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Memorable Moments</small></p>
-                <h4 class="mb-0">Moments Worth Remembering</h4>
-                <p class="text-sm mb-0">The people, occasions and memories that shape our journey.</p>
               </div>
             </article>
           </div>
 
-          <!-- 8. Celebrating Together -->
-          <div class="photo-item" data-category="celebrations farexel-culture memorable-moments" data-order="8">
+          <div class="media" data-category="celebrations farexel-culture memorable-moments" data-order="8">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/client-experience.jpg" height="280" width="500" alt="Celebrating Together"
+                <img src="public/images/posts/Image8.jpg" height="280" width="500" alt="Celebrating Together"
                   class="img-fluid w-100" />
-                <a class="magnifier glightbox" href="public/images/client-experience.jpg" data-gallery="FAREXEL-media"
-                  data-title="Celebrating Together"
-                  data-description="Because milestones are better when the whole team shares them."
-                  aria-label="Open Celebrating Together">
+                <a class="magnifier glightbox" href="public/images/posts/Image8.jpg" data-gallery="FAREXEL-media"
+                  data-title="Celebrating Together" aria-label="Open Celebrating Together">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
-              </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>Celebrations</small></p>
-                <h4 class="mb-0">Celebrating Together</h4>
-                <p class="text-sm mb-0">Because milestones are better when the whole team shares them.</p>
               </div>
             </article>
           </div>
 
-          <!-- 9. The FAREXEL Culture -->
-          <div class="photo-item" data-category="farexel-culture our-studio behind-the-craft memorable-moments"
-            data-order="9">
+          <div class="media" data-category="latest-moments" data-order="9">
             <article class="card photo border-0">
               <div class="card-header p-0">
-                <img src="public/images/surface-refinement.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                <img src="public/images/posts/Image9.jpg" height="280" width="500" alt="The FAREXEL Culture"
                   class="img-fluid w-100" />
-                <a class="magnifier glightbox" href="public/images/surface-refinement.jpg" data-gallery="FAREXEL-media"
-                  data-title="The FAREXEL Culture" data-description="Professional in our work. Connected beyond it."
-                  aria-label="Open The FAREXEL Culture">
+                <a class="magnifier glightbox" href="public/images/posts/Image9.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
                   <ion-icon name="search-outline"></ion-icon>
                 </a>
               </div>
-              <div class="card-body">
-                <p class="text-primary mb-0"><small>FAREXEL Culture</small></p>
-                <h4 class="mb-0">The FAREXEL Culture</h4>
-                <p class="text-sm mb-0">Professional in our work. Connected beyond it.</p>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio latest-moments" data-order="10">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Image10.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Image10.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio behind-the-craft memorable-moments" data-order="11">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle1.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle1.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio behind-the-craft memorable-moments" data-order="12">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle2.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle2.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="farexel-culture our-studio behind-the-craft memorable-moments"
+            data-order="13">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle3.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle3.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="behind-the-craft memorable-moments" data-order="14">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle4.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle4.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="farexel-culture our-studio" data-order="15">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle5.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle5.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio" data-order="16">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle6.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle6.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="farexel-culture our-studio behind-the-craft" data-order="17">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle7.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle7.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="farexel-culture our-studio" data-order="18">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle8.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle8.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio" data-order="19">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle9.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle9.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio" data-order="20">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle10.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle10.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio" data-order="21">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle11.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle11.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio" data-order="22">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle12.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle12.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio" data-order="23">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle13.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle13.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio" data-order="24">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle14.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle14.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio" data-order="25">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle15.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle15.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio" data-order="26">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle16.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle16.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <div class="media" data-category="our-studio" data-order="27">
+            <article class="card photo border-0">
+              <div class="card-header p-0">
+                <img src="public/images/posts/Verticle17.jpg" height="280" width="500" alt="The FAREXEL Culture"
+                  class="img-fluid w-100" />
+                <a class="magnifier glightbox" href="public/images/posts/Verticle17.jpg" data-gallery="FAREXEL-media"
+                  data-title="The FAREXEL Culture" aria-label="Open The FAREXEL Culture">
+                  <ion-icon name="search-outline"></ion-icon>
+                </a>
               </div>
             </article>
           </div>

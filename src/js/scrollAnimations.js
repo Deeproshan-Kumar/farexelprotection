@@ -303,6 +303,28 @@ function pinBlogIntro() {
   });
 }
 
+// Contact details pin animation
+function pinContactDetails() {
+  const intro = document.querySelector(".contact-form");
+  const section = document.querySelector(".contact-details");
+
+  if (!intro || !section || window.matchMedia("(max-width: 991px)").matches)
+    return;
+
+  ScrollTrigger.create({
+    trigger: section,
+    start: "top top+=96",
+    end: () => {
+      const scrollDistance = section.offsetHeight - intro.offsetHeight;
+      return `+=${Math.max(scrollDistance, 1)}`;
+    },
+    pin: intro,
+    pinSpacing: true,
+    anticipatePin: 1,
+    invalidateOnRefresh: true,
+  });
+}
+
 // Keep the recent-blogs sidebar visible while the detail article is read.
 function pinRecentBlogs() {
   const sidebar = document.querySelector(".recent-blogs");
@@ -359,7 +381,11 @@ export function initScrollAnimations() {
   revealGroup(".service-marquee", { y: 20, duration: 0.7 });
 
   // ─── #about-hero (about page hero) ──────────────────────────────────────────
-  revealGroup("#about-hero .about-hero-img", { scale: 0.8, y: 16, duration: 1 });
+  revealGroup("#about-hero .about-hero-img", {
+    scale: 0.8,
+    y: 16,
+    duration: 1,
+  });
 
   // ─── Our vision and mission ────────────────────────────────────────────────────
   waveReveal("#our-vision-mission", ".vm-card .card-container", {
@@ -707,6 +733,7 @@ export function initScrollAnimations() {
   waveReveal("#blogs .col-lg-7 > .blogs-list", ":scope > article");
   pinBlogIntro();
   pinRecentBlogs();
+  pinContactDetails();
 
   // ─── #blog-detail ────────────────────────────────────────────────────────────
   revealGroup("#blog-detail .blog-content", { y: 32, duration: 0.8 });

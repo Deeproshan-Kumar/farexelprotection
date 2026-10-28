@@ -71,10 +71,8 @@
                     name="call"></ion-icon>+966 55 518 8194</a>
               </li>
               <li class="action switch-lang">
-                <label for="lang"><ion-icon class="icon me-1" name="language"></ion-icon>Lang:</label>
-                <select name="lang" id="lang" class="lang">
-                  <option value="en" selected>EN</option>
-                </select>
+                <ion-icon class="icon me-1" name="language"></ion-icon>
+                <div id="google_translate_element"></div>
               </li>
               <li class="action login">
                 <a href="#" class="text-decoration-none"><ion-icon class="icon me-1" name="person"></ion-icon>Login</a>
@@ -138,6 +136,14 @@
                   </a>
                 </li>
                 <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="career.html">
+                    <span class="dropdown-item-icon">
+                      <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    Career
+                  </a>
+                </li>
+                <li>
                   <a class="dropdown-item d-flex align-items-center gap-2" href="testimonials.html">
                     <span class="dropdown-item-icon">
                       <ion-icon name="happy-outline"></ion-icon>
@@ -188,9 +194,6 @@
               <a class="nav-link rounded-1" href="blog.html"><ion-icon name="reader"></ion-icon>Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link rounded-1" href="career.html"><ion-icon name="briefcase"></ion-icon>Career</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link rounded-1" href="contact.html"><ion-icon name="call"></ion-icon>Contact Us</a>
             </li>
           </ul>
@@ -236,6 +239,14 @@
                       <ion-icon name="pencil-outline"></ion-icon>
                     </span>
                     Leadership Insights
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item d-flex align-items-center gap-2" href="career.html">
+                    <span class="dropdown-item-icon">
+                      <ion-icon name="briefcase-outline"></ion-icon>
+                    </span>
+                    Career
                   </a>
                 </li>
                 <li>
@@ -288,9 +299,6 @@
               <a class="nav-link rounded-1" href="blog.html">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="career.html">Career</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
           </ul>
@@ -319,8 +327,6 @@
   <main class="main" id="main">
     <!-- Subpage Banner -->
     <section class="subpage-banner" id="subpage-banner" aria-label="Customer Experience Banner">
-      <img src="public/images/banners/customer-experience-banner.jpg" alt="Customer Experience Banner"
-        class="img-fluid w-100 h-100" />
       <div class="section">
         <div class="container position-relative py-4 py-md-5">
           <h1>Customer Experiences</h1>
@@ -331,7 +337,7 @@
           <div class="breadcrumb">
             <ul class="list-unstyled d-flex align-items-center gap-2 ps-0 mb-0">
               <li>
-                <a href="index.html" class="text-decoration-none text-primary d-flex align-items-center gap-2">
+                <a href="index.html" class="text-decoration-none fw-semibold d-flex align-items-center gap-2">
                   <ion-icon name="home" class="icon"></ion-icon>Home
                 </a>
               </li>
@@ -348,8 +354,34 @@
       <div class="container py-4 py-md-5">
         <div class="row">
           <div class="col-sm-12 col-lg-6 gsap-ce-hero-img">
-            <img src="public/images/client-experience.jpg" alt="Client Experience Image"
-              class="img-fluid w-100 rounded-1" />
+            <div class="swiper customer-experience-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <video autoplay muted loop playisinline class="slide-bg">
+                    <source src="public/videos/works/WorkingVideo1.mp4" />
+                  </video>
+                  <video autoplay muted loop playisinline>
+                    <source src="public/videos/works/WorkingVideo1.mp4" />
+                  </video>
+                </div>
+                <div class="swiper-slide">
+                  <video autoplay muted loop playisinline class="slide-bg">
+                    <source src="public/videos/works/WorkingVideo2.mp4" />
+                  </video>
+                  <video autoplay muted loop playisinline>
+                    <source src="public/videos/works/WorkingVideo2.mp4" />
+                  </video>
+                </div>
+                <div class="swiper-slide">
+                  <video autoplay muted loop playisinline class="slide-bg">
+                    <source src="public/videos/works/WorkingVideo3.mp4" />
+                  </video>
+                  <video autoplay muted loop playisinline>
+                    <source src="public/videos/works/WorkingVideo3.mp4" />
+                  </video>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-sm-12 col-lg-6 gsap-ce-hero-content">
             <h2>
@@ -390,9 +422,12 @@
         </div>
         <div class="row justify-content-md-center gy-4 gy-lg-0">
           <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <article class="card process">
-              <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                <h4 class="mb-0">We Understand</h4>
+            <article class="card process" data-step="01">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="accessibility-outline"></ion-icon>
+                </div>
+                <h5 class="mb-0">We Understand</h5>
               </div>
               <div class="card-body">
                 <p class="mb-0">
@@ -403,9 +438,12 @@
             </article>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <article class="card process">
-              <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                <h4 class="mb-0">We Inspect</h4>
+            <article class="card process" data-step="02">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="apps-outline"></ion-icon>
+                </div>
+                <h5 class="mb-0">We Inspect</h5>
               </div>
               <div class="card-body">
                 <p class="mb-0">
@@ -416,9 +454,12 @@
             </article>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <article class="card process">
-              <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                <h4 class="mb-0">We Refine</h4>
+            <article class="card process" data-step="03">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="color-wand-outline"></ion-icon>
+                </div>
+                <h5 class="mb-0">We Refine</h5>
               </div>
               <div class="card-body">
                 <p class="mb-0">
@@ -429,9 +470,12 @@
             </article>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <article class="card process">
-              <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                <h4 class="mb-0">We Review</h4>
+            <article class="card process" data-step="04">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="search-outline"></ion-icon>
+                </div>
+                <h5 class="mb-0">We Review</h5>
               </div>
               <div class="card-body">
                 <p class="mb-0">
@@ -448,14 +492,12 @@
     <!-- Before and After -->
     <section class="section before-after" id="before-after" aria-label="Before and After Detailing Results">
       <div class="container py-4 py-md-5">
-        <div class="text-center mb-4 mb-lg-5">
-          <span
-            class="subpage-badge text-uppercase tracking-wider text-primary fw-bold text-sm mb-2 d-inline-block">Transformation
-            Gallery</span>
-          <h2 class="display-6 fw-bold mb-3">
+        <div class="section-header text-center mb-4 mb-lg-4">
+          <h2 class="d-inline-block position-relative pb-2">
             The Difference Is in the Details
           </h2>
-          <p class="text-muted mx-auto" style="max-width: 38rem">
+          <p><strong>Transformation Gallery</strong></p>
+          <p class="mb-0">
             Explore selected transformations across FAREXEL’s detailing, refinement,
             protection, film, and finishing services - where careful preparation and precise
             workmanship create results you can see.
@@ -852,22 +894,40 @@
           <h2 class="d-inline-block position-relative pb-2">What Our Clients Say</h2>
           <p class="mb-0">Hear directly from our happy clients as they share their experiences, feedback, and success
             stories. Discover why our clients trust us and choose us for quality service and outstanding results.</p>
+          <img src="public/images/scroll-indicator.png" alt="Scroll Indicator" class="scroll-indicator">
         </div>
-        <div class="row align-items-center gy-4 gy-lg-0">
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <video autoplay muted loop playisinline>
-              <source src="" />
-            </video>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <video autoplay muted loop playisinline>
-              <source src="" />
-            </video>
-          </div>
-          <div class="col-sm-12 col-md-6 col-lg-4">
-            <video autoplay muted loop playisinline>
-              <source src="" />
-            </video>
+        <div class="swiper intro-videos-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <video autoplay muted loop playisinline>
+                <source src="public/videos/intro/IntroVideo1.mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video autoplay muted loop playisinline>
+                <source src="public/videos/intro/IntroVideo2.mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video autoplay muted loop playisinline>
+                <source src="public/videos/intro/IntroVideo3.mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video autoplay muted loop playisinline>
+                <source src="public/videos/intro/IntroVideo4.mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video autoplay muted loop playisinline>
+                <source src="public/videos/intro/IntroVideo5.mp4" />
+              </video>
+            </div>
+            <div class="swiper-slide">
+              <video autoplay muted loop playisinline>
+                <source src="public/videos/intro/IntroVideo6.mp4" />
+              </video>
+            </div>
           </div>
         </div>
       </div>
@@ -889,7 +949,7 @@
                     it was the same car. The interior looked incredible and
                     the paint had a completely different shine.”
                   </p>
-                  <div class="d-flex align-items-center gap-3">
+                  <div class="d-flex align-items-center gap-3 mt-auto">
                     <img src="public/images/default-user.jpg" alt="User Profile Pic"
                       class="user-profile-pic rounded-circle img-fluid" />
                     <div>
@@ -914,7 +974,7 @@
                     certain areas needed extra attention. You can tell they
                     genuinely care about the work.”
                   </p>
-                  <div class="d-flex align-items-center gap-3">
+                  <div class="d-flex align-items-center gap-3 mt-auto">
                     <img src="public/images/default-user.jpg" alt="User Profile Pic"
                       class="user-profile-pic rounded-circle img-fluid" />
                     <div>
@@ -939,7 +999,7 @@
                     smallest interior surfaces was finished perfectly. The car
                     looked better than it did when I first bought it.”
                   </p>
-                  <div class="d-flex align-items-center gap-3">
+                  <div class="d-flex align-items-center gap-3 mt-auto">
                     <img src="public/images/default-user.jpg" alt="User Profile Pic"
                       class="user-profile-pic rounded-circle img-fluid" />
                     <div>
@@ -965,7 +1025,8 @@
     </section>
 
     <!-- Why Customers Comes Back -->
-    <section class="section why-customer-comes-back" id="why-customers-comes-back" aria-label="Why Customers Return">
+    <section class="section why-customer-comes-back how-we-works" id="why-customers-comes-back"
+      aria-label="Why Customers Return">
       <div class="container py-4 py-md-5">
         <div class="section-header text-center mb-4 mb-lg-4">
           <h2 class="d-inline-block position-relative pb-2">
@@ -976,9 +1037,12 @@
         </div>
         <div class="row gy-4 gy-xl-0">
           <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <article class="card">
-              <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                <h4 class="mb-0">Detail Without Shortcuts</h4>
+            <article class="card process" data-step="01">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="search-outline"></ion-icon>
+                </div>
+                <h5 class="mb-0">Detail Without Shortcuts</h5>
               </div>
               <div class="card-body">
                 <p class="mb-0">
@@ -989,9 +1053,12 @@
             </article>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <article class="card">
-              <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                <h4 class="mb-0">Care That Understands Your Car</h4>
+            <article class="card process" data-step="02">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </div>
+                <h5 class="mb-0">Care That Understands Your Car</h5>
               </div>
               <div class="card-body">
                 <p class="mb-0">
@@ -1002,9 +1069,12 @@
             </article>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <article class="card">
-              <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                <h4 class="mb-0">Standards You Can See</h4>
+            <article class="card process" data-step="03">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="ribbon-outline"></ion-icon>
+                </div>
+                <h5 class="mb-0">Standards You Can See</h5>
               </div>
               <div class="card-body">
                 <p class="mb-0">
@@ -1015,9 +1085,12 @@
             </article>
           </div>
           <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
-            <article class="card">
-              <div class="card-header bg-transparent border-0 pt-3 pb-0">
-                <h4 class="mb-0">An Experience Worth Returning To</h4>
+            <article class="card process" data-step="04">
+              <div class="card-header bg-transparent d-flex align-items-center gap-2 border-0 pt-4 pb-0">
+                <div class="icon d-flex align-items-center justify-content-center rounded-1 p-2">
+                  <ion-icon name="briefcase-outline"></ion-icon>
+                </div>
+                <h5 class="mb-0">An Experience Worth Returning To</h5>
               </div>
               <div class="card-body">
                 <p class="mb-0">
@@ -1042,24 +1115,42 @@
             and uncompromising attention to detail come together.</p>
         </div>
         <div class="masonary-grid">
-          <img src="public/images/surface-refinement.jpg" height="280" width="500" alt="Precision Surface Refinement"
-            class="img-fluid w-100" />
-          <img src="public/images/interior-detailing.jpg" height="280" width="500" alt="Interior Detailing Excellence"
-            class="img-fluid w-100" />
-          <img src="public/images/client-experience.jpg" height="280" width="500" alt="Client Experience & Consultation"
-            class="img-fluid w-100" />
-          <img src="public/images/paint-enhancement.jpg" height="280" width="500" alt="Advance Paint Enhancement"
-            class="img-fluid w-100" />
-          <img src="public/images/premium-finish-protection.jpg" height="280" width="500"
-            alt="Premium Finish Protection" class="img-fluid w-100" />
-          <img src="public/images/premium-finish-detailing.jpg" height="280" width="500" alt="Premium Finish Detailing"
-            class="img-fluid w-100" />
-          <img src="public/images/suspension-and-underbody.jpg" height="280" width="500"
-            alt="Suspension & Underbody Care" class="img-fluid w-100" />
-          <img src="public/images/client-experience.jpg" height="280" width="500" alt="Red Vehicle Exterior Finish"
-            class="img-fluid w-100" />
-          <img src="public/images/surface-refinement.jpg" height="280" width="500" alt="Executive Vehicle Care"
-            class="img-fluid w-100" />
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo1.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo2.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo3.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo4.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo5.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo6.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo7.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo8.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo9.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo10.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo11.mp4" />
+          </video>
+          <video autoplay muted loop playisinline class="slide-bg">
+            <source src="public/videos/works/WorkingVideo12.mp4" />
+          </video>
         </div>
 
         <div class="d-flex justify-content-center align-items-center gap-3 mt-4">
