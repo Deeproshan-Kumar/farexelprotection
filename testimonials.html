@@ -57,7 +57,7 @@
               </li>
               <li class="action readonly">
                 <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Sun :
-                09:00am - 10:30pm
+                01:00 - 10:30pm
               </li>
             </ul>
           </div>
@@ -363,9 +363,30 @@
         </div>
 
         <div class="row align-items-center gy-4 gy-lg-0">
-          <div class="image-col col-sm-12 col-lg-6 gsap-cx-img-col">
-            <img src="public/images/customer-experience.jpg" class="img-fluid rounded-1" alt="Customer Experiences"
-              loading="lazy" decoding="async" />
+          <div class="image-col col-sm-12 col-lg-6 gsap-cx-swiper-col">
+            <div class="swiper customer-experience-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <video autoplay muted loop playisinline>
+                    <source src="public/videos/client/ClientVideo1.mp4" />
+                  </video>
+                </div>
+                <div class="swiper-slide">
+                  <video autoplay muted loop playisinline>
+                    <source src="public/videos/client/ClientVideo2.mp4" />
+                  </video>
+                </div>
+                <div class="swiper-slide">
+                  <video autoplay muted loop playisinline>
+                    <source src="public/videos/client/ClientVideo3.mp4" />
+                  </video>
+                </div>
+              </div>
+              <div class="swiper-navigation d-flex align-items-center justify-content-center gap-2">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
             <div class="image-caption">
               <h3 class="m-0">12 Years of Experiences</h3>
             </div>
@@ -1223,7 +1244,7 @@
           <p class="text-12">
             Subscribe to our newsletter and stay updated with our offer.
           </p>
-          <form action="https://formsubmit.co/deeproshankumar123@gmail.com" method="POST" class="d-flex align-items-stretch gap-2">
+          <form action="" method="POST" class="d-flex align-items-stretch gap-2">
             <input type="hidden" name="_subject" class="d-none" value="New Newsletter Subscription!" />
             <input type="email" name="email" id="email" class="form-control" placeholder="Your Email..." />
             <button type="submit" class="btn btn-primary">

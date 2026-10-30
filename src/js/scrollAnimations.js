@@ -430,7 +430,7 @@ export function initScrollAnimations() {
   waveReveal("#our-amenities", ".amenity");
 
   // ─── #customer-experiences (Homepage & Testimonials page) ───────────────────
-  revealGroup("#customer-experiences .gsap-cx-img-col", {
+  revealGroup("#customer-experiences .gsap-cx-swiper-col", {
     x: -36,
     y: 0,
     scale: 0.96,

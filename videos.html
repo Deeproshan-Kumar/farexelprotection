@@ -59,7 +59,7 @@
               </li>
               <li class="action readonly">
                 <ion-icon class="icon me-1" name="time"></ion-icon>Mon - Sun :
-                09:00am - 10:30pm
+                01:00 - 10:30pm
               </li>
             </ul>
           </div>
@@ -350,281 +350,639 @@
       </div>
     </section>
 
-    <!-- Videos -->
-    <section class="section photos" id="photos" aria-label="Detailing Video Showcase">
-      <div class="container py-4 py-md-5">
-        <div class="section-header">
-          <div class="section-header text-center mb-4 mb-lg-4">
-            <h2 class="d-inline-block position-relative pb-2">
-              VIDEOS - FAREXEL in Motion
-            </h2>
-            <p class="mb-0">Some moments deserve more than a photograph. Step inside FAREXEL through
-              moving stories of our team, our studio, our collaborations, our celebrations and the
-              experiences we create along the way.</p>
-          </div>
+    <!-- Videos Cinema Showcase -->
+    <section class="section videos-showcase py-4 py-md-5" id="videos" aria-label="Detailing Cinema Showcase">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header text-center mb-4 mb-lg-5">
+          <h2 class="d-inline-block position-relative pb-2">
+            The Cinema of Automotive Preservation
+          </h2>
+          <p class="mb-0">
+            Step inside our Al Khobar studio through ultra-high-definition cinema films and viral detailing reels.
+            Experience the obsessive craft, precision edge-wrapping, and flawless deliveries of the Kingdom's finest
+            supercars and superbikes.
+          </p>
         </div>
 
-        <div class="row filters gy-3 gy-lg-0 mb-4">
-          <div class="col-sm-12 col-lg-6" id="photos-count">Showing 1–9 of 9 results</div>
-          <div class="col-sm-12 col-lg-6">
-            <div class="position-relative">
-              <select name="sort" id="sort" class="sorting form-control pe-4" aria-label="Filter video moments">
-                <option value="all" selected>All Videos</option>
-                <option value="latest">Latest Videos</option>
-                <option value="oldest">Oldest Videos</option>
-                <option value="studio-life">Studio Life</option>
-                <option value="behind-the-scenes">Behind the Scenes</option>
-                <option value="our-team">Our Team</option>
-                <option value="client-moments">Client Moments</option>
-                <option value="team-collaborations">Team Collaborations</option>
-                <option value="celebrations">Celebrations</option>
-                <option value="farexel-stories">FAREXEL Stories</option>
-              </select>
-              <ion-icon name="chevron-down-outline" class="select-icon"></ion-icon>
+        <!-- 1. Hero Cinema Spotlight (Premiere Theater) -->
+        <div class="cinema-spotlight-wrapper">
+          <div class="cinema-video-frame">
+            <video id="spotlight-player" autoplay muted loop playsinline poster="public/images/hero.png">
+              <source src="public/videos/intro/IntroVideo1.mp4" type="video/mp4" />
+            </video>
+            <div class="spotlight-glass-bar">
+              <div>
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="spotlight-live-badge">
+                    <span class="spotlight-live-dot"></span> NOW PREMIERING &bull; 4K UHD
+                  </span>
+                </div>
+                <h3 class="h4 text-light spotlight-title">Millimeter-Perfect Full-Body PPF &amp; Ceramic Infusion</h3>
+                <p class="text-light mb-0">Watch our master technicians execute edge-tucked paint protection film and
+                  ceramic coating in our climate-controlled cleanroom.</p>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <button type="button" class="btn btn-secondary" id="spotlight-audio-btn">
+                  <span>
+                    <ion-icon name="volume-mute-outline" id="spotlight-audio-icon" class="me-1"></ion-icon>
+                    <span id="spotlight-audio-text">Unmute Sound</span>
+                  </span>
+                </button>
+                <a href="public/videos/intro/IntroVideo1.mp4" class="glightbox btn btn-primary" data-type="video"
+                  data-gallery="cinema-spotlight" data-title="Porsche 911 GT3 RS - Full PPF &amp; Ceramic Premiere">
+                  <span>
+                    <ion-icon name="expand-outline" class="me-1"></ion-icon>Fullscreen Theater
+                  </span>
+                </a>
+                <a href="services.html" class="btn btn-secondary d-none d-md-inline-flex">
+                  <span><ion-icon name="arrow-forward" class="me-1"></ion-icon>Get Estimate</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="masonary-grid">
-          <div class="media"
-            data-category="studio-life behind-the-scenes farexel-stories" data-order="1">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/bike/BikeVideo1.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/bike/BikeVideo1.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="A Day Inside FAREXEL">
-                  <ion-icon name="search-outline"></ion-icon>
-                </a>
+
+        <!-- 2. Viral Detailing Reels & Shorts (9:16 Vertical Carousel) -->
+        <div class="reels-section-wrapper">
+          <div class="d-flex align-items-center justify-content-between mb-3">
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <ion-icon name="flash" class="text-primary fs-5"></ion-icon>
+                <span class="text-xs text-uppercase tracking-wider text-primary fw-bold">Fast-Paced Social
+                  Transformations</span>
               </div>
-            </article>
+              <h3 class="h4 mb-0">Viral Detailing Reels &amp; Shorts</h3>
+            </div>
+            <div class="swiper-navigation d-flex align-items-center justify-content-center gap-2">
+              <div class="swiper-button-prev reels-prev" aria-label="Previous reel"></div>
+              <div class="swiper-button-next reels-next" aria-label="Next reel"></div>
+            </div>
           </div>
 
-          <div class="media"
-            data-category="behind-the-scenes studio-life farexel-stories" data-order="2">
-            <article class="card photo border-0">
-              <div class="card-header p-0 border-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/bike/BikeVideo2.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/bike/BikeVideo2.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Behind the Craft">
-                  <ion-icon name="search-outline"></ion-icon>
+          <!-- Swiper for 9:16 Reels -->
+          <div class="swiper reels-swiper">
+            <div class="swiper-wrapper">
+              <!-- Reel 1 -->
+              <div class="swiper-slide">
+                <a href="public/videos/works/WorkingVideo3.mp4" class="reel-card glightbox" data-type="video"
+                  data-gallery="reels-gallery" data-title="Satisfying PPF Film Peeling &amp; Tuck">
+                  <video muted loop playsinline preload="metadata">
+                    <source src="public/videos/works/WorkingVideo3.mp4#t=0.1" type="video/mp4" />
+                  </video>
+                  <div class="reel-top-bar">
+                    <span class="reel-audio-badge"><ion-icon name="musical-notes"></ion-icon></span>
+                  </div>
+                  <div class="reel-play-center">
+                    <ion-icon name="play"></ion-icon>
+                  </div>
+                  <div class="reel-bottom-scrim">
+                    <span class="reel-tag">#PPFPeelASMR</span>
+                    <h5 class="reel-title">Satisfying PPF Release &amp; Hidden Corner Wrap</h5>
+                  </div>
                 </a>
               </div>
-            </article>
-          </div>
 
-          <div class="media"
-            data-category="our-team team-collaborations farexel-stories" data-order="3">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/bike/BikeVideo3.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/bike/BikeVideo3.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Meet the FAREXEL Team">
-                  <ion-icon name="search-outline"></ion-icon>
+              <!-- Reel 2 -->
+              <div class="swiper-slide">
+                <a href="public/videos/works/WorkingVideo5.mp4" class="reel-card glightbox" data-type="video"
+                  data-gallery="reels-gallery" data-title="Hydrophobic Ceramic Contact Angle Test">
+                  <video muted loop playsinline preload="metadata">
+                    <source src="public/videos/works/WorkingVideo5.mp4#t=0.1" type="video/mp4" />
+                  </video>
+                  <div class="reel-top-bar">
+                    <span class="reel-audio-badge"><ion-icon name="water"></ion-icon></span>
+                  </div>
+                  <div class="reel-play-center">
+                    <ion-icon name="play"></ion-icon>
+                  </div>
+                  <div class="reel-bottom-scrim">
+                    <span class="reel-tag">#CeramicHydrophobic</span>
+                    <h5 class="reel-title">Extreme Water Beading Reaction on 10H Ceramic</h5>
+                  </div>
                 </a>
               </div>
-            </article>
-          </div>
 
-          <div class="media"
-            data-category="team-collaborations our-team farexel-stories" data-order="4">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/bike/BikeVideo4.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/bike/BikeVideo4.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Where Teams Become Stronger">
-                  <ion-icon name="search-outline"></ion-icon>
+              <!-- Reel 3 -->
+              <div class="swiper-slide">
+                <a href="public/videos/bike/BikeVideo1.mp4" class="reel-card glightbox" data-type="video"
+                  data-gallery="reels-gallery" data-title="Ducati Panigale V4S Fairing PPF">
+                  <video muted loop playsinline preload="metadata">
+                    <source src="public/videos/bike/BikeVideo1.mp4#t=0.1" type="video/mp4" />
+                  </video>
+                  <div class="reel-top-bar">
+                    <span class="reel-audio-badge"><ion-icon name="speedometer"></ion-icon></span>
+                  </div>
+                  <div class="reel-play-center">
+                    <ion-icon name="play"></ion-icon>
+                  </div>
+                  <div class="reel-bottom-scrim">
+                    <span class="reel-tag">#SuperbikePPF</span>
+                    <h5 class="reel-title">Ducati Panigale V4S Carbon Fairing Film Wrap</h5>
+                  </div>
                 </a>
               </div>
-            </article>
-          </div>
 
-          <div class="media" data-category="studio-life client-moments farexel-stories"
-            data-order="5">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/intro/IntroVideo1.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/intro/IntroVideo1.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="From Consultation to Handover">
-                  <ion-icon name="search-outline"></ion-icon>
+              <!-- Reel 4 -->
+              <div class="swiper-slide">
+                <a href="public/videos/client/ClientVideo2.mp4" class="reel-card glightbox" data-type="video"
+                  data-gallery="reels-gallery" data-title="Client Handover Reaction — Porsche 911">
+                  <video muted loop playsinline preload="metadata">
+                    <source src="public/videos/client/ClientVideo2.mp4#t=0.1" type="video/mp4" />
+                  </video>
+                  <div class="reel-top-bar">
+                    <span class="reel-audio-badge"><ion-icon name="heart"></ion-icon></span>
+                  </div>
+                  <div class="reel-play-center">
+                    <ion-icon name="play"></ion-icon>
+                  </div>
+                  <div class="reel-bottom-scrim">
+                    <span class="reel-tag">#VIPClientHandover</span>
+                    <h5 class="reel-title">Genuine Client Reaction to Showroom Handover</h5>
+                  </div>
                 </a>
               </div>
-            </article>
-          </div>
 
-          <div class="media" data-category="client-moments farexel-stories"
-            data-order="6">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/intro/IntroVideo2.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/intro/IntroVideo2.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Client Moments at FAREXEL">
-                  <ion-icon name="search-outline"></ion-icon>
+              <!-- Reel 5 -->
+              <div class="swiper-slide">
+                <a href="public/videos/works/WorkingVideo13.mp4" class="reel-card glightbox" data-type="video"
+                  data-gallery="reels-gallery" data-title="Scangrip Inspection Paint Correction">
+                  <video muted loop playsinline preload="metadata">
+                    <source src="public/videos/works/WorkingVideo13.mp4#t=0.1" type="video/mp4" />
+                  </video>
+                  <div class="reel-top-bar">
+                    <span class="reel-audio-badge"><ion-icon name="sparkles"></ion-icon></span>
+                  </div>
+                  <div class="reel-play-center">
+                    <ion-icon name="play"></ion-icon>
+                  </div>
+                  <div class="reel-bottom-scrim">
+                    <span class="reel-tag">#PaintCorrection</span>
+                    <h5 class="reel-title">99% Swirl Defect Removal under Scangrip LEDs</h5>
+                  </div>
                 </a>
               </div>
-            </article>
-          </div>
 
-          <div class="media" data-category="celebrations our-team farexel-stories"
-            data-order="7">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/intro/IntroVideo3.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/intro/IntroVideo3.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Celebrating the Journey">
-                  <ion-icon name="search-outline"></ion-icon>
+              <!-- Reel 6 -->
+              <div class="swiper-slide">
+                <a href="public/videos/intro/IntroVideo3.mp4" class="reel-card glightbox" data-type="video"
+                  data-gallery="reels-gallery" data-title="Studio Night Craft &amp; Lighting">
+                  <video muted loop playsinline preload="metadata">
+                    <source src="public/videos/intro/IntroVideo3.mp4#t=0.1" type="video/mp4" />
+                  </video>
+                  <div class="reel-top-bar">
+                    <span class="reel-audio-badge"><ion-icon name="moon"></ion-icon></span>
+                  </div>
+                  <div class="reel-play-center">
+                    <ion-icon name="play"></ion-icon>
+                  </div>
+                  <div class="reel-bottom-scrim">
+                    <span class="reel-tag">#StudioAfterHours</span>
+                    <h5 class="reel-title">Inside FAREXEL Al Khobar Cleanroom at Night</h5>
+                  </div>
                 </a>
               </div>
-            </article>
-          </div>
 
-          <div class="media"
-            data-category="farexel-stories our-team team-collaborations celebrations" data-order="8">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/intro/IntroVideo4.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/intro/IntroVideo4.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="Life Beyond the Detailing Bay">
-                  <ion-icon name="search-outline"></ion-icon>
+              <!-- Reel 7 -->
+              <div class="swiper-slide">
+                <a href="public/videos/bike/BikeVideo3.mp4" class="reel-card glightbox" data-type="video"
+                  data-gallery="reels-gallery" data-title="Superbike Titanium Exhaust Ceramic">
+                  <video muted loop playsinline preload="metadata">
+                    <source src="public/videos/bike/BikeVideo3.mp4#t=0.1" type="video/mp4" />
+                  </video>
+                  <div class="reel-top-bar">
+                    <span class="reel-audio-badge"><ion-icon name="flame"></ion-icon></span>
+                  </div>
+                  <div class="reel-play-center">
+                    <ion-icon name="play"></ion-icon>
+                  </div>
+                  <div class="reel-bottom-scrim">
+                    <span class="reel-tag">#TitaniumCeramic</span>
+                    <h5 class="reel-title">Exhaust Header 1200&deg;C Thermal Ceramic Shield</h5>
+                  </div>
                 </a>
               </div>
-            </article>
-          </div>
 
-          <div class="media" data-category="farexel-stories our-team studio-life"
-            data-order="9">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/works/WorkingVideo1.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/works/WorkingVideo1.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
-                  <ion-icon name="search-outline"></ion-icon>
+              <!-- Reel 8 -->
+              <div class="swiper-slide">
+                <a href="public/videos/client/ClientVideo1.mp4" class="reel-card glightbox" data-type="video"
+                  data-gallery="reels-gallery" data-title="Mercedes-AMG G63 Satin Black Reveal">
+                  <video muted loop playsinline preload="metadata">
+                    <source src="public/videos/client/ClientVideo1.mp4#t=0.1" type="video/mp4" />
+                  </video>
+                  <div class="reel-top-bar">
+                    <span class="reel-audio-badge"><ion-icon name="car-sport"></ion-icon></span>
+                  </div>
+                  <div class="reel-play-center">
+                    <ion-icon name="play"></ion-icon>
+                  </div>
+                  <div class="reel-bottom-scrim">
+                    <span class="reel-tag">#G63AMG</span>
+                    <h5 class="reel-title">Mercedes-AMG G63 Satin Matte PPF Full Reveal</h5>
+                  </div>
                 </a>
               </div>
-            </article>
-          </div>
-
-          <div class="media" data-category="farexel-stories our-team studio-life"
-            data-order="10">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/works/WorkingVideo2.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/works/WorkingVideo2.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
-                  <ion-icon name="search-outline"></ion-icon>
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div class="media" data-category="farexel-stories our-team studio-life"
-            data-order="11">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/works/WorkingVideo3.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/works/WorkingVideo3.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
-                  <ion-icon name="search-outline"></ion-icon>
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div class="media" data-category="farexel-stories our-team studio-life"
-            data-order="12">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/works/WorkingVideo4.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/works/WorkingVideo4.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
-                  <ion-icon name="search-outline"></ion-icon>
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div class="media" data-category="farexel-stories our-team studio-life"
-            data-order="13">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/client/ClientVideo1.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/client/ClientVideo1.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
-                  <ion-icon name="search-outline"></ion-icon>
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div class="media" data-category="farexel-stories our-team studio-life"
-            data-order="14">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/client/ClientVideo2.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/client/ClientVideo2.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
-                  <ion-icon name="search-outline"></ion-icon>
-                </a>
-              </div>
-            </article>
-          </div>
-
-          <div class="media" data-category="farexel-stories our-team studio-life"
-            data-order="15">
-            <article class="card photo border-0">
-              <div class="card-header p-0">
-                <video autoplay muted loop playsinline height="280" width="500">
-                  <source src="public/videos/client/ClientVideo3.mp4" />
-                </video>
-                <a class="magnifier glightbox" href="public/videos/client/ClientVideo3.mp4" data-type="video"
-                  data-gallery="FAREXEL-media" data-title="FAREXEL - In Our Own Words">
-                  <ion-icon name="search-outline"></ion-icon>
-                </a>
-              </div>
-            </article>
+            </div>
           </div>
         </div>
 
-        <div class="pagination justify-content-center gap-2 mt-4">
-          <button class="btn btn-primary">
-            <span>Prev</span>
+        <!-- 3. Category Filter Navigation for Cinema Productions -->
+        <div
+          class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-4 pt-3 border-top border-secondary border-opacity-25">
+          <div>
+            <h3 class="h4 mb-1">Studio Cinema Films &amp; Feature Documentaries</h3>
+            <p class="text-sm text-muted mb-0">High-definition deep dives into individual vehicle builds, specialized
+              techniques, and technician interviews.</p>
+          </div>
+          <div class="text-sm text-muted">
+            Showing <strong id="cinema-count">12</strong> FAREXEL Productions
+          </div>
+        </div>
+
+        <!-- Filter Pills -->
+        <div class="cinema-filter-pills" id="cinema-pills">
+          <button type="button" class="cinema-pill-btn active" data-filter="all">
+            <ion-icon name="grid-outline"></ion-icon> All Productions (12)
           </button>
-          <button class="btn btn-secondary"><span>1</span></button>
-          <button class="btn btn-secondary"><span>2</span></button>
-          <button class="btn btn-secondary"><span>3</span></button>
-          <button class="btn btn-secondary"><span>4</span></button>
-          <button class="btn btn-primary">
-            <span>Next</span>
+          <button type="button" class="cinema-pill-btn" data-filter="ppf">
+            <ion-icon name="shield-checkmark-outline"></ion-icon> PPF Installations (5)
           </button>
+          <button type="button" class="cinema-pill-btn" data-filter="ceramic">
+            <ion-icon name="sparkles-outline"></ion-icon> Ceramic Coating (3)
+          </button>
+          <button type="button" class="cinema-pill-btn" data-filter="superbike">
+            <ion-icon name="bicycle-outline"></ion-icon> Superbike Protection (2)
+          </button>
+          <button type="button" class="cinema-pill-btn" data-filter="client">
+            <ion-icon name="people-outline"></ion-icon> Client Stories &amp; Delivery (2)
+          </button>
+        </div>
+
+        <!-- 4. 16:9 Cinema Productions Grid -->
+        <div class="cinema-productions-grid" id="cinema-grid">
+          <!-- Film 1: PPF CRAFT -->
+          <article class="card cinema-prod-card" data-category="ppf">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/works/WorkingVideo1.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">PPF CRAFT</span>
+              <span class="cinema-prod-duration">02:15</span>
+              <a href="public/videos/works/WorkingVideo1.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="High-Impact PPF Application &amp; Mirror Glaze">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">Ferrari 296 GTB</span>
+              <h4 class="h5">High-Impact PPF Application &amp; Mirror Glaze</h4>
+              <p class="text-sm mb-0">Complex curved surface wrapping around active aero ducts with zero blade touch on
+                paintwork.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">Cleanroom Detailing</span>
+                <a href="public/videos/works/WorkingVideo1.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="High-Impact PPF Application &amp; Mirror Glaze">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 2: CERAMIC SHIELD -->
+          <article class="card cinema-prod-card" data-category="ceramic">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/works/WorkingVideo2.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">CERAMIC SHIELD</span>
+              <span class="cinema-prod-duration">01:45</span>
+              <a href="public/videos/works/WorkingVideo2.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="Multi-Stage Paint Correction &amp; 10H Ceramic Coating">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">BMW M5 Competition</span>
+              <h4 class="h5">Multi-Stage Paint Correction &amp; 10H Ceramic Coating</h4>
+              <p class="text-sm mb-0">Restoring factory orange peel to liquid glass clarity and applying dual-layer 10H
+                thermal ceramic.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">Paint Correction</span>
+                <a href="public/videos/works/WorkingVideo2.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="Multi-Stage Paint Correction &amp; 10H Ceramic Coating">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 3: PPF CRAFT -->
+          <article class="card cinema-prod-card" data-category="ppf">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/works/WorkingVideo4.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">PPF CRAFT</span>
+              <span class="cinema-prod-duration">02:30</span>
+              <a href="public/videos/works/WorkingVideo4.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="Custom Computer Cut vs Hand-Tucked Installation">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">Mercedes-Maybach S680</span>
+              <h4 class="h5">Custom Computer Cut vs Hand-Tucked Installation</h4>
+              <p class="text-sm mb-0">An artisan breakdown of software plotter cutouts versus hand-extended edges for
+                100% invisible seams.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">Master Technique</span>
+                <a href="public/videos/works/WorkingVideo4.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="Custom Computer Cut vs Hand-Tucked Installation">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 4: SUPERBIKE PPF -->
+          <article class="card cinema-prod-card" data-category="superbike">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/bike/BikeVideo2.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">SUPERBIKE PPF</span>
+              <span class="cinema-prod-duration">01:50</span>
+              <a href="public/videos/bike/BikeVideo2.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="BMW S1000RR M-Package Full Protection Scheme">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">BMW S1000RR M-Package</span>
+              <h4 class="h5">BMW S1000RR M-Package Full Protection Scheme</h4>
+              <p class="text-sm mb-0">Specialized motorcycle PPF protecting aerodynamic winglets, windscreen, and
+                carbon-fiber belly pan.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">Motorcycle Studio</span>
+                <a href="public/videos/bike/BikeVideo2.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="BMW S1000RR M-Package Full Protection Scheme">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 5: SUPERBIKE PPF -->
+          <article class="card cinema-prod-card" data-category="superbike">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/bike/BikeVideo4.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">SUPERBIKE PPF</span>
+              <span class="cinema-prod-duration">02:05</span>
+              <a href="public/videos/bike/BikeVideo4.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="High-Stress Fuel Tank &amp; Tail Section Film Wrap">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">Ducati Streetfighter V4</span>
+              <h4 class="h5">High-Stress Fuel Tank &amp; Tail Section Film Wrap</h4>
+              <p class="text-sm mb-0">Defending high-wear contact zones from riding gear abrasion with 8.5mil
+                self-healing TPU film.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">Motorcycle Studio</span>
+                <a href="public/videos/bike/BikeVideo4.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="High-Stress Fuel Tank &amp; Tail Section Film Wrap">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 6: CLIENT STORY -->
+          <article class="card cinema-prod-card" data-category="client">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/client/ClientVideo3.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">CLIENT STORY</span>
+              <span class="cinema-prod-duration">01:35</span>
+              <a href="public/videos/client/ClientVideo3.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="Lamborghini Urus Delivery Day Inspection">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">Lamborghini Urus Performante</span>
+              <h4 class="h5">Lamborghini Urus Delivery Day Inspection</h4>
+              <p class="text-sm mb-0">An owner's first reaction seeing their matte carbon exterior fully sealed under
+                FAREXEL invisible shield.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">VIP Handover</span>
+                <a href="public/videos/client/ClientVideo3.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="Lamborghini Urus Delivery Day Inspection">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 7: PPF CRAFT -->
+          <article class="card cinema-prod-card" data-category="ppf">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/works/WorkingVideo6.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">PPF CRAFT</span>
+              <span class="cinema-prod-duration">01:55</span>
+              <a href="public/videos/works/WorkingVideo6.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="Self-Healing Demonstration under 80&deg;C Heat">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">Lab Test &amp; Demonstration</span>
+              <h4 class="h5">Self-Healing Demonstration under 80&deg;C Heat</h4>
+              <p class="text-sm mb-0">Live wire-brush scratch test showing swirl marks vanish in seconds under heat and
+                direct sun exposure.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">Technology Test</span>
+                <a href="public/videos/works/WorkingVideo6.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="Self-Healing Demonstration under 80&deg;C Heat">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 8: CERAMIC SHIELD -->
+          <article class="card cinema-prod-card" data-category="ceramic">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/works/WorkingVideo7.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">CERAMIC SHIELD</span>
+              <span class="cinema-prod-duration">02:10</span>
+              <a href="public/videos/works/WorkingVideo7.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="Interior Nano-Ceramic Leather &amp; Alcantara Seal">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">Bentley Continental GT</span>
+              <h4 class="h5">Interior Nano-Ceramic Leather &amp; Alcantara Seal</h4>
+              <p class="text-sm mb-0">Permanent dye transfer protection and UV defense preserving supple Nappa leather
+                and micro-suede.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">Interior Protection</span>
+                <a href="public/videos/works/WorkingVideo7.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="Interior Nano-Ceramic Leather &amp; Alcantara Seal">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 9: PPF CRAFT -->
+          <article class="card cinema-prod-card" data-category="ppf">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/works/WorkingVideo8.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">PPF CRAFT</span>
+              <span class="cinema-prod-duration">01:40</span>
+              <a href="public/videos/works/WorkingVideo8.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="Track Defense Package: Bumper, Hood &amp; Rockers">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">Porsche 718 Cayman GT4</span>
+              <h4 class="h5">Track Defense Package: Bumper, Hood &amp; Rockers</h4>
+              <p class="text-sm mb-0">Thickened rocker panels and rear intake stone-guard protection tailored for
+                circuit and highway driving.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">Track Protection</span>
+                <a href="public/videos/works/WorkingVideo8.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="Track Defense Package: Bumper, Hood &amp; Rockers">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 10: CERAMIC SHIELD -->
+          <article class="card cinema-prod-card" data-category="ceramic">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/works/WorkingVideo9.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">CERAMIC SHIELD</span>
+              <span class="cinema-prod-duration">02:25</span>
+              <a href="public/videos/works/WorkingVideo9.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="Forged Wheel Barrel &amp; Caliper Thermal Coating">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">Audi RS6 Avant</span>
+              <h4 class="h5">Forged Wheel Barrel &amp; Caliper Thermal Coating</h4>
+              <p class="text-sm mb-0">Preventing carbon-ceramic brake dust corrosion with heat-resistant 9H ceramic
+                coating.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">Wheel Detailing</span>
+                <a href="public/videos/works/WorkingVideo9.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="Forged Wheel Barrel &amp; Caliper Thermal Coating">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 11: PPF CRAFT -->
+          <article class="card cinema-prod-card" data-category="ppf">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/works/WorkingVideo10.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">PPF CRAFT</span>
+              <span class="cinema-prod-duration">02:00</span>
+              <a href="public/videos/works/WorkingVideo10.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="98% Infrared Heat-Rejection Thermal Window Film">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">Range Rover Autobiography</span>
+              <h4 class="h5">98% Infrared Heat-Rejection Thermal Window Film</h4>
+              <p class="text-sm mb-0">Precision thermal tinting preventing Saudi Arabia desert heat penetration while
+                preserving nighttime optical clarity.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">Thermal Tint</span>
+                <a href="public/videos/works/WorkingVideo10.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="98% Infrared Heat-Rejection Thermal Window Film">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Film 12: CLIENT STORY -->
+          <article class="card cinema-prod-card" data-category="client">
+            <div class="card-header cinema-prod-thumb">
+              <video muted loop playsinline preload="metadata">
+                <source src="public/videos/client/ClientVideo2.mp4#t=0.1" type="video/mp4" />
+              </video>
+              <span class="badge">CLIENT STORY</span>
+              <span class="cinema-prod-duration">01:50</span>
+              <a href="public/videos/client/ClientVideo2.mp4" class="cinema-prod-play glightbox" data-type="video"
+                data-gallery="cinema-productions" data-title="Aston Martin DBX707 Handover &amp; Paint Depth Check">
+                <ion-icon name="play"></ion-icon>
+              </a>
+            </div>
+            <div class="card-body">
+              <span class="cinema-prod-vehicle">Aston Martin DBX707</span>
+              <h4 class="h5">Aston Martin DBX707 Handover &amp; Paint Depth Check</h4>
+              <p class="text-sm mb-0">Digital micrometer paint thickness report and warranty certificate presentation
+                during client handover.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0 pb-3">
+              <div class="d-flex align-items-center justify-content-between gap-2">
+                <span class="text-sm text-muted">VIP Handover</span>
+                <a href="public/videos/client/ClientVideo2.mp4" class="cinema-watch-link glightbox" data-type="video"
+                  data-gallery="cinema-productions" data-title="Aston Martin DBX707 Handover &amp; Paint Depth Check">
+                  <span>Watch 4K Film</span> <ion-icon name="arrow-forward"></ion-icon>
+                </a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
+
 
     <!-- Fullwidth CTA -->
     <section class="section fullwidth-cta" id="fullwidth-cta" aria-label="Call To Action">
@@ -859,7 +1217,7 @@
           <p class="text-12">
             Subscribe to our newsletter and stay updated with our offer.
           </p>
-          <form action="https://formsubmit.co/deeproshankumar123@gmail.com" method="POST" class="d-flex align-items-stretch gap-2">
+          <form action="" method="POST" class="d-flex align-items-stretch gap-2">
             <input type="hidden" name="_subject" class="d-none" value="New Newsletter Subscription!" />
             <input type="email" name="email" id="email" class="form-control" placeholder="Your Email..." />
             <button type="submit" class="btn btn-primary">

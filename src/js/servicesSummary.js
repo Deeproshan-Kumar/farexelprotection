@@ -3,7 +3,7 @@
  */
 export function initServicesSummary() {
   const summarySection = document.querySelector("#selected-services-summary");
-  if (!summarySection) return; // Only runs on Services page where summary section exists!
+  if (!summarySection) return; 
 
   const summaryVehicleTypeEl = document.querySelector("#summary-vehicle-type");
   const summaryTotalPriceEl = document.querySelector("#summary-total-price");
@@ -39,9 +39,13 @@ export function initServicesSummary() {
     // Select all selected cards across all vehicle tabs
     const selectedCards = document.querySelectorAll(".card.service.selected");
     let totalPriceSAR = 0;
-    const selectedTitles = [];
+    const regularServices = [];
+    const additionalServices = [];
 
     selectedCards.forEach((card) => {
+      // Detect if card is inside the additional-services section
+      const isAdditional = !!card.closest("#additional-services");
+
       // Extract title
       const titleEl = card.querySelector(".card-body h5, .card-body h6");
       let titleText = "Service";
@@ -52,14 +56,18 @@ export function initServicesSummary() {
         titleText = clone.textContent.trim();
       }
 
-      // Extract price e.g. "SAR 900" or "12,500 SAR"
+      // Extract price
       const priceBadge = card.querySelector(".card-body .price");
       if (priceBadge) {
         const priceNum = parseInt(priceBadge.textContent.replace(/[^\d]/g, ""), 10);
         if (!isNaN(priceNum)) totalPriceSAR += priceNum;
       }
 
-      selectedTitles.push(titleText);
+      if (isAdditional) {
+        additionalServices.push(titleText);
+      } else {
+        regularServices.push(titleText);
+      }
     });
 
     if (summarySelectedCountEl) {
@@ -71,19 +79,34 @@ export function initServicesSummary() {
     }
 
     if (summarySelectedServicesEl) {
-      if (selectedTitles.length === 0) {
+      const totalCount = regularServices.length + additionalServices.length;
+      if (totalCount === 0) {
         summarySelectedServicesEl.innerHTML = `<span class="text-muted text-sm fst-italic">No services selected yet. Click any service card above to select.</span>`;
       } else {
-        summarySelectedServicesEl.innerHTML = selectedTitles.map(title =>
-          `<span class="selected-service-badge"><ion-icon name="checkmark-circle"></ion-icon>${title}</span>`
-        ).join("");
+        let html = "";
+        if (regularServices.length > 0) {
+          html += regularServices.map(title =>
+            `<span class="selected-service-badge selected-service-badge--regular"><ion-icon name="checkmark-circle"></ion-icon>${title}</span>`
+          ).join("");
+        }
+        if (additionalServices.length > 0) {
+          if (regularServices.length > 0) {
+            html += `<span class="text-xs text-uppercase tracking-wider text-muted d-block w-100 mt-2"><ion-icon name="add-circle-outline" class="me-1"></ion-icon>Additional &amp; Bespoke Services</span>`;
+          }
+          html += additionalServices.map(title =>
+            `<span class="selected-service-badge selected-service-badge--additional"><ion-icon name="sparkles-outline"></ion-icon>${title}</span>`
+          ).join("");
+        }
+        summarySelectedServicesEl.innerHTML = html;
       }
     }
   }
 
-  // Toggle card selection via event delegation for maximum reliability across tabs
-  const farexelServicesSection = document.querySelector("#farexel-services") || document.body;
-  farexelServicesSection.addEventListener("click", (e) => {
+  // Toggle card selection via event delegation for maximum reliability across all service sections and tabs
+  const mainServicesContainer = document.querySelector("#main") || document.body;
+  mainServicesContainer.addEventListener("click", (e) => {
+    // Avoid triggering toggle if user clicked on collapse toggler or accordion buttons inside card
+    if (e.target.closest(".features-toggle, .collapse")) return;
     const card = e.target.closest(".card.service");
     if (!card) return;
 
