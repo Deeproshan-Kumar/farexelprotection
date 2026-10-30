@@ -61,10 +61,14 @@ window.addEventListener("DOMContentLoaded", () => {
       `${announcementHeight}px`,
     );
 
+    let lastScrolled = null;
     const updateHeader = () => {
       const isScrolled = window.scrollY >= announcementHeight;
-      siteHeader.classList.toggle("is-scrolled", isScrolled);
-      document.body.classList.toggle("header-condensed", isScrolled);
+      if (isScrolled !== lastScrolled) {
+        lastScrolled = isScrolled;
+        siteHeader.classList.toggle("is-scrolled", isScrolled);
+        document.body.classList.toggle("header-condensed", isScrolled);
+      }
     };
 
     updateHeader();
