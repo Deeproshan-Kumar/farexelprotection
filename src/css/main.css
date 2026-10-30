@@ -2474,6 +2474,10 @@ html[data-bs-theme="light"] .video-in-text h2 {
 }
 
 /* Customer Experience */
+.ce-hero .customer-experience-swiper {
+  border-radius: 0.25rem;
+}
+
 .ce-hero .customer-experience-swiper .swiper-slide {
   background: var(--clr-surface-2);
   display: flex;

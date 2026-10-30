@@ -13,6 +13,16 @@
  * classes have been added to the HTML so GSAP has an unambiguous handle.
  */
 
+let refreshTimer = null;
+function debouncedScrollTriggerRefresh(delay = 150) {
+  if (typeof ScrollTrigger === "undefined") return;
+  if (refreshTimer) clearTimeout(refreshTimer);
+  refreshTimer = setTimeout(() => {
+    ScrollTrigger.refresh();
+    refreshTimer = null;
+  }, delay);
+}
+
 const REDUCED_MOTION = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 ).matches;
@@ -200,9 +210,7 @@ function initServiceCardAnimations() {
       }
     });
 
-    if (typeof ScrollTrigger !== "undefined") {
-      ScrollTrigger.refresh();
-    }
+    debouncedScrollTriggerRefresh(150);
   }
 
   document.addEventListener("shown.bs.tab", (e) => {
@@ -213,44 +221,24 @@ function initServiceCardAnimations() {
     if (targetSelector && targetSelector.startsWith("#")) {
       const pane = document.querySelector(targetSelector);
       handleTabChange(pane);
-
-      // Secondary check after tab transition completes to guarantee visibility
-      setTimeout(() => {
-        handleTabChange(pane);
-      }, 150);
     }
   });
 
-  // Failsafe safety net: On scroll or after load, ensure any visible card in view is never stuck at opacity 0
-  const ensureVisibilitySafetyNet = () => {
+  // One-time failsafe after page load to ensure cards are visible without polling or scroll listeners
+  const ensureVisibilityFailsafe = () => {
     containers.forEach((c) => {
       if (isElementVisible(c)) {
-        const rect = c.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const items = c.querySelectorAll("ul.services li");
-          items.forEach((item) => {
-            if (window.getComputedStyle(item).opacity === "0") {
-              gsap.to(item, {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                skewY: 0,
-                duration: 0.3,
-                clearProps: "all",
-                overwrite: "auto",
-              });
-            }
-          });
-        }
+        const items = c.querySelectorAll("ul.services li");
+        items.forEach((item) => {
+          if (item.style.opacity === "0") {
+            gsap.set(item, { clearProps: "transform,opacity,visibility" });
+          }
+        });
       }
     });
   };
 
-  window.addEventListener("scroll", ensureVisibilitySafetyNet, {
-    passive: true,
-  });
-  setTimeout(ensureVisibilitySafetyNet, 500);
-  setTimeout(ensureVisibilitySafetyNet, 1200);
+  setTimeout(ensureVisibilityFailsafe, 800);
 }
 
 // Letter-by-letter wave for the "FAREXEL" text-anim heading — same wave
@@ -772,26 +760,23 @@ export function initScrollAnimations() {
     revealGroup(".gsap-footer-col", { y: 24, duration: 0.7 });
   }
 
-  // ─── Re-measure once everything (images, fonts) has loaded ───────────────────
-  window.addEventListener("load", () => ScrollTrigger.refresh());
+  // ─── Re-measure once everything (images, fonts) has loaded (debounced) ───────
+  window.addEventListener("load", () => debouncedScrollTriggerRefresh(100));
 
   // ─── Re-measure when lazy-loaded images finish downloading (debounced) ──────
-  let imgRefreshTimer;
   document.addEventListener(
     "load",
     (e) => {
       if (e.target && e.target.tagName === "IMG") {
-        clearTimeout(imgRefreshTimer);
-        imgRefreshTimer = setTimeout(() => ScrollTrigger.refresh(), 350);
+        debouncedScrollTriggerRefresh(350);
       }
     },
     true,
   );
 
-  // ─── Re-measure on Bootstrap tab / accordion toggle ──────────────────────────
+  // ─── Re-measure on Bootstrap tab / accordion toggle (debounced) ──────────────
   const handleLayoutChange = () => {
-    ScrollTrigger.refresh();
-    setTimeout(() => ScrollTrigger.refresh(), 150);
+    debouncedScrollTriggerRefresh(150);
   };
 
   document.addEventListener("shown.bs.tab", handleLayoutChange);

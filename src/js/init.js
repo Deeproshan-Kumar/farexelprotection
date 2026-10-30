@@ -24,8 +24,8 @@ export function initLenis() {
     lenis.raf(time * 1000); // Convert time from seconds to milliseconds
   });
 
-  // Disable lag smoothing in GSAP to prevent any delay in scroll animations
-  gsap.ticker.lagSmoothing(0);
+  // Enable lag smoothing to absorb frame hitches without frozen catch-up jumps
+  gsap.ticker.lagSmoothing(500, 33);
 
   return lenis;
 }
@@ -470,18 +470,22 @@ export function initTeamCardTilt() {
   });
 }
 
+let mediaLightboxInstance = null;
+
 // Initialize GLightbox for photo and video media
 export function initMediaLightbox() {
-  if (typeof GLightbox === "undefined") return;
-  if (!document.querySelector(".glightbox")) return;
+  if (typeof GLightbox === "undefined") return null;
+  if (!document.querySelector(".glightbox")) return null;
 
-  GLightbox({
+  mediaLightboxInstance = GLightbox({
     selector: ".glightbox",
     touchNavigation: true,
     loop: true,
     preload: false,
     autoplayVideos: true,
   });
+
+  return mediaLightboxInstance;
 }
 
 // Filter Career listings from the search bar and sidebar controls
@@ -816,15 +820,27 @@ export function initScrollToTop(el, lenis) {
   if (!el) return;
 
   const header = document.querySelector(".site-header");
-  const getThreshold = () => header?.offsetHeight ?? 0;
+  let threshold = header?.offsetHeight ?? 0;
+  window.addEventListener(
+    "resize",
+    () => {
+      threshold = header?.offsetHeight ?? 0;
+    },
+    { passive: true },
+  );
+
   let currentScroll = window.scrollY;
+  let lastVisible = null;
 
   function updateVisibility(scrollPosition = window.scrollY) {
     currentScroll = scrollPosition;
-    const isVisible = scrollPosition >= getThreshold();
-    el.classList.toggle("is-visible", isVisible);
-    el.setAttribute("aria-hidden", String(!isVisible));
-    el.tabIndex = isVisible ? 0 : -1;
+    const isVisible = scrollPosition >= threshold;
+    if (isVisible !== lastVisible) {
+      lastVisible = isVisible;
+      el.classList.toggle("is-visible", isVisible);
+      el.setAttribute("aria-hidden", String(!isVisible));
+      el.tabIndex = isVisible ? 0 : -1;
+    }
   }
 
   updateVisibility();
@@ -840,7 +856,7 @@ export function initScrollToTop(el, lenis) {
   }
 
   el.addEventListener("click", function () {
-    if (currentScroll >= getThreshold()) {
+    if (currentScroll >= threshold) {
       if (lenis) {
         lenis.scrollTo(0);
       } else {
@@ -1011,6 +1027,16 @@ export function initCinemaShowcase() {
     const pillBtns = pillsContainer.querySelectorAll(".cinema-pill-btn");
     const cards = cinemaGrid.querySelectorAll(".cinema-prod-card");
 
+    // Forward clicks from .cinema-watch-link to the card's single .cinema-prod-play trigger
+    cinemaGrid.addEventListener("click", (e) => {
+      const watchLink = e.target.closest(".cinema-watch-link");
+      if (!watchLink) return;
+      e.preventDefault();
+      const card = watchLink.closest(".cinema-prod-card");
+      const playTrigger = card?.querySelector(".cinema-prod-play");
+      playTrigger?.click();
+    });
+
     pillBtns.forEach(btn => {
       btn.addEventListener("click", () => {
         pillBtns.forEach(b => b.classList.remove("active"));
@@ -1021,15 +1047,32 @@ export function initCinemaShowcase() {
 
         cards.forEach(card => {
           const category = card.dataset.category;
-          if (filter === "all" || category === filter) {
+          const playTrigger = card.querySelector(".cinema-prod-play");
+          const isMatch = filter === "all" || category === filter;
+
+          if (isMatch) {
             card.style.display = "flex";
             visibleCount++;
+            if (playTrigger) {
+              playTrigger.classList.add("glightbox");
+              playTrigger.setAttribute("data-gallery", "cinema-productions");
+            }
           } else {
             card.style.display = "none";
+            if (playTrigger) {
+              playTrigger.classList.remove("glightbox");
+              playTrigger.removeAttribute("data-gallery");
+            }
           }
         });
 
         if (countEl) countEl.textContent = visibleCount;
+
+        if (!mediaLightboxInstance && typeof GLightbox !== "undefined" && document.querySelector(".glightbox")) {
+          initMediaLightbox();
+        } else if (mediaLightboxInstance && typeof mediaLightboxInstance.reload === "function") {
+          mediaLightboxInstance.reload();
+        }
       });
     });
   }
