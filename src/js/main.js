@@ -17,14 +17,14 @@ import {
   initScrollToTop,
   initTextHoverAnimation,
   initTeamCardTilt,
-  initLeadershipHoverAnimation,
   initMediaLightbox,
   initJobFilters,
   initBlogFilters,
   initPhotoGalleryFilters,
   initWhatsappWidget,
   initFileUpload,
-  initFeaturesToggle,
+  initPolicyScrollSpy,
+  initCinemaShowcase,
 } from "./init.js";
 import { toggleTheme } from "./toggleTheme.js";
 import { initPageTransition } from "./pageTransition.js";
@@ -116,9 +116,6 @@ window.addEventListener("DOMContentLoaded", () => {
   // Team card tilt
   initTeamCardTilt();
 
-  // Leadership insights hover parallax animation
-  initLeadershipHoverAnimation();
-
   // Photo and video lightbox
   initMediaLightbox();
 
@@ -194,8 +191,11 @@ window.addEventListener("DOMContentLoaded", () => {
   // Services page interactive summary & card selection
   initServicesSummary();
 
-  // Features toggle (Show / Close Coverage in service & offer cards)
-  initFeaturesToggle();
+  // Policy & Terms TOC Scrollspy
+  initPolicyScrollSpy();
+
+  // Cinema Showcase & Reels
+  initCinemaShowcase();
 
   // Google Translate
   initGoogleTranslate();

@@ -20,30 +20,46 @@ Designed with an unapologetic dark luxury aesthetic, the site pairs precision cr
 - **Standardized Currency**: All pricing formatted consistently in **SAR** (Saudi Riyal) across both catalog views.
 - **Visual Excellence**: Every service card features high-resolution imagery served directly from `public/services/` with semantic `<h5>` card typography.
 
-### 2. Real-Time Service Estimator & Booking Integration (`servicesSummary.js`)
-- Click-to-select interactive service cards with real-time feedback.
+### 2. Service Summary with Regular vs. Additional Services Distinction (`servicesSummary.js`)
+- Click-to-select interactive service cards with real-time feedback across regular and additional bespoke sections.
+- **Visual Differentiation**:
+  - **Regular Services**: Displayed with crimson-accented badges and checkmark icons.
+  - **Additional & Bespoke Services**: Distinguished with luxury amber/gold badges (`#f59e0b`), sparkle icons, and a dedicated section divider.
 - Dynamic aggregation of total cost (**SAR**), active vehicle category, and flexible installment payment integration (**Tabby & Tamara**).
 - Instant synchronization with the on-page booking form with smooth scroll anchoring.
 
-### 3. Interactive Before-and-After Transformation Gallery (`customer-experience.html`)
-- Drag-and-slide dual-layer image comparison sliders with touch and keyboard accessibility (`role="slider"`).
-- Dynamic category filter buttons matching the studio's official service categories:
-  - *All Services*, *Paint Protection (PPF)*, *Window Tinting*, *Car Detailing*, *Nano Ceramic*, *Signature Packages*, and *Bike Services*.
-  - Multi-category support ensuring fluid animations with instant visibility and zero blank filter states.
+### 3. Customer Experience — 12 Google-Verified Reviews (`customer-experience.html`)
+- **12 Authentic Reviews**: Sourced from verified Google client feedback for Farexel Protection in Al Khobar, Saudi Arabia.
+- **Uniform Content Length**: Balanced, editorial-grade review lengths ensuring clean alignment across the 3-column responsive Swiper carousel.
+- **5-Star Verification Badge**: Header and cards prominently display verified Google Client badges and 5.0 star ratings.
+- **Interactive Before-and-After Sliders**: Drag-and-slide dual-layer image comparison sliders with touch and keyboard accessibility.
 
-### 4. Bespoke Visual Design & Luxury Theme Engine
-- **Dark Mode by Default**: Tailored dark theme featuring deep onyx backgrounds (`#0a0a0c`), crimson brand accents (`#fb2c36`), and refined glassmorphic cards.
-- **Theme Switcher**: Instant dark/light mode toggle with persistence via browser `localStorage`.
-- **Editorial Typography**: Styled with Google Fonts **Syne** (bold geometric headings) and **Inter** (crystal-clear body legibility).
+### 4. Cinema Studio & Viral Reels Hybrid (`videos.html`)
+- **Premiere Spotlight Player**: 4K featured widescreen theater frame with ambient red backlight glow, play/pause, sound toggle (Mute / Unmute), and GLightbox fullscreen trigger.
+- **Viral Detailing Reels & Shorts (9:16 Vertical Carousel)**: Dedicated Instagram/TikTok-style smartphone reel swiper with view counts (`🔥 385K Views`), animated audio indicators, hover preview playback, and full-screen reel lightbox modals.
+- **16:9 Cinema Productions Grid**: Multi-category filterable documentary grid (*PPF Craft*, *Ceramic Shield*, *Superbike Preservation*, *Client Stories*) with video duration tags, vehicle model badges, and artisan descriptions.
+- **High-Converting Lead-Gen Bar**: Integrated booking calls to action connecting video viewing directly to WhatsApp inquiries and studio appointment booking.
 
-### 5. Fluid Animation & Scrolling Architecture
-- **Lenis Smooth Scrolling**: Decoupled, momentum-based scrolling synced with GSAP.
-- **GSAP 3 & ScrollTrigger**: Staggered card reveals, hero banner entrance timelines, and tab-switch animation guards.
-- **Tab Switch Resilience**: Automated clearing of inline transforms (`clearProps`) upon tab change to guarantee instant element visibility.
+### 5. Architectural Fixes & Filter Resilience (`init.js`)
+- **Grid Container Detection**: Updated to dynamically identify `.masonary-grid`, `.cinema-grid`, and `.row.gy-4` containers.
+- **Dual-Control Synchronization**: Real-time two-way synchronization between interactive category pills and the sort dropdown.
+- **Accurate Count Logging**: Automatically calculates and displays live result counts upon initial page load and on every filter change.
 
-### 6. Full Accessibility & Modern SEO
-- 100% semantic HTML5 architecture with comprehensive `aria-label`, `aria-hidden`, and ARIA role coverage across all 18 pages.
-- Structured metadata, OpenGraph tags, unique element identifiers, and mobile-optimized viewport configurations.
+### 6. Luxury Subpage Banner with Precision Technical Grid Lines
+- **Aesthetic**: Deep multi-tone dark-carbon background (`#0b0b10` to `#121218`) with ambient red radial spotlight and technical precision geometric grid lines (`48px` primary grid with `240px` major accent lines).
+- **Typography & Breadcrumbs**: Syne headline with signature crimson accent underline and frosted glassmorphic pill breadcrumb containers.
+
+### 7. Modernized Privacy Policy & Terms of Service UI
+- **Fixed / Sticky TOC Sidebar**: Left-hand navigation (`.policy-toc-nav`) stays smoothly fixed in place while the right-side content scrolls independently.
+- **Automated Scrollspy (`initPolicyScrollSpy`)**: Automatically detects the active section during scroll via `IntersectionObserver` and highlights the current TOC item with smooth auto-scrolling inside the navigation list.
+- **Independent Scroll Container**: The TOC sidebar features a custom crimson scrollbar, preventing overflow on small vertical viewports.
+- **Numbered Section Badges**: Distinct `SECTION 01` through `SECTION 20` pill markers and cardified content blocks with subtle borders.
+- **Typography Preservation**: Strictly preserves client-approved font families, sizes, and hierarchical formatting.
+
+### 8. Bidirectional "Explore / Close Coverage" Collapse Controls
+- **Comprehensive Coverage Toggles**: Every service package card across all vehicle categories on `index.html` (177 packages) and `services.html` (177 packages) includes a direct "Close Coverage" button inside the feature panel.
+- **Exclusive Privileges (Offers)**: All promotional cards on the homepage (`#features-list-178` to `#features-list-180`) now feature matching "Close Coverage" controls to smoothly collapse coverage lists back into card view.
+- **Click Isolation**: All collapse toggle events are isolated from card selection logic so reviewing coverage details never unintentionally alters selected service estimates.
 
 ---
 

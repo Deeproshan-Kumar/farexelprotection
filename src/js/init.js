@@ -687,7 +687,7 @@ export function initBlogFilters() {
   });
 }
 
-// Filter and sort Photo and Video gallery cards from the sort/filter dropdown
+// Filter and sort Photo and Video gallery cards from the sort/filter dropdown and pills
 export function initPhotoGalleryFilters() {
   const gallerySections = document.querySelectorAll("#photos, #videos");
   if (!gallerySections.length) return;
@@ -695,16 +695,17 @@ export function initPhotoGalleryFilters() {
   gallerySections.forEach((section) => {
     const sortSelect = section.querySelector("#sort");
     const countEl = section.querySelector("#photos-count, #videos-count");
-    const grid = section.querySelector(".row.gy-4");
+    const grid = section.querySelector(".masonary-grid, .cinema-grid, .row.gy-4");
     const items = [
-      ...(grid?.querySelectorAll(".media, .video-item") || []),
+      ...(grid?.querySelectorAll(".media, .video-item, .cinema-card") || []),
     ];
     const pagination = section.querySelector(".pagination");
+    const filterPills = section.querySelectorAll(".cinema-pill-filter-btn, .gallery-pill-filter-btn");
 
-    if (!sortSelect || !grid || !items.length) return;
+    if (!grid || !items.length) return;
 
-    function applyFilters() {
-      const value = sortSelect.value;
+    function applyFilters(overrideVal) {
+      const value = overrideVal || (sortSelect ? sortSelect.value : "all");
       let matchingItems = [];
 
       if (value === "all") {
@@ -754,6 +755,18 @@ export function initPhotoGalleryFilters() {
         }
       }
 
+      // Sync active state on pills
+      filterPills.forEach((pill) => {
+        const pillVal = pill.getAttribute("data-filter");
+        pill.classList.toggle("active", pillVal === value);
+      });
+
+      // Sync select dropdown
+      if (sortSelect && sortSelect.value !== value) {
+        const matchingOpt = Array.from(sortSelect.options).find(o => o.value === value);
+        if (matchingOpt) sortSelect.value = value;
+      }
+
       if (pagination) {
         pagination.style.display = totalVisible < items.length ? "none" : "";
       }
@@ -763,7 +776,38 @@ export function initPhotoGalleryFilters() {
       }
     }
 
-    sortSelect.addEventListener("change", applyFilters);
+    if (sortSelect) {
+      sortSelect.addEventListener("change", () => applyFilters());
+    }
+
+    // Attach click listeners to pill filter buttons
+    filterPills.forEach((pill) => {
+      pill.addEventListener("click", () => {
+        const filterVal = pill.getAttribute("data-filter");
+        applyFilters(filterVal);
+      });
+    });
+
+    // Cinema Spotlight sound toggle
+    const spotlightVideo = section.querySelector("#spotlight-player");
+    const soundToggleBtn = section.querySelector("#spotlight-sound-toggle");
+    const soundIcon = section.querySelector("#spotlight-sound-icon");
+    const soundLabel = section.querySelector("#spotlight-sound-label");
+
+    if (spotlightVideo && soundToggleBtn) {
+      soundToggleBtn.addEventListener("click", () => {
+        spotlightVideo.muted = !spotlightVideo.muted;
+        if (soundIcon) {
+          soundIcon.setAttribute("name", spotlightVideo.muted ? "volume-mute-outline" : "volume-high-outline");
+        }
+        if (soundLabel) {
+          soundLabel.textContent = spotlightVideo.muted ? "Unmute" : "Mute";
+        }
+      });
+    }
+
+    // Run initial filter on page load to sync counts
+    applyFilters();
   });
 }
 
@@ -864,139 +908,130 @@ export function initWhatsappWidget(
   });
 }
 
-// Interactive mouse hover parallax animation for Leadership Insights decorative shapes
-export function initLeadershipHoverAnimation() {
-  if (typeof gsap === "undefined") return;
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+// Init scroll spy for policy and terms pages TOC navigation
+export function initPolicyScrollSpy() {
+  const tocNav = document.querySelector(".policy-toc-nav");
+  if (!tocNav) return;
 
-  const imgCols = document.querySelectorAll(
-    ".leadership-insights .img-col, .insights-container .img-col",
-  );
-  if (!imgCols.length) return;
+  const links = tocNav.querySelectorAll("a[href^='#']");
+  if (!links.length) return;
 
-  imgCols.forEach((col) => {
-    // Find decorative elements within this img-col
-    const circle = col.querySelector("#circle, .circle");
-    const rect = col.querySelector("#rect, .rect");
-    const triangle = col.querySelector("#triangle, #rectange, .triangle");
-    const imgDeco = col.querySelector(".img-decoration");
+  const targets = Array.from(links)
+    .map(link => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
 
-    const layers = [
-      { el: circle, factor: 55, speed: 2 },
-      { el: rect, factor: 42, speed: 2 },
-      { el: triangle, factor: 50, speed: 2 },
-      { el: imgDeco, factor: 28, speed: 1.5 },
-    ].filter((item) => item.el !== null);
+  if (!targets.length) return;
 
-    if (!layers.length) return;
-
-    // Track active numeric state for each layer to animate smoothly with GSAP
-    const stateList = layers.map((layer) => ({
-      layer,
-      x: 0,
-    }));
-
-    let lastClientX = null;
-    let velocityX = 0;
-
-    const onMouseEnter = (e) => {
-      lastClientX = e.clientX;
-      velocityX = 0;
-    };
-
-    const onMouseMove = (e) => {
-      const bounds = col.getBoundingClientRect();
-      if (!bounds.width) return;
-
-      // Position relative to center of img-col: normalized from -1 (left edge) to +1 (right edge)
-      const centerX = bounds.left + bounds.width / 2;
-      const normalizedX = Math.max(
-        -1,
-        Math.min(1, (e.clientX - centerX) / (bounds.width / 2)),
-      );
-
-      // Instantaneous movement direction (mouse pointer delta)
-      let movementDeltaX = 0;
-      if (lastClientX !== null) {
-        movementDeltaX = e.clientX - lastClientX;
-      } else if (typeof e.movementX === "number") {
-        movementDeltaX = e.movementX;
-      }
-      lastClientX = e.clientX;
-
-      // Dampen velocity for fluid momentum kick
-      velocityX = velocityX * 0.65 + movementDeltaX * 0.35;
-      const impulse = Math.max(-20, Math.min(20, -velocityX * 0.75));
-
-      // Translate in OPPOSITE direction:
-      // When mouse moves RIGHT (positive X), elements translateX LEFT (negative)
-      // When mouse moves LEFT (negative X), elements translateX RIGHT (positive)
-      stateList.forEach((itemState) => {
-        const rawTargetX = -normalizedX * itemState.layer.factor + impulse;
-        const maxLimit = itemState.layer.factor * 1.25;
-        const targetX = Math.max(-maxLimit, Math.min(maxLimit, rawTargetX));
-
-        gsap.to(itemState, {
-          x: targetX,
-          duration: itemState.layer.speed,
-          ease: "power2.out",
-          overwrite: "auto",
-          onUpdate: () => {
-            itemState.layer.el.style.setProperty(
-              "--tx",
-              `${itemState.x.toFixed(2)}px`,
-            );
-          },
-        });
-      });
-    };
-
-    const onMouseLeave = () => {
-      lastClientX = null;
-      velocityX = 0;
-
-      // Smoothly reset back to 0px on hover exit
-      stateList.forEach((itemState) => {
-        gsap.to(itemState, {
-          x: 0,
-          duration: 0.75,
-          ease: "power3.out",
-          overwrite: "auto",
-          onUpdate: () => {
-            itemState.layer.el.style.setProperty(
-              "--tx",
-              `${itemState.x.toFixed(2)}px`,
-            );
-          },
-        });
-      });
-    };
-
-    col.addEventListener("mouseenter", onMouseEnter);
-    col.addEventListener("mousemove", onMouseMove);
-    col.addEventListener("mouseleave", onMouseLeave);
-  });
-}
-
-/**
- * initFeaturesToggle
- * Updates "Explore Coverage" / "Close Coverage" label on collapse toggle buttons
- * when Bootstrap collapse panels inside .card.service or .card.offer are shown/hidden.
- */
-export function initFeaturesToggle() {
-  document.querySelectorAll('[id^="features-list-"]').forEach((collapseEl) => {
-    const btn = document.querySelector(`[data-bs-target="#${collapseEl.id}"]`);
-    if (!btn) return;
-
-    const updateLabel = (isOpen) => {
-      btn.childNodes.forEach((node) => {
-        if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
-          node.textContent = isOpen ? " Close Coverage" : " Explore Coverage";
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute("id");
+          links.forEach(l => {
+            if (l.getAttribute("href") === `#${id}`) {
+              l.classList.add("active");
+              l.scrollIntoView({ block: "nearest", behavior: "smooth" });
+            } else {
+              l.classList.remove("active");
+            }
+          });
         }
       });
-    };
+    },
+    {
+      rootMargin: "-15% 0 -65% 0",
+      threshold: 0,
+    }
+  );
 
-    collapseEl.addEventListener("show.bs.collapse", () => updateLabel(true));
-    collapseEl.addEventListener("hide.bs.collapse", () => updateLabel(false));
-  });
+  targets.forEach(target => observer.observe(target));
 }
+
+// Init Cinema Showcase, Reels Swiper, and Spotlight Controls
+export function initCinemaShowcase() {
+  // 1. Spotlight Audio Toggle
+  const spotlightPlayer = document.querySelector("#spotlight-player");
+  const audioBtn = document.querySelector("#spotlight-audio-btn");
+  const audioIcon = document.querySelector("#spotlight-audio-icon");
+  const audioText = document.querySelector("#spotlight-audio-text");
+
+  if (spotlightPlayer && audioBtn) {
+    audioBtn.addEventListener("click", () => {
+      spotlightPlayer.muted = !spotlightPlayer.muted;
+      if (spotlightPlayer.muted) {
+        if (audioIcon) audioIcon.setAttribute("name", "volume-mute-outline");
+        if (audioText) audioText.textContent = "Unmute Sound";
+      } else {
+        if (audioIcon) audioIcon.setAttribute("name", "volume-high-outline");
+        if (audioText) audioText.textContent = "Mute Sound";
+      }
+    });
+  }
+
+  // 2. 9:16 Viral Reels Swiper
+  const reelsSwiperEl = document.querySelector(".reels-swiper");
+  if (reelsSwiperEl && typeof Swiper !== "undefined") {
+    new Swiper(reelsSwiperEl, {
+      slidesPerView: 1.4,
+      spaceBetween: 14,
+      grabCursor: true,
+      navigation: {
+        nextEl: ".reels-next",
+        prevEl: ".reels-prev",
+      },
+      breakpoints: {
+        480: { slidesPerView: 2.2, spaceBetween: 16 },
+        768: { slidesPerView: 3.2, spaceBetween: 18 },
+        992: { slidesPerView: 4.2, spaceBetween: 20 },
+        1200: { slidesPerView: 5.2, spaceBetween: 22 },
+      },
+    });
+
+    // Hover auto-preview for reel cards
+    const reelCards = reelsSwiperEl.querySelectorAll(".reel-card");
+    reelCards.forEach(card => {
+      const vid = card.querySelector("video");
+      if (!vid) return;
+      card.addEventListener("mouseenter", () => {
+        vid.play().catch(() => {});
+      });
+      card.addEventListener("mouseleave", () => {
+        vid.pause();
+        vid.currentTime = 0;
+      });
+    });
+  }
+
+  // 3. Cinema Productions Category Filtering
+  const pillsContainer = document.querySelector("#cinema-pills");
+  const cinemaGrid = document.querySelector("#cinema-grid");
+  const countEl = document.querySelector("#cinema-count");
+
+  if (pillsContainer && cinemaGrid) {
+    const pillBtns = pillsContainer.querySelectorAll(".cinema-pill-btn");
+    const cards = cinemaGrid.querySelectorAll(".cinema-prod-card");
+
+    pillBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        pillBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        const filter = btn.dataset.filter;
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const category = card.dataset.category;
+          if (filter === "all" || category === filter) {
+            card.style.display = "flex";
+            visibleCount++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        if (countEl) countEl.textContent = visibleCount;
+      });
+    });
+  }
+}
+
