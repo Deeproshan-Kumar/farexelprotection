@@ -188,7 +188,7 @@
   }
 
   .datetime {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   .hero .separator {
@@ -260,6 +260,11 @@
   .masonary-grid {
     column-count: 2;
   }
+
+  .card.process .icon {
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 /* ---------------------------------------------------------
@@ -273,6 +278,7 @@
   .site-header .announcement-bar li,
   .site-header .announcement-bar li a {
     display: flex;
+    align-items: center;
     font-size: 0.75rem;
     white-space: nowrap;
   }
@@ -337,10 +343,6 @@
     height: 0.8rem;
   }
 
-  .studioTourSwiper .swiper-slide img {
-    height: auto !important;
-  }
-
   .countdown-timer .screen {
     padding: 0.25rem;
   }
@@ -390,6 +392,7 @@
 
   .achievements .icon-box .icon {
     width: 2.5rem;
+    min-width: 2.5rem;
     height: 2.5rem;
     padding: 1rem;
   }
@@ -458,10 +461,29 @@
     column-count: 1;
   }
 
+  .cinema-video-frame {
+    aspect-ratio: 9/16;
+  }
+
+  .customer-experiences .total-reviews img {
+    height: 5rem;
+    width: 5rem;
+  }
+
   .card.consulation .icon-box .icon,
   .card.location .icon-box .icon {
     width: 2rem;
     height: 2rem;
+  }
+
+  .ba-handle-button {
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.25rem;
+  }
+
+  .pagination .btn>span {
+    font-size: 0.75rem;
   }
 
   .contact-us-spinner img {
@@ -507,10 +529,6 @@
 @media only screen and (max-width: 510px) {
   .site-header .announcement-bar {
     padding-inline: 0.5rem;
-  }
-
-  .customer-experiences .image-col {
-    padding-left: 5.25rem;
   }
 
   .video-in-text {

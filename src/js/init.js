@@ -955,7 +955,7 @@ export function initPolicyScrollSpy() {
       });
     },
     {
-      rootMargin: "-15% 0 -65% 0",
+      rootMargin: "-15% 0% -65% 0%",
       threshold: 0,
     }
   );

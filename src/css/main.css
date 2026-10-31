@@ -1290,7 +1290,7 @@ html[data-bs-theme="dark"] .site-header .navbar-nav .dropdown-item {
   height: 100%;
   width: 100%;
   background: var(--clr-surface-2);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 /* Our Vision and Mission */
@@ -2305,7 +2305,8 @@ section.team .anim-txt {
 }
 
 .studioTourSwiper .swiper-slide img {
-  height: 43.75rem;
+  max-height: 43.75rem;
+  aspect-ratio: 16 / 9;
 }
 
 /* Our Team */
@@ -2381,10 +2382,6 @@ html[data-bs-theme="light"] .video-in-text h2 {
 
 .insights-container .insight:nth-child(even) {
   flex-direction: row-reverse;
-}
-
-.insights-container .insight .img-col {
-  padding: 2.5rem 1rem;
 }
 
 .leadership-insights .insight .profile-pic {
@@ -2475,7 +2472,7 @@ html[data-bs-theme="light"] .video-in-text h2 {
 
 /* Customer Experience */
 .ce-hero .customer-experience-swiper {
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
 }
 
 .ce-hero .customer-experience-swiper .swiper-slide {
@@ -2720,11 +2717,11 @@ html[data-bs-theme="light"] .video-in-text h2 {
 }
 
 .ba-badge {
-  z-index: 3;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.0625rem;
   backdrop-filter: blur(0.5rem);
   pointer-events: none;
+  z-index: 3;
 }
 
 .ba-badge-before {
@@ -2762,7 +2759,7 @@ html[data-bs-theme="light"] .video-in-text h2 {
   display: block;
   margin-bottom: 1.2rem;
   break-inside: avoid;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   will-change: transform, opacity;
   backface-visibility: hidden;
 }
@@ -2876,7 +2873,7 @@ html[data-bs-theme="light"] .video-in-text h2 {
 .cinema-spotlight-wrapper {
   position: relative;
   background: #09090d;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   border: 0.0625rem solid rgba(251, 44, 54, 0.35);
   overflow: hidden;
   margin-bottom: 3.5rem;
@@ -2965,7 +2962,7 @@ html[data-bs-theme="light"] .video-in-text h2 {
 .reel-card {
   position: relative;
   aspect-ratio: 9 / 16;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   background: #101015;
   border: 0.0625rem solid rgba(255, 255, 255, 0.08);
   transition: transform 350ms ease, border-color 350ms ease, box-shadow 350ms ease;
@@ -3100,13 +3097,13 @@ html[data-bs-theme="light"] .video-in-text h2 {
 }
 
 .cinema-prod-card {
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
 }
 
 .cinema-prod-card:hover {
   transform: translateY(-0.5rem);
-  border-color: rgba(251, 44, 54, 0.45);
+  border-color: var(--clr-primary);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.35);
 }
 
@@ -3215,7 +3212,7 @@ html[data-bs-theme="light"] .video-in-text h2 {
 .card.certificate-card {
   background-color: var(--clr-surface-2);
   border: 0.0625rem solid var(--clr-border) !important;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   position: relative;
   transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
@@ -3907,9 +3904,6 @@ html[data-bs-theme="light"] .video-in-text h2 {
 .policy-meta-card {
   background: var(--clr-dark-surface, #16161b);
   border: 0.0625rem solid var(--clr-border);
-  border-radius: 0.75rem;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.2);
 }
 
 .policy-sidebar {
@@ -3925,8 +3919,6 @@ html[data-bs-theme="light"] .video-in-text h2 {
 .policy-toc-nav {
   background: var(--clr-dark-surface, #16161b);
   border: 0.0625rem solid var(--clr-border);
-  border-radius: 0.75rem;
-  padding: 1.25rem;
   overflow-y: auto;
   max-height: calc(100vh - var(--site-header-offset, 5rem) - 18rem);
   scrollbar-width: thin;
@@ -3983,8 +3975,6 @@ html[data-bs-theme="light"] .video-in-text h2 {
   position: relative;
   background: var(--clr-dark-surface, #16161b);
   border: 0.0625rem solid var(--clr-border);
-  border-radius: 0.75rem;
-  padding: 2rem;
   transition: border-color 250ms ease, box-shadow 250ms ease;
 }
 
