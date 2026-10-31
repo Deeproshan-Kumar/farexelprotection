@@ -84,7 +84,7 @@
   width: 100%;
   font-size: 0.875rem;
   white-space: nowrap;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 0.25rem;
   border: 0;
 }
@@ -150,6 +150,10 @@
 
 .border-1 {
   border: 0.1rem solid var(--clr-border);
+}
+
+.card {
+  border-radius: 0.5rem;
 }
 
 .card .tags .tag {
